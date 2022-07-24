@@ -1,0 +1,41 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: aqua;
+}
+
+.logo {
+    width: 150px;
+    height: 150px;
+}
+
+.login-form {
+    background-color: white;
+    margin: 0 auto;
+    width: 480px;
+    height: 550px;
+    border-radius: 35px;
+}
+
+.todoLogin {
+    margin: 0 auto;
+    padding: 5px;
+    text-align: center;
+}
+
+.login_cima {
+    width: 250px;
+    margin: 0 auto;
+}
+
+.slogan {
+    margin: 10px;
+}
+
+.login-meio {
+    width: 350px;
+    margin: inherit;
+}
+
+
+
