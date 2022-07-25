@@ -2,18 +2,19 @@ body {
     margin: 0;
     padding: 0;
     background-color: aqua;
+    font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .logo {
-    width: 150px;
-    height: 150px;
+    width: 80px;
+    height: 80px;
 }
 
 .login-form {
     background-color: white;
     margin: 0 auto;
-    width: 480px;
-    height: 550px;
+    width: 380px;
+    height: 800px;
     border-radius: 35px;
 }
 
@@ -28,14 +29,95 @@ body {
     margin: 0 auto;
 }
 
+.flex2 {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 230px;
+    margin: 0 auto;
+    align-items: center;
+    align-content: space-between;
+}
+
+.flex2>div {
+    flex: 1 1 200px;
+    margin: 10px;
+}
+
+.exit-icon{
+    background-color: white;
+    border: none;
+}
+
+.fa-xmark{
+    height: 25px;
+}
+
 .slogan {
     margin: 10px;
 }
 
 .login-meio {
     width: 350px;
-    margin: inherit;
+    padding: inherit;
 }
 
+fieldset {
+    margin: 10px auto;
+    text-align: initial;
+    border-radius: 10px;
+    border: 5px solid #EDEDED;
+    width: 200px;
+    color: #a2a2a2;
+    padding: 5px;
 
+}
 
+.norm-login {
+    border: none;
+    font-size: 15px;
+    color: #a2a2a2;
+
+}
+
+.continuar {
+    border: 1px dashed #ded559;
+    border-radius: 5px;
+    background-color: #F6EB60;
+    padding: 10px;
+    width: 150px;
+    font-size: medium;
+}
+
+.ou{
+    margin-bottom: 0;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 230px;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.flex>div {
+    flex: 1 1 200px;
+    margin: 10px;
+}
+
+.icon-login {
+    width: 40px;
+    height: 40px;
+    margin: 0;
+}
+
+.login-with {
+    border: none;
+    background-color: white;
+    color: #a2a2a2;
+    padding: 10px;
+    font-size: medium;
+    max-width: 150px;
+    margin: 0;
+    padding: 0;
+}
