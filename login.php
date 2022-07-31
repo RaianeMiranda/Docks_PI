@@ -16,10 +16,14 @@ include "libras.php";
     <div class="login-form">
         <div class="todoLogin">
             <div class="login_cima">
+                <div class="container">
                 <div class="flex2">
                     <img class="logo" src="assets/images/logo.png" alt="logo do site, sendo um círculo com nosso mascote docks, um pato dentro desse círculo.">
+                </div>
+                <div class="flex3">
                     <button class="exit-icon"><i class="fa-solid fa-xmark"></i></button>
                     <!--CONTINUAR DAQUI, CRIAR GRID PARA SEPARAR ÍCONE DA LOGO-->
+                </div>
                 </div>
 
                 <h1 class="slogan">Bem vindo(a) ao Docks</h1>
@@ -58,7 +62,7 @@ include "libras.php";
                         <button class="login-with">Continue com o Google </button>
                     </div>
                 </fieldset>
-
+                <p class="membro">Já é um membro? <button>Entrar</button></p>
 
             </div>
         </div>
