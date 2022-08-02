@@ -1,5 +1,5 @@
 body {
-    margin: 0;
+    margin: 25px;
     padding: 0;
     background-color: aqua;
     font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -14,7 +14,7 @@ body {
     background-color: white;
     margin: 0 auto;
     width: 380px;
-    height:650px;
+    height: 750px;
     border-radius: 35px;
 }
 
@@ -35,6 +35,7 @@ body {
     width: 310px;
     grid-template-areas: "l i";
 }
+
 .flex2 {
     margin: 0 auto;
     height: auto;
@@ -47,12 +48,12 @@ body {
 }
 
 
-.exit-icon{
+.exit-icon {
     background-color: white;
     border: none;
 }
 
-.fa-xmark{
+.fechar{
     height: 28px;
 }
 
@@ -92,7 +93,7 @@ fieldset {
     font-size: medium;
 }
 
-.ou{
+.ou {
     margin-bottom: 0;
 }
 
@@ -127,8 +128,18 @@ fieldset {
     padding: 0;
 }
 
-.membro{
+input:focus{
+    outline: none;
+}
+
+button{
+    cursor: pointer;
+}
+
+.membro {
     font-size: 13px;
-    margin-bottom:0 ;
+    margin-bottom: 0;
     margin-top: 10px;
+    background-color: white;
+    border: none;
 }
