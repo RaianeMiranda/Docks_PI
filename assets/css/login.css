@@ -110,12 +110,6 @@ fieldset {
     margin: 10px;
 }
 
-.icon-login {
-    width: 35px;
-    height: 35px;
-    margin: 0;
-}
-
 .login-with {
     border: none;
     background-color: white;
@@ -143,3 +137,5 @@ button{
     background-color: white;
     border: none;
 }
+
+
