@@ -1,13 +1,16 @@
 body {
     margin: 25px;
     padding: 0;
-    background-color: aqua;
     font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .logo {
     width: 80px;
     height: 80px;
+}
+
+.icon-login{
+    width: 42px;
 }
 
 .login-form {
@@ -45,12 +48,6 @@ body {
 .flex3 {
     height: auto;
     grid-area: i;
-}
-
-
-.exit-icon {
-    background-color: white;
-    border: none;
 }
 
 .fechar{

@@ -11,7 +11,7 @@
     <h2>Modal Example</h2>
 
     <!-- Trigger/Open The Modal -->
-    <button id="myBtn">Open Modal</button>
+    <button id="myBtn">Login-</button>
 
     <!-- The Modal -->
     <div id="myModal" class="modal">
