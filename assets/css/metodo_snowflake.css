@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    background-color: #FFF2D8;
+    margin-left: 60px;
+}
+h2.etapa{
+    color:#F09AA3;
+    font-size: 23px;
+}
+h1.titulo-snowflake{
+    color:#F09AA3;
+}
+div.etapa_1-container{
+    display: flex;
+    align-items: baseline;
+}
+div.etapa_2-container{
+    display: flex;
+    align-items: baseline;
+}
+div.etapa_3-container{
+    display: flex;
+    align-items: baseline;
+}
+div.etapa_4-container{
+    display: flex;
+    align-items: baseline;
+}
+p.etapa-descricao{
+    font-size: 19px;
+    margin-left: 4px;
+}
