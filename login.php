@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="assets/css/login.css">
+    <link rel="stylesheet" href="assets/css/modal.css">
     <title>Document</title>
 </head>
 
@@ -16,8 +17,7 @@
                         <img class="logo" src="assets/images/logo.png" alt="logo do site, sendo um círculo com nosso mascote docks, um pato dentro desse círculo.">
                     </div>
                     <div class="flex3">
-                       <a href="login.php"><img class="fechar" src="assets/images/fechar.png" alt=""></a>
-                        <!--CONTINUAR DAQUI, CRIAR GRID PARA SEPARAR ÍCONE DA LOGO-->
+                        <span class="close">&times;</span>
                     </div>
                 </div>
 
@@ -36,7 +36,7 @@
                     <input class="norm-login" type="password" placeholder="Senha">
                 </fieldset>
 
-                <a href="login.php"><button class="continuar"> Continuar </button></a>
+                <a href="#"><button class="continuar"> Continuar </button></a>
 
                 <p class="ou">OU</p>
             </div>
@@ -46,7 +46,7 @@
                 <fieldset>
                     <div class="flex">
                         <img class="icon-login" src="assets/images/facebook.png" alt="Faça seu login com o Facebook">
-                        <a href="login.php"><button class="login-with">Continue com o Facebook </button></a>
+                        <a href="#"><button class="login-with">Continue com o Facebook </button></a>
                     </div>
                 </fieldset>
 
@@ -54,14 +54,15 @@
                     <div class="flex">
 
                         <img class="icon-login" src="assets/images/google.png" alt="Faça seu login com o Facebook">
-                        <a href="login.php"><button class="login-with">Continue com o Google </button></a>
+                        <a href="#"><button class="login-with">Continue com o Google </button></a>
                     </div>
                 </fieldset>
-                <p>Já é um membro? <a href="login.php"><button class="membro">Entrar</button></a></p>
+                <p>Ainda não é um membro?</p>
+                <p><a href="#"><button class="membro">Cadastre-se</button></a></p>
 
             </div>
         </div>
-
+    </div>
     </div>
     <!-- 
             <div class="login-meio">
