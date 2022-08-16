@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    background-color: #FFF2D8;
+    margin-left: 60px;
+    margin-right: 80px;
+}
+h1.metodo-cp-titulo{
+    color:#BAAAC8;
+    
+}
+p{
+    margin: 1px;
+}
+li.camadas{
+    color:#BAAAC8;
+    font-size: 23px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+p.camadas-descricao{
+    font-size: 19px;
+    margin-left: 5px;
+    
+}
+div.camadas-descricao-container{
+    display: flex;
+    align-items: baseline;
+    margin-top: 10px;
+    
+}
