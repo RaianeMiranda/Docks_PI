@@ -1,4 +1,5 @@
 <?php 
+$titulo = "Configurações";
 include "head.php"
 ?>
 <!DOCTYPE html>
