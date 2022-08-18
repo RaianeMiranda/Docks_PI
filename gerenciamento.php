@@ -71,18 +71,25 @@ if ($email && $senha) {
 
 <body>
     <form method="POST" enctype="multipart/form-data">
-
-        Email: <br><input type="text" name="email">
-        <span class="obrigatorio">*</span>
-        <input type="submit" value="Alterar" name="submit">
-        <br>
-        Senha: <br><input type="password" name="senha">
-        <span class="obrigatorio">*</span>
-        <input type="submit" value="Alterar" name="submit">
-        <br>
-        <input type="reset" value="Desativar Conta" name="reset">
-        <br>
-        <input type="button" value="Salvar alterações" name="button">
+        <div class="email-gerenciamento">
+            <p>Email: </p><input type="text" name="email">
+            <span class="obrigatorio">*</span>
+            <input type="submit" value="Alterar" name="submit">
+            <br>
+        </div>
+        <div class="senha-gerenciamento">
+            <p>Senha: </p><input type="password" name="senha">
+            <span class="obrigatorio">*</span>
+            <input type="submit" value="Alterar" name="submit">
+            <br>
+        </div>
+        <div class="botao-desativar-conta">
+            <input type="reset" value="Desativar Conta" name="reset">
+            <br>
+        </div>
+        <div class="botao-salvar-alteracoes">
+            <input type="button" value="Salvar alterações" name="button">
+        </div>
     </form>
     <span></span>
 </body>
