@@ -1,5 +1,5 @@
 <?php 
-include "cabecalho/head.php"
+include "head.php"
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -9,7 +9,7 @@ include "cabecalho/head.php"
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Configurações</title>
-    <link rel="stylesheet" href="assets/css/tipografia.css">
+    <link rel="stylesheet" href="assets/css/configuracoes.css">
     <link href='https://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Source Serif Pro' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Noto Sans' rel='stylesheet'>
@@ -51,6 +51,9 @@ include "cabecalho/head.php"
 </div>
 </div>
 </div>
+<?php
+include "gerenciamento.php"
+?>
 </body>
 
 </html>

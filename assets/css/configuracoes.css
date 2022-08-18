@@ -3,7 +3,7 @@
 
 body {
     background-color: #FFF2D8;
-    margin-left: 70px;
+    /*margin-left: 70px;*/
     padding: 0;
     box-sizing: border-box;
     font-family: 'Open Sans', sans-serif;
@@ -211,8 +211,7 @@ button.botao-acessibilidade6{
 div.container-tipografia-acessibilidade{
       display:flex;
 }
-div.container-acessibilidade{
+/*div.container-acessibilidade{
     display: block;
     margin-left:360px;
-
-}
+}*/
