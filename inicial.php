@@ -6,8 +6,9 @@
     <title>Document</title>
 </head>
 <body>
-    <header>
         <?php include "head.php" ?>
-    </header>
+    <main>
+    <?php include "card_teste.php" ?>
+    </main>
 </body>
 </html>

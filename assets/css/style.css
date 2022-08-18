@@ -8,12 +8,12 @@ body {
 }
 
 .item {
-    padding-bottom: 10px;
+    padding-bottom: 15px;
     padding-bottom: 0;
 }
 
 .logotipo {
-    width: 60px;
+    width: 100px;
     align-items: center;
     justify-content: center;
     margin-right: 15px;
@@ -26,7 +26,7 @@ h1 {
 }
 
 .nome {
-    font-size: 25px;
+    font-size: 40px;
     font-weight: bolder;
 }
 
@@ -58,7 +58,7 @@ nav li a:hover {
     color: black;
     display: inline-block;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 25px;
     font-weight: 600;
 }
 
@@ -66,7 +66,7 @@ hr.linha {
     border: none;
     background: rgb(188, 228, 228);
     background: linear-gradient(90deg, rgba(188, 228, 228, 1) 0%, rgba(188, 228, 228, 1) 5%, rgba(244, 204, 200, 1) 5%, rgba(244, 203, 196, 1) 10%, rgba(241, 196, 165, 1) 10%, rgba(241, 196, 165, 1) 15%, rgba(233, 218, 247, 1) 15%, rgba(233, 218, 247, 1) 20%, rgba(188, 228, 228, 1) 20%, rgba(188, 228, 228, 1) 25%, rgba(244, 203, 197, 1) 25%, rgba(244, 203, 197, 1) 30%, rgba(241, 196, 165, 1) 30%, rgba(241, 196, 165, 1) 35%, rgba(233, 218, 247, 1) 35%, rgba(233, 218, 247, 1) 40%, rgba(188, 228, 228, 1) 40%, rgba(188, 228, 228, 1) 45%, rgba(244, 203, 198, 1) 45%, rgba(244, 203, 198, 1) 50%, rgba(241, 196, 165, 1) 50%, rgba(241, 196, 165, 1) 54%, rgba(241, 196, 165, 1) 55%, rgba(233, 218, 247, 1) 55%, rgba(233, 218, 247, 1) 60%, rgba(188, 228, 228, 1) 60%, rgba(188, 228, 228, 1) 65%, rgba(244, 203, 197, 1) 65%, rgba(244, 203, 197, 1) 70%, rgba(241, 196, 165, 1) 70%, rgba(241, 196, 165, 1) 75%, rgba(233, 218, 247, 1) 75%, rgba(233, 218, 247, 1) 80%, rgba(188, 228, 228, 1) 80%, rgba(188, 228, 228, 1) 85%, rgba(244, 203, 197, 1) 85%, rgba(244, 203, 197, 1) 90%, rgba(241, 196, 165, 1) 90%, rgba(241, 196, 165, 1) 95%, rgba(233, 218, 247, 1) 95%);
-    height: 10px;
+    height: 15px;
     display: block;
 }
 
@@ -80,8 +80,8 @@ main {
 }
 
 .menu-container {
-    width: 50px;
-    height: 35px;
+    width: 60px;
+    height: 45px;
     display: flex;
     justify-content: center;
     align-items: center;

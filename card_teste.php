@@ -6,15 +6,14 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/card_style.css">
-    <title>Document</title>
+    <title>Teste de carousel cards</title>
 </head>
 
 <body>
-
-    <div id="carouselExampleControls" class="carousel carousel-dark slide" data-ride="carousel">
+    <div id="carouselExampleControls" class="carousel slide"  data-ride="carousel" >
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <div class="wrap">
+                <div class="card-wrapper">
                     <div class="card">
                         <div class="card-img-top1">
                             <img class="card-img-top1 logo" src="assets/images/docks.png" alt="Card image cap">
@@ -26,130 +25,87 @@
                                 content.</p>
                         </div>
                     </div>
-
                     <div class="card">
-                        <div class="card-img-top2">
+                        <div class="card-top2">
                             <h4 class="card-text">1. O chamado</h4>
                         </div>
                         <div class="card-body">
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of the
-                                card's
+                                of the card's
                                 content.</p>
                         </div>
                     </div>
                     <div class="card">
-                        <div class="card-img-top2">
-                            <h4 class="card-text">2. Transição</h4>
+                        <div class="card-top2">
+                            <h4 class="card-text">1. O chamado</h4>
                         </div>
                         <div class="card-body">
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of the
-                                card's
+                                of the card's
                                 content.</p>
                         </div>
                     </div>
-
                     <div class="card">
-                        <div class="card-img-top2">
-                            <h4 class="card-text">3. Desafio</h4>
+                        <div class="card-top2">
+                            <h4 class="card-text">1. O chamado</h4>
                         </div>
                         <div class="card-body">
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of the
-                                card's
+                                of the card's
                                 content.</p>
                         </div>
                     </div>
-
                     <div class="card">
-                        <div class="card-img-top2">
-                            <h4 class="card-text">4. Abismo</h4>
+                        <div class="card-top2">
+                            <h4 class="card-text">1. O chamado</h4>
                         </div>
                         <div class="card-body">
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of the
-                                card's
+                                of the card's
                                 content.</p>
                         </div>
                     </div>
                 </div>
-                <div class="carousel-item">
-                    <div class="wrap">
-                        <div class="card">
-                            <div class="card-img-top2">
-                                <h4 class="card-text">4. Abismo</h4>
-                            </div>
-                            <div class="card-body">
-                                <p class="card-text">Some quick example text to build on the card title and make up the
-                                    bulk
-                                    of the
-                                    card's
-                                    content.</p>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-img-top2">
-                                <h4 class="card-text">4. Abismo</h4>
-                            </div>
-                            <div class="card-body">
-                                <p class="card-text">Some quick example text to build on the card title and make up the
-                                    bulk
-                                    of the
-                                    card's
-                                    content.</p>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-img-top2">
-                                <h4 class="card-text">4. Abismo</h4>
-                            </div>
-                            <div class="card-body">
-                                <p class="card-text">Some quick example text to build on the card title and make up the
-                                    bulk
-                                    of the
-                                    card's
-                                    content.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="wrap">
-                        <div class="card">
-                            <div class="card-img-top2">
-                                <h4 class="card-text">4. Abismo</h4>
-                            </div>
-                            <div class="card-body">
-                                <p class="card-text">Some quick example text to build on the card title and make up the
-                                    bulk
-                                    of the
-                                    card's
-                                    content.</p>
-                            </div>
-                        </div>
-                    </div>
+            </div>
+            <div class="carousel-item">
+                <div class="card-wrapper">
                     <div class="card">
-                        <div class="card-img-top2">
-                            <h4 class="card-text">4. Abismo</h4>
+                        <div class="card-top2">
+                            <h4 class="card-text">1. O chamado</h4>
                         </div>
                         <div class="card-body">
-                            <p class="card-text">Some quick example text to build on the card title and make up the
-                                bulk
-                                of the
-                                card's
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of the card's
                                 content.</p>
                         </div>
                     </div>
                     <div class="card">
-                        <div class="card-img-top2">
-                            <h4 class="card-text">4. Abismo</h4>
+                        <div class="card-top2">
+                            <h4 class="card-text">1. O chamado</h4>
                         </div>
                         <div class="card-body">
-                            <p class="card-text">Some quick example text to build on the card title and make up the
-                                bulk
-                                of the
-                                card's
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of the card's
+                                content.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-top2">
+                            <h4 class="card-text">1. O chamado</h4>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of the card's
+                                content.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-top2">
+                            <h4 class="card-text">1. O chamado</h4>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of the card's
                                 content.</p>
                         </div>
                     </div>
