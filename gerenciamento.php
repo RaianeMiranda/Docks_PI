@@ -8,13 +8,11 @@
     <title>Gerenciamento de Conta</title>
     <link rel="stylesheet" href="assets/css/gerenciamento.css">
     <link rel="stylesheet" href="assets/css/input-gerenciamento.css">
+    <div class="gerenciamento-titulo">
+        <h1>Gerenciamento da conta</h1>
+    </div>
 </head>
 
-<body>
-    <h1>Gerenciamento de Conta</h1>
-</body>
-
-</html>
 
 <?php /*00
 $codigo = "";
@@ -63,9 +61,12 @@ if ($email && $senha) {
 
 <head>
     <meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Cadastro de Usuário</title>
-    <link rel="stylesheet" href="../css/input-gerenciamento.css">
     <link rel="stylesheet" href="../css/gerenciamento.css">
+    <link rel="stylesheet" href="../css/input-gerenciamento.css">
 </head>
 
 <body>
@@ -79,11 +80,9 @@ if ($email && $senha) {
         <span class="obrigatorio">*</span>
         <input type="submit" value="Alterar" name="submit">
         <br>
-            <input type="reset" value="Desativar Conta" name="reset">
+        <input type="reset" value="Desativar Conta" name="reset">
         <br>
         <input type="button" value="Salvar alterações" name="button">
-
-        
     </form>
     <span></span>
 </body>

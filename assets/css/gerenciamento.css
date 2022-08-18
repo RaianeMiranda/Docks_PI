@@ -3,6 +3,9 @@
 body {
 
     background-color: #FFF2D8;
-    /*margin-left: 40px;*/
     font-family: 'Open Sans', sans-serif;
+}
+
+div.gerenciamento-titulo{
+    margin-left: 180px;
 }

@@ -14,13 +14,15 @@ body {
     align-items: center;
     text-align: left;
     justify-content: flex-start;
+    margin-left: 180px;
 }
 
 h2.tipografia {
     display: flex;
     align-items: center;
     text-align: left;
-    justify-content: flex-start
+    justify-content: flex-start;
+    margin-left: 180px;
 }
 
 h2.acessibilidade {
@@ -28,6 +30,7 @@ h2.acessibilidade {
     align-items: center;
     text-align: right;
     justify-content: flex-end;
+    margin-right: 100px;
 }
 
 div.config2 {
@@ -49,6 +52,7 @@ div.config2 {
 
 div.container {
     margin: 2px;
+    margin-left:180px;
 }
 
 .botao-tipografia-container {
@@ -211,7 +215,7 @@ button.botao-acessibilidade6{
 div.container-tipografia-acessibilidade{
       display:flex;
 }
-/*div.container-acessibilidade{
-    display: block;
-    margin-left:360px;
-}*/
+div.container-acessibilidade{
+    /*display: block;*/
+    margin-left:710px;
+}

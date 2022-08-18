@@ -17,6 +17,7 @@ include "head.php"
 </head>
 
 <body>
+  <br>
     <div class="config">
         <h1 class="titulo-config">Configurações</h1>
         <div class="config2">
