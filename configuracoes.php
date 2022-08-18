@@ -1,3 +1,6 @@
+<?php 
+include "cabecalho/head.php"
+?>
 <!DOCTYPE html>
 <html lang="en">
 
