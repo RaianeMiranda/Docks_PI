@@ -1,8 +1,4 @@
 
-<<<<<<< HEAD
-
-=======
->>>>>>> testes_helo
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,7 +16,7 @@
     <div class="alt-container">
         <div class="alt-titulo">
             <h1>Alterações da conta</h1>
-        </div>
+</div>
         <p class="alt-1"><b>Altere seu Email</b></p><input type="text" placeholder=" Seu E-mail Atual">
         <br>
         <input type="text" placeholder=" Seu novo E-mail">
