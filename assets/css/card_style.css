@@ -26,7 +26,7 @@ body {
 .carousel-inner {
     padding: 1em;
     position: relative;
-    width: 65%;
+    width: 100%;
     overflow: hidden;
 }
 
@@ -42,6 +42,10 @@ body {
     border-radius: 50%;
     top: 50%;
     transform: translateY(-50%);
+}
+
+.carousel-control-prev{
+    
 }
 
 .card-wrapper {
