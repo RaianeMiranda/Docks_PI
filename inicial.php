@@ -15,8 +15,13 @@
         <a href="#"><button class="criar_livro" type="submit"> <i class="fa-solid fa-plus"></i> Criar novo Livro</button></a>
     </header>
     <main>
-        <?php include "card_heroi.php" ?>
-        <?php include "card_snowflake.php" ?>
+        <?php 
+        include "card_heroi.php";
+        include "card_snowflake.php";
+        include "card_mundo.php";
+        include "card_persona.php";
+        ?>
+        
     </main>
 </body>
 

@@ -10,23 +10,23 @@
 </head>
 
 <body>
-    <div id="carouselExampleControls2" class="carousel slide"  data-ride="carousel" >
+    <div id="carouselExampleControls4" class="carousel slide"  data-ride="carousel" >
         <div class="carousel-inner">
             <div class="carousel-item active">
                 <div class="card-wrapper">
-                    <div class="snow-card card">
+                    <div class="persona-card card">
                         <div class="card-img-top1">
                             <img class="card-img-top1 logo" src="assets/images/docks.png" alt="Card image cap">
                         </div>
-                        <h4 class="titulo_top-card snow-title">Jornada do Herói</h4>
+                        <h4 class="titulo_top-card persona-title">Jornada do Herói</h4>
                         <div class="card-body">
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk
                                 of the card's
                                 content.</p>
                         </div>
                     </div>
-                    <div class="snow-card card">
-                        <div class="snow-top card-top">
+                    <div class="persona-card card">
+                        <div class="persona-top card-top">
                             <h4 class="card-text">1. O chamado</h4>
                         </div>
                         <div class="card-body">
@@ -35,8 +35,8 @@
                                 content.</p>
                         </div>
                     </div>
-                    <div class="snow-card card">
-                        <div class="snow-top card-top">
+                    <div class="persona-card card">
+                        <div class="persona-top card-top">
                             <h4 class="card-text">1. O chamado</h4>
                         </div>
                         <div class="card-body">
@@ -45,8 +45,8 @@
                                 content.</p>
                         </div>
                     </div>
-                    <div class="snow-card card">
-                        <div class="snow-top card-top">
+                    <div class="persona-card card">
+                        <div class="persona-top card-top">
                             <h4 class="card-text">1. O chamado</h4>
                         </div>
                         <div class="card-body">
@@ -55,8 +55,8 @@
                                 content.</p>
                         </div>
                     </div>
-                    <div class="snow-card card">
-                        <div class="snow-top card-top">
+                    <div class="persona-card card">
+                        <div class="persona-top card-top">
                             <h4 class="card-text">1. O chamado</h4>
                         </div>
                         <div class="card-body">
@@ -69,8 +69,8 @@
             </div>
             <div class="carousel-item">
                 <div class="card-wrapper">
-                    <div class="snow-card card">
-                        <div class="snow-top card-top">
+                    <div class="persona-card card">
+                        <div class="persona-top card-top">
                             <h4 class="card-text">1. O chamado</h4>
                         </div>
                         <div class="card-body">
@@ -79,8 +79,8 @@
                                 content.</p>
                         </div>
                     </div>
-                    <div class="snow-card card">
-                        <div class="snow-top card-top">
+                    <div class="persona-card card">
+                        <div class="persona-top card-top">
                             <h4 class="card-text">1. O chamado</h4>
                         </div>
                         <div class="card-body">
@@ -89,8 +89,8 @@
                                 content.</p>
                         </div>
                     </div>
-                    <div class="snow-card card">
-                        <div class="snow-top card-top">
+                    <div class="persona-card card">
+                        <div class="persona-top card-top">
                             <h4 class="card-text">1. O chamado</h4>
                         </div>
                         <div class="card-body">
@@ -99,8 +99,8 @@
                                 content.</p>
                         </div>
                     </div>
-                    <div class="snow-card card">
-                        <div class="snow-top card-top">
+                    <div class="persona-card card">
+                        <div class="persona-top card-top">
                             <h4 class="card-text">1. O chamado</h4>
                         </div>
                         <div class="card-body">
@@ -112,11 +112,11 @@
                 </div>
             </div>
         </div>
-        <a class="carousel-control-prev" href="#carouselExampleControls2" role="button" data-slide="prev">
+        <a class="carousel-control-prev" href="#carouselExampleControls4" role="button" data-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="false"></span>
             <span class="sr-only">Previous</span>
         </a>
-        <a class="carousel-control-next" href="#carouselExampleControls2" role="button" data-slide="next">
+        <a class="carousel-control-next" href="#carouselExampleControls4" role="button" data-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="false"></span>
             <span class="sr-only">Next</span>
         </a>

@@ -14,19 +14,19 @@
         <div class="carousel-inner">
             <div class="carousel-item active">
                 <div class="card-wrapper">
-                    <div class="card">
+                    <div class="hero-card card">
                         <div class="card-img-top1">
                             <img class="card-img-top1 logo" src="assets/images/docks.png" alt="Card image cap">
                         </div>
-                        <h4 class="titulo_top-card">Jornada do Herói</h4>
+                        <h4 class="titulo_top-card hero-title">Jornada do Herói</h4>
                         <div class="card-body">
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk
                                 of the card's
                                 content.</p>
                         </div>
                     </div>
-                    <div class="card">
-                        <div class="card-top2">
+                    <div class="hero-card card">
+                        <div class="hero-top card-top">
                             <h4 class="card-text">1. O chamado</h4>
                         </div>
                         <div class="card-body">
@@ -35,8 +35,8 @@
                                 content.</p>
                         </div>
                     </div>
-                    <div class="card">
-                        <div class="card-top2">
+                    <div class="hero-card card">
+                        <div class="hero-top card-top">
                             <h4 class="card-text">1. O chamado</h4>
                         </div>
                         <div class="card-body">
@@ -45,8 +45,8 @@
                                 content.</p>
                         </div>
                     </div>
-                    <div class="card">
-                        <div class="card-top2">
+                    <div class="hero-card card">
+                        <div class="hero-top card-top">
                             <h4 class="card-text">1. O chamado</h4>
                         </div>
                         <div class="card-body">
@@ -55,8 +55,8 @@
                                 content.</p>
                         </div>
                     </div>
-                    <div class="card">
-                        <div class="card-top2">
+                    <div class="hero-card card">
+                        <div class="hero-top card-top">
                             <h4 class="card-text">1. O chamado</h4>
                         </div>
                         <div class="card-body">
@@ -69,8 +69,8 @@
             </div>
             <div class="carousel-item">
                 <div class="card-wrapper">
-                    <div class="card">
-                        <div class="card-top2">
+                    <div class="hero-card card">
+                        <div class="hero-top card-top">
                             <h4 class="card-text">1. O chamado</h4>
                         </div>
                         <div class="card-body">
@@ -79,8 +79,8 @@
                                 content.</p>
                         </div>
                     </div>
-                    <div class="card">
-                        <div class="card-top2">
+                    <div class="hero-card card">
+                        <div class="hero-top card-top">
                             <h4 class="card-text">1. O chamado</h4>
                         </div>
                         <div class="card-body">
@@ -89,8 +89,8 @@
                                 content.</p>
                         </div>
                     </div>
-                    <div class="card">
-                        <div class="card-top2">
+                    <div class="hero-card card">
+                        <div class="hero-top card-top">
                             <h4 class="card-text">1. O chamado</h4>
                         </div>
                         <div class="card-body">
@@ -99,8 +99,8 @@
                                 content.</p>
                         </div>
                     </div>
-                    <div class="card">
-                        <div class="card-top2">
+                    <div class="hero-card card">
+                        <div class="hero-top card-top">
                             <h4 class="card-text">1. O chamado</h4>
                         </div>
                         <div class="card-body">
@@ -113,11 +113,11 @@
             </div>
         </div>
         <a class="carousel-control-prev" href="#carouselExampleControls1" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="carousel-control-prev-icon" aria-hidden="false"></span>
             <span class="sr-only">Previous</span>
         </a>
         <a class="carousel-control-next" href="#carouselExampleControls1" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="carousel-control-next-icon" aria-hidden="false"></span>
             <span class="sr-only">Next</span>
         </a>
     </div>
