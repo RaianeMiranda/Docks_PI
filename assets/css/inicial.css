@@ -1,0 +1,38 @@
+body{
+    font-family: 'Open Sans', 'Helvetica Neue';
+    background-color: #FFF2D8;
+}
+
+header{
+  padding-left:23% ;
+  padding-right: 23%;
+  padding-top: 3%;
+}
+
+main{
+  padding-left:20% ;
+  padding-right: 20%;
+}
+
+.title_welcome{
+  font-size: 45px;
+  font-weight: bold;
+}
+
+.before_course{
+color: #646464;
+}
+
+.criar_livro{
+  margin: 15px 0 15px 0;
+  background-color: #FFF2D8;
+  border: 4px solid #FED576;
+  border-radius: 10px;
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 25px;
+  font-weight: bolder;
+  cursor: pointer;
+}
+
