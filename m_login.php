@@ -1,11 +1,8 @@
-<!DOCTYPE html>
-<html>
 
-<head>
     <link rel="stylesheet" href="assets/css/modal.css">
-</head>
-
-<body>
+    <?php 
+    include "head.php"
+    ?>
 
     <h2>Modal Example</h2>
 

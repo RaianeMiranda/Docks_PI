@@ -1,14 +1,51 @@
-<!DOCTYPE html>
-<html lang="pt-Br">
+<?php
+include "include/MySql.php";
+include "include/functions.php";
 
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="assets/css/login.css">
-    <link rel="stylesheet" href="assets/css/modal.css">
-    <title>Document</title>
-</head>
+session_start();
+$_SESSION['nome'] = "";
+$_SESSION['administrador'] = "";
 
-<body>
+$idEmail = "";
+$senha = "";
+$msgErro = "";
+$idEmailErro = "";
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    if (empty($_POST['idEmail'])) {
+        $idEmailErro = "idEmail é obrigatório";
+    } else {
+        $idEmail = test_input($_POST['idEmail']);
+    }
+    if (empty($_POST['senha'])) {
+        $senhaErro = "Senha é obrigatório";
+    } else {
+        $senha = test_input($_POST['senha']);
+    }
+
+    if ($idEmail && $senha) {
+        $sql = $pdo->prepare("SELECT * FROM USUARIO WHERE idEmail=? AND senha=?"); //idEmail e a senha são validados com o banco de dados
+        if ($sql->execute(array($idEmail, MD5($senha)))) {
+            $info = $sql->fetchAll(PDO::FETCH_ASSOC);
+            if (count($info) > 0) {
+                foreach ($info as $key => $values) {
+                    $_SESSION['nome'] = $values['nome'];
+                    $_SESSION['administrador'] = '1';
+                }
+                header('location:paginas/list_usuario.php');
+            } else {
+                $msgErro = "Usuário não cadastrado!";
+            }
+        } else {
+            $msgErro = "Usuário não cadastrado!";
+        }
+    }
+}
+
+
+?>
+<link rel="stylesheet" href="assets/css/login.css">
+<form method="POST" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>">
     <div class="login-form">
         <div class="todoLogin">
             <div class="login_cima">
@@ -27,16 +64,16 @@
 
             <div class="login-meio">
                 <fieldset>
-                    <legend>Digite seu E-mail</legend>
-                    <input class="norm-login" type="text" placeholder="E-mail">
+                    <legend for="idEmail">Digite seu E-mail</legend>
+                    <input class="norm-login" type="text" name="idEmail" id="idEmail" placeholder="E-mail">
                 </fieldset>
 
                 <fieldset>
-                    <legend>Digite sua Senha</legend>
-                    <input class="norm-login" type="password" placeholder="Senha">
+                    <legend for="Senha">Digite sua Senha</legend>
+                    <input class="norm-login" type="password" name="senha" id="Senha" placeholder="Senha">
                 </fieldset>
 
-                <a href="#"><button class="continuar"> Continuar </button></a>
+                <input type="submit" name="continuar" id="continuar" value="Continuar" class="continuar"></input>
 
                 <p class="ou">OU</p>
             </div>
@@ -63,18 +100,11 @@
             </div>
         </div>
     </div>
-    </div>
-    <!-- 
+</form>
+<span><?php echo $msgErro ?></span>
+<!-- 
             <div class="login-meio">
             <label for="e-mail">E-mail</label>
-            <input class="" type="text" name="email" id="e-mail" placeholder="Digite seu E-mail">
+            <input class="" type="text" name="idEmail" id="e-mail" placeholder="Digite seu E-mail">
             </div>
         -->
-
-
-    </div>
-    </div>
-    </div>
-</body>
-
-</html>

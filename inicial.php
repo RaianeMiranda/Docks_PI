@@ -1,13 +1,4 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-
-<head>
-    <meta charset="UTF-8">
     <link rel="stylesheet" href="assets/css/inicial.css">
-    <title>Document</title>
-</head>
-
-<body>
     <?php include "head.php" ?>
     <header>
         <h1 class="title_welcome">Bem vindo(a), escritor(a)</h1>
@@ -23,6 +14,7 @@
         ?>
 
     </main>
-</body>
 
-</html>
+    <?php
+    include "footer.php"
+    ?>
