@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <div id="carouselExampleControls2" class="carousel slide" data-ride="carousel">
+    <div id="carouselExampleControls2" class="carousel slide" data-ride="carousel" data-interval="0">
         <div class="carousel-inner">
             <div class="carousel-item active">
                 <div class="card-wrapper">
