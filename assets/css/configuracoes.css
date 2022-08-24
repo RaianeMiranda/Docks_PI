@@ -15,6 +15,7 @@ body {
     text-align: left;
     justify-content: flex-start;
     margin-left: 180px;
+    font-size: 40px;
 }
 
 h2.tipografia {
@@ -52,7 +53,7 @@ div.config2 {
 
 div.container {
     margin: 2px;
-    margin-left:180px;
+    margin-left:170px;
 }
 
 .botao-tipografia-container {
@@ -86,6 +87,7 @@ button.botao-tipografia1 {
     font-family: 'Merriweather';
     font-size: 16px;
     width: 175px;
+    height: 75px;
 }
 
 button.botao-tipografia2 {
@@ -98,6 +100,7 @@ button.botao-tipografia2 {
     font-family: 'Source Serif Pro';
     font-size: 16px;
     width: 175px;
+    height: 75px;
 }
 
 button.botao-tipografia3 {
@@ -110,6 +113,7 @@ button.botao-tipografia3 {
     font-family: 'Open Sans', sans-serif;
     font-size: 16px;
     width: 175px;
+    height: 75px;
 }
 
 button.botao-tipografia4 {
@@ -122,6 +126,7 @@ button.botao-tipografia4 {
     font-family: 'Noto Sans';
     font-size: 16px;
     width: 175px;
+    height: 75px;
 }
 
 .botao-acessibilidade-container {
@@ -166,6 +171,7 @@ button.botao-acessibilidade1 {
     border: 4px solid #EDEDED;
     font-size: 16px;
     width: 175px;
+    height: 75px;
 }
 button.botao-acessibilidade3{
     background: #fff;
@@ -176,6 +182,7 @@ button.botao-acessibilidade3{
     border: 4px solid #EDEDED;
     font-size: 16px;
     width: 175px;
+    height: 75px;
 }
 button.botao-acessibilidade5{
     background: #fff;
@@ -186,6 +193,7 @@ button.botao-acessibilidade5{
     border: 4px solid #EDEDED;
     font-size: 16px;
     width: 175px;
+    height: 75px
 }
 button.botao-acessibilidade2{
     background: #F4CCC8;
@@ -217,5 +225,5 @@ div.container-tipografia-acessibilidade{
 }
 div.container-acessibilidade{
     /*display: block;*/
-    margin-left:690px;
+    margin-right:530px;
 }

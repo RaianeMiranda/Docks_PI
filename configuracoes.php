@@ -21,6 +21,7 @@ include "head.php"
   <br>
     <div class="config">
         <h1 class="titulo-config">Configurações</h1>
+        <br>
         <div class="config2">
             <h2 class="tipografia">Tipografia</h2>
             <h2 class="acessibilidade">Acessibilidade</h2>
@@ -54,7 +55,7 @@ include "head.php"
 </div>
 </div>
 <?php
-include "gerenciamento.php"
+include "gerenciamento.php";
 ?>
 </body>
 

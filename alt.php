@@ -14,10 +14,14 @@
 
 <body>
     <div class="alt-container">
+    <div class="container-alteracao">
         <div class="alt-titulo">
             <h1>Alterações da conta</h1>
+            <br>
 </div>
-        <p class="alt-1"><b>Altere seu Email</b></p><input type="text" placeholder=" Seu E-mail Atual">
+        <p class="alt-1"><b>Altere suas Informações</b></p><input type="text" placeholder=" Seu E-mail Atual">
+        <br>
+        <input type="text" placeholder="Altere Nome">
         <br>
         <input type="text" placeholder=" Seu novo E-mail">
         <br>
@@ -28,6 +32,7 @@
         <form>
             <button>Salvar</button>
         </form>
+    </div>
     </div>
 
 
