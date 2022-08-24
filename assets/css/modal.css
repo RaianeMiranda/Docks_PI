@@ -1,30 +1,33 @@
-.modal {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    background: transparent;
-    z-index: 99999;
-    opacity:0;
-    -webkit-transition: opacity 400ms ease-in;
-    -moz-transition: opacity 400ms ease-in;
-    transition: opacity 400ms ease-in;
-    pointer-events: none;
-  }
-
-  .modal:target {
-    opacity: 1;
-    pointer-events: auto;
-  }
-  .modal > div {
-    width: 320px;
-    position: relative;
-    margin: 10% auto;
-    padding: 15px 20px;
-    background: #fff;
-  }
+.modal-fechar{
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+  pointer-events: auto;
+  /* background-color: #fff; */
+  background-clip: padding-box;
+  border: 1px solidrgba(0,0,0,.2);
+  border-radius: 0.3rem;
+  outline: 0;
+}
+.botao-alterar1 {
+  /* color: #fff; */
+  /* background-color: #007bff; */
+ /*
+  /* border-color: #007bff; */
+  background-color: #D5ECB4;
+  border: 2px solid #BBBBBB;
+  height: 25px;
+  width: 80px;
+  font-weight: bolder;
+  font-size: 15px;
+  text-align: center;
+}
 body{
-    background-color:grey;
+  background-color: #FFF2D8;
 }
