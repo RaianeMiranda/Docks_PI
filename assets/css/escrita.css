@@ -8,10 +8,14 @@
     flex: 1;
     background: #FFF2D8;
 }
-
+.container2{
+    display: flex;
+    margin-left:10%;
+    padding:0;
+}
 .texto2 textarea {
     cursor: pointer;
-    width: 600px;
+    width: 400px;
     height: 900px;
     margin: 35px;
     resize: none;
@@ -54,9 +58,7 @@
 }
 
 .container1 {
-    max-width: 100%;
     display: flex;
-
 }
 
 body {
@@ -183,11 +185,7 @@ a {
     justify-content: baseline;
    
 }
-.container2{
-    display: flex;
-    margin-left:50%;
-    padding:0;
-}
+
 .titulo2 {
     font-family: 'Open Sans';
     font-size: 30px;
