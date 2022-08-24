@@ -1,64 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Gerenciamento de Conta</title>
-    <link rel="stylesheet" href="assets/css/gerenciamento.css">
-    <link rel="stylesheet" href="assets/css/input-gerenciamento.css">
-    <div class="gerenciamento-titulo">
-        <h1>Gerenciamento da conta</h1>
-    </div>
-</head>
-
-
-<?php /*00
-$codigo = "";
-$email = "";
-$senha = "";
-
-$emailErro = "";
-$senhaErro = "";
-
-if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
-    if (empty($_POST['email']))
-        $emailErro = "Email é obrigatório!";
-    else
-        $email = $_POST['email'];
-    if (empty($_POST['senha']))
-        $senhaErro = "Senha é obrigatório!";
-    else
-        $senha = $_POST['senha'];
-}
-if ($email && $senha) {
-    //Verificar se ja existe o email
-    $sql = $pdo->prepare("SELECT * FROM USUARIO WHERE email = ? AND codigo <> ?");
-    if ($sql->execute(array($email, $codigo))) {
-        if ($sql->rowCount() <= 0) {
-            $sql = $pdo->prepare("UPDATE USUARIO SET codigo=?, 
-                                                     email=?, 
-                                                     senha=?,
-                                               WHERE codigo=?");
-            if ($sql->execute(array($codigo, $email, md5($senha), $codigo))) {
-                header('location:listUsuario.php');
-                $msgErro = "Dados alterados com sucesso!";
-            } else {
-                $msgErro = "Dados não cadastrados!";
-            }
-        } else {
-            $msgErro = "Email de usuário já cadastrado!!";
-        }
-    } else {
-        $msgErro = "Dados não alteardos!";
-    }
-}
-*/
-?>
-<!DOCTYPE html>
 <html>
-
+ 
 <head>
     <meta charset="UTF-8">
     <meta charset="UTF-8">
@@ -68,19 +10,37 @@ if ($email && $senha) {
     <link rel="stylesheet" href="../css/gerenciamento.css">
     <link rel="stylesheet" href="../css/input-gerenciamento.css">
 </head>
-
 <body>
     <form method="POST" enctype="multipart/form-data">
         <div class="email-gerenciamento">
             <p>Email: </p><input type="text" name="email">
             <span class="obrigatorio">*</span>
-            <input type="submit" value="Alterar" name="submit">
+            <!-- <input type="submit" value="Alterar" name="submit"> -->
+            <button type="button" class="botao-alterar1" data-toggle="modal" data-target="#exampleModalLong" style=" background-color: #D5ECB4;
+  border: 2px solid #BBBBBB;
+  height: 25px;
+  width: 80px;
+  font-weight: bolder;
+  font-size: 15px;
+  text-align: center;
+  border-radius: 0px;">
+                Alterar
+            </button>
+   
             <br>
         </div>
         <div class="senha-gerenciamento">
             <p>Senha: </p><input type="password" name="senha">
             <span class="obrigatorio">*</span>
-            <input type="submit" value="Alterar" name="submit">
+            <button type="button" class="botao-alterar1" data-toggle="modal" data-target="#exampleModalLong" style=" background-color: #D5ECB4;
+  border: 2px solid #BBBBBB;
+  height: 25px;
+  width: 80px;
+  font-weight: bolder;
+  font-size: 15px;
+  text-align: center;
+  border-radius: 0px;">
+                Alterar
             <br>
         </div>
         <div class="botao-desativar-conta">
@@ -92,6 +52,36 @@ if ($email && $senha) {
         </div>
     </form>
     <span></span>
+ 
+<!-- Modal -->
+<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-fechar" style=" position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+  pointer-events: auto;
+  /* background-color: #fff; */
+  background-clip: padding-box;
+  border: 1px solid rgba(0,0,0,.2);
+  border-radius: 0.3rem;
+  outline: 0;">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      <div class="modal-body">
+        <?php
+         include "alt.php";
+        ?>
+      </div>
+    </div>
+  </div>
+</div>
 </body>
-
+ 
 </html>
