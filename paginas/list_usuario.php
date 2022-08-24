@@ -1,5 +1,5 @@
 <?php
-include "include/MySql.php";
+include "../include/MySql.php";
 
 $sql = $pdo->prepare('SELECT * FROM usuario');
 if ($sql->execute()) {
@@ -18,13 +18,13 @@ if ($sql->execute()) {
     echo "<td>" . $value['nome'] . "</td>";
     echo "<td>" . $value['idEmail'] . "</td>";
     echo "<td>" . $value['senha'] . "</td>";
-    echo "<td><center><a href='altUsuario.php?id=" . $value['idEmail'] . "'>(+)</a></center></td>";
-    echo "<td><center><a href='delUsuario.php?id=" . $value['idEmail'] . "'>(-)</a></center></td>";
+    echo "<td><center><a href='alt_usuario.php?id=" . $value['idEmail'] . "'>(+)</a></center></td>";
+    echo "<td><center><a href='del_usuario.php?id=" . $value['idEmail'] . "'>(-)</a></center></td>";
     echo "</tr>";
   }
   echo "</table>";
 }
 ?>
-<input type="button" value="Cadastrar" onclick="parent.location='paginas/cadUsuario.php'">
+<input type="button" value="Cadastrar" onclick="parent.location='cad_usuario.php'">
 <!--Onclick= ao clicar redirecione para cadusuario-->
-<h3><a href="principal.php">Principal</a></h3>
+<h3><a href="../inicial.php">Principal</a></h3>

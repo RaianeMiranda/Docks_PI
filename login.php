@@ -30,6 +30,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             if (count($info) > 0) {
                 foreach ($info as $key => $values) {
                     $_SESSION['nome'] = $values['nome'];
+                    $_SESSION['idEmail'] = $values['idEmail'];
                     $_SESSION['administrador'] = '1';
                 }
                 header('location:paginas/list_usuario.php');

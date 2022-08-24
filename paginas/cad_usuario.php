@@ -1,5 +1,5 @@
 <?php
-include "include/MySql.php";
+include "../include/MySql.php";
 
 $nome = "";
 $idEmail = "";
@@ -44,7 +44,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) { //se isso
                     $nome = "";
                     $idEmail = "";
                     $senha = ""; //isso serve para zerar as variáveis e não manter os dados no formulário
-                    header('location:login.php'); //acima de header não pode ter echo de forma alguma
+                    header('location:../login.php'); //acima de header não pode ter echo de forma alguma
                 } else {
                     $msgErro = "Dados não cadastrados!";
                 }
