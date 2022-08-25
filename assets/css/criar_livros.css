@@ -1,0 +1,57 @@
+body{
+    background-color: #FFF2D8;
+}
+
+div.container{
+    background-color: #FFFFFF;
+    text-align: center;
+    display: table;
+    text-align: center;
+    margin: auto;
+    padding: 17px;
+    border-radius: 20px;
+    margin-top: auto;
+    width: 400px;
+}
+div.container-capa{
+    display: table;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    border: 1px solid grey;
+
+}
+img.azul{
+  width:40px;
+  height: 300px;
+}
+img.verde{
+  width:40px;
+  height: 300px;
+}
+img.rosa{
+    width: 40px;
+    height: 300px;
+}
+img.laranja{
+    width: 40px;
+    height: 300px;
+}
+img.roxo{
+    width: 40px;
+    height: 300px;
+}
+
+h2.titulo-criar_livros{
+    display: flex;
+    text-align: left;
+    margin-bottom: 0px;
+}
+
+input[type="text" i] {border: 5px solid #EDEDED;
+    border-radius:0px;
+    height: 30px;
+    width: 250px;
+    margin-bottom: 8px;
+    margin-top:0px;
+}

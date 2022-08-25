@@ -18,6 +18,22 @@
 </head>
 <body>
     <form method="POST" enctype="multipart/form-data">
+    <div class="nome-gerenciamento">
+      <p>Nome:</p><input type="text" name="nome">
+      <span class="obrigatorio">*</span>
+      <button type="button" class="botao-alterar1" data-toggle="modal" data-target="#exampleModalLong" style=" background-color: #D5ECB4;
+  border: 2px solid #BBBBBB;
+  height: 25px;
+  width: 80px;
+  font-weight: bolder;
+  font-size: 15px;
+  text-align: center;
+  border-radius: 0px;">
+                Alterar
+            </button>
+   
+            <br>
+    </div>
         <div class="email-gerenciamento">
             <p>Email: </p><input type="text" name="email">
             <span class="obrigatorio">*</span>
@@ -74,7 +90,6 @@
   pointer-events: auto;
   /* background-color: #fff; */
   background-clip: padding-box;
-  border: 1px solid rgba(0,0,0,.2);
   border-radius: 0.3rem;
   outline: 0;">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
