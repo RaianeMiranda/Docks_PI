@@ -1,11 +1,11 @@
-<<?php
+<?php
     include "../include/MySql.php";
     session_start();
     $nomeLivro = "";
 
     $nomeLivroErro = "";
     $msgErro = "";
-
+echo "aqui:".$_SESSION['idEmail'];
     if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
         if (!empty($_FILES["image"]["name"])) {
             //Pegar informações do arquivo
@@ -30,10 +30,10 @@
                         if ($sql->rowCount() <= 0) {
                             $sql = $pdo->prepare("INSERT INTO LIVROS (nomeLivro, capaLivro, idEmail)
                                                 VALUES (?, ?, ?)");
-                            if ($sql->execute(array($nomeLivro, $imgContent, "admin1"))) {
+                            if ($sql->execute(array($nomeLivro, $imgContent, $_SESSION['idEmail']))) {
                                 $msgErro = "Dados cadastrados com sucesso!";
                                 $nomeLivro = "";
-                                header('location:../inicial.php');
+                                //header('location:../inicial.php');
                             } else {
                                 $msgErro = "Dados não cadastrados!";
                             }
@@ -64,7 +64,7 @@
     <body>
         <form method="POST" enctype="multipart/form-data">
             <fieldset>
-                <legend>Cadastro de Usuário</legend>
+                <legend>Cadastro de Usuário1</legend>
 
                 Nome: <input type="text" name="nome" value="<?php echo   $nomeLivro ?>">
                 <span class="obrigatorio">*<?php echo   $nomeLivroErro ?></span>
