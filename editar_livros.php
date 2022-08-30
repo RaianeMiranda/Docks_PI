@@ -5,14 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Criar Livros</title>
-    <link rel="stylesheet" href="assets/css/criar_livros.css">
+    <title>Editar Livro</title>
+    <link rel="stylesheet" href="assets/css/editar_livro.css">
 </head>
  
 <body>
     <div class="container">
         <div class="container-escrita">
-            <h1>Criar Livros</h1>
+            <h1>Editar Livros</h1>
             <div class="container-cores">
                 <div class="container-capa">
                     <img class="azul" src="assets/images/azul.png">
@@ -21,16 +21,17 @@
                     <img class="laranja" src="assets/images/laranja.png">
                     <img class="roxo" src="assets/images/roxo.png">
                 </div>
-                <div class="container-criar">
-                <img class="botao" src="assets/images/botao.png">
+                <div class="container-botao">
+                    <img class="botao" src="assets/images/botao.png">
                 </div>
-                <div class="container-adicionar">
-                    <h3>Adicionando capa</h3>
-                </div>
+            </div>
+       
+            <div class="container-editar">
+                <h3>Edite sua Capa</h3>
             </div>
             <h2 class="titulo-criar_livros">Título</h2>
             <div class="botao-criar_livros">
-                <input type="text" name="titulo" value="Adicione o título">
+                <input type="text" name="titulo" value="Alice na Favela">
             </div>
             <div class="botao-salvar">
                 <button> Salvar

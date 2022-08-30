@@ -48,15 +48,16 @@ img.roxo{
     width: 40px;
     height: 300px;
 }
- 
-div.container-criar{
+div.container-botao{
     position: absolute;
     margin-top: 70px;
 }
+ 
 img.botao{
     height: 100px;
     width: 100px;
 }
+ 
 h2.titulo-criar_livros{
     display: flex;
     text-align: left;
@@ -70,12 +71,10 @@ input[type="text" i] {border: 3px solid #EDEDED;
     margin-bottom: 8px;
     margin-top:0px;
     background-color: #F4CCC8;
-    font-weight:bolder;
 }
  
 div.container-adicionar{
     position:absolute;
-    margin-top: 150px;
 }
 div.botao-salvar{
     display:flex;
