@@ -1,7 +1,6 @@
 <?php
 include "include/MySql.php";
 include "include/functions.php";
-
 session_start();
 $_SESSION['nome'] = "";
 $_SESSION['administrador'] = "";
