@@ -1,5 +1,5 @@
 <?php
-include "../include/MySql.php";
+include "../include/mysql.php";
 
 $msgErro = "";
 $idEmail = "";
@@ -13,7 +13,7 @@ if(isset($_GET['id'])){
             $msgErro = "Usuário excluido com sucesso!";
             header('location:listUsuario.php');
         }else {
-            $msgErro = "Email não localizado!";
+            $msgErro = "Código não localizado!";
         } 
     } else {
         $msgErro = "Erro ao excluir usuário!";

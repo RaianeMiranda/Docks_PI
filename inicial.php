@@ -1,38 +1,39 @@
 <?php
 include "include/MySql.php";
 session_start();
-echo "aqui:" . $_SESSION['idEmail'];
-echo "aqui:" . $_SESSION['nomeLivro'];
-
-if (isset($_SESSION['nomeLivro'])) {
-    echo "Continue escrevendo:" . $_SESSION['nomeLivro'];
-} else {
-    echo "Para desbloquear as fases, crie um livro";
-}
-
-
-/*                $sql = $pdo->prepare("SELECT * FROM LIVROS WHERE nomeLivro = ?");
-                if ($sql->execute(array($nomeLivro))) {
-                    if ($sql->rowCount() <= 0) {
-                        $sql = $pdo->prepare("INSERT INTO LIVROS (nomeLivro, capaLivro, idEmail)
-                                                VALUES (?, ?, ?)");
-                        if ($sql->execute(array($_SESSION['nomeLivro'], $_SESSION['idEmail']))) {
-                            $msgErro = "Dados cadastrados com sucesso!";
-                            //header('location:../inicial.php');
-                        } else {
-                            $msgErro = "aqui:" . $_SESSION['nomeLivro'];
-                        }
-                    }
-                }*/
+$codLivro = "";
+$titulo = "Página inicial";
 ?>
 
 
 <link rel="stylesheet" href="assets/css/inicial.css">
 <?php include "head.php" ?>
 <header>
-    <h1 class="title_welcome">Bem vindo(a), escritor(a)</h1>
-    <h3 class="before_course">Para desbloquear as fases, crie um livro</h3>
-    <a href="paginas/cad_livro.php"><button class="criar_livro" type="submit"> <i class="fa-solid fa-plus"></i> Criar novo Livro</button></a>
+    <?php if (isset($_GET['id'])) {
+        $nomeLivro = $_GET['id'];
+        $sql = $pdo->prepare("SELECT * FROM LIVROS WHERE nomeLivro = ?");
+        if ($sql->execute(array($nomeLivro))) {
+            $info = $sql->fetchAll(PDO::FETCH_ASSOC);
+            foreach ($info as $key => $value) {
+                $_SESSION['nomeLivro'] = $nomeLivro;
+                $nomeLivro = "";
+            }
+        }
+    }
+    ?>
+    <?php if ($_SESSION['nome'] != "") { ?>
+        <h1 class="title_welcome">Bem vindo(a)<?php echo $_SESSION['nome'] ?>!!</h1>
+    <?php } else { ?>
+        <h1 class="title_welcome">Voce não está logado!!</h1>
+        <h3><a href="login.php">Login</a></h3>
+    <?php } ?>
+
+    <?php if ($_SESSION['nomeLivro'] != "") { ?>
+        <h3 class="before_course">Continue escrevendo: <span class="nome_livro"><?php echo $_SESSION['nomeLivro'] ?></span></h3>
+    <?php } else { ?>
+        <h3 class="before_course">Para desbloquear as fases, crie um livro</h3>
+        <a href="paginas/cad_livro.php"><button class="criar_livro" type="submit"> <i class="fa-solid fa-plus"></i> Criar novo Livro</button></a>
+    <?php } ?>
 </header>
 <main>
     <?php
@@ -42,7 +43,11 @@ if (isset($_SESSION['nomeLivro'])) {
     include "card_persona.php";
     ?>
 
+    <h3><a href="paginas/logout.php">logout</a></h3>
+
 </main>
+
+
 
 <?php
 include "footer.php"

@@ -1,6 +1,6 @@
 <?php
     define('HOST', 'localhost');
-    define('DB', 'docks_pi');
+    define('DB', 'pi_docks');
     define('USER', 'root');
     define('PASS', '');
     define('PORT', '3306');

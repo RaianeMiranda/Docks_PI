@@ -32,6 +32,7 @@ echo "aqui:".$_SESSION['idEmail'];
                                                 VALUES (?, ?, ?)");
                             if ($sql->execute(array($nomeLivro, $imgContent, $_SESSION['idEmail']))) {
                                 $msgErro = "Dados cadastrados com sucesso!";
+                                $_SESSION['nomeLivro'] =$nomeLivro;
                                 $nomeLivro = "";
                                 //header('location:../inicial.php');
                             } else {
@@ -75,6 +76,7 @@ echo "aqui:".$_SESSION['idEmail'];
             </fieldset>
         </form>
         <span><?php echo $msgErro ?></span>
+        <h3><a href="../inicial.php">Principal</a></h3>
     </body>
 
     </html>
