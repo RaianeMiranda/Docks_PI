@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -7,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/css/helena.css">
+    <link rel="stylesheet" href="assets/css/style.css">
     <title>Docks</title>
 </head>
 
@@ -16,7 +18,7 @@
         <div class="item1">
             <nav class="parte1">
                 <ul>
-                    <li class="voltar1"><a href="#"><img src="assets/images/voltar.png"><b>voltar</b></a></li>
+                    <li class="voltar1"><a href="#"><img src="assets/images/voltar.png"></a></li>
                     <li class="snow"><b>Snowflake</b></li>
                     <li class="menu"><b>Menu</b></li>
                 </ul>
@@ -31,40 +33,33 @@
         </div>
         <div class="vertical"></div>
         <div class="item2">
-          <nav class="parte2">
+            <nav class="parte2">
                 <ul>
                     <span onclick="openNav()">
                         <li class="expandir1"> <img src="assets/images/expandir.png"></li>
                     </span>
                     <?php 
-                    include"expandir.php";
+                    include "expandir.php";
                     ?>
-                    <li class="nomelivro1"><b>Alice</b></li>
-                    <li class="lupa1"><img src="assets/images/lupa.png"></li>
                 </ul>
-</nav>
-                <hr>
-                <div class="botoes1">
-                    <div class="botao">
-                        <p class="fase1"><b> Fase 1 </b></p>
-                        <<<<<<< HEAD <button type="button" class="salvar1"><b> Salvar </b></button>
-                            <button type="button" class="Aa1" data - toggle="modal" data -
-                                target="#exampleModal"><b>Aa</b></button>
-                    </div>
-                    <button type="submit" class="salvar1"><b> Salvar </b></button>
-                    <!-- Botão para acionar modal -->
-                    <button type="button" class="Aa1" data-toggle="modal" data-target="#modalExemplo">
-                        <b>Aa</b>
-                    </button>
-                    <?php
-                include"modal.php";
+            </nav>
+            <hr>
+            <div class="botoes1">
+                <p class="fase1"><b> Fase 1 </b></p>
+                <button type="submit" class="salvar1"><b> Salvar </b></button>
+                <!-- Botão para acionar modal -->
+                <button type="button" class="Aa1" data-toggle="modal" data-target="#modalExemplo">
+                    <b>Aa</b>
+                </button>
+                <?php
+                    include "modal.php";
                 ?>
+            </div>
+            <div class="texto2">
+                    <textarea>oogokoe</textarea>
                 </div>
-                <div class="texto2">
-                    <textarea>
-                    oi
-                </textarea>
-                </div>
+        </div>
+
         </div>
     </section>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
