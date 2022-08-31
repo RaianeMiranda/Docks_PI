@@ -114,7 +114,7 @@ hr {
 }
 
 .parte2 {
-    width: 675px;
+    width: 500px;
     margin-top: 25px;
     margin-bottom: 20px;
     justify-content: space-between;
@@ -126,6 +126,7 @@ hr {
     flex: 1;
     background: #FFF2D8;
     height: 1195px;
+    width: 500px;
 }
 
 .nomelivro1 {
@@ -149,14 +150,17 @@ hr {
     background-color: #F4CCC8;
     width:45px;
     height:30px;
-    margin-right:10px;
+    
+}
+botão{
+    justify-content:space-around ;
 }
 .salvar1{
     border-color:#9F9F9F;
     background-color: #CCCCCC;
     width:65px;
     height:30px;
-    margin-right:5px;
+   
 }
 .botoes1{
     display:flex;
@@ -167,11 +171,11 @@ hr {
 .fase1{
     font-size: 25px;
     font-family: 'Open Sans';
-    margin-right: 170px;
+   
 }
 .texto2 textarea {
     width: 650px;
-    height: 800px;
+    height: 500px;
     border: 0;
     outline: 0;
     resize: none;

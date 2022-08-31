@@ -31,20 +31,15 @@
         </div>
         <div class="vertical"></div>
         <div class="item2">
-            <nav class="parte2">
-                <ul>
-                    <span onclick="openNav()">
-                        <li class="expandir1"> <img src="assets/images/expandir.png"></li>
-                    </span>
-                    <?php include"expandir.php";?>
-                    <li class="nomelivro1"><b>Alice</b></li>
-                    <li class="lupa1"><img src="assets/images/lupa.png"></li>
-            </nav>
+  
+          
             <hr>
             <div class="botoes1">
+                <div class="botao">
                 <p class="fase1"><b> Fase 1 </b></p>
                 <button type="button" class="salvar1"><b> Salvar </b></button>
                 <button type="button" class="Aa1" data - toggle="modal" data - target="#exampleModal"><b>Aa</b></button>
+                </div>
                 <?php
                 include"modal.php";
                 ?>
