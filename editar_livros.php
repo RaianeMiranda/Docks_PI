@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
- 
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +8,7 @@
     <title>Editar Livro</title>
     <link rel="stylesheet" href="assets/css/editar_livro.css">
 </head>
- 
+
 <body>
     <div class="container">
         <div class="container-escrita">
@@ -21,11 +21,13 @@
                     <img class="laranja" src="assets/images/laranja.png">
                     <img class="roxo" src="assets/images/roxo.png">
                 </div>
-                <div class="container-botao">
-                    <img class="botao" src="assets/images/botao.png">
+                <div class="juncao-botao1">
+                    <button class="capa">
+                        <img class="botao" src="assets/images/botao.png">
+                    </button>
                 </div>
             </div>
-       
+
             <div class="container-editar">
                 <h3>Edite sua Capa</h3>
             </div>
@@ -33,12 +35,13 @@
             <div class="botao-criar_livros">
                 <input type="text" name="titulo" value="Alice na Favela">
             </div>
-            <div class="botao-salvar">
+            <div class="container-salvar">
                 <button> Salvar
                 </button>
             </div>
         </div>
     </div>
+    </div>
 </body>
- 
+
 </html>

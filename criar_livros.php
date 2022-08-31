@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
- 
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,11 +8,11 @@
     <title>Criar Livros</title>
     <link rel="stylesheet" href="assets/css/criar_livros.css">
 </head>
- 
+
 <body>
     <div class="container">
         <div class="container-escrita">
-            <h1>Criar Livros</h1>
+            <h1 class="livro">Criar Livros</h1>
             <div class="container-cores">
                 <div class="container-capa">
                     <img class="azul" src="assets/images/azul.png">
@@ -22,10 +22,14 @@
                     <img class="roxo" src="assets/images/roxo.png">
                 </div>
                 <div class="container-criar">
-                <img class="botao" src="assets/images/botao.png">
+                    <div class="juncao-botao1">
+                        <button class="capa">
+                            <img class="botao" src="assets/images/botao.png">
+                        </button>
+                    </div>
                 </div>
                 <div class="container-adicionar">
-                    <h3>Adicionando capa</h3>
+                    <h3 class="adicionar">Adicionando capa</h3>
                 </div>
             </div>
             <h2 class="titulo-criar_livros">Título</h2>
@@ -33,11 +37,10 @@
                 <input type="text" name="titulo" value="Adicione o título">
             </div>
             <div class="botao-salvar">
-                <button> Salvar
-                </button>
+                <button> Salvar </button>
             </div>
         </div>
     </div>
 </body>
- 
+
 </html>
