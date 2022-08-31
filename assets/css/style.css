@@ -79,11 +79,11 @@ hr {
 
 }
 
-.titulo1 {
+.titulo1 h1 {
     justify-content: baseline;
     margin: 20px;
     font-family: 'Open Sans';
-    font-size: 15px;
+    font-size: 25px;
 }
 
 .menu {
