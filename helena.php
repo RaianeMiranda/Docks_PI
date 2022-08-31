@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/helena.css">
-    <title>teste</title>
+    <title>Docks</title>
 </head>
 
 <body>
@@ -36,15 +36,21 @@
                     <span onclick="openNav()">
                         <li class="expandir1"> <img src="assets/images/expandir.png"></li>
                     </span>
-                    <?php include"expandir.php";?>
+                    <?php 
+                    include"expandir.php";
+                    ?>
                     <li class="nomelivro1"><b>Alice</b></li>
                     <li class="lupa1"><img src="assets/images/lupa.png"></li>
+                </ul>
             </nav>
             <hr>
             <div class="botoes1">
                 <p class="fase1"><b> Fase 1 </b></p>
                 <button type="button" class="salvar1"><b> Salvar </b></button>
-                <button type="button" class="Aa1" data - toggle="modal" data - target="#exampleModal"><b>Aa</b></button>
+                <!-- Botão para acionar modal -->
+                <button type="button" class="Aa1" data-toggle="modal" data-target="#modalExemplo">
+                    <b>Aa</b>
+                </button>
                 <?php
                 include"modal.php";
                 ?>
