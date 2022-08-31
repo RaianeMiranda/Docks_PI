@@ -186,58 +186,40 @@ hr {
     margin-left:10px;
 }
 /*modal style*/
-
-.negrito img{
-    width: 45px;
-    height:30px;
+.tipografia-titulo{
+    display: flex;
+    justify-content:flex-start;
 }
-.italico img{
-    width: 45px;
-    height:30px;
+.i-tipografia{
+    padding-left:30px;
 }
-
-.tipografia{
-    display:flex;
+.n-tipografia{
+    padding-left:15px;
 }
-.foto-tipografia{
-display:flex;
-
+.bnt-tipografia{
+    display: flex;
+    justify-content:flex-start;
+  
 }
-.italico-titulo{
-    margin-right:10px;
+.italico-tipografia{
+    margin-left: 40px;
+    width: 50px;
+    height:50px;
+    font-size:30px;
+    background-color: white;
 }
-.marcadores {
-    margin-top:30px;
-    margin-bottom:30px;
-    width:60px;
-    height:30px;
-    display:flex;
-   flex-wrap: wrap;
-    justify-content: space-around;
+.negrito-tipografia{
+    margin-left: 25px;  
+    width: 50px;
+    height:50px;
+    font-size:30px;
+    background-color: white;
+   
+}
+  
     
-}
-.c1{
-background-color:#F4CCC8;
-}
-.c2{
-    background-color:#F1C4A5;
-}
-.c3{
-    background-color:#D5ECB4;
-}
-.c4{
-    background-color:#EBDEF0;
-}
-.c5{
-    background-color:#BCE4E4;
-}
-.c6{
-    background-color:white;
-    border-radius: 5px;
-    width:70px;
-    height:30px;
-    margin-top:5px;
-}
+
+
 
 /*expandir*/
 /* sobreposiçao (background) */

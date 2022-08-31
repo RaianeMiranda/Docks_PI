@@ -46,7 +46,7 @@
             <hr>
             <div class="botoes1">
                 <p class="fase1"><b> Fase 1 </b></p>
-                <button type="button" class="salvar1"><b> Salvar </b></button>
+                <button type="submit" class="salvar1"><b> Salvar </b></button>
                 <!-- Botão para acionar modal -->
                 <button type="button" class="Aa1" data-toggle="modal" data-target="#modalExemplo">
                     <b>Aa</b>
