@@ -11,7 +11,7 @@ if(isset($_GET['id'])){
     if ($sql->execute(array($idEmail))){
         if ($sql->rowCount()>0){
             $msgErro = "Usuário excluido com sucesso!";
-            header('location:listUsuario.php');
+            header('location:list_usuario.php');
         }else {
             $msgErro = "Código não localizado!";
         } 

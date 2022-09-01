@@ -28,8 +28,8 @@ echo "aqui:".$_SESSION['idEmail'];
                     $sql = $pdo->prepare("SELECT * FROM LIVROS WHERE nomeLivro = ?");
                     if ($sql->execute(array($nomeLivro))) {
                         if ($sql->rowCount() <= 0) {
-                            $sql = $pdo->prepare("INSERT INTO LIVROS (nomeLivro, capaLivro, idEmail)
-                                                VALUES (?, ?, ?)");
+                            $sql = $pdo->prepare("INSERT INTO LIVROS (codLivro, nomeLivro, capaLivro, idEmail)
+                                                VALUES (NULL, ?, ?, ?)");
                             if ($sql->execute(array($nomeLivro, $imgContent, $_SESSION['idEmail']))) {
                                 $msgErro = "Dados cadastrados com sucesso!";
                                 $_SESSION['nomeLivro'] =$nomeLivro;
@@ -65,7 +65,7 @@ echo "aqui:".$_SESSION['idEmail'];
     <body>
         <form method="POST" enctype="multipart/form-data">
             <fieldset>
-                <legend>Cadastro de Usuário1</legend>
+                <legend>Cadastro de Livros</legend>
 
                 Nome: <input type="text" name="nome" value="<?php echo   $nomeLivro ?>">
                 <span class="obrigatorio">*<?php echo   $nomeLivroErro ?></span>

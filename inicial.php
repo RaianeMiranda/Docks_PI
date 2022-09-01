@@ -2,6 +2,7 @@
 include "include/MySql.php";
 session_start();
 $codLivro = "";
+$msgErro= "";
 $titulo = "Página inicial";
 ?>
 
@@ -37,13 +38,21 @@ $titulo = "Página inicial";
 </header>
 <main>
     <?php
-    include "card_heroi.php";
-    include "card_snowflake.php";
-    include "card_mundo.php";
-    include "card_persona.php";
+    include "cards/card_heroi.php";
+    include "cards/card_snowflake.php";
+    include "cards/card_mundo.php";
+    include "cards/card_persona.php";
     ?>
 
     <h3><a href="paginas/logout.php">logout</a></h3>
+
+    <?php if ($_SESSION['nomeLivro'] != "") { 
+
+        include "capitulos.php";
+        echo"<br>";
+        include "teste_cap.php";
+
+    }?> 
 
 </main>
 
