@@ -42,6 +42,7 @@ body {
     border: 0;
     padding: 0;
     margin: 0;
+    overflow-x:hidden;
 
 }
 
@@ -57,7 +58,7 @@ hr {
 .parte1 ul {
     list-style: none;
     display: flex;
-    justify-content: space-around;
+    justify-content:space-between;
     padding: 0px;
 }
 
@@ -73,9 +74,10 @@ hr {
 .parte1 {
     margin-top: 25px;
     margin-bottom: 20px;
-    justify-content: space-around;
+    justify-content: space-between;
     justify-content: baseline;
-
+   margin-left: 5px;
+   margin-right:5px ;
 }
 
 .titulo1 h1 {
@@ -112,14 +114,12 @@ hr {
     display: flex;
     padding: 0;
     justify-content: space-between;
-    margin-left: 5px;
 }
 
+
 .parte2 {
-    width: 675px;
     margin-top: 25px;
-    margin-bottom: 25.5px;
-    justify-content: space-between;
+    margin-bottom: 20px;
     justify-content: baseline;
 
 }
@@ -137,23 +137,21 @@ hr {
 }
 
 .lupa1 img {
-    width: 25px;
-    height: 30px;
+    height: 25px;
 }
-
-.expadir1 img {
-    width: 30px;
-    height: 15px;
-
+.lupa{
+    margin-left:5px;
 }
-
+.nome-livro{
+    margin: 0 auto;
+}
 .dropdown-toggle {
     border-radius: 0;
     border-color: #CBA8A4;
     background-color: #F4CCC8;
     width: 75px;
     height: 35px;
-    margin-right: 10px;
+    margin-right: 175px;
 
 }
 
@@ -181,13 +179,19 @@ hr {
 }
 
 .texto2 textarea {
-    width: 650px;
+    width: 900px;
     height: 800px;
     padding: 50px;
     padding-top: 0;
     font-family: 'Open Sans';
     font-size: 20px;
     margin-top: 10px;
+    background-color: #FFF2D8;
+    margin: 30px;
+    resize: none;
+    border-color: #FFF2D8;
+    outline: 0;
+  
 }
 
 /*drop style*/
@@ -336,12 +340,10 @@ hr {
     font-family: 'Open Sans';
     font-size:14px;
 }
-.btn-primary-salvar{
-    background-color:#F4CCC8;
+
+.dropdown-menu{
+    width: 180px;
 }
-.modal-content{
-    width:350px;
-    margin:0 auto;
-}
+
 
 
