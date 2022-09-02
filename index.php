@@ -86,9 +86,8 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])){
                     </button>
 
                 </div>
-                <div>
+                <div class="texto2">
                     <textarea name="texto"><?php $texto?></textarea>
-
                 </div>
             </form>
         </div>
