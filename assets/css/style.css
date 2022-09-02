@@ -5,7 +5,7 @@
 }
 
 .texto1 textarea {
-    width: 650px;
+    width: 953px;
     height: 800px;
     border: 0;
     outline: 0;
@@ -20,8 +20,8 @@
 
 .texto1 {
     background: #F4CCC8;
-    width: 675px;
-    height: 900px;
+    width: 953px;
+    height: 810px;
     margin-top: 30px;
 }
 
@@ -58,7 +58,7 @@ hr {
     list-style: none;
     display: flex;
     padding: 0;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 
@@ -71,25 +71,27 @@ hr {
 
 }
 .parte1 {
-    width: 675px;
+   
     margin-top: 25px;
     margin-bottom: 20px;
-    justify-content: space-between;
+    justify-content: space-around;
     justify-content: baseline;
-    
 
 }
 
-.titulo1 {
+.titulo1 h1 {
     justify-content: baseline;
     margin: 20px;
     font-family: 'Open Sans';
-    font-size: 20px;
+    font-size: 25px;
 }
 
 .menu {
     font-size: 25px;
     font-family: 'Open Sans';
+    margin-left:30px;
+    margin:0;
+    
 }
 
 .snow {
@@ -100,6 +102,7 @@ hr {
 .voltar {
     font-size: 25px;
     font-family: 'Open Sans';
+   
 }
 
 
@@ -116,7 +119,7 @@ hr {
 .parte2 {
     width: 675px;
     margin-top: 25px;
-    margin-bottom: 20px;
+    margin-bottom: 25.5px;
     justify-content: space-between;
     justify-content: baseline;
     
@@ -126,6 +129,7 @@ hr {
     flex: 1;
     background: #FFF2D8;
     height: 1195px;
+    width: 500px;
 }
 
 .nomelivro1 {
@@ -150,7 +154,9 @@ hr {
     width:45px;
     height:30px;
     margin-right:10px;
+    
 }
+
 .salvar1{
     border-color:#9F9F9F;
     background-color: #CCCCCC;
@@ -167,24 +173,20 @@ hr {
 .fase1{
     font-size: 25px;
     font-family: 'Open Sans';
-    margin-right: 170px;
+    margin-right:300px;
+
+   
 }
 .texto2 textarea {
     width: 650px;
     height: 800px;
-    border: 0;
-    outline: 0;
-    resize: none;
-    background:#FFF2D8;
-  
+    padding: 50px;
     padding-top: 0;
     font-family: 'Open Sans';
     font-size: 20px;
-   
+    margin-top: 10px;
 }
-.texto2{
-    margin-left:10px;
-}
+
 /*modal style*/
 .tipografia-titulo{
     display: flex;
@@ -216,10 +218,6 @@ hr {
     background-color: white;
    
 }
-  
-    
-
-
 
 /*expandir*/
 /* sobreposiçao (background) */
@@ -260,8 +258,8 @@ hr {
     margin-right:5px;
 }
 .texto3 {
-    width: 1280px;
-    height: 1000px;
+    width: 1880px;
+    height: 900px;
     border:0;
     outline: 0;
     resize: none;
