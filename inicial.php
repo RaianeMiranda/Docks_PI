@@ -47,10 +47,7 @@ $titulo = "Página inicial";
     <h3><a href="paginas/logout.php">logout</a></h3>
 
     <?php if ($_SESSION['nomeLivro'] != "") { 
-
-        include "capitulos.php";
-        echo"<br>";
-        include "teste_cap.php";
+        include "paginas/cad_capitulo.php";
 
     }?> 
 

@@ -33,7 +33,8 @@ echo "aqui:".$_SESSION['idEmail'];
                             if ($sql->execute(array($nomeLivro, $imgContent, $_SESSION['idEmail']))) {
                                 $msgErro = "Dados cadastrados com sucesso!";
                                 $_SESSION['nomeLivro'] =$nomeLivro;
-                                $nomeLivro = "";
+  
+                                $nomeLivro = "";  
                                 //header('location:../inicial.php');
                             } else {
                                 $msgErro = "Dados não cadastrados!";

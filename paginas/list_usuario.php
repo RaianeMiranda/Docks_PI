@@ -33,4 +33,4 @@ if ($sql->execute()) {
 }
 ?>
 <input type="button" value="Cadastrar" onclick="parent.location='cad_usuario.php'"> <!--Onclick= ao clicar redirecione para cadusuario-->
-<h3><a href="principal.php">Principal</a></h3>
+<h3><a href="../inicial.php">Principal</a></h3>
