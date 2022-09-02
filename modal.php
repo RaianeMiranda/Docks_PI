@@ -4,7 +4,6 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Alterações</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -18,23 +17,63 @@
                     <button class="negrito-tipografia"><b>B</b></button>
                     <button class="italico-tipografia"><i>I</i></button>
                 </div>
-
-
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-                    <button type="button" class="btn btn-primary">Salvar mudanças</button>
+                <div class="tamanho">
+                    <h5 class="tamanho-titulo"><b>Tamanho</b></h5>
                 </div>
-            </div>
-        </div>
+                <input type="range" min="0" max="100" value="50" class="estilo" id="valor">
+                <br>
+                <p class="resultado" id="resultado">.</p>
+
+                <script type="text/javascript">
+                function range() {
+                    let resultado = document.getElementById("resultado");
+                    let valor = document.getElementById("valor").value;
+                    resultado.innerHTML = valor
+                }
+
+                range()
+
+                document.addEventListener("change", range);
+                </script>
+
+                <h5 class="marcadores"><b>Marcadores</b></h5>
+
+                <div class="container-marcador1">
+                    <button type="button" class="btn1"></button>
+
+                    <button type="button" class="btn2"></button>
+
+                    <button type="button" class="btn3"></button>
+
+                </div>
+                <div class="container-marcador2">
+                    <button type="button" class="btn4"></button>
+                
+                <button type="button" class="btn5"></button>
+            
+            <button type="button" class="btn6"><b>nenhum</b></button>
+    
+      
     </div>
-    <link rel="stylesheet" href="assets/css/helena.css">
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Alterações</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
+</div>
+
+
+
+<div class="modal-footer">
+    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+    <button type="button" class="btn btn-primary-salvar">Salvar</button>
+</div>
+</div>
+</div>
+</div>
+<link rel="stylesheet" href="assets/css/helena.css">
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Alterações</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>

@@ -15,11 +15,6 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])){
     } else {
         $msgErro = "Dados não cadastrados!";
     } 
-} 
-{
-    $sql = $pdo->prepare("UPDATE etapas SET descricao = :descricao  WHERE codEtapas = :codEtapas");
- 
-  
 }
 ?>
 
@@ -56,7 +51,6 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])){
                 <textarea>
 
                 <?php
-                
                 $sql = $pdo->prepare('SELECT * FROM snowflake'); //where codlivro = sessao
                 if ($sql->execute()){
                     $info = $sql->fetchAll(PDO::FETCH_ASSOC);
@@ -67,7 +61,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])){
                         echo $value['descricao'];
                     }
                 }
-                echo "rteste";
+                echo "teste";
                 ?>
                 </textarea>
             </div>
@@ -76,12 +70,8 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])){
         <div class="item2">
             <nav class="parte2">
                 <ul>
-                    <span onclick="openNav()">
-                        <li class="expandir1"> <img src="assets/images/expandir.png"></li>
-                    </span>
-                    <?php 
-                    include "expandir.php";
-                    ?>
+                    <li class="nomelivro1"><b>Alice</b></li>
+                    <li class="lupa1"><img src="assets/images/lupa.png"></li>
                 </ul>
             </nav>
             <hr>
@@ -102,7 +92,6 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])){
             </form>
         </div>
 
-        </div>
     </section>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
