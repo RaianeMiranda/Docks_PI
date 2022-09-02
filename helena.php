@@ -33,12 +33,7 @@
         <div class="item2">
             <nav class="parte2">
                 <ul>
-                    <span onclick="openNav()">
                         <li class="expandir1"> <img src="assets/images/expandir.png"></li>
-                    </span>
-                    <?php 
-                    include"expandir.php";
-                    ?>
                     <li class="nomelivro1"><b>Alice</b></li>
                     <li class="lupa1"><img src="assets/images/lupa.png"></li>
                 </ul>
