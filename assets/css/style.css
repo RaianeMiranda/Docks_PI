@@ -57,8 +57,8 @@ hr {
 .parte1 ul {
     list-style: none;
     display: flex;
-    padding: 0;
     justify-content: space-around;
+    padding:0px;
 }
 
 
@@ -67,11 +67,9 @@ hr {
     text-decoration: none;
     color: black;
     font-family: 'Open Sans';
-    font-size: 20px;
 
 }
 .parte1 {
-   
     margin-top: 25px;
     margin-bottom: 20px;
     justify-content: space-around;
@@ -191,6 +189,7 @@ hr {
 .tipografia-titulo{
     display: flex;
     justify-content:flex-start;
+    height:35px
 }
 .i-tipografia{
     padding-left:30px;
@@ -201,7 +200,6 @@ hr {
 .bnt-tipografia{
     display: flex;
     justify-content:flex-start;
-  
 }
 .italico-tipografia{
     margin-left: 40px;
@@ -216,8 +214,45 @@ hr {
     height:50px;
     font-size:30px;
     background-color: white;
-   
 }
+.tamanho-titulo{
+    margin-top: 20px;
+  margin-left: 15px;
+}
+
+.estilo {
+    -webkit-appearance: none;
+    background:#F4CCC8;
+    outline: none;
+    width:150px;
+    height: 5px;
+    border-radius: 9px;  
+    margin-left: 15px; 
+}
+.resultado{
+    margin-left: 75px; 
+}
+/*bolinha da range*/
+.estilo::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width:15px;
+    height: 15px;
+    border-radius: 50px; 
+
+    background:#9F9F9F;
+    cursor: pointer;
+}
+
+.estilo::-moz-range-thumb {
+    width: 15px;
+    height: 15px;
+    border-radius: 50px; 
+
+    background:#9F9F9F;
+    cursor: pointer;
+}
+
 
 /*expandir*/
 /* sobreposiçao (background) */

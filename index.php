@@ -1,5 +1,3 @@
-
-
 <?php 
 session_start();
 include "include/MySql.php";
@@ -19,7 +17,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])){
     } 
 }    
 
-?> 
+?>
 
 
 
@@ -54,7 +52,6 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])){
                 <textarea>
 
                 <?php
-                
                 $sql = $pdo->prepare('SELECT * FROM snowflake'); //where codlivro = sessao
                 if ($sql->execute()){
                     $info = $sql->fetchAll(PDO::FETCH_ASSOC);
@@ -74,7 +71,6 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])){
         <div class="item2">
             <nav class="parte2">
                 <ul>
-                        <li class="expandir1"> <img src="assets/images/expandir.png"></li>
                     <li class="nomelivro1"><b>Alice</b></li>
                     <li class="lupa1"><img src="assets/images/lupa.png"></li>
                 </ul>
@@ -90,11 +86,11 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])){
                     </button>
 
                 </div>
-                <div >
+                <div>
                     <textarea name="texto"><?php $texto?></textarea>
-                                  
+
                 </div>
-            </form>         
+            </form>
         </div>
 
         </div>
@@ -108,7 +104,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])){
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
     </script>
-     <?php
+    <?php
                     include "modal.php";
                 ?>
 </body>

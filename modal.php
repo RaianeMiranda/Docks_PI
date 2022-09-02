@@ -4,7 +4,6 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Alterações</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -18,6 +17,25 @@
                     <button class="negrito-tipografia"><b>B</b></button>
                     <button class="italico-tipografia"><i>I</i></button>
                 </div>
+                <div class="tamanho">
+                    <h5 class="tamanho-titulo"><b>Tamanho</b></h5>
+                </div>
+                <input type="range" min="0" max="100" value="50" class="estilo" id="valor">
+                <br>
+                <p  class="resultado" id="resultado">.</p>
+
+                <script type="text/javascript">
+                function range() {
+                    let resultado = document.getElementById("resultado");
+                    let valor = document.getElementById("valor").value;
+                    resultado.innerHTML = valor
+                }
+
+                range()
+
+                document.addEventListener("change", range);
+                </script>
+              
 
 
                 <div class="modal-footer">
