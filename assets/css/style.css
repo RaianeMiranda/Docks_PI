@@ -147,12 +147,12 @@ hr {
 
 }
 
-.Aa1 {
+.dropdown-toggle {
     border-radius: 0;
     border-color: #CBA8A4;
     background-color: #F4CCC8;
-    width: 45px;
-    height: 30px;
+    width: 75px;
+    height: 35px;
     margin-right: 10px;
 
 }
@@ -190,7 +190,7 @@ hr {
     margin-top: 10px;
 }
 
-/*modal style*/
+/*drop style*/
 .tipografia-titulo {
     display: flex;
     justify-content: flex-start;
