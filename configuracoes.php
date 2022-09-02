@@ -40,16 +40,17 @@ include "head.php"
     </div>
    <div class="container-acessibilidade">
    <div class="botao-acessibilidade-container">
-    <a href=""><button class="botao-acessibilidade1">Tradutor de Libras</button></a>
-    <a href=""><button class="botao-acessibilidade2">Desligar</button></a>
+    <button type="" class="botao-acessibilidade1">Tradutor de Libras</button>
+   <button id="btn-1" class="botao-acessibilidade2">Desligar</button>
 </div>
   <div class="botao-acessibilidade-container2">
-    <a href=""><button class="botao-acessibilidade3">Alto Contraste</button></a>
-    <a href=""><button class="botao-acessibilidade4">Ligar</button></a>
+    <button class="botao-acessibilidade3">Alto Contraste</button>
+    <button id="btn-2" class="botao-acessibilidade4">Ligar</button>
+
   </div>
   <div class="botao-acessibilidade-container3">
-    <a href=""><button class="botao-acessibilidade5">Daltonismo<br>(Escala Cinza)</button></a>
-    <a href=""><button class="botao-acessibilidade6">Desligar</button></a>
+    <button class="botao-acessibilidade5">Daltonismo<br>(Escala Cinza)</button>
+    <button id="btn-3" class="botao-acessibilidade6">Desligar</button>
   </div>
 </div>
 </div>
@@ -57,6 +58,41 @@ include "head.php"
 <?php
 include "gerenciamento.php";
 ?>
-</body>
+<script>     
+       const btn1 = document.getElementById("btn-1");
+        btn1.addEventListener("click", ()=>{
+            if(btn1.innerText === "Ligar"){
+                btn1.innerText = "Desligar";
+                btn1.style.backgroundColor = '#F4CCC8';
+            }else{
+                btn1.innerText= "Ligar";
+                btn1.style.backgroundColor = '#D5ECB4';
+            }
+        })    
+      
 
+        const btn2 = document.getElementById("btn-2");
+        btn2.addEventListener("click", ()=>{
+            if(btn2.innerText === "Desligar"){
+                btn2.innerText = "Ligar";
+                btn2.style.backgroundColor = '#D5ECB4';
+            }else{
+                btn2.innerText= "Desligar";
+                btn2.style.backgroundColor = '#F4CCC8';
+            }
+        })    
+      
+        const btn3 = document.getElementById("btn-3");
+        btn3.addEventListener("click", ()=>{
+            if(btn3.innerText === "Ligar"){
+                btn3.innerText = "Desligar";
+                btn3.style.backgroundColor = '#F4CCC8';
+            }else{
+                btn3.innerText= "Ligar";
+                btn3.style.backgroundColor = '#D5ECB4';
+            }
+        })    
+
+</script>
+</body>
 </html>

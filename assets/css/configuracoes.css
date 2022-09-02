@@ -86,9 +86,12 @@ button.botao-tipografia1 {
     border: 4px solid #EDEDED;
     font-family: 'Merriweather';
     font-size: 16px;
-    width: 175px;
-    height: 75px;
+    width: 190px;
+    height: 90px;
     transition: background-color 0.5s;
+}
+button.botao-tipografia1:hover{
+   background-color:  #EDEDED;
 }
 
 button.botao-tipografia2 {
@@ -100,10 +103,13 @@ button.botao-tipografia2 {
     border: 4px solid #EDEDED;
     font-family: 'Source Serif Pro';
     font-size: 16px;
-    width: 175px;
-    height: 75px;
+    width: 190px;
+    height: 90px;
     transition: background-color 0.5s;
 }
+button.botao-tipografia2:hover{
+    background-color: #EDEDED;
+ }
 
 button.botao-tipografia3 {
     background: #fff;
@@ -114,11 +120,14 @@ button.botao-tipografia3 {
     border: 4px solid #EDEDED;
     font-family: 'Open Sans', sans-serif;
     font-size: 16px;
-    width: 175px;
-    height: 75px;
+    width: 190px;
+    height: 90px;
     transition: background-color 0.5s;
 }
 
+button.botao-tipografia3:hover{
+    background-color:  #EDEDED;
+ }
 button.botao-tipografia4 {
     background: #fff;
     border-radius: 8px;
@@ -128,10 +137,13 @@ button.botao-tipografia4 {
     border: 4px solid #EDEDED;
     font-family: 'Noto Sans';
     font-size: 16px;
-    width: 175px;
-    height: 75px;
+    width: 190px;
+    height: 90px;
     transition: background-color 0.5s;
 }
+button.botao-tipografia4:hover{
+    background-color: #EDEDED;
+ }
 
 .botao-acessibilidade-container {
 
@@ -143,6 +155,7 @@ button.botao-tipografia4 {
 
     flex-flow: row wrap;
     gap: 20px;
+    flex-wrap: nowrap;
 }
 .botao-acessibilidade-container2 {
     display: flex;
@@ -155,7 +168,6 @@ button.botao-tipografia4 {
 }
 
 .botao-acessibilidade-container3 {
-
     display: inline-flex;
     align-items: center;
     align-content: flex-start;
@@ -174,8 +186,11 @@ button.botao-acessibilidade1 {
     color: #000;
     border: 4px solid #EDEDED;
     font-size: 16px;
-    width: 175px;
-    height: 75px;
+    width: 190px;
+    height: 90px;
+}
+button.botao-acessibilidade1:hover{
+    background-color: white;
 }
 button.botao-acessibilidade3{
     background: #fff;
@@ -185,8 +200,11 @@ button.botao-acessibilidade3{
     color: #000;
     border: 4px solid #EDEDED;
     font-size: 16px;
-    width: 175px;
-    height: 75px;
+    width: 190px;
+    height: 90px;
+}
+button.botao-acessibilidade3:hover{
+    background-color: white;
 }
 button.botao-acessibilidade5{
     background: #fff;
@@ -196,8 +214,11 @@ button.botao-acessibilidade5{
     color: #000;
     border: 4px solid #EDEDED;
     font-size: 16px;
-    width: 175px;
-    height: 75px
+    width: 190px;
+    height: 90px;
+}
+button.botao-acessibilidade5:hover{
+    background-color: white;
 }
 button.botao-acessibilidade2{
     background: #F4CCC8;
@@ -205,7 +226,7 @@ button.botao-acessibilidade2{
     font-weight: bolder;
     border: 2px solid #BBBB; 
     width: 75px;
-    height: 25px;
+    height: 100%;
     border-radius: 0px;
 }
 button.botao-acessibilidade4{
@@ -214,23 +235,31 @@ button.botao-acessibilidade4{
     font-weight: bolder;
     border: 2px solid #BBBB; 
     width: 75px;
-    height: 25px;
+    height: 100%;
     border-radius: 0px;
 }
 button.botao-acessibilidade6{
-    background: #D5ECB4;
+    background: #F4CCC8;
     color:#000;
     font-weight: bolder;
     border: 2px solid #BBBB;
     width: 75px;
-    height: 25px;
+    height: 100%;
     border-radius: 0px;
 }
-
+button.close{
+    position: fixed;
+    width: 10%;
+    border-radius: 12px;
+    margin-left: 380px;
+}
+button.close:hover{
+    background-color: transparent;
+}
 div.container-tipografia-acessibilidade{
       display:flex;
 }
 div.container-acessibilidade{
     /*display: block;*/
-    margin-right:530px;
+    margin-right: 425px;
 }
