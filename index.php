@@ -1,11 +1,9 @@
-
-
 <?php 
 session_start();
 include "include/MySql.php";
 
 
-
+$msgErro="";
 
 if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])){
     $texto = $_POST['texto'];
@@ -17,9 +15,13 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])){
     } else {
         $msgErro = "Dados não cadastrados!";
     } 
-}    
-
-?> 
+} 
+{
+    $sql = $pdo->prepare("UPDATE etapas SET descricao = :descricao  WHERE codEtapas = :codEtapas");
+ 
+  
+}
+?>
 
 
 
@@ -93,11 +95,11 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])){
                     </button>
 
                 </div>
-                <div >
+                <div class="texto2">
                     <textarea name="texto"><?php $texto?></textarea>
-                                  
+
                 </div>
-            </form>         
+            </form>
         </div>
 
         </div>
@@ -111,7 +113,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])){
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
     </script>
-     <?php
+    <?php
                     include "modal.php";
                 ?>
 </body>
