@@ -35,20 +35,20 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
 </head>
 
 <body>
-    <section class="container1">
-        <div class="item1">
-            <nav class="parte1">
+    <section class="container1-mundo">
+        <div class="item1-mundo">
+            <nav class="parte1-mundo">
                 <ul>
-                    <li class="voltar1"><a href="#"><img src="assets/images/voltar.png"></a></li>
-                    <li class="snow"><b>Snowflake</b></li>
-                    <li class="menu"><b>Menu</b></li>
+                    <li class="voltar-mundo"><a href="#"><img src="assets/images/voltar.png"></a></li>
+                    <li class="mundo"><b>Snowflake</b></li>
+                    <li class="menu-mundo"><b>Menu</b></li>
                 </ul>
             </nav>
             <hr>
-            <div class="titulo1">
+            <div class="titulo1-mundo">
                 <h1><b>1. Faça seu livro em uma frase</b></h1>
             </div>
-            <div class="texto1">
+            <div class="texto1-mundo">
                 <textarea>
 
                 <?php
@@ -68,21 +68,21 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
             </div>
         </div>
         <div class="vertical"></div>
-        <div class="item2">
-            <nav class="parte2">
+        <div class="item2-mundo">
+            <nav class="parte2-mundo">
                 <ul>
-                    <div class="nome-livro">
-                        <li class="nomelivro1"><b>Alice</b></li>
+                    <div class="nome-livro-mundo">
+                        <li class="nomelivro1-mundo"><b>Alice</b></li>
                     </div>
-                    <div class="lupa">
-                        <li class="lupa1"><img src="assets/images/lupa.png"></li>
+                    <div class="lupa-mundo">
+                        <li class="lupa1-mundo"><img src="assets/images/lupa.png"></li>
                     </div>
                 </ul>
             </nav>
             <hr>
             <form action="" method="POST" enctype="multipart/form-data">
-                <div class="botoes1">
-                    <p class="fase1"><b> Fase 1 </b></p>
+                <div class="botoes-mundo">
+                    <p class="fase1-mundo"><b> Fase 1 </b></p>
                     <button type="submit" name="submit" class="salvar1"><b> Salvar </b></button>
                     <!-- Botão para acionar drop -->
                     <button class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
@@ -92,7 +92,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
                     include "drop.php";
                     ?>
                 </div>
-                <div class="texto2">
+                <div class="texto2-mundo">
                     <textarea name="texto"><?php echo $texto ?></textarea>
                 </div>
             </form>
