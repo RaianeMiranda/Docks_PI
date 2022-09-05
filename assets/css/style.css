@@ -361,7 +361,7 @@ hr {
     height: 800px;
     border: 0;
     outline: 0;
-    background: #F4CCC8;
+    background:  #BCE4E4;
     padding: 50px;
     padding-top: 0;
     font-family: 'Open Sans';
@@ -371,7 +371,7 @@ hr {
 }
 
 .texto1-personagem {
-    background: #F4CCC8;
+    background:  #BCE4E4;
     width: 953px;
     height: 810px;
     margin-top: 30px;
@@ -401,8 +401,8 @@ body {
 hr {
     width: 100%;
     height: 20px;
-    background-color: #F4CCC8;
-    border-color: #F4CCC8;
+    background-color: #BCE4E4;
+    border-color: #BCE4E4;
     margin: 0;
     border-width: 0;
 }
@@ -496,8 +496,8 @@ hr {
 }
 .dropdown-toggle {
     border-radius: 0;
-    border-color: #CBA8A4;
-    background-color: #F4CCC8;
+    border-color:  #BCE4E4;
+    background-color:  #BCE4E4;
     width: 75px;
     height: 35px;
     margin-right: 175px;
@@ -556,7 +556,7 @@ hr {
     height: 800px;
     border: 0;
     outline: 0;
-    background: #F4CCC8;
+    background:  #D5ECB4;
     padding: 50px;
     padding-top: 0;
     font-family: 'Open Sans';
@@ -566,7 +566,7 @@ hr {
 }
 
 .texto1-mundo {
-    background: #F4CCC8;
+    background:  #D5ECB4;
     width: 953px;
     height: 810px;
     margin-top: 30px;
@@ -596,8 +596,8 @@ body {
 hr {
     width: 100%;
     height: 20px;
-    background-color: #F4CCC8;
-    border-color: #F4CCC8;
+    background-color:  #D5ECB4;
+    border-color: #D5ECB4;
     margin: 0;
     border-width: 0;
 }
@@ -691,8 +691,8 @@ hr {
 }
 .dropdown-toggle {
     border-radius: 0;
-    border-color: #CBA8A4;
-    background-color: #F4CCC8;
+    border-color:  #D5ECB4;
+    background-color:  #D5ECB4;
     width: 75px;
     height: 35px;
     margin-right: 175px;
