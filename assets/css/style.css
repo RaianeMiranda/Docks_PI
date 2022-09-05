@@ -1,4 +1,8 @@
-.item1 {
+ 
+ 
+ /*parte direita da tela snowflake*/
+ 
+ .item1 {
     flex: 1;
     background: #FFF2D8;
     height: 1195px;
@@ -344,6 +348,197 @@ hr {
 .dropdown-menu{
     width: 180px;
 }
+/*parte esquerda da tela personagem*/
+
+.item1-personagem {
+    flex: 1;
+    background: #FFF2D8;
+    height: 1195px;
+}
+
+.texto1-personagem textarea {
+    width: 953px;
+    height: 800px;
+    border: 0;
+    outline: 0;
+    background: #F4CCC8;
+    padding: 50px;
+    padding-top: 0;
+    font-family: 'Open Sans';
+    font-size: 20px;
+    margin: 10px;
+    resize: none;
+}
+
+.texto1-personagem {
+    background: #F4CCC8;
+    width: 953px;
+    height: 810px;
+    margin-top: 30px;
+}
+
+.vertical {
+    border-left: 6px solid black;
+    height: 1195px;
+    position: fixed;
+    left: 50%;
+
+}
+
+.container1-personagem {
+    max-width: 100%;
+    display: flex;
+}
+
+body {
+    border: 0;
+    padding: 0;
+    margin: 0;
+    overflow-x:hidden;
+
+}
+
+hr {
+    width: 100%;
+    height: 20px;
+    background-color: #F4CCC8;
+    border-color: #F4CCC8;
+    margin: 0;
+    border-width: 0;
+}
+
+.parte1-personagem ul {
+    list-style: none;
+    display: flex;
+    justify-content:space-between;
+    padding: 0px;
+}
 
 
+.parte1-personagem a {
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+    font-family: 'Open Sans';
 
+}
+
+.parte1-personagem {
+    margin-top: 25px;
+    margin-bottom: 20px;
+    justify-content: space-between;
+    justify-content: baseline;
+   margin-left: 5px;
+   margin-right:5px ;
+}
+
+.titulo1-personagem h1 {
+    justify-content: baseline;
+    margin: 20px;
+    font-family: 'Open Sans';
+    font-size: 25px;
+}
+
+.menu-personagem {
+    font-size: 25px;
+    font-family: 'Open Sans';
+    margin-left: 30px;
+    margin: 0;
+
+}
+
+.personagem {
+    font-size: 25px;
+    font-family: 'Open Sans';
+}
+
+.voltar-personagem {
+    font-size: 25px;
+    font-family: 'Open Sans';
+
+    /*parte direita da tela personagem*/
+}
+.parte2-personagem ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    justify-content: space-between;
+}
+
+
+.parte2-personagem {
+    margin-top: 25px;
+    margin-bottom: 20px;
+    justify-content: baseline;
+
+}
+
+.item2-personagem {
+    flex: 1;
+    background: #FFF2D8;
+    height: 1195px;
+    width: 500px;
+}
+
+.nomelivro1-personagem {
+    font-size: 25px;
+    font-family: 'Open Sans';
+}
+
+.lupa1-personagem img {
+    height: 25px;
+}
+.lupa-personagem{
+    margin-left:5px;
+}
+.nome-livro-personagem{
+    margin: 0 auto;
+}
+.dropdown-toggle {
+    border-radius: 0;
+    border-color: #CBA8A4;
+    background-color: #F4CCC8;
+    width: 75px;
+    height: 35px;
+    margin-right: 175px;
+
+}
+
+.salvar1-personagem {
+    border-color: #9F9F9F;
+    background-color: #CCCCCC;
+    width: 65px;
+    height: 30px;
+    margin-right: 5px;
+}
+
+.botoes-personagem {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+
+}
+
+.fase-personagem {
+    font-size: 25px;
+    font-family: 'Open Sans';
+    margin-right: 300px;
+
+
+}
+
+.texto2-personagem textarea {
+    width: 900px;
+    height: 800px;
+    padding: 50px;
+    padding-top: 0;
+    font-family: 'Open Sans';
+    font-size: 20px;
+    margin-top: 10px;
+    background-color: #FFF2D8;
+    margin: 30px;
+    resize: none;
+    border-color: #FFF2D8;
+    outline: 0;
+  
+}
