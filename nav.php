@@ -13,7 +13,7 @@
             </div>
         </div>
         <ul>
-            <li><b><a class="link" href="personagens.php">Criação de Personagens</a></b></li>
+            <li><b><a class="link" href="paginas/cad_persona.php">Criação de Personagens</a></b></li>
             <li><b><a class="link" href="paginas/list_livro.php">Biblioteca</a></b></li>
             <li><b><a class="link" href="jornada.php">Jornada do Herói</a></b></li>
             <li><b><a class="link" href="snowflake.php">Snowflake</a></b></li>

@@ -27,10 +27,12 @@ if ($sql->execute()) {
     echo "<td>" . $value['senha'] . "</td>";
     echo "<td><center><a href='alt_usuario.php? id=".$value['idEmail'] . "'>(+)</a></center></td>";
     echo "<td><center><a href='del_usuario.php? id=".$value['idEmail'] . "'>(-)</a></center></td>";
+    echo "<td><center><a href='alt_teste.php? id=".$value['idEmail'] . "'>(😅)</a></center></td>";
     echo "</tr>";
   }
   echo "</table>";
 }
 ?>
-<input type="button" value="Cadastrar" onclick="parent.location='cad_usuario.php'"> <!--Onclick= ao clicar redirecione para cadusuario-->
+<input type="button" value="Cadastrar" onclick="parent.location='cad_usuario.php'">
+<!--Onclick= ao clicar redirecione para cadusuario-->
 <h3><a href="../inicial.php">Principal</a></h3>
