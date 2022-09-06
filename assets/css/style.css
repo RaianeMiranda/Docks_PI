@@ -369,7 +369,7 @@ body {
     max-height: 800px;
     border: 0;
     outline: 0;
-    background:  #BCE4E4;
+    background:#BCE4E4;
     padding: 50px;
     padding-top: 0;
     font-family: 'Open Sans';
@@ -569,14 +569,6 @@ body {
     max-width: 953px;
     max-height: 810px;
     margin-top: 30px;
-}
-
-.vertical {
-    border-left: 6px solid black;
-    max-height: 1195px;
-    position: fixed;
-    left: 50%;
-
 }
 
 .container1-mundo {
