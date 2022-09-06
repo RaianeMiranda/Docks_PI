@@ -24,8 +24,8 @@
 
 .texto1-snow {
     background: #F4CCC8;
-    width: 953px;
-    height: 810px;
+    max-width: 953px;
+    max-height: 810px;
     margin-top: 30px;
 }
 
@@ -131,8 +131,8 @@ body {
 .item2-snow {
     flex: 1;
     background: #FFF2D8;
-    height: 1195px;
-    width: 500px;
+    max-height: 1195px;
+    max-width: 500px;
 }
 
 .nomelivro1-snow {
@@ -346,7 +346,7 @@ body {
 }
 
 .dropdown-menu{
-    width: 215px;
+    max-width: 215px;
 }
 /*parte esquerda da tela personagem*/
 
@@ -365,8 +365,8 @@ body {
 }
 
 .texto1-personagem textarea {
-    width: 953px;
-    height: 800px;
+    max-width: 953px;
+    max-height: 800px;
     border: 0;
     outline: 0;
     background:  #BCE4E4;
@@ -380,8 +380,8 @@ body {
 
 .texto1-personagem {
     background:  #BCE4E4;
-    width: 953px;
-    height: 810px;
+    max-width: 953px;
+    max-height: 810px;
     margin-top: 30px;
 }
 
@@ -428,8 +428,7 @@ body {
     margin-bottom: 20px;
     justify-content: space-between;
     justify-content: baseline;
-   margin-left: 5px;
-   margin-right:5px ;
+   margin-right:85px ;
 }
 
 .titulo1-personagem h1 {
@@ -477,8 +476,8 @@ body {
 .item2-personagem {
     flex: 1;
     background: #FFF2D8;
-    height: 1195px;
-    width: 500px;
+    max-height: 1195px;
+    max-width: 500px;
 }
 
 .nomelivro1-personagem {
@@ -529,13 +528,13 @@ body {
 }
 
 .texto2-personagem textarea {
-    width: 900px;
-    height: 800px;
+    max-width: 900px;
+    max-height: 800px;
     padding: 50px;
     padding-top: 0;
     font-family: 'Open Sans';
     font-size: 20px;
-    margin-top: 10px;
+    margin-top: 70px;
     background-color: #FFF2D8;
     margin: 30px;
     resize: none;
@@ -549,11 +548,11 @@ body {
 .item1-mundo {
     flex: 1;
     background: #FFF2D8;
-    height: 1195px;
+    max-height: 1195px;
 }
 .texto1-mundo textarea {
-    width: 953px;
-    height: 800px;
+    max-width: 953px;
+    max-height: 800px;
     border: 0;
     outline: 0;
     background:  #D5ECB4;
@@ -567,14 +566,14 @@ body {
 
 .texto1-mundo {
     background:  #D5ECB4;
-    width: 953px;
-    height: 810px;
+    max-width: 953px;
+    max-height: 810px;
     margin-top: 30px;
 }
 
 .vertical {
     border-left: 6px solid black;
-    height: 1195px;
+    max-height: 1195px;
     position: fixed;
     left: 50%;
 
@@ -692,7 +691,7 @@ body {
     border-radius: 0;
     border-color:  #D5ECB4;
     background-color:  #D5ECB4;
-    width: 75px;
+    width: 45px;
     height: 35px;
     margin-right: 175px;
 
@@ -707,9 +706,7 @@ body {
 }
 
 .botoes-mundo {
-    display: flex;
-    justify-content: flex-end;
-    margin-top: 20px;
+  
 
 }
 
@@ -722,18 +719,17 @@ body {
 }
 
 .texto2-mundo textarea {
-    width: 900px;
-    height: 800px;
+    max-width: 900px;
+    max-height: 800px;
     padding: 50px;
     padding-top: 0;
     font-family: 'Open Sans';
     font-size: 20px;
-    margin-top: 10px;
+    margin-top: 80px;
     background-color: #FFF2D8;
-    margin: 30px;
-    resize: none;
-    border-color: #FFF2D8;
-    outline: 0;
-  
+    margin-left: 20px;
+   
+    border-color:black;
+    
 }
 

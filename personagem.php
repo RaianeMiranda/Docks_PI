@@ -96,6 +96,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
                     <textarea name="texto"><?php echo $texto ?></textarea>
                 </div>
             </form>
+            <?php echo $msgErro ?>
         </div>
     </section>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"

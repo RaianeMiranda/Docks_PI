@@ -2,17 +2,18 @@
 session_start();
 include "include/MySql.php";
 
-
+$value = "";
+$codMundo = "";
 $msgErro = "";
 $texto = "";
 
 if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
     $texto = $_POST['texto'];
-    $_SESSION['nomeLivro'] = 1;
-    $sql = $pdo->prepare("INSERT INTO etapas (codEtapas, codSnowflake, codLivro, descricao)
-    VALUES (null, ?, ?, ?)");
-    if ($sql->execute(array($_SESSION['codSnowflake'], $_SESSION['nomeLivro'], $texto))) {
+    $sql = $pdo->prepare("INSERT INTO mundo (codMundo, codLivro, descricao)
+    VALUES (NULL, ?, ?)");
+    if ($sql->execute(array('1', $texto))) {
         $msgErro = "Dados cadastrados com sucesso!";
+        $_SESSION['codMundo'] = $value['codMundo'];
     } else {
         $msgErro = "Dados não cadastrados!";
     }
@@ -35,21 +36,22 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
 </head>
 
 <body>
-    <section class="container1-mundo">
-        <div class="item1-mundo">
-            <nav class="parte1-mundo">
-                <ul>
-                    <li class="voltar-mundo"><a href="#"><img src="assets/images/voltar.png"></a></li>
-                    <li class="mundo"><b>Snowflake</b></li>
-                    <li class="menu-mundo"><b>Menu</b></li>
-                </ul>
-            </nav>
-            <hr class="hr-mundo">
-            <div class="titulo1-mundo">
-                <h1><b>1. Faça seu livro em uma frase</b></h1>
-            </div>
-            <div class="texto1-mundo">
-                <textarea>
+    <section class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <nav class="parte1-mundo">
+                    <ul>
+                        <li class="voltar-mundo"><a href="#"><img src="assets/images/voltar.png"></a></li>
+                        <li class="mundo"><b>Snowflake</b></li>
+                        <li class="menu-mundo"><b>Menu</b></li>
+                    </ul>
+                </nav>
+                <hr class="hr-mundo">
+                <div class="titulo1-mundo">
+                    <h1><b>1. Faça seu livro em uma frase</b></h1>
+                </div>
+                <div class="texto1-mundo">
+                    <textarea>
 
                 <?php
                 $sql = $pdo->prepare('SELECT * FROM snowflake'); //where codlivro = sessao
@@ -57,47 +59,66 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
                     $info = $sql->fetchAll(PDO::FETCH_ASSOC);
 
                     foreach ($info as $key => $value) {
-                        $_SESSION['codSnowflake'] = $value['codSnowflake'];
-                        echo $value['codSnowflake'];
+                        $_SESSION['codMundo'] = $value['codMundo'];
+                        echo $value['codMundo'];
                         echo $value['descricao'];
                     }
                 }
                 echo "teste";
                 ?>
                 </textarea>
+                </div>
+            </div>
+            <!-- <div class="vertical"></div> -->
+            <div class="col-md-6">
+                <nav class="parte2-mundo">
+                    <ul>
+                        <div class="nome-livro-mundo">
+                            <li class="nomelivro1-mundo"><b>Alice</b></li>
+                        </div>
+                        <div class="lupa-mundo">
+                            <li class="lupa1-mundo"><img src="assets/images/lupa.png"></li>
+                        </div>
+                    </ul>
+                </nav>
+                <hr class="hr-mundo">
+                <form action="" method="POST" enctype="multipart/form-data">
+                    <div class="botoes-mundo">
+                        <p class="fase1-mundo"><b> Fase 1 </b></p>
+                        <div style="display: flex;display: flex;flex-direction: row;justify-content: flex-end;">
+                            <button type="submit" name="submit" class="salvar1-mundo"><b> Salvar </b></button>
+                            <!-- Botão para acionar drop -->
+                            <button class="dropdown-toggle-mundo" type="button" id="dropdownMenuButton"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><b>Aa</b>
+                            </button>
+
+                        </div>
+                    </div>
+                    <div>
+                        <!-- <textarea name="texto" class="w-100 mt-5"></textarea> -->
+                        <div id="editor"><?php echo $texto ?></div>
+
+                    </div>
+                </form>
+                <?php echo $msgErro ?>
             </div>
         </div>
-        <div class="vertical"></div>
-        <div class="item2-mundo">
-            <nav class="parte2-mundo">
-                <ul>
-                    <div class="nome-livro-mundo">
-                        <li class="nomelivro1-mundo"><b>Alice</b></li>
-                    </div>
-                    <div class="lupa-mundo">
-                        <li class="lupa1-mundo"><img src="assets/images/lupa.png"></li>
-                    </div>
-                </ul>
-            </nav>
-            <hr class="hr-mundo">
-            <form action="" method="POST" enctype="multipart/form-data">
-                <div class="botoes-mundo">
-                    <p class="fase1-mundo"><b> Fase 1 </b></p>
-                    <button type="submit" name="submit" class="salvar1-mundo"><b> Salvar </b></button>
-                    <!-- Botão para acionar drop -->
-                    <button class="dropdown-toggle-mundo" type="button" id="dropdownMenuButton" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false"><b>Aa1</b>
-                    </button>
-                    <?php
-                    include "drop.php";
-                    ?>
-                </div>
-                <div class="texto2-mundo">
-                    <textarea name="texto"><?php echo $texto ?></textarea>
-                </div>
-            </form>
-        </div>
     </section>
+
+    <!-- Inicia o CK editor -->
+    <script src="https://cdn.ckeditor.com/ckeditor5/35.1.0/classic/ckeditor.js"></script>
+    <script>
+    ClassicEditor
+        .create(document.querySelector('#editor'))
+        .then(editor => {
+            console.log(editor);
+        })
+        .catch(error => {
+            console.error(error);
+        });
+    </script>
+    <!-- Inicia o CK editor -->
+
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
     </script>

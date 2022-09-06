@@ -15,15 +15,15 @@
     <p class="resultado" id="resultado">.</p>
 
     <script type="text/javascript">
-    function range() {
-        let resultado = document.getElementById("resultado");
-        let valor = document.getElementById("valor").value;
-        resultado.innerHTML = valor
-    }
+        function range() {
+            let resultado = document.getElementById("resultado");
+            let valor = document.getElementById("valor").value;
+            resultado.innerHTML = valor
+        }
 
-    range()
+        range()
 
-    document.addEventListener("change", range);
+        document.addEventListener("change", range);
     </script>
 
     <h5 class="marcadores"><b>Marcadores</b></h5>
@@ -44,3 +44,4 @@
         <button type="button" class="btn6"><b>nenhum</b></button>
 
     </div>
+</div>
