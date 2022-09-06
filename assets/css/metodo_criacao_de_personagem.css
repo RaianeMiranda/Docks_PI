@@ -3,31 +3,34 @@
 body{
     font-family: 'Open Sans', sans-serif;
     background-color: #FFF2D8;
-    margin-left: 60px;
-    margin-right: 80px;
+}
+div.container{
+    margin-left: 180px;
+    margin-right: 290px;
+}
+div.descricao-container{
+    font-size: 20px;
 }
 h1.metodo-cp-titulo{
     color:#BAAAC8;
+    font-size: 40px;
     
 }
-p{
-    margin: 1px;
-}
-li.camadas{
+.camadas{
     color:#BAAAC8;
     font-size: 23px;
     font-weight: bold;
     white-space: nowrap;
 }
-
-p.camadas-descricao{
-    font-size: 19px;
-    margin-left: 5px;
-    
+.camadas-container{
+    font-size: 20px;
 }
-div.camadas-descricao-container{
-    display: flex;
-    align-items: baseline;
-    margin-top: 10px;
-    
+li{
+    margin-bottom:10px;
+}
+p{
+    margin-bottom: 0px;
+}
+p.juncao{
+    margin-top: 3px;
 }

@@ -1,3 +1,7 @@
+<?php 
+ $titulo = "Método Snowflake";
+include "head.php"
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,13 +10,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Método Snowflake</title>
-    <?php
-    $titulo = "Método Snowflake"
-    ?>
     <link rel="stylesheet" href="assets/css/metodo_snowflake.css">
 </head>
 
 <body>
+<div class="container">
     <h1 class="titulo-snowflake">Snowflake</h1>
     <p>O nome deriva do inglês e significa “floco de neve”, e a ideia é visualizar o floco de neve como uma figura complexa, que é desenvolvida por formas simples que, quando colocadas uma junto à outra, evoluem até formar uma figura bem desenvolvida.
         Esse método é ótimo para você que tem uma ideia na cabeça, mas ainda não sabe como passá-la para o papel ou como organizá-la sem furos. O método pega o comecinho dessa ideia, da forma que ela surgiu e desenvolve através de alguns passos.
@@ -32,6 +34,7 @@
 <div class="etapa_4-container">
     <h2 class="etapa">Etapa 4: </h2>
     <p class="etapa-descricao">expandir o parágrafo inicial em vários parágrafos</p>
+</div>
 </div>
 </body>
 
