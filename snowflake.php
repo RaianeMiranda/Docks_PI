@@ -35,20 +35,20 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
 </head>
 
 <body>
-    <section class="container1">
-        <div class="item1">
-            <nav class="parte1">
+    <section class="container1-snow">
+        <div class="item1-snow">
+            <nav class="parte1-snow">
                 <ul>
-                    <li class="voltar1"><a href="#"><img src="assets/images/voltar.png"></a></li>
+                    <li class="voltar1-snow"><a href="#"><img src="assets/images/voltar.png"></a></li>
                     <li class="snow"><b>Snowflake</b></li>
-                    <li class="menu"><b>Menu</b></li>
+                    <li class="menu-snow"><b>Menu</b></li>
                 </ul>
             </nav>
-            <hr>
-            <div class="titulo1">
+            <hr class="hr-snow">
+            <div class="titulo1-snow">
                 <h1><b>1. Faça seu livro em uma frase</b></h1>
             </div>
-            <div class="texto1">
+            <div class="texto1-snow">
                 <textarea>
 
                 <?php
@@ -68,31 +68,31 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
             </div>
         </div>
         <div class="vertical"></div>
-        <div class="item2">
-            <nav class="parte2">
+        <div class="item2-snow">
+            <nav class="parte2-snow">
                 <ul>
-                    <div class="nome-livro">
-                        <li class="nomelivro1"><b>Alice</b></li>
+                    <div class="nome-livro-snow">
+                        <li class="nomelivro1-snow"><b>Alice</b></li>
                     </div>
-                    <div class="lupa">
-                        <li class="lupa1"><img src="assets/images/lupa.png"></li>
+                    <div class="lupa-snow">
+                        <li class="lupa1-snow"><img src="assets/images/lupa.png"></li>
                     </div>
                 </ul>
             </nav>
-            <hr>
+            <hr class="hr-snow">
             <form action="" method="POST" enctype="multipart/form-data">
-                <div class="botoes1">
-                    <p class="fase1"><b> Fase 1 </b></p>
-                    <button type="submit" name="submit" class="salvar1"><b> Salvar </b></button>
+                <div class="botoes1-snow">
+                    <p class="fase1-snow"><b> Fase 1 </b></p>
+                    <button type="submit" name="submit" class="salvar1-snow"><b> Salvar </b></button>
                     <!-- Botão para acionar drop -->
-                    <button class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                    <button class="dropdown-toggle-snow" type="button" id="dropdownMenuButton" data-toggle="dropdown"
                         aria-haspopup="true" aria-expanded="false"><b>Aa1</b>
                     </button>
                     <?php
                     include "drop.php";
                     ?>
                 </div>
-                <div class="texto2">
+                <div class="texto2-snow">
                     <textarea name="texto"><?php echo $texto ?></textarea>
                 </div>
             </form>

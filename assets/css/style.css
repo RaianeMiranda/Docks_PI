@@ -2,13 +2,13 @@
  
  /*parte direita da tela snowflake*/
  
- .item1 {
+ .item1-snow {
     flex: 1;
     background: #FFF2D8;
     height: 1195px;
 }
 
-.texto1 textarea {
+.texto1-snow textarea {
     width: 953px;
     height: 800px;
     border: 0;
@@ -22,7 +22,7 @@
     resize: none;
 }
 
-.texto1 {
+.texto1-snow {
     background: #F4CCC8;
     width: 953px;
     height: 810px;
@@ -37,7 +37,7 @@
 
 }
 
-.container1 {
+.container1-snow {
     max-width: 100%;
     display: flex;
 }
@@ -50,7 +50,7 @@ body {
 
 }
 
-hr {
+.hr-snow {
     width: 100%;
     height: 20px;
     background-color: #F4CCC8;
@@ -59,7 +59,7 @@ hr {
     border-width: 0;
 }
 
-.parte1 ul {
+.parte1-snow ul {
     list-style: none;
     display: flex;
     justify-content:space-between;
@@ -67,7 +67,7 @@ hr {
 }
 
 
-.parte1 a {
+.parte1-snow a {
     font-size: 20px;
     text-decoration: none;
     color: black;
@@ -75,7 +75,7 @@ hr {
 
 }
 
-.parte1 {
+.parte1-snow {
     margin-top: 25px;
     margin-bottom: 20px;
     justify-content: space-between;
@@ -84,14 +84,14 @@ hr {
    margin-right:5px ;
 }
 
-.titulo1 h1 {
+.titulo1-snow h1 {
     justify-content: baseline;
     margin: 20px;
     font-family: 'Open Sans';
     font-size: 25px;
 }
 
-.menu {
+.menu-snow {
     font-size: 25px;
     font-family: 'Open Sans';
     margin-left: 30px;
@@ -104,7 +104,7 @@ hr {
     font-family: 'Open Sans';
 }
 
-.voltar {
+.voltar-snow {
     font-size: 25px;
     font-family: 'Open Sans';
 
@@ -113,7 +113,7 @@ hr {
 
 /*parte esquerda da tela*/
 
-.parte2 ul {
+.parte2-snow ul {
     list-style: none;
     display: flex;
     padding: 0;
@@ -121,45 +121,45 @@ hr {
 }
 
 
-.parte2 {
+.parte2-snow {
     margin-top: 25px;
     margin-bottom: 20px;
     justify-content: baseline;
 
 }
 
-.item2 {
+.item2-snow {
     flex: 1;
     background: #FFF2D8;
     height: 1195px;
     width: 500px;
 }
 
-.nomelivro1 {
+.nomelivro1-snow {
     font-size: 25px;
     font-family: 'Open Sans';
 }
 
-.lupa1 img {
+.lupa1-snow img {
     height: 25px;
 }
-.lupa{
+.lupa-snow{
     margin-left:5px;
 }
-.nome-livro{
+.nome-livro-snow{
     margin: 0 auto;
 }
-.dropdown-toggle {
+.dropdown-toggle-snow {
     border-radius: 0;
     border-color: #CBA8A4;
     background-color: #F4CCC8;
-    width: 75px;
+    width: 95px;
     height: 35px;
-    margin-right: 175px;
+   
 
 }
 
-.salvar1 {
+.salvar1-snow {
     border-color: #9F9F9F;
     background-color: #CCCCCC;
     width: 65px;
@@ -167,14 +167,14 @@ hr {
     margin-right: 5px;
 }
 
-.botoes1 {
+.botoes1-snow {
     display: flex;
     justify-content: flex-end;
     margin-top: 20px;
 
 }
 
-.fase1 {
+.fase1-snow {
     font-size: 25px;
     font-family: 'Open Sans';
     margin-right: 300px;
@@ -182,7 +182,7 @@ hr {
 
 }
 
-.texto2 textarea {
+.texto2-snow textarea {
     width: 900px;
     height: 800px;
     padding: 50px;
@@ -210,7 +210,7 @@ hr {
 }
 
 .n-tipografia {
-    padding-left: 15px;
+    padding-left: 25px;
 }
 
 .bnt-tipografia {
@@ -227,7 +227,7 @@ hr {
 }
 
 .negrito-tipografia {
-    margin-left: 25px;
+    margin-left: 35px;
     width: 50px;
     height: 50px;
     font-size: 30px;
@@ -236,7 +236,7 @@ hr {
 
 .tamanho-titulo {
     margin-top: 20px;
-    margin-left: 15px;
+    margin-left: 55px;
 }
 
 .estilo {
@@ -246,11 +246,11 @@ hr {
     width: 150px;
     height: 5px;
     border-radius: 9px;
-    margin-left: 15px;
+    margin-left: 25px;
 }
 
 .resultado {
-    margin-left: 75px;
+    margin-left: 90px;
 }
 
 /*bolinha da range*/
@@ -276,12 +276,12 @@ hr {
 
 /*bolinha da range*/
 .marcadores {
-    margin-left: 15px;
+    margin-left: 45px;
 }
 
 .container-marcador1 {
     display: flex;
-    margin-left: 20px;
+    margin-left: 25px;
 }
 
 .container-marcador1>button {
@@ -291,7 +291,7 @@ hr {
 
 .container-marcador2 {
     display: flex;
-    margin-left: 20px;
+    margin-left: 25px;
 
 }
 
@@ -336,17 +336,17 @@ hr {
     background-color: #BCE4E4;
 }
 .btn6 {
-    width: 65px;
+    width: 55px;
     height: 30px;
     border-color: #9F9F9F;
     background-color: white;
     border-radius: 5px;
     font-family: 'Open Sans';
-    font-size:14px;
+    font-size:10px;
 }
 
 .dropdown-menu{
-    width: 180px;
+    width: 215px;
 }
 /*parte esquerda da tela personagem*/
 
@@ -354,6 +354,14 @@ hr {
     flex: 1;
     background: #FFF2D8;
     height: 1195px;
+}
+.hr-personagem {
+    width: 100%;
+    height: 20px;
+    background-color:  #BCE4E4;
+    border-color: #BCE4E4;
+    margin: 0;
+    border-width: 0;
 }
 
 .texto1-personagem textarea {
@@ -398,14 +406,6 @@ body {
 
 }
 
-hr {
-    width: 100%;
-    height: 20px;
-    background-color: #BCE4E4;
-    border-color: #BCE4E4;
-    margin: 0;
-    border-width: 0;
-}
 
 .parte1-personagem ul {
     list-style: none;
@@ -473,6 +473,7 @@ hr {
 
 }
 
+
 .item2-personagem {
     flex: 1;
     background: #FFF2D8;
@@ -494,7 +495,7 @@ hr {
 .nome-livro-personagem{
     margin: 0 auto;
 }
-.dropdown-toggle {
+.dropdown-toggle-personagem {
     border-radius: 0;
     border-color:  #BCE4E4;
     background-color:  #BCE4E4;
@@ -550,7 +551,6 @@ hr {
     background: #FFF2D8;
     height: 1195px;
 }
-
 .texto1-mundo textarea {
     width: 953px;
     height: 800px;
@@ -593,14 +593,6 @@ body {
 
 }
 
-hr {
-    width: 100%;
-    height: 20px;
-    background-color:  #D5ECB4;
-    border-color: #D5ECB4;
-    margin: 0;
-    border-width: 0;
-}
 
 .parte1-mundo ul {
     list-style: none;
@@ -659,7 +651,14 @@ hr {
     padding: 0;
     justify-content: space-between;
 }
-
+.hr-mundo {
+    width: 100%;
+    height: 20px;
+    background-color:  #D5ECB4;
+    border-color:  #D5ECB4;
+    margin: 0;
+    border-width: 0;
+}
 
 .parte2-mundo {
     margin-top: 25px;
@@ -689,7 +688,7 @@ hr {
 .nome-livro-mundo{
     margin: 0 auto;
 }
-.dropdown-toggle {
+.dropdown-toggle-mundo {
     border-radius: 0;
     border-color:  #D5ECB4;
     background-color:  #D5ECB4;

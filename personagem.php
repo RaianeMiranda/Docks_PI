@@ -2,16 +2,16 @@
 session_start();
 include "include/MySql.php";
 
-
+$codPersonagens = "";
 $msgErro = "";
 $texto = "";
 
 if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
     $texto = $_POST['texto'];
     $_SESSION['nomeLivro'] = 1;
-    $sql = $pdo->prepare("INSERT INTO etapas (codEtapas, codSnowflake, codLivro, descricao)
-    VALUES (null, ?, ?, ?)");
-    if ($sql->execute(array($_SESSION['codSnowflake'], $_SESSION['nomeLivro'], $texto))) {
+    $sql = $pdo->prepare("INSERT INTO personagens (codPersonagens, codLivro, descricao)
+    VALUES (NULL ?, ?)");
+    if ($sql->execute(array( '1', $texto))) {
         $msgErro = "Dados cadastrados com sucesso!";
     } else {
         $msgErro = "Dados não cadastrados!";
@@ -44,7 +44,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
                     <li class="menu-personagem"><b>Menu</b></li>
                 </ul>
             </nav>
-            <hr>
+            <hr class="hr-personagem">
             <div class="titulo1-personagem">
                 <h1><b>1. Faça seu livro em uma frase</b></h1>
             </div>
@@ -52,13 +52,13 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
                 <textarea>
 
                 <?php
-                $sql = $pdo->prepare('SELECT * FROM snowflake'); //where codlivro = sessao
+                $sql = $pdo->prepare('SELECT * FROM personagens'); //where codlivro = sessao
                 if ($sql->execute()) {
                     $info = $sql->fetchAll(PDO::FETCH_ASSOC);
 
                     foreach ($info as $key => $value) {
-                        $_SESSION['codSnowflake'] = $value['codSnowflake'];
-                        echo $value['codSnowflake'];
+                        $_SESSION['codPersonagens'] = $value['codPersonagens'];
+                        echo $value['codPersonagens'];
                         echo $value['descricao'];
                     }
                 }
@@ -79,13 +79,13 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
                     </div>
                 </ul>
             </nav>
-            <hr>
+            <hr class="hr-personagem">
             <form action="" method="POST" enctype="multipart/form-data">
                 <div class="botoes-personagem">
                     <p class="fase-personagem"><b> Fase 1 </b></p>
                     <button type="submit" name="submit" class="salvar1-personagem"><b> Salvar </b></button>
                     <!-- Botão para acionar drop -->
-                    <button class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                    <button class="dropdown-toggle-personagem" type="button" id="dropdownMenuButton" data-toggle="dropdown"
                         aria-haspopup="true" aria-expanded="false"><b>Aa1</b>
                     </button>
                     <?php

@@ -44,7 +44,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
                     <li class="menu-mundo"><b>Menu</b></li>
                 </ul>
             </nav>
-            <hr>
+            <hr class="hr-mundo">
             <div class="titulo1-mundo">
                 <h1><b>1. Faça seu livro em uma frase</b></h1>
             </div>
@@ -79,13 +79,13 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
                     </div>
                 </ul>
             </nav>
-            <hr>
+            <hr class="hr-mundo">
             <form action="" method="POST" enctype="multipart/form-data">
                 <div class="botoes-mundo">
                     <p class="fase1-mundo"><b> Fase 1 </b></p>
                     <button type="submit" name="submit" class="salvar1-mundo"><b> Salvar </b></button>
                     <!-- Botão para acionar drop -->
-                    <button class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                    <button class="dropdown-toggle-mundo" type="button" id="dropdownMenuButton" data-toggle="dropdown"
                         aria-haspopup="true" aria-expanded="false"><b>Aa1</b>
                     </button>
                     <?php
