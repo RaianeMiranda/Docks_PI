@@ -79,6 +79,8 @@ if ($sql->execute()) {
         echo "<td>" . $value['nome_cap'] . "</td>";
         echo "<td>" . $value['codCapitulo'] . "</td>";
         echo "<td>" . $value['codLivro'] . "</td>";
+        echo "<td><center><a href='paginas/.php?id=" . $value['codCapitulo'] . "'>(+)</a></center></td>";
+        echo "<td><center><a href='paginas/del_capitulo.php?id=" . $value['codCapitulo'] . "'>(-)</a></center></td>";
         echo "</tr>";
     }
     echo "</table>";
