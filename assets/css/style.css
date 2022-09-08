@@ -202,7 +202,7 @@ body {
 .tipografia-titulo {
     display: flex;
     justify-content: flex-start;
-    height: 35px
+    height: 35px;
 }
 
 .i-tipografia {
@@ -697,10 +697,6 @@ body {
     margin-right: 5px;
 }
 
-.botoes-mundo {
-  
-
-}
 
 .fase-mundo {
     font-size: 25px;
