@@ -54,7 +54,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
                     <textarea>
 
                 <?php
-                $sql = $pdo->prepare('SELECT * FROM snowflake'); //where codlivro = sessao
+                $sql = $pdo->prepare('SELECT * FROM MUNDO'); //where codlivro = sessao
                 if ($sql->execute()) {
                     $info = $sql->fetchAll(PDO::FETCH_ASSOC);
 
@@ -66,43 +66,39 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
                 }
                 echo "teste";
                 ?>
-                </textarea>
+            </textarea>
                 </div>
             </div>
-            <!-- <div class="vertical"></div> -->
-            <div class="col-md-6">
-                <nav class="parte2-mundo">
-                    <ul>
-                        <div class="nome-livro-mundo">
-                            <li class="nomelivro1-mundo"><b>Alice</b></li>
+
+                <div class="col-md-6">
+                    <nav class="parte2-mundo">
+                        <ul>
+                            <div class="nome-livro-mundo">
+                                <li class="nomelivro1-mundo"><b>Alice</b></li>
+                            </div>
+                            <div class="lupa-mundo">
+                                <li class="lupa1-mundo"><img src="assets/images/lupa.png"></li>
+                            </div>
+                        </ul>
+                    </nav>
+                    <hr class="hr-mundo">
+                    <form action="" method="POST" enctype="multipart/form-data">
+                        <div class="botoes-mundo">
+                            <p class="fase1-mundo"><b> Fase 1 </b></p>
+                            <div style="display: flex;display: flex;flex-direction: row;justify-content: flex-end;">
+                                <button type="submit" name="submit" class="salvar1-mundo"><b> Salvar </b></button>
+
+                            </div>
                         </div>
-                        <div class="lupa-mundo">
-                            <li class="lupa1-mundo"><img src="assets/images/lupa.png"></li>
-                        </div>
-                    </ul>
-                </nav>
-                <hr class="hr-mundo">
-                <form action="" method="POST" enctype="multipart/form-data">
-                    <div class="botoes-mundo">
-                        <p class="fase1-mundo"><b> Fase 1 </b></p>
-                        <div style="display: flex;display: flex;flex-direction: row;justify-content: flex-end;">
-                            <button type="submit" name="submit" class="salvar1-mundo"><b> Salvar </b></button>
-                            <!-- Botão para acionar drop -->
-                            <button class="dropdown-toggle-mundo" type="button" id="dropdownMenuButton"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><b>Aa</b>
-                            </button>
+                        <div>
+
+                            <div id="editor" name="texto"><?php echo $texto ?></div>
 
                         </div>
-                    </div>
-                    <div>
-                        <!-- <textarea name="texto" class="w-100 mt-5"></textarea> -->
-                        <div id="editor"><?php echo $texto ?></div>
-
-                    </div>
-                </form>
-                <?php echo $msgErro ?>
+                    </form>
+                    <?php echo $msgErro ?>
+                </div>
             </div>
-        </div>
     </section>
 
     <!-- Inicia o CK editor -->
@@ -117,7 +113,9 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
             console.error(error);
         });
     </script>
-    <!-- Inicia o CK editor -->
+
+
+
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">

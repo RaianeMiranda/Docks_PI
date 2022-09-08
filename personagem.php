@@ -52,7 +52,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
                 <textarea>
 
                 <?php
-                $sql = $pdo->prepare('SELECT * FROM personagens'); //where codlivro = sessao
+                $sql = $pdo->prepare('SELECT * FROM PERSONAGENS'); //where codlivro = sessao
                 if ($sql->execute()) {
                     $info = $sql->fetchAll(PDO::FETCH_ASSOC);
 

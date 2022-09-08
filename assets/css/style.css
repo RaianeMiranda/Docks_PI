@@ -543,16 +543,19 @@ body {
   
 }
 
+
+
+
+
+
+
 /*parte esquerda da tela mundos*/
 
 .item1-mundo {
     flex: 1;
     background: #FFF2D8;
-    max-height: 1195px;
 }
 .texto1-mundo textarea {
-    max-width: 953px;
-    max-height: 800px;
     border: 0;
     outline: 0;
     background:  #D5ECB4;
@@ -563,6 +566,9 @@ body {
     margin: 10px;
     resize: none;
 }
+.col-md-6{
+    background-color: #FFF2D8;
+}
 
 .texto1-mundo {
     background:  #D5ECB4;
@@ -571,20 +577,12 @@ body {
     margin-top: 30px;
 }
 
-.container1-mundo {
-    max-width: 100%;
-    display: flex;
-}
-
 body {
     border: 0;
     padding: 0;
     margin: 0;
     overflow-x:hidden;
-
 }
-
-
 .parte1-mundo ul {
     list-style: none;
     display: flex;
@@ -679,22 +677,14 @@ body {
 .nome-livro-mundo{
     margin: 0 auto;
 }
-.dropdown-toggle-mundo {
-    border-radius: 0;
-    border-color:  #D5ECB4;
-    background-color:  #D5ECB4;
-    width: 45px;
-    height: 35px;
-    margin-right: 175px;
-
-}
 
 .salvar1-mundo {
-    border-color: #9F9F9F;
-    background-color: #CCCCCC;
+    border-color: #D5ECB4;
+    background-color:  #D5ECB4;
     width: 65px;
     height: 30px;
-    margin-right: 5px;
+   margin-top:5px;
+    margin-bottom:20px;
 }
 
 
@@ -716,8 +706,10 @@ body {
     margin-top: 80px;
     background-color: #FFF2D8;
     margin-left: 20px;
-   
     border-color:black;
     
 }
 
+#editor{
+    background-color: #FFF2D8;
+}
