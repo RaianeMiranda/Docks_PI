@@ -1,0 +1,33 @@
+.modal-fechar{
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+  pointer-events: auto;
+  /* background-color: #fff; */
+  background-clip: padding-box;
+  /*border: 1px solidrgba(0,0,0,.2);*/
+  border-radius: 0.3rem;
+  outline: 0;
+}
+.botao-alterar1 {
+  /* color: #fff; */
+  /* background-color: #007bff; */
+ /*
+  /* border-color: #007bff; */
+  background-color: #D5ECB4;
+  border: 2px solid #BBBBBB;
+  height: 25px;
+  width: 80px;
+  font-weight: bolder;
+  font-size: 15px;
+  text-align: center;
+}
+body{
+  background-color: #FFF2D8;
+}
