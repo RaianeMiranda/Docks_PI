@@ -30,12 +30,12 @@ include "head.php"
     <div class="container-tipografia-acessibilidade">
     <div class="container">
     <div class="botao-tipografia-container">
-        <a href=""><button class="botao-tipografia1">Merriweather</button></a>
-        <a href=""><button class="botao-tipografia2">Source serif pro</button></a>
+        <button class="botao-tipografia1" id="botao-tipografia1">Merriweather</button>
+        <button class="botao-tipografia2">Source serif pro</button>
 </div>
         <div class="botao-tipografia-container2">
-            <a href=""><button class="botao-tipografia3">Open Sans</button></a>
-            <a href=""><button class="botao-tipografia4">Noto sans</button></a>
+            <button class="botao-tipografia3" >Open Sans</button>
+            <button class="botao-tipografia4">Noto sans</button>
         </div>
     </div>
    <div class="container-acessibilidade">
@@ -58,6 +58,7 @@ include "head.php"
 <?php
 include "gerenciamento.php";
 ?>
+
 <script>     
        const btn1 = document.getElementById("btn-1");
         btn1.addEventListener("click", ()=>{
@@ -69,7 +70,7 @@ include "gerenciamento.php";
                 btn1.style.backgroundColor = '#D5ECB4';
             }
         })    
-      
+        
 
         const btn2 = document.getElementById("btn-2");
         btn2.addEventListener("click", ()=>{

@@ -38,14 +38,17 @@
   background-clip: padding-box;
   border-radius: 0.3rem;
   outline: 0;">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+  <div class="modal-body">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" style=" position: fixed;
+    margin-left: 420px;
+    height: 5px;
+    width: 10px;">
           <span aria-hidden="true">&times;</span>
         </button>
-      <div class="modal-body">
+</div>
         <?php
          include "editar_livros.php";
         ?>
-      </div>
     </div>
   </div>
 </div>

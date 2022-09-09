@@ -24,7 +24,7 @@
             <!-- Modal -->
 <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
   <div class="modal-dialog" role="document">
-    <div class="modal-fechar" style=" position: relative;
+    <div class="modal-fechar" style=" 
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -38,14 +38,17 @@
   background-clip: padding-box;
   border-radius: 0.3rem;
   outline: 0;">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+  <div class="modal-body">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="    position: fixed;
+    margin-left: 420px;
+    height: 5px;
+    width: 10px;">
           <span aria-hidden="true">&times;</span>
         </button>
-      <div class="modal-body">
-        <?php
-         include "criar_livros.php";
-        ?>
-      </div>
+          <?php
+          include "criar_livros.php";
+          ?>
+        </div>
     </div>
   </div>
 </div>
