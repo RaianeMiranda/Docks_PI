@@ -10,7 +10,7 @@ $texto = "";
 if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
     $texto = $_POST['texto'];
     $sql = $pdo->prepare("INSERT INTO mundo (codMundo, codLivro, descricao)
-    VALUES (NULL, ?, ?)");
+    VALUES (NULL, ?, ?, ?)");
     if ($sql->execute(array('1', $texto))) {
         $msgErro = "Dados cadastrados com sucesso!";
         $_SESSION['codMundo'] = $value['codMundo'];
