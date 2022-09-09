@@ -1,5 +1,6 @@
 <?php
 include "../include/mysql.php";
+//NÃO FUNCIONA 😥 COMO ATUALIZAR IMAGE
 $codLivro = "";
 $nomeLivro = "";
 $idEmail = "";
@@ -41,10 +42,6 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
             else
                 $nomeLivro = $_POST['nomeLivro'];
 
-            if (empty($_POST['telefone']))
-                $telefoneErro = "Telefone é obrigatório";
-            else
-                $telefone = $_POST['telefone'];
             if (empty($_POST['capaLivro']))
                 $capaLivroErro = "capaLivro é obrigatório";
             else
@@ -52,10 +49,8 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
 
             if ($idEmail && $nomeLivro && $capaLivro) { //se o idEmail e o nomeLivro e[...] não estiverem preenhidos ele não irá prosseguir e aparecera o erro do else
                 // verificar se já existe o idEmail
-                $sql = $pdo->prepare("SELECT * FROM USUARIO WHERE idEmail =? AND codLivro <> ?");
-                if ($sql->execute(array($idEmail, $codLivro))) {
-                    if ($sql->rowCount() <= 0) {
-                        $sql = $pdo->prepare("UPDATE USUARIO SET codLivro = ?, nomeLivro = ?, capaLivro = ? WHERE codLivro = ?");
+                $sql = $pdo->prepare("SELECT * FROM LIVROS WHERE codLivro =?");
+                        $sql = $pdo->prepare("UPDATE LIVROS SET codLivro = ?, nomeLivro = ?, capaLivro = ? WHERE codLivro = ?");
 
                         if ($sql->execute(array($codLivro, $nomeLivro, $capaLivro, $codLivro))) {
                             $msgErro = "Dados alterados com sucesso!";
@@ -67,15 +62,12 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
                     } else {
                         $msgErro = "idEmail de usuário já cadastrado";
                     }
-                } else {
-                    $msgErro = "Erro no comando UPDATE";
-                }
             } else {
                 $msgErro = "Dados não alterados!";
             }
         }
     }
-}
+
 
 
 ?>

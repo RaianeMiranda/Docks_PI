@@ -11,7 +11,7 @@ if(isset($_GET['id'])){
     if ($sql->execute(array($codCapitulo))){
         if ($sql->rowCount()>0){
             $msgErro = "Capítulo excluido com sucesso!";
-           // header('location:listUsuario.php');
+           header('location:inicial.php');
         }else {
             $msgErro = "Código não localizado!";
         } 

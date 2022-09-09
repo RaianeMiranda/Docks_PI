@@ -25,7 +25,7 @@ if ($sql->execute()) {
     echo "<td>" . $value['idEmail'] . "</td>";
     echo "<td><center><a href='../inicial.php?id=" . $value['nomeLivro'] . "'>(+)</a></center></td>";
     echo "<td><center><a href='del_livro.php?id=" . $value['nomeLivro'] . "'>(-)</a></center></td>";
-    echo "<td><center><a href='alt_livros.php?id=" . $value['nomeLivro'] . "'>(😥)</a></center></td>";
+    echo "<td><center><a href='alt_livro.php?id=" . $value['nomeLivro'] . "'>(😥)</a></center></td>";
     echo "</tr>";
   }
   echo "</table>";
