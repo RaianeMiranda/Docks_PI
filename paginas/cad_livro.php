@@ -60,7 +60,7 @@ echo "aqui:".$_SESSION['idEmail'];
     <head>
         <meta charset="UTF-8">
         <title>Cadastro de Usuário</title>
-        <link rel="stylesheet" href="../css/estilo.css">
+        <link rel="stylesheet" href="../assets/">
     </head>
 
     <body>

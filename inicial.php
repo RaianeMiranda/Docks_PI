@@ -8,6 +8,7 @@ $titulo = "Página inicial";
 
 
 <link rel="stylesheet" href="assets/css/inicial.css">
+<link rel="stylesheet" href="assets/css/modal.css">
 <?php include "head.php" ?>
 <header>
     <?php if (isset($_GET['id'])) {
@@ -23,7 +24,7 @@ $titulo = "Página inicial";
     }
     ?>
     <?php if ($_SESSION['nome'] != "") { ?>
-        <h1 class="title_welcome">Bem vindo(a)<?php echo $_SESSION['nome'] ?>!!</h1>
+        <h1 class="title_welcome">Bem vindo(a) <?php echo $_SESSION['nome'] ?>!!</h1>
     <?php } else { ?>
         <h1 class="title_welcome">Voce não está logado!!</h1>
         <h3><a href="login.php">Login</a></h3>
@@ -47,9 +48,18 @@ $titulo = "Página inicial";
     <h3><a href="paginas/logout.php">logout</a></h3>
 
     <?php if ($_SESSION['nomeLivro'] != "") { 
-        include "paginas/cad_capitulo.php";
+        include "paginas/list_capitulo.php"?>
+         <button id="myBtn">+ Adicionar novo Capítulo</button>
 
-    }?> 
+         <!-- The Modal -->
+         <div id="myModal" class="modal">
+     
+             <!-- Modal content -->
+             <?php include "paginas/cad_capitulo.php";?>
+     
+         </div>
+        
+   <?php } ?>
 
 </main>
 
