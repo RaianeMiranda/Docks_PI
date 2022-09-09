@@ -23,7 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 
     if ($idEmail && $senha) {
-        $sql = $pdo->prepare("SELECT * FROM USUARIO WHERE idEmail=? AND senha=?"); //idEmail e a senha são validados com o banco de dados
+        $sql = $pdo->prepare("SELECT * FROM USUARIO WHERE idEmail=? AND senha=? AND administrador=1"); //idEmail e a senha são validados com o banco de dados
         if ($sql->execute(array($idEmail, MD5($senha)))) {
             $info = $sql->fetchAll(PDO::FETCH_ASSOC);
             if (count($info) > 0) {
@@ -32,7 +32,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     $_SESSION['idEmail'] = $values['idEmail'];
                     $_SESSION['administrador'] = '1';
                 }
-                header('location:inicial.php');
+                header('location:paginas/list_usuario.php');
             } else {
                 $msgErro = "Usuário não cadastrado!";
             }
@@ -58,8 +58,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     </div>
                 </div>
 
-                <h1 class="slogan">Bem vindo(a) ao Docks</h1>
-                <p class="slogan">Aqui é o lugar para suas histórias</p>
+                <h1 class="slogan">Bem vindo(a) administrador(a)</h1>
+                <p class="slogan">Senti a sua falta!!!</p>
             </div>
 
             <div class="login-meio">

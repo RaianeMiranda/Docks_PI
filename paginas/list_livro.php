@@ -1,9 +1,10 @@
 <?php
 include "../include/MySql.php";
+session_start();
 $nomeLivro =
 
-$sql = $pdo->prepare('SELECT * FROM livros');
-if ($sql->execute()) {
+$sql = $pdo->prepare('SELECT * FROM livros WHERE idEmail=?');
+if ($sql->execute(array( $_SESSION['idEmail']))) {
   $info = $sql->fetchAll(PDO::FETCH_ASSOC);
   if (count($info) > 0) {
     foreach ($info as $key => $values) {
