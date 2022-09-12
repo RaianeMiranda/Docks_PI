@@ -37,19 +37,29 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
 <body>
 
     <section class="container">
-        <div class="row">
-            <div class="col-md-6">
+        <div class="persona">
+            <div class="p">
                 <nav class="parte1-personagem">
                     <ul>
                         <li class="voltar-personagem"><a href="#"><img src="assets/images/voltar.png"></a></li>
-                        <li class="personagem"><b>Snowflake</b></li>
+                        <li class="personagem"><b>Criação de Personagem</b></li>
                         <li class="menu-personagem"><b>Menu</b></li>
+                        <div class="lupa-personagem">
+                            <li class="lupa1-personagem"><img src="assets/images/lupa.png"></li>
+
+                        </div>
                     </ul>
                 </nav>
                 <hr class="hr-personagem">
-                <div class="titulo1-personagem">
-                    <h1><b>1. Faça seu livro em uma frase</b></h1>
-                </div>
+                <form action="" method="POST" enctype="multipart/form-data">
+                    <div class="fase-persona">
+                        <div class="titulo1-personagem">
+                            <h1><b>Descreva seu personagem aqui!!!</b></h1>
+                        </div>
+                        <button type="submit" name="submit" class="salvar1-personagem"><b> Salvar
+                            </b></button>
+                    </div>
+                </form>
                 <div class="texto1-personagem">
                     <textarea>
 
@@ -69,51 +79,11 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
             </textarea>
                 </div>
             </div>
-
-            <div class="col-md-6">
-                <nav class="parte2-personagem">
-                    <ul>
-                        <div class="nome-livro-personagem">
-                            <li class="nomelivro1-personagem"><b>Alice</b></li>
-                        </div>
-                        <div class="lupa-personagem">
-                            <li class="lupa1-personagem"><img src="assets/images/lupa.png"></li>
-                            
-                        </div>
-                    </ul>
-                </nav>
-                <hr class="hr-personagem">
-                <form action="" method="POST" enctype="multipart/form-data">
-                    <div class="fase-persona">
-                        <p class="fase-personagem"><b> Fase 1 </b></p>
-                        <button type="submit" name="submit" class="salvar1-personagem"><b> Salvar
-                            </b></button>
-                    </div>
-
-
-
-                    <div id="editor" name="texto"><?php echo $texto ?></div>
-
-            </div>
-            </form>
-            <?php echo $msgErro ?>
-        </div>
         </div>
     </section>
 
 
-    <!-- Inicia o CK editor -->
-    <script src="https://cdn.ckeditor.com/ckeditor5/35.1.0/classic/ckeditor.js"></script>
-    <script>
-    ClassicEditor
-        .create(document.querySelector('#editor'))
-        .then(editor => {
-            console.log(editor);
-        })
-        .catch(error => {
-            console.error(error);
-        });
-    </script>
+
 
 
 

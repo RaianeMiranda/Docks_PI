@@ -36,7 +36,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
 </head>
 
 <body>
-    <section class="container">
+<section class="container">
         <div class="mundo">
             <div class="m">
                 <nav class="parte1-mundo">
@@ -52,11 +52,11 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
                 </nav>
                 <hr class="hr-mundo">
                 <form action="" method="POST" enctype="multipart/form-data">
-                    <div class="fase-mundo">
-                        <div class="titulo1-mundo">
-                            <h1><b>Descreva seu mundo aqui!!!</b></h1>
+                    <div class="fase-persona">
+                        <div class="titulo1-personagem">
+                            <h1><b>Descreva seu personagem aqui!!!</b></h1>
                         </div>
-                        <button type="submit" name="submit" class="salvar1-mundo"><b>Salvar
+                        <button type="submit" name="submit" class="salvar1-personagem"><b> Salvar
                             </b></button>
                     </div>
                 </form>
@@ -78,11 +78,50 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
             </textarea>
                 </div>
             </div>
-        </div>
 
+               
+                    <nav class="parte2-mundo">
+                        <ul>
+                            <div class="nome-livro-mundo">
+                                <li class="nomelivro1-mundo"><b>Alice</b></li>
+                            </div>
+                            <div class="lupa-mundo">
+                                <li class="lupa1-mundo"><img src="assets/images/lupa.png"></li>
+                            </div>
+                        </ul>
+                    </nav>
+                    <hr class="hr-mundo">
+                    <form action="" method="POST" enctype="multipart/form-data">
+                        <div class="botoes-mundo">
+                            <p class="fase1-mundo"><b> Fase 1 </b></p>
+                            <div style="display: flex;display: flex;flex-direction: row;justify-content: flex-end;">
+                                <button type="submit" name="submit" class="salvar1-mundo"><b> Salvar </b></button>
+
+                            </div>
+                        </div>
+                        <div>
+
+                            <div id="editor" name="texto"><?php echo $texto ?></div>
+
+                        </div>
+                    </form>
+                    <?php echo $msgErro ?>
+                </div>
+            </div>
     </section>
 
-
+    <!-- Inicia o CK editor -->
+    <script src="https://cdn.ckeditor.com/ckeditor5/35.1.0/classic/ckeditor.js"></script>
+    <script>
+    ClassicEditor
+        .create(document.querySelector('#editor'))
+        .then(editor => {
+            console.log(editor);
+        })
+        .catch(error => {
+            console.error(error);
+        });
+    </script>
 
 
 
