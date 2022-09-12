@@ -29,7 +29,12 @@ img.image2{
 }
 .nav-cabecalho{
     background-color: #F4CCC8;
+    max-width: 23.87%;
 }
 div.nome-usuario{
+    display: flex;
+    margin-left:0px;
+}
+.container-perfil{
     display: flex;
 }

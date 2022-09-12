@@ -12,11 +12,16 @@
 <body>
     <div class="nav-cabecalho">
         <div class="imagens">
+        <div class="container-perfil">
         <img class="image" src="assets/images/camera.png" alt=""> 
         <div class="nome-usuario">
         <img class="image2" src="assets/images/usuario.png" alt="">
+        </div>
+        <div class="nome-email">
         <h4 class="nome">Fulana Ciclana</h4>
-</div>
+        <p>fulana65@gmail.com</p>
+        </div>
+        </div>
 </div>
     </div>
 <div class="row">
