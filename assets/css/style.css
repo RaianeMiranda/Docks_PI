@@ -1,468 +1,486 @@
- 
- 
  /*parte direita da tela snowflake*/
- 
+
+
  .item1-snow {
-    flex: 1;
-    background: #FFF2D8;
-    height: 1195px;
-}
+     flex: 1;
+     background: #FFF2D8;
+     height: 1195px;
+ }
 
-.texto1-snow textarea {
-   
-    border: 0;
-    outline: 0;
-    background: #F4CCC8;
-    padding: 50px;
-    padding-top: 0;
-    font-family: 'Open Sans';
-    font-size: 20px;
-    margin: 10px;
-    resize: none;
-}
+ .texto1-snow textarea {
 
-
-
-.vertical {
-    border-left: 6px solid black;
-    height: 1195px;
-    position: fixed;
-    left: 50%;
-
-}
+     border: 0;
+     outline: 0;
+     background-color: #F4CCC8;
+     padding: 50px;
+     padding-top: 0;
+     font-family: 'Open Sans';
+     font-size: 20px;
+     resize: none;
+     width: 540px;
+     height: 300px;
+ }
 
 
-body {
-    border: 0;
-    padding: 0;
-    margin: 0;
-    overflow-x:hidden;
 
-}
+ .vertical {
+     border-left: 6px solid black;
+     height: 1195px;
+     position: fixed;
+     left: 50%;
 
-.hr-snow {
-    width: 100%;
-    height: 20px;
+ }
+
+
+ body {
+     border: 0;
+     padding: 0;
+     margin: 0;
+     overflow-x: hidden;
+
+ }
+
+ .hr-snow {
+     width: 100%;
+     height: 20px;
+     background-color: #F4CCC8;
+     border-color: #F4CCC8;
+     margin: 0;
+     border-width: 0;
+ }
+
+ .parte1-snow ul {
+     list-style: none;
+     display: flex;
+     justify-content: space-between;
+     padding: 0px;
+ }
+
+
+ .parte1-snow a {
+     font-size: 20px;
+     text-decoration: none;
+     color: black;
+     font-family: 'Open Sans';
+
+ }
+
+ .parte1-snow {
+     margin-top: 25px;
+     margin-bottom: 20px;
+     justify-content: space-between;
+     justify-content: baseline;
+     margin-left: 5px;
+     margin-right: 5px;
+ }
+
+ .titulo1-snow h1 {
+     justify-content: baseline;
+     margin: 20px;
+     font-family: 'Open Sans';
+     font-size: 25px;
+ }
+
+ .menu-snow {
+     font-size: 25px;
+     font-family: 'Open Sans';
+     margin-left: 30px;
+     margin: 0;
+
+ }
+
+ .snow {
+     font-size: 25px;
+     font-family: 'Open Sans';
+ }
+
+ .voltar-snow {
+     font-size: 25px;
+     font-family: 'Open Sans';
+
+ }
+
+ .salvinho {
+     display: flex;
+     display: flex;
+     flex-direction: row;
+     justify-content: flex-end;
+ }
+
+ /*parte esquerda da tela*/
+
+ .parte2-snow ul {
+     list-style: none;
+     display: flex;
+     padding: 0;
+     justify-content: space-between;
+ }
+
+
+ .parte2-snow {
+     margin-top: 25px;
+     margin-bottom: 20px;
+     justify-content: baseline;
+
+ }
+
+ .item2-snow {
+     flex: 1;
+     background: #FFF2D8;
+     max-height: 1195px;
+     max-width: 500px;
+ }
+
+ .nomelivro1-snow {
+     font-size: 25px;
+     font-family: 'Open Sans';
+ }
+
+ .lupa1-snow img {
+     height: 25px;
+ }
+
+ .lupa-snow {
+     margin-left: 5px;
+ }
+
+ .nome-livro-snow {
+     margin: 0 auto;
+ }
+
+ .botoes1-snow {
+     display: flex;
+     justify-content: flex-end;
+
+
+ }
+
+ .fase1-snow {
+     font-size: 25px;
+     font-family: 'Open Sans';
+     text-align: center;
+     margin-right: 15px;
+     margin-top: 20px;
+
+ }
+
+ /*parte esquerda da tela personagem*/
+
+ .hr-personagem {
+     width: 100%;
+     height: 20px;
+     background-color: #BCE4E4;
+     border-color: #BCE4E4;
+     margin: 0;
+     border-width: 0;
+ }
+
+ .texto1-personagem textarea {
+     border: 0;
+     outline: 0;
+     background: #BCE4E4;
+     font-family: 'Open Sans';
+     font-size: 20px;
+     margin: 10px;
+     resize: none;
+     margin-top: 0;
+     width: 1100px;
+     height: 500px;
+ }
+
+
+ body {
+     border: 0;
+     padding: 0;
+     margin: 0;
+     background-color: #FFF2D8;
+
+ }
+
+
+ .parte1-personagem ul {
+     list-style: none;
+     display: flex;
+     justify-content: space-between;
+     padding: 0px;
+
+ }
+
+
+ .parte1-personagem a {
+     font-size: 20px;
+     text-decoration: none;
+     color: black;
+     font-family: 'Open Sans';
+
+ }
+
+ .parte1-personagem {
+     margin-top: 25px;
+     margin-bottom: 20px;
+     justify-content: space-around;
+     justify-content: baseline;
+     width: 100%
+ }
+
+ .titulo1-personagem h1 {
+     justify-content: baseline;
+     text-align: left;
+
+     font-family: 'Open Sans';
+     font-size: 25px;
+     margin-right: 350px;
+     margin-bottom: 20px;
+ }
+
+ .menu-personagem {
+     font-size: 25px;
+     font-family: 'Open Sans';
+     margin-left: 20px;
+ }
+
+ .personagem {
+     font-size: 25px;
+     font-family: 'Open Sans';
+     margin-right: 30px;
+ }
+
+ .voltar-personagem {
+     font-size: 25px;
+     font-family: 'Open Sans';
+     /*parte direita da tela personagem*/
+ }
+
+ .nomelivro1-personagem {
+     font-size: 25px;
+     font-family: 'Open Sans';
+ }
+
+ .lupa1-personagem img {
+     height: 25px;
+ }
+
+ .lupa-personagem {
+     margin-left: 5px;
+ }
+
+ .fase-persona {
+     display: flex;
+     flex-direction: row;
+     justify-content: flex-end;
+     margin-top: 10px;
+
+ }
+
+ .salvar1-personagem {
+     border-color: #9F9F9F;
+     background-color: #CCCCCC;
+     width: 65px;
+     height: 30px;
+     margin-bottom: 20px;
+     justify-content: baseline;
+     font-family: 'Open Sans';
+
+ }
+
+
+
+ .salvar1-snow {
+     border-color: #9F9F9F;
+     background-color: #CCCCCC;
+     width: 65px;
+     height: 30px;
+     margin-bottom: 20px;
+     justify-content: baseline;
+     font-family: 'Open Sans';
+
+ }
+
+
+
+
+
+
+
+
+
+ /*parte esquerda da tela mundos*/
+
+ .salvar1-mundo {
+     border-color: #9F9F9F;
+     background-color: #CCCCCC;
+     width: 65px;
+     height: 30px;
+     margin-bottom: 20px;
+     justify-content: baseline;
+     font-size: medium;
+     font-family: 'Open Sans';
+ }
+
+
+ .item1-mundo {
+     flex: 1;
+     background: #FFF2D8;
+ }
+
+ .col-md-6 {
+     background-color: #FFF2D8;
+ }
+
+
+ body {
+     border: 0;
+     padding: 0;
+     margin: 0;
+
+ }
+
+ .parte1-mundo ul {
+     list-style: none;
+     display: flex;
+     justify-content: space-between;
+     padding: 0px;
+ }
+
+
+ .parte1-mundo a {
+     font-size: 20px;
+     text-decoration: none;
+     color: black;
+     font-family: 'Open Sans';
+
+ }
+
+ .parte1-mundo {
+     margin-top: 25px;
+     margin-bottom: 20px;
+     justify-content: space-between;
+     justify-content: baseline;
+     margin-left: 5px;
+     margin-right: 5px;
+ }
+
+
+ .titulo1-mundo h1 {
+     justify-content: baseline;
+     text-align: left;
+     margin-top: 20px;
+     font-family: 'Open Sans';
+     font-size: 25px;
+     margin-right: 350px;
+     margin-bottom: 10px;
+ }
+
+ .menu-mundo {
+     font-size: 25px;
+     font-family: 'Open Sans';
+     margin-left: 30px;
+     margin: 0;
+
+ }
+
+ .mundo {
+     font-size: 25px;
+     font-family: 'Open Sans';
+ }
+
+ .voltar-mundo {
+     font-size: 25px;
+     font-family: 'Open Sans';
+
+     /*parte direita da tela mundo*/
+ }
+
+ .parte2-mundo ul {
+     list-style: none;
+     display: flex;
+     padding: 0;
+     justify-content: space-between;
+ }
+
+ .hr-mundo {
+     width: 100%;
+     height: 20px;
+     background-color: #D5ECB4;
+     border-color: #D5ECB4;
+     margin: 0;
+     border-width: 0;
+ }
+
+ .parte2-mundo {
+     margin-top: 25px;
+     margin-bottom: 20px;
+     justify-content: baseline;
+
+ }
+
+ .item2-mundo {
+     flex: 1;
+     background: #FFF2D8;
+     height: 1195px;
+     width: 500px;
+ }
+
+ .nomelivro1-mundo {
+     font-size: 25px;
+     font-family: 'Open Sans';
+ }
+
+ .lupa1-mundo img {
+     height: 25px;
+ }
+
+ .lupa-mundo {
+     margin-left: 5px;
+ }
+
+ .nome-livro-mundo {
+     margin: 0 auto;
+ }
+
+
+ .fase-mundo {
+     display: flex;
+     flex-direction: row;
+     justify-content: flex-end;
+     margin-top: 10px;
+
+ }
+
+
+
+ #editor {
+     background-color: #FFF2D8;
+ }
+
+
+
+
+
+ mark {
+     background: orange;
+     color: black;
+ }
+
+ .descricao-snowflake {
     background-color: #F4CCC8;
-    border-color: #F4CCC8;
-    margin: 0;
-    border-width: 0;
-}
-
-.parte1-snow ul {
-    list-style: none;
-    display: flex;
-    justify-content:space-between;
-    padding: 0px;
-}
-
-
-.parte1-snow a {
+    padding: 20px;
+    font-family: 'Open Sans';
     font-size: 20px;
-    text-decoration: none;
-    color: black;
-    font-family: 'Open Sans';
-
-}
-
-.parte1-snow {
-    margin-top: 25px;
-    margin-bottom: 20px;
-    justify-content: space-between;
-    justify-content: baseline;
-   margin-left: 5px;
-   margin-right:5px ;
-}
-
-.titulo1-snow h1 {
-    justify-content: baseline;
-    margin: 20px;
-    font-family: 'Open Sans';
-    font-size: 25px;
-}
-
-.menu-snow {
-    font-size: 25px;
-    font-family: 'Open Sans';
-    margin-left: 30px;
-    margin: 0;
-
-}
-
-.snow {
-    font-size: 25px;
-    font-family: 'Open Sans';
-}
-
-.voltar-snow {
-    font-size: 25px;
-    font-family: 'Open Sans';
-
-}
-
-
-/*parte esquerda da tela*/
-
-.parte2-snow ul {
-    list-style: none;
-    display: flex;
-    padding: 0;
-    justify-content: space-between;
-}
-
-
-.parte2-snow {
-    margin-top: 25px;
-    margin-bottom: 20px;
-    justify-content: baseline;
-
-}
-
-.item2-snow {
-    flex: 1;
-    background: #FFF2D8;
-    max-height: 1195px;
-    max-width: 500px;
-}
-
-.nomelivro1-snow {
-    font-size: 25px;
-    font-family: 'Open Sans';
-}
-
-.lupa1-snow img {
-    height: 25px;
-}
-.lupa-snow{
-    margin-left:5px;
-}
-.nome-livro-snow{
-    margin: 0 auto;
-}
-.dropdown-toggle-snow {
-    border-radius: 0;
-    border-color: #CBA8A4;
-    background-color: #F4CCC8;
-    width: 95px;
-    height: 35px;
-   
-
-}
-
-.salvar1-snow {
-    border-color: #9F9F9F;
-    background-color: #CCCCCC;
-    width: 65px;
-    height: 30px;
-    margin-right: 5px;
-}
-
-.botoes1-snow {
-    display: flex;
-    justify-content: flex-end;
-    margin-top: 20px;
-
-}
-
-.fase1-snow {
-    font-size: 25px;
-    font-family: 'Open Sans';
-    margin-right: 300px;
-
-
-}
-
-/*parte esquerda da tela personagem*/
-
-.hr-personagem {
-    width: 100%;
-    height: 20px;
-    background-color:  #BCE4E4;
-    border-color: #BCE4E4;
-    margin: 0;
-    border-width: 0;
-}
-
-.texto1-personagem textarea {
     border: 0;
     outline: 0;
-    background:#BCE4E4;
-    font-family: 'Open Sans';
-    font-size: 20px;
-    margin: 10px;
     resize: none;
-    margin-top:0;
-    width:1100px;
-    height:500px;
-}
-
-
-body {
-    border: 0;
-    padding: 0;
-    margin: 0;
-    overflow-x:hidden;
-    background-color: #FFF2D8;
-
-}
-
-
-.parte1-personagem ul {
-    list-style: none;
-    display: flex;
-    justify-content:space-between;
-    padding: 0px;
-    
-}
-
-
-.parte1-personagem a {
+    height: 300px;
+ }
+ 
+ .descrição-personagem {
+    background-color: #BCE4E4;
+    padding: 20px;
+    font-family: 'Open Sans';
     font-size: 20px;
-    text-decoration: none;
-    color: black;
-    font-family: 'Open Sans';
-
-}
-
-.parte1-personagem {
-    margin-top: 25px;
-    margin-bottom: 20px;
-    justify-content: space-around;
-    justify-content: baseline;
-  
-}
-.titulo1-personagem h1 {
-    justify-content: baseline;
-    text-align: left;
-
-    font-family: 'Open Sans';
-    font-size: 25px;
-    margin-right: 350px;
-    margin-bottom: 20px;
-}
-.menu-personagem {
-    font-size: 25px;
-    font-family: 'Open Sans';
-  margin-left:20px;
-}
-
-.personagem {
-    font-size: 25px;
-    font-family: 'Open Sans';
-    margin-right: 30px;
-
-  
-}
-
-
-.voltar-personagem {
-    font-size: 25px;
-    font-family: 'Open Sans';
-  
-
-    /*parte direita da tela personagem*/
-}
-
-.nomelivro1-personagem {
-    font-size: 25px;
-    font-family: 'Open Sans';
-}
-
-.lupa1-personagem img {
-    height: 25px;
-}
-.lupa-personagem{
-    margin-left:5px;
-}
-.salvar1-mundo {
-    border-color: #9F9F9F;
-    background-color: #CCCCCC;
-    width: 65px;
-    height: 30px;
-    margin-bottom:20px;
-    justify-content:baseline;
-    font-size: 25px;
-    font-family: 'Open Sans';
-   
-}
-.fase-persona{
-    display: flex;flex-direction: row;justify-content: flex-end;
-    margin-top:10px;
-    
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*parte esquerda da tela mundos*/
-
-.item1-mundo {
-    flex: 1;
-    background: #FFF2D8;
-}
-.texto1-mundo textarea {
     border: 0;
     outline: 0;
-    background:  #D5ECB4;
-    padding: 50px;
-    padding-top: 0;
-    font-family: 'Open Sans';
-    font-size: 20px;
-    margin: 10px;
     resize: none;
-    width: 1105px;
-    height: 500px;
-    margin-top: 30px;
-}
-.col-md-6{
-    background-color: #FFF2D8;
-}
-
-
-body {
-    border: 0;
-    padding: 0;
-    margin: 0;
-    overflow-x:hidden;
-}
-.parte1-mundo ul {
-    list-style: none;
-    display: flex;
-    justify-content:space-between;
-    padding: 0px;
-}
-
-
-.parte1-mundo a {
-    font-size: 20px;
-    text-decoration: none;
-    color: black;
-    font-family: 'Open Sans';
-
-}
-
-.parte1-mundo {
-    margin-top: 25px;
-    margin-bottom: 20px;
-    justify-content: space-between;
-    justify-content: baseline;
-   margin-left: 5px;
-   margin-right:5px ;
-}
-
-
-.titulo1-mundo h1 {
-    justify-content: baseline;
-text-align: left;
-margin-top:20px;
-    font-family: 'Open Sans';
-    font-size: 25px;
-    margin-right:350px;
-    margin-bottom:10px;
-}
-
-.menu-mundo {
-    font-size: 25px;
-    font-family: 'Open Sans';
-    margin-left: 30px;
-    margin: 0;
-
-}
-
-.mundo {
-    font-size: 25px;
-    font-family: 'Open Sans';
-}
-
-.voltar-mundo {
-    font-size: 25px;
-    font-family: 'Open Sans';
-
-    /*parte direita da tela mundo*/
-}
-.parte2-mundo ul {
-    list-style: none;
-    display: flex;
-    padding: 0;
-    justify-content: space-between;
-}
-.hr-mundo {
-    width: 100%;
-    height: 20px;
-    background-color:  #D5ECB4;
-    border-color:  #D5ECB4;
-    margin: 0;
-    border-width: 0;
-}
-
-.parte2-mundo {
-    margin-top: 25px;
-    margin-bottom: 20px;
-    justify-content: baseline;
-
-}
-
-.item2-mundo {
-    flex: 1;
-    background: #FFF2D8;
-    height: 1195px;
-    width: 500px;
-}
-
-.nomelivro1-mundo {
-    font-size: 25px;
-    font-family: 'Open Sans';
-}
-
-.lupa1-mundo img {
-    height: 25px;
-}
-.lupa-mundo{
-    margin-left:5px;
-}
-.nome-livro-mundo{
-    margin: 0 auto;
-}
-
-
-.salvar1-mundo {
-    border-color: #9F9F9F;
-    background-color: #CCCCCC;
-    width: 65px;
-    height: 30px;
-    margin-bottom:10px;
-   font-size: 20px;
-   font-family: 'Open Sans';
-   margin-top: 20px;
-}
-
-.fase-mundo{
-    display: flex;flex-direction: row;justify-content: flex-end;
-    margin-top:10px;
-    
-}
-
-
-
-#editor{
-    background-color: #FFF2D8;
-}
-
-
-
-
-
-mark {
-    background: orange;
-    color: black;
-  }
+    height: 800px;
+    width: 1110px;
+ }
