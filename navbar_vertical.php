@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="assets/css/navbar.css">
 </head>
 <body>
-    <div class="nav-cabecalho">
+<div class="nav-cabecalho">
         <div class="imagens">
         <div class="container-perfil">
         <img class="image" src="assets/images/camera.png" alt=""> 

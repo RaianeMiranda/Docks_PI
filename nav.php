@@ -2,12 +2,14 @@
     <div class="all-form">
         <div class="item">
             <div class="logo-nome">
+                <button>
                 <div class="menu-container">
                     <a href="#" class="container-menu-burger">
                         <i class="menu-burger">
                         </i>
                     </a>
                 </div>
+</button>
                 <img src="assets/images/docks.png" class="logotipo">
                 <h1 class="nome">Docks</h1>
             </div>
