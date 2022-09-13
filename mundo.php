@@ -10,8 +10,8 @@ $texto = "";
 if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
     $texto = $_POST['texto'];
     $sql = $pdo->prepare("INSERT INTO mundo (codMundo, codLivro, descricao)
-    VALUES (NULL, ?, ?, ?)");
-    if ($sql->execute(array('1', $texto))) {
+    VALUES (NULL, ?, ?,)");
+    if ($sql->execute(array('1',  " ".$texto." "))) {
         $msgErro = "Dados cadastrados com sucesso!";
         $_SESSION['codMundo'] = $value['codMundo'];
     } else {
@@ -42,7 +42,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
                 <nav class="parte1-mundo">
                     <ul>
                         <li class="voltar-mundo"><a href="#"><img src="assets/images/voltar.png"></a></li>
-                        <li class="mundo"><b>Snowflake</b></li>
+                        <li class="mundo"><b>Mundo</b></li>
                         <li class="menu-mundo"><b>Menu</b></li>
                     </ul>
                 </nav>
@@ -50,69 +50,59 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
                 <div class="titulo1-mundo">
                     <h1><b>1. Faça seu livro em uma frase</b></h1>
                 </div>
+                
                 <div class="texto1-mundo">
-                    <textarea>
+                <form action="" method="POST" enctype="multipart/form-data">
+                    <textarea name="texto">
 
                 <?php
-                $sql = $pdo->prepare('SELECT * FROM MUNDO'); //where codlivro = sessao
+                $sql = $pdo->prepare('SELECT * FROM mundo'); //where codlivro = sessao
                 if ($sql->execute()) {
                     $info = $sql->fetchAll(PDO::FETCH_ASSOC);
 
                     foreach ($info as $key => $value) {
                         $_SESSION['codMundo'] = $value['codMundo'];
-                        echo $value['codMundo'];
+                
                         echo $value['descricao'];
                     }
                 }
-                echo "teste";
+               
                 ?>
             </textarea>
+            <button type="submit" name="submit" class="salvar1-mundo"><b> Salvar </b></button>
+            </form>
                 </div>
             </div>
 
-                <div class="col-md-6">
-                    <nav class="parte2-mundo">
-                        <ul>
-                            <div class="nome-livro-mundo">
-                                <li class="nomelivro1-mundo"><b>Alice</b></li>
-                            </div>
-                            <div class="lupa-mundo">
-                                <li class="lupa1-mundo"><img src="assets/images/lupa.png"></li>
-                            </div>
-                        </ul>
-                    </nav>
-                    <hr class="hr-mundo">
-                    <form action="" method="POST" enctype="multipart/form-data">
-                        <div class="botoes-mundo">
-                            <p class="fase1-mundo"><b> Fase 1 </b></p>
-                            <div style="display: flex;display: flex;flex-direction: row;justify-content: flex-end;">
-                                <button type="submit" name="submit" class="salvar1-mundo"><b> Salvar </b></button>
-
-                            </div>
+            <div class="col-md-6">
+                <nav class="parte2-mundo">
+                    <ul>
+                        <div class="nome-livro-mundo">
+                            <li class="nomelivro1-mundo"><b>Alice</b></li>
                         </div>
-                        <div>
-
-                            <div id="editor" name="texto"><?php echo $texto ?></div>
+                        <div class="lupa-mundo">
+                            <li class="lupa1-mundo"><img src="assets/images/lupa.png"></li>
+                        </div>
+                    </ul>
+                </nav>
+                <hr class="hr-mundo">
+              
+                    <div class="botoes-mundo">
+                        <p class="fase1-mundo"><b> Fase 1 </b></p>
+                        <div style="display: flex;display: flex;flex-direction: row;justify-content: flex-end;">
+                          
 
                         </div>
-                    </form>
-                    <?php echo $msgErro ?>
-                </div>
+                    </div>
+                    <div>
+
+                    </div>
+               
+                <?php echo $msgErro ?>
             </div>
+        </div>
     </section>
 
-    <!-- Inicia o CK editor -->
-    <script src="https://cdn.ckeditor.com/ckeditor5/35.1.0/classic/ckeditor.js"></script>
-    <script>
-    ClassicEditor
-        .create(document.querySelector('#editor'))
-        .then(editor => {
-            console.log(editor);
-        })
-        .catch(error => {
-            console.error(error);
-        });
-    </script>
 
 
 

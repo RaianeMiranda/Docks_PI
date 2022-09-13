@@ -7,11 +7,16 @@ $msgErro = "";
 $texto = "";
 
 if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
-    $texto = $_POST['texto'];
+    if (isset($_POST['texto']))
+        $texto = $_POST['texto'];
+    else
+        $texto = "Sem texto";    
+    
+    
     $_SESSION['nomeLivro'] = 1;
     $sql = $pdo->prepare("INSERT INTO etapas (codEtapas, codSnowflake, codLivro, descricao)
     VALUES (null, ?, ?, ?)");
-    if ($sql->execute(array($_SESSION['codSnowflake'], $_SESSION['nomeLivro'], $texto))) {
+    if ($sql->execute(array($_SESSION['codSnowflake'], $_SESSION['nomeLivro'], " ".$texto." "))) {
         $msgErro = "Dados cadastrados com sucesso!";
     } else {
         $msgErro = "Dados não cadastrados!";
@@ -69,51 +74,51 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
                 </div>
             </div>
 
-                <div class="col-md-6">
-                    <nav class="parte2-snow">
-                        <ul>
-                            <div class="nome-livro-snow">
-                                <li class="nomelivro1-snow"><b>Alice</b></li>
-                            </div>
-                            <div class="lupa-snow">
-                                <li class="lupa1-snow"><img src="assets/images/lupa.png"></li>
-                            </div>
-                        </ul>
-                    </nav>
-                    <hr class="hr-snow">
-                    <form action="" method="POST" enctype="multipart/form-data">
-                        <div class="botoes-snow">
-                            <p class="fase1-snow"><b> Fase 1 </b></p>
-                            <div style="display: flex;display: flex;flex-direction: row;justify-content: flex-end;">
-                                <button type="submit" name="submit" class="salvar1-snow"><b> Salvar </b></button>
-
-                            </div>
+            <div class="col-md-6">
+                <nav class="parte2-snow">
+                    <ul>
+                        <div class="nome-livro-snow">
+                            <li class="nomelivro1-snow"><b>Alice</b></li>
                         </div>
-                        <div>
-
-                            <div id="editor" name="texto"><?php echo $texto ?></div>
+                        <div class="lupa-snow">
+                            <li class="lupa1-snow"><img src="assets/images/lupa.png"></li>
+                        </div>
+                    </ul>
+                </nav>
+                <hr class="hr-snow">
+                <form action="" method="POST" enctype="multipart/form-data">
+                    <div class="botoes-snow">
+                        <p class="fase1-snow"><b> Fase 1 </b></p>
+                        <div style="display: flex;display: flex;flex-direction: row;justify-content: flex-end;">
+                            <button type="submit" name="submit" class="salvar1-snow"><b> Salvar </b></button>
 
                         </div>
-                    </form>
-                    <?php echo $msgErro ?>
-                </div>
+                    </div>
+                    <div>
+
+                        <textarea id="texto" name="texto"><?php echo $texto ?></textarea>
+
+                    </div>
+                </form>
+                <?php echo $msgErro ?>
             </div>
+        </div>
     </section>
 
     <!-- Inicia o CK editor -->
     <script src="https://cdn.ckeditor.com/ckeditor5/35.1.0/classic/ckeditor.js"></script>
     <script>
     ClassicEditor
-        .create(document.querySelector('#editor'))
+        .create(document.querySelector('#texto'))
         .then(editor => {
             console.log(editor);
+            
         })
         .catch(error => {
             console.error(error);
         });
+
     </script>
-
-
 
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"

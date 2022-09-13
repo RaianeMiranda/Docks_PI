@@ -2,16 +2,16 @@
 session_start();
 include "include/MySql.php";
 
-$codPersonagens = "";
+
 $msgErro = "";
 $texto = "";
 
 if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
     $texto = $_POST['texto'];
     $_SESSION['nomeLivro'] = 1;
-    $sql = $pdo->prepare("INSERT INTO personagens (codPersonagens, codLivro, descricao)
-    VALUES (NULL ?, ?)");
-    if ($sql->execute(array( '1', $texto))) {
+    $sql = $pdo->prepare("INSERT INTO personagens (codPersonagens, nome_persona, codLivro, descricao)
+    VALUES (NULL ?, ?, ?,)");
+    if ($sql->execute(array( '1',  " ".$texto." "))) {
         $msgErro = "Dados cadastrados com sucesso!";
     } else {
         $msgErro = "Dados não cadastrados!";
@@ -41,13 +41,13 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
                 <nav class="parte1-personagem">
                     <ul>
                         <li class="voltar-personagem"><a href="#"><img src="assets/images/voltar.png"></a></li>
-                        <li class="personagem"><b>Snowflake</b></li>
+                        <li class="personagem"><b>Personagem</b></li>
                         <li class="menu-personagem"><b>Menu</b></li>
                     </ul>
                 </nav>
                 <hr class="hr-personagem">
                 <div class="titulo1-personagem">
-                    <h1><b>1. Faça seu livro em uma frase</b></h1>
+                    <h1><b>1. Descreva seu personagem</b></h1>
                 </div>
                 <div class="texto1-personagem">
                     <textarea>
@@ -69,48 +69,50 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
                 </div>
             </div>
 
-                <div class="col-md-6">
-                    <nav class="parte2-personagem">
-                        <ul>
-                            <div class="nome-livro-personagem">
-                                <li class="nomelivro1-personagem"><b>Alice</b></li>
-                            </div>
-                            <div class="lupa-personagem">
-                                <li class="lupa1-personagem"><img src="assets/images/lupa.png"></li>
-                            </div>
-                        </ul>
-                    </nav>
-                    <hr class="hr-personagem">
-                    <form action="" method="POST" enctype="multipart/form-data">
-                        <div class="botoes-mundo">
-                            <p class="fase1-mundo"><b> Fase 1 </b></p>
-                            <div style="display: flex;display: flex;flex-direction: row;justify-content: flex-end;">
-                                <button type="submit" name="submit" class="salvar1-personagem"><b> Salvar </b></button>
-
-                            </div>
+            <div class="col-md-6">
+                <nav class="parte2-personagem">
+                    <ul>
+                        <div class="nome-livro-personagem">
+                            <li class="nomelivro1-personagem"><b>Alice</b></li>
                         </div>
-                        <div>
-
-                            <div id="editor" name="texto"><?php echo $texto ?></div>
+                        <div class="lupa-personagem">
+                            <li class="lupa1-personagem"><img src="assets/images/lupa.png"></li>
+                        </div>
+                    </ul>
+                </nav>
+                <hr class="hr-personagem">
+                <form action="" method="POST" enctype="multipart/form-data">
+                    <div class="botoes-mundo">
+                        <p class="fase1-mundo"><b> Fase 1 </b></p>
+                        <div style="display: flex;display: flex;flex-direction: row;justify-content: flex-end;">
+                            <button type="submit" name="submit" class="salvar1-personagem"><b> Salvar </b></button>
 
                         </div>
-                    </form>
-                    <?php echo $msgErro ?>
-                </div>
+                    </div>
+                    <div>
+
+                    <textarea id="texto" name="texto"><?php echo $texto ?></textarea>
+
+
+                    </div>
+                </form>
+                <?php echo $msgErro ?>
             </div>
+        </div>
     </section>
-
     <!-- Inicia o CK editor -->
     <script src="https://cdn.ckeditor.com/ckeditor5/35.1.0/classic/ckeditor.js"></script>
     <script>
     ClassicEditor
-        .create(document.querySelector('#editor'))
+        .create(document.querySelector('#texto'))
         .then(editor => {
             console.log(editor);
+            
         })
         .catch(error => {
             console.error(error);
         });
+
     </script>
 
 

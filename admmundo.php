@@ -3,18 +3,18 @@ session_start();
 include "include/mysql.php";
 
 $value="";
-$codSnowflake="";
+$codMundo="";
 $texto = "";
 $msgErro="";
 
     if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
         $texto = $_POST['texto'];
-        $sql = $pdo->prepare("INSERT INTO snowflake (codSnowflake, descricao)
-        VALUES ( null,?)");
-        if ($sql->execute(array( $texto))) {
+        $sql = $pdo->prepare("INSERT INTO MUNDO (codMundo, codLivro, descricao)
+        VALUES ( null,?,?)");
+        if ($sql->execute(array('1', $texto))) {
             $msgErro = "Dados cadastrados com sucesso!";
-            $_SESSION['codSnowflake'] = $codSnowflake;
-            $codSnowflake="";
+            $_SESSION['codMundo'] = $codMundo;
+            $codMundo="";
         } else {
             $msgErro = "Dados não cadastrados!";
         }
@@ -26,16 +26,15 @@ $msgErro="";
 
 <head>
     <meta charset="UTF-8">
-    <title>cadastro de usuário</title>
     <link rel="stylesheet">
 </head>
 
 <body>
     <form method="POST">
         <fieldset>
-            <legend>cadastro de descricao de fase</legend>
+            <legend>cadastro de descricao de mundo</legend>
             <br>
-            descrição de fase:<textarea name="texto" value="<?php echo $texto ?>">
+            texto personagem:<textarea name="texto" value="<?php echo $texto ?>">
 </textarea>
             <button type="submit" value="Salvar" name="submit">Salvar</button>
         </fieldset>
