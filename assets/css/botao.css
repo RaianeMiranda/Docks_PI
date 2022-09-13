@@ -1,0 +1,19 @@
+
+hr{
+    background-color: #FED576;
+}
+.dropdown-menu.dropdown-item:hover{
+    background-color: #FED576;
+}
+a:hover{
+    background-color: #FED576;
+}
+.btn:focus{
+    box-shadow: none;
+}
+.dropdown-item :focus{
+    background-color:transparent;
+}
+.dropdown-menu> a:hover{
+    background-color: transparent;
+}

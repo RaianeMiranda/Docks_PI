@@ -1,85 +1,103 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
-body{
-    font-family: 'open Sans',sans-serif;
+body {
+    font-family: 'open Sans', sans-serif;
     background: #FFF2D8
 }
-button{
+
+button {
     height: 50px;
-    width: 250px;
+    width: 300px;
     border-radius: 5px;
     background-color: transparent;
     border: 3px solid #FED576;
     margin-left: 25px;
-
-    
-
 }
-.livros{
+
+.livros {
     margin-left: 5%;
+    display:flex;
 }
+
 button.pate {
     background-color: transparent;
     height: 55px;
-  
     border: 3px solid #FED576;
 }
 
 button.dock {
     background-color: transparent;
-  
     height: 55px;
-    border-color:#FED576 
+    border-color: #FED576
 }
 
 button.mentor {
     background-color: transparent;
-   
     height: 55px;
     border: 3px solid #FED576;
 }
 
-div.container{
+div.container {
     display: flex;
     margin-top: 40px;
     /*justify-content: space-between;*/
-   
 }
-.dock{
-    width: 250px;
-    height: 300px;
- margin-left: 20px;
-}
-.mentor{
+
+.dock {
     width: 250px;
     height: 300px;
     margin-left: 20px;
 }
-.pate{
+
+.mentor {
     width: 250px;
+    height: 300px;
+    margin-left: 20px;
+}
+
+.pate {
+    width:  250px;
     height: 300px;
     margin-left: 20px;
 }
 
 .container-leitura {
-          display: flex;
-        }
+    display: flex;
+}
 
-        .container-bt button {
-          height: 100%;
-          width: 30px;
-          background-color: transparent;
-          background-image: url('assets/images/dot.png');
-          background-position: center;
-         /* background-size: 80%;*/
-          background-repeat: no-repeat;
-          border-color: transparent;
-       
-        }
-p{
+.container-bt button {
+    height: 100%;
+    width: 30px;
+    background-color: transparent;
+    background-image: url('assets/images/dot.png');
+    background-position: center;
+    /* background-size: 80%;*/
+    background-repeat: no-repeat;
+    border-color: transparent;
+}
 
+.container-bt .dropdown-toggle::after {
+    display: none!important;
+}
+
+.container-bt .btn-secondary:focus, 
+.container-bt .btn-secondary:hover, 
+.container-bt .btn-secondary:active {
+    color: #fff;
+    background-color: transparent;
+    border-color: transparent;
+}
+
+p {
     text-align: left;
     margin-left: 5px;
 }
-img{
- margin-left: 5px;
+
+img {
+    margin-left: 5px;
+}
+.container{
+    display: flex;
+}
+.legenda{
+    display: block;
 }
