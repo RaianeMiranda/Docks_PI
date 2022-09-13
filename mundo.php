@@ -56,8 +56,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
                         <div class="titulo1-mundo">
                             <h1><b>Descreva seu mundo aqui!!!</b></h1>
                         </div>
-                        <button type="submit" name="submit" class="salvar1-mundo"><b>Salvar
-                            </b></button>
+                        <button type="submit" name="submit" class="salvar1-mundo"><b> Salvar
                     </div>
                 </form>
                 <div class="texto1-mundo">
