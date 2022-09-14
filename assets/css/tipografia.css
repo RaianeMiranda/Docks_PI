@@ -1,0 +1,16 @@
+#posts {
+    background-color: #F0F0F1;
+    margin: 64px 64px 64px 64px;
+    padding: 10px;
+    border: 5px solid red;
+    overflow: auto;
+    box-shadow: 0 0 10px #777777;
+  }
+  .amatic {
+    font-family: 'Amatic SC', cursive;
+    font-size: 200%;
+  }
+  .roman {
+    font-family: 'Times New Roman', cursive;
+    font-size: 200%;
+  }

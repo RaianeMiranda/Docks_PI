@@ -77,7 +77,7 @@ div.container {
     margin-top: 2px;
 }
 
-button.botao-tipografia1 {
+.botao-tipografia1 {
     background: #fff;
     border-radius: 8px;
     padding: 17px;
@@ -90,11 +90,11 @@ button.botao-tipografia1 {
     height: 90px;
     transition: background-color 0.5s;
 }
-button.botao-tipografia1:hover{
+.botao-tipografia1:hover{
    background-color:  #EDEDED;
 }
 
-button.botao-tipografia2 {
+.botao-tipografia2 {
     background: #fff;
     border-radius: 8px;
     padding: 17px;
@@ -107,11 +107,11 @@ button.botao-tipografia2 {
     height: 90px;
     transition: background-color 0.5s;
 }
-button.botao-tipografia2:hover{
+.botao-tipografia2:hover{
     background-color: #EDEDED;
  }
 
-button.botao-tipografia3 {
+.botao-tipografia3 {
     background: #fff;
     border-radius: 8px;
     padding: 17px;
@@ -125,10 +125,10 @@ button.botao-tipografia3 {
     transition: background-color 0.5s;
 }
 
-button.botao-tipografia3:hover{
+.botao-tipografia3:hover{
     background-color:  #EDEDED;
  }
-button.botao-tipografia4 {
+.botao-tipografia4 {
     background: #fff;
     border-radius: 8px;
     padding: 17px;
@@ -141,7 +141,7 @@ button.botao-tipografia4 {
     height: 90px;
     transition: background-color 0.5s;
 }
-button.botao-tipografia4:hover{
+.botao-tipografia4:hover{
     background-color: #EDEDED;
  }
 
@@ -178,7 +178,7 @@ button.botao-tipografia4:hover{
     gap: 20px;
 }
 
-button.botao-acessibilidade1 {
+.botao-acessibilidade1 {
     background: #fff;
     border-radius: 8px;
     padding: 17px;
@@ -189,10 +189,10 @@ button.botao-acessibilidade1 {
     width: 190px;
     height: 90px;
 }
-button.botao-acessibilidade1:hover{
+.botao-acessibilidade1:hover{
     background-color: white;
 }
-button.botao-acessibilidade3{
+.botao-acessibilidade3{
     background: #fff;
     border-radius: 8px;
     padding: 17px;
@@ -203,10 +203,10 @@ button.botao-acessibilidade3{
     width: 190px;
     height: 90px;
 }
-button.botao-acessibilidade3:hover{
+.botao-acessibilidade3:hover{
     background-color: white;
 }
-button.botao-acessibilidade5{
+.botao-acessibilidade5{
     background: #fff;
     border-radius: 8px;
     padding: 17px;
@@ -217,10 +217,10 @@ button.botao-acessibilidade5{
     width: 190px;
     height: 90px;
 }
-button.botao-acessibilidade5:hover{
+.botao-acessibilidade5:hover{
     background-color: white;
 }
-button.botao-acessibilidade2{
+.botao-acessibilidade2{
     background: #F4CCC8;
     color: #000;
     font-weight: bolder;
@@ -229,7 +229,7 @@ button.botao-acessibilidade2{
     height: 100%;
     border-radius: 0px;
 }
-button.botao-acessibilidade4{
+.botao-acessibilidade4{
     background: #D5ECB4;
     color:#000;
     font-weight: bolder;
@@ -238,7 +238,7 @@ button.botao-acessibilidade4{
     height: 100%;
     border-radius: 0px;
 }
-button.botao-acessibilidade6{
+.botao-acessibilidade6{
     background: #F4CCC8;
     color:#000;
     font-weight: bolder;
@@ -247,13 +247,13 @@ button.botao-acessibilidade6{
     height: 100%;
     border-radius: 0px;
 }
-button.close{
+.close{
     position: fixed;
     width: 10%;
     border-radius: 12px;
     margin-left: 380px;
 }
-button.close:hover{
+.close:hover{
     background-color: transparent;
 }
 div.container-tipografia-acessibilidade{
@@ -263,3 +263,19 @@ div.container-acessibilidade{
     /*display: block;*/
     margin-right: 425px;
 }
+.amatic {
+    font-family: 'Amatic SC', cursive;
+    font-size: 200%;
+  }
+  .roman {
+    font-family: 'Times New Roman', cursive;
+    font-size: 200%;
+  }
+  #posts {
+    background-color: #F0F0F1;
+    margin: 64px 64px 64px 64px;
+    padding: 10px;
+    border: 5px solid red;
+    overflow: auto;
+    box-shadow: 0 0 10px #777777;
+  }

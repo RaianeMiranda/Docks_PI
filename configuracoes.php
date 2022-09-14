@@ -17,7 +17,7 @@ include "head.php"
     
 </head>
 
-<body>
+<body  id="posts">
   <br>
     <div class="config">
         <h1 class="titulo-config">Configurações</h1>
@@ -30,7 +30,11 @@ include "head.php"
     <div class="container-tipografia-acessibilidade">
     <div class="container">
     <div class="botao-tipografia-container">
-        <button class="botao-tipografia1" id="botao-tipografia1">Merriweather</button>
+        <div class="amatic">Content</div>
+        <button type="button" onclick="changeFont()">Change the font!</button>
+        
+        <button type="button" class="botao-tipografia1" id="botao-tipografia1" onclick="changeFont()">Merriweather</button>
+</div>
         <button class="botao-tipografia2">Source serif pro</button>
 </div>
         <div class="botao-tipografia-container2">
@@ -60,6 +64,15 @@ include "gerenciamento.php";
 ?>
 
 <script>     
+function changeFont() {
+  var fon = document.getElementById("posts");
+  if (fon.className == "amatic") {
+    fon.className = 'roman';
+  } else {
+    fon.className = 'amatic';
+  }
+}
+
        const btn1 = document.getElementById("btn-1");
         btn1.addEventListener("click", ()=>{
             if(btn1.innerText === "Ligar"){
