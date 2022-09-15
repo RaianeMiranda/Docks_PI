@@ -8,10 +8,10 @@ $texto = "";
 $msgErro="";
 $nome_etapas="";
 
-//etapass
+
     if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
         $texto = $_POST['texto'];
-        $nome_fase =$_POST['nome_fase'];
+        $nome_fase = $_POST['nome_fase'];
         $sql = $pdo->prepare("INSERT INTO etapas (codEtapas, codSnowflake, codLivro, descricao, nome_etapas)
 VALUES (null, ?, ?, ?, ?)");
         if ($sql->execute(array( $texto))) {
