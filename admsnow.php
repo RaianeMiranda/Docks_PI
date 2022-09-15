@@ -2,18 +2,22 @@
 session_start();
 include "include/mysql.php";
 
-
-$descricao = "";
+$value="";
+$codSnowflake="";
+$texto = "";
 $msgErro="";
 
+//etapass
     if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
-        $descricao = $_POST['descricao'];
-        $sql = $pdo->prepare("INSERT INTO snowflake ( codSnowflake, descricao)
-        VALUES ( null,?,?)");
-        if ($sql->execute(array( $descricao))) {
+        $texto = $_POST['texto'];
+        $sql = $pdo->prepare("INSERT INTO snowflake (codSnowflake, descricao)
+        VALUES ( null,?)");
+        if ($sql->execute(array( $texto))) {
             $msgErro = "Dados cadastrados com sucesso!";
-            $_SESSION['codSnowflake'] = $value['codSnowflake'];
-        } else {
+            $_SESSION['codSnowflake'] = $codSnowflake;
+            $codSnowflake="";
+        }
+         else {
             $msgErro = "Dados não cadastrados!";
         }
     }
@@ -33,12 +37,15 @@ $msgErro="";
         <fieldset>
             <legend>cadastro de descricao de fase</legend>
             <br>
-            descrição de fase:<textarea name="descricao" value="<?php echo $descricao ?>">
-</textarea>
-            <button type="submit" value="Salvar" name="submit">Salvar</button>
+            nome da etapa:<input type="texto" name="texto" value="<?php echo $text?>">
+            <br>
+            <br>
+            <br>
+            descrição de fase:<textarea name="texto" value="<?php echo $texto ?>"></textarea>
+            <input type="submit" value="Salvar" name="submit"></input>
         </fieldset>
     </form>
     <?php echo $msgErro ?>
 </body>
-
+funcionando
 </html>

@@ -66,7 +66,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
                 $sql = $pdo->prepare('SELECT * FROM MUNDO'); //where codlivro = sessao
                 if ($sql->execute()) {
                     $info = $sql->fetchAll(PDO::FETCH_ASSOC);
-
+                    print_r($info);
                     foreach ($info as $key => $value) {
                         $_SESSION['codMundo'] = $value['codMundo'];
                         echo $value['codMundo'];

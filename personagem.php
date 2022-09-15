@@ -2,16 +2,16 @@
 session_start();
 include "include/MySql.php";
 
-$codPersonagens = "";
+
 $msgErro = "";
 $texto = "";
 
 if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
     $texto = $_POST['texto'];
     $_SESSION['nomeLivro'] = 1;
-    $sql = $pdo->prepare("INSERT INTO personagens (codPersonagens, codLivro, descricao)
-    VALUES (NULL ?, ?)");
-    if ($sql->execute(array( '1', $texto))) {
+    $sql = $pdo->prepare("INSERT INTO personagens (codPersonagens, nome_persona, codLivro, descricao)
+    VALUES (NULL ?, ?, ?,)");
+    if ($sql->execute(array( '1',  " ".$texto." "))) {
         $msgErro = "Dados cadastrados com sucesso!";
     } else {
         $msgErro = "Dados não cadastrados!";
@@ -56,12 +56,11 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
                         <div class="titulo1-personagem">
                             <h1><b>Descreva seu personagem aqui!!!</b></h1>
                         </div>
-                        <button type="submit" name="submit" class="salvar1-personagem"><b> Salvar
-                            </b></button>
+                        <button type="submit" name="submit" class="salvar1-personagem"><b>Salvar</b></button>
                     </div>
                 </form>
-                <div class="texto1-personagem">
-                    <textarea>
+           
+                    <textarea class="descrição-personagem">
 
                   <?php
                 $sql = $pdo->prepare('SELECT * FROM PERSONAGENS'); //where codlivro = sessao
@@ -70,19 +69,19 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
 
                     foreach ($info as $key => $value) {
                         $_SESSION['codPersonagens'] = $value['codPersonagens'];
-                        echo $value['codPersonagens'];
+                      //  echo $value['codPersonagens'];
                         echo $value['descricao'];
                     }
                 }
                 echo "teste";
                 ?>
-            </textarea>
-                </div>
+                    </textarea>
+                
             </div>
         </div>
     </section>
 
-
+   
 
 
 
