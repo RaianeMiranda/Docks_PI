@@ -11,10 +11,10 @@ $nome_etapas="";
 
     if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
         $texto = $_POST['texto'];
-        $nome_fase = $_POST['nome_fase'];
-        $sql = $pdo->prepare("INSERT INTO etapas (codEtapas, codSnowflake, codLivro, descricao, nome_etapas)
-VALUES (null, ?, ?, ?, ?)");
-        if ($sql->execute(array( $texto))) {
+        $nome_etapas = $_POST['nome_etapas'];
+        $sql = $pdo->prepare("INSERT INTO etapas (codEtapas, codSnowflake, codLivro, nome_etapas, descricao)
+VALUES ( ?, ?, ?, NULL, ?)");
+        if ($sql->execute(array( $texto, $nome_etapas))) {
             $msgErro = "Dados cadastrados com sucesso!";
             $_SESSION['codSnowflake'] = $codSnowflake;
             $codSnowflake="";
@@ -39,11 +39,11 @@ VALUES (null, ?, ?, ?, ?)");
         <fieldset>
             <legend>cadastro de descricao de fase</legend>
             <br>
-            nome da etapa:<input type="texto" name="nome_fase" value="<?php echo $nome_etapas?>">
+            nome da etapa:<input type="texto" name="nome_etapas" value="<?php echo $nome_etapas?>">
             <br>
             <br>
             <br>
-            descrição de fase:<textarea name="texto" value="<?php echo $texto ?>"></textarea>
+            descrição de etapa:<textarea name="texto" value="<?php echo $texto ?>"></textarea>
             <input type="submit" value="Salvar" name="submit">
         </fieldset>
     </form>

@@ -2,21 +2,22 @@
 session_start();
 include "include/mysql.php";
 
-    $sql = $pdo->prepare('SELECT * FROM etapas');
+    $sql = $pdo->prepare('SELECT * FROM ETAPAS');
     if ($sql->execute()){
         $info = $sql->fetchAll(PDO::FETCH_ASSOC);
 
         echo "<table border='1'>";
         echo "<tr>";
-        //echo "  <th>nome fase</th>";
+        echo "  <th>nome da etapa </th>";
         echo "  <th>descrição</th>";
         echo "  <th>Alterar</th>";
         echo "  <th>Excluir</th>";
         echo "</tr>";
         foreach($info as $key => $value){
             echo "<tr>";
+            echo "<td>".$value['nome_etapas']."</td>";
             echo "<td>".$value['descricao']."</td>";
-            echo "<td><center><a href='altUsuario.php?id=".$value['codSnowflake']."'>(+)</a></center></td>";
+            echo "<td><center><a href='altsnow.php?id=".$value['codSnowflake']."'>(+)</a></center></td>";
             echo "<td><center><a href='delUsuario.php?id=".$value['codSnowflake']."'>(-)</a></center></td>";
             echo "</tr>";
         }
@@ -24,4 +25,3 @@ include "include/mysql.php";
     }
 ?>
 <input type="button" value="Cadastrar" onclick="parent.location='admsnow.php'">
-funcionando
