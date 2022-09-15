@@ -30,16 +30,12 @@ include "head.php"
     <div class="container-tipografia-acessibilidade">
     <div class="container">
     <div class="botao-tipografia-container">
-        <div class="amatic">Content</div>
-        <button type="button" onclick="changeFont()">Change the font!</button>
-        
         <button type="button" class="botao-tipografia1" id="botao-tipografia1" onclick="changeFont()">Merriweather</button>
-</div>
-        <button class="botao-tipografia2">Source serif pro</button>
+        <button class="botao-tipografia2"onclick="changeFont1()">Source serif pro</button>
 </div>
         <div class="botao-tipografia-container2">
-            <button class="botao-tipografia3" >Open Sans</button>
-            <button class="botao-tipografia4">Noto sans</button>
+            <button class="botao-tipografia3"onclick="changeFont2()" >Open Sans</button>
+            <button class="botao-tipografia4"onclick="changeFont()">Noto sans</button>
         </div>
     </div>
    <div class="container-acessibilidade">
@@ -66,10 +62,35 @@ include "gerenciamento.php";
 <script>     
 function changeFont() {
   var fon = document.getElementById("posts");
-  if (fon.className == "amatic") {
-    fon.className = 'roman';
+  if (fon.className == "merriweather") {
+    fon.className = 'open-sans';
   } else {
-    fon.className = 'amatic';
+    fon.className = 'merriweather';
+  }
+}
+function changeFont1(){
+      var fon = document.getElementById("posts");
+      if(fon.className == "source") {
+        fon.className = 'open-sans';
+      } else {
+        fon.className = 'source';
+      }
+}
+function changeFont2(){
+  var fon = document.getElementById("posts");
+  if(fon.className == "open-sans"){
+    fon.className = 'open-sans';
+  }else{
+    fon.className = 'open-sans';
+  }
+}
+
+function changeFont3(){
+  var fon = document.getElementById("posts");
+  if(fon.className == "noto-sans"){
+    fon.className = 'open-sans';
+  }else{
+    fon.className = 'noto-sans';
   }
 }
 

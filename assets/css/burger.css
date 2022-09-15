@@ -33,6 +33,6 @@
     transform: rotate(45deg);
 }
 
-.container-menu-burger:active .menu-burger::after {
+/*.container-menu-burger:active .menu-burger::after {
     transform: rotate(-45deg);
 }
