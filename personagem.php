@@ -60,7 +60,8 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
                     </div>
                 </form>
            
-                    <textarea class="descrição-personagem">
+                    <textarea class="descrição-a@2102
+                    personagem">
 
                   <?php
                 $sql = $pdo->prepare('SELECT * FROM PERSONAGENS'); //where codlivro = sessao

@@ -6,12 +6,14 @@ $value="";
 $codSnowflake="";
 $texto = "";
 $msgErro="";
+$nome_etapas="";
 
 //etapass
     if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
         $texto = $_POST['texto'];
-        $sql = $pdo->prepare("INSERT INTO snowflake (codSnowflake, descricao)
-        VALUES ( null,?)");
+        $nome_fase =$_POST['nome_fase'];
+        $sql = $pdo->prepare("INSERT INTO etapas (codEtapas, codSnowflake, codLivro, descricao, nome_etapas)
+VALUES (null, ?, ?, ?, ?)");
         if ($sql->execute(array( $texto))) {
             $msgErro = "Dados cadastrados com sucesso!";
             $_SESSION['codSnowflake'] = $codSnowflake;
@@ -37,15 +39,15 @@ $msgErro="";
         <fieldset>
             <legend>cadastro de descricao de fase</legend>
             <br>
-            nome da etapa:<input type="texto" name="texto" value="<?php echo $text?>">
+            nome da etapa:<input type="texto" name="nome_fase" value="<?php echo $nome_etapas?>">
             <br>
             <br>
             <br>
             descrição de fase:<textarea name="texto" value="<?php echo $texto ?>"></textarea>
-            <input type="submit" value="Salvar" name="submit"></input>
+            <input type="submit" value="Salvar" name="submit">
         </fieldset>
     </form>
     <?php echo $msgErro ?>
 </body>
-funcionando
+
 </html>
