@@ -2,7 +2,7 @@
 include "../include/MySql.php";
 session_start();
 $nomeLivro = "";
-
+//DESCUBRA COMO COLOCAR O MODAL COM AS IMAGENS E COMO IDENTIFICAR OS ID'S NA MESMA PÁGINA
 $nomeLivroErro = "";
 $msgErro = "";
 echo "aqui:" . $_SESSION['idEmail'];
@@ -63,6 +63,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Criar Livros</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="../assets/css/criar_livros.css">
 </head>
 
@@ -99,10 +100,65 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
                     <span class="obrigatorio"> * <?php echo   $nomeLivroErro ?></span>
 
                     <div class="botao-flex">
-                        <input class="botao-salvar"  type="submit" value="Salvar" name="submit">
+                        <input class="botao-salvar" type="submit" value="Salvar" name="submit">
                     </div>
                 </div>
             </form>
+
+<!--============================================T=R=O=U=X=A============================================================-->
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+                Launch demo modal
+            </button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="all-form">
+                                <?php
+                                $sql = $pdo->prepare('SELECT * FROM IMAGEM WHERE imagem=?');
+                                if ($sql->execute(array('1'))) {
+                                    $info = $sql->fetchAll(PDO::FETCH_ASSOC);
+                                    if (count($info) > 0) {
+                                        foreach ($info as $key => $values) {
+                                            $_SESSION['imagem'] = $imagem;
+                                            $imagem = "";
+                                        }
+                                        //header('location:paginas/list_usuario.php');
+                                    }
+                                    echo "<table border='1'>";
+                                    echo "<tr>";
+                                    echo "  <th>Imagem</th>";
+                                    echo "  <th>Selecionar</th>";
+                                    echo "  <th>Excluir</th>";
+                                    echo "</tr>";
+                                    foreach ($info as $key => $value) {
+                                        echo "<tr>";
+                                        echo "<td>" . $value['imagem'] . "</td>";
+                                        echo '<td><img src="data:image/png;base64,' . base64_encode($value['capaLivro']) . '" />1</td>';
+                                        echo "</tr>";
+                                    }
+                                    echo "</table>";
+                                }
+                                ?>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <input class="botao-salvar" type="submit" value="Salvar" name="submit">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
             <script>
                 const imgInp = document.getElementById("upload_image");
                 const imagemTemp = document.getElementById("imagemTemp");
@@ -114,7 +170,14 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
                     }
                 }
             </script>
+
+ <!--============================================T=R=O=U=X=A============================================================-->
             <span class="erro"><?php echo $msgErro ?></span>
+
+
+            <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 
 </html>

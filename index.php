@@ -8,7 +8,7 @@
 </head>
 <body>
     <a href="paginas/cad_usuario.php"><button>Cadastre-se</button></a>
-    <a href="login.php"><button>Entre</button></a>
+    <a href="m_login.php"><button>Entre</button></a>
     <a href="login_adm.php"><button>administrador</button></a>
 </body>
 </html>

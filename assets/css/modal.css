@@ -1,33 +1,40 @@
-.modal-fechar{
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  width: 100%;
-  pointer-events: auto;
-  /* background-color: #fff; */
-  background-clip: padding-box;
-  /*border: 1px solidrgba(0,0,0,.2);*/
-  border-radius: 0.3rem;
-  outline: 0;
-}
-.botao-alterar1 {
-  /* color: #fff; */
-  /* background-color: #007bff; */
- /*
-  /* border-color: #007bff; */
-  background-color: #D5ECB4;
-  border: 2px solid #BBBBBB;
-  height: 25px;
-  width: 80px;
-  font-weight: bolder;
-  font-size: 15px;
-  text-align: center;
-}
-body{
-  background-color: #FFF2D8;
-}
+   /* The Modal (background) */
+   .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    padding: 35px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    background-color: white;
+    margin: 0 auto;
+    width: 380px;
+    height: 750px;
+    border-radius: 35px;
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #000000;
+    float: right;
+    font-size: 50px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+    
+  }
