@@ -155,3 +155,7 @@ button.capa {
     height: 100%;
 }
 
+#upload_image{
+    width: 180px;
+    height: 300px;
+}

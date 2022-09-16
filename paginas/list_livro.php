@@ -3,11 +3,13 @@ include "../include/MySql.php";
 session_start();
 $nomeLivro =
 
+
   $sql = $pdo->prepare('SELECT * FROM livros WHERE idEmail=?');
 if ($sql->execute(array($_SESSION['idEmail']))) {
   $info = $sql->fetchAll(PDO::FETCH_ASSOC);
   if (count($info) > 0) {
     foreach ($info as $key => $values) {
+
       $_SESSION['nomeLivro'] = $nomeLivro;
       $nomeLivro = "";
     }
@@ -25,7 +27,7 @@ if ($sql->execute(array($_SESSION['idEmail']))) {
     echo "<tr>";
     echo "<td>" . $value['nomeLivro'] . "</td>";
     echo "<td>" . $value['idEmail'] . "</td>";
-    echo '<td><img src="data:image/png;base64,' . base64_encode($value['capaLivro']) . '" />1</td>';
+    echo '<td><img style= "width:180px; height:240px;" src="data:image/png;base64,' . base64_encode($value['capaLivro']) . '" /></td>';
     echo "<td><center><a href='../inicial.php?id=" . $value['nomeLivro'] . "'>(+)</a></center></td>";
     echo "<td><center><a href='del_livro.php?id=" . $value['nomeLivro'] . "'>(-)</a></center></td>";
     echo "<td><center><a href='alt_livro.php?id=" . $value['nomeLivro'] . "'>(😥)</a></center></td>";

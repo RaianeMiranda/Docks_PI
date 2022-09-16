@@ -1,11 +1,26 @@
 <?php
-$nome_cap="";
+$nome_cap = "";
 
-$sql = $pdo->prepare('SELECT * FROM capitulo');
-if ($sql->execute()) {
+
+$sql = $pdo->prepare("SELECT * FROM LIVROS WHERE nomeLivro = ?");
+if ($sql->execute(array($_SESSION['nomeLivro']))) {
     $info = $sql->fetchAll(PDO::FETCH_ASSOC);
     if (count($info) > 0) {
         foreach ($info as $key => $values) {
+            $_SESSION['codLivro'] = $value['codLivro'];
+        }
+    } else {
+        $_SESSION['codLivro'] = 0;
+    }
+}
+
+echo "aqui:" . $_SESSION['codLivro'];
+$sql = $pdo->prepare('SELECT * FROM capitulo WHERE codLivro=?');
+if ($sql->execute(array($_SESSION['codLivro']))) {
+    $info = $sql->fetchAll(PDO::FETCH_ASSOC);
+    if (count($info) > 0) {
+        foreach ($info as $key => $values) {
+
             $_SESSION['nome_cap'] = $nome_cap;
             $nome_cap = "";
         }
@@ -30,4 +45,3 @@ if ($sql->execute()) {
     }
     echo "</table>";
 }
-?>
