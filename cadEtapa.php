@@ -3,7 +3,7 @@ session_start();
 include "include/mysql.php";
 
 $value="";
-$codSnowflake="";
+$codEtapas="";
 $texto = "";
 $msgErro="";
 $nome_etapas="";
@@ -13,11 +13,11 @@ $nome_etapas="";
         $texto = $_POST['texto'];
         $nome_etapas = $_POST['nome_etapas'];
         $sql = $pdo->prepare("INSERT INTO etapas (codEtapas, codSnowflake, codLivro, nome_etapas, descricao)
-VALUES ( ?, ?, ?, NULL, ?)");
-        if ($sql->execute(array( $texto, $nome_etapas))) {
+VALUES ( NULL, NULL, NULL, ?, ?)");
+        if ($sql->execute(array($nome_etapas, $texto))) {
             $msgErro = "Dados cadastrados com sucesso!";
-            $_SESSION['codSnowflake'] = $codSnowflake;
-            $codSnowflake="";
+            $_SESSION['codEtapas'] = $codEtapas;
+            $codEtapas="";
         }
          else {
             $msgErro = "Dados não cadastrados!";

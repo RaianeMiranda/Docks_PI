@@ -6,42 +6,33 @@ $nome = "";
 $msgErro = "";
 $texto = "";
 $nome_etapas = "";
-$codEtapas= "";
 
-echo"aqui1: ".  $_SESSION['codEtapas'];
-
-$sql = $pdo->prepare('SELECT * FROM ETAPAS WHERE codEtapas=?');
-if ($sql->execute(array($_SESSION['codEtapas']))) {
-    $info = $sql->fetchAll(PDO::FETCH_ASSOC);
-    if (count($info) > 0) {
-        foreach ($info as $key => $values) {
-            $codEtapas= $values['codEtapas'];
-            $nome_etapas = $values['nome_etapas'];
-            $texto = $values['descricao'];
-        }
-        //header('location:paginas/list_usuario.php');
-    }
-}
 
 if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
     if (isset($_POST['texto']))
         $texto = $_POST['texto'];
     else
         $texto = "Sem texto";
-    if (isset($_POST['texto']))
+        if (isset($_POST['texto']))
         $texto = $_POST['texto'];
 
-
+  
     $sql = $pdo->prepare("INSERT INTO etapas (codEtapas, codSnowflake, codLivro, nome_etapas, descricao)
-    VALUES ( NULL, NULL, NULL, ?, ?)");
-    if ($sql->execute(array($_SESSION['codEtapas'],  " " . $texto . " "))) {
+    VALUES (?, NULL, NULL, NULL, ?)");
+    if ($sql->execute(array($_SESSION['codEtapas'], $_SESSION['nomeLivro'], " " . $texto . " "))) {
         $msgErro = "Dados cadastrados com sucesso!";
     } else {
         $msgErro = "Dados não cadastrados!";
     }
-}
-?>
+   
 
+    //header('location:paginas/list_usuario.php');
+
+  }
+    
+
+?>
+ 
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -50,7 +41,8 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Docks</title>
 </head>
@@ -69,8 +61,17 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
                 <hr class="hr-snow">
                 <div class="titulo1-snow">
                     <h1>
-                        <?php
-                        echo $nome_etapas;
+                    <?php
+                        $sql = $pdo->prepare('SELECT * FROM ETAPAS '); //where codlivro = sessao
+                        if ($sql->execute()) {
+                            $info = $sql->fetchAll(PDO::FETCH_ASSOC);
+                            // print_r($info);
+                            foreach ($info as $key => $value) {
+                                $_SESSION['codEtapas'] = $value['codEtapas'];
+                                // echo $value['codSnowflake'];
+                                echo $value['nome_etapas'];
+                            }
+                        }  
                         ?>
                     </h1>
                 </div>
@@ -78,7 +79,17 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
                     <div class="descricao-snowflake">
 
                         <?php
-                        echo $texto;
+                        $sql = $pdo->prepare('SELECT * FROM ETAPAS'); //where codlivro = sessao
+                        if ($sql->execute()) {
+                            $info = $sql->fetchAll(PDO::FETCH_ASSOC);
+                            // print_r($info);
+                            foreach ($info as $key => $value) {
+                                $_SESSION['codEtapas'] = $value['codEtapas'];
+                                // echo $value['codSnowflake'];
+                                echo $value['descricao'];
+                            }
+                        }
+                       
                         ?>
                     </div>
                 </div>
@@ -118,23 +129,26 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
     <!-- Inicia o CK editor -->
     <script src="https://cdn.ckeditor.com/ckeditor5/35.1.0/classic/ckeditor.js"></script>
     <script>
-        ClassicEditor
-            .create(document.querySelector('#texto'))
-            .then(editor => {
-                console.log(editor);
+    ClassicEditor
+        .create(document.querySelector('#texto'))
+        .then(editor => {
+            console.log(editor);
 
-            })
-            .catch(error => {
-                console.error(error);
-            });
+        })
+        .catch(error => {
+            console.error(error);
+        });
     </script>
 
 
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
     </script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
     </script>
 </body>
 

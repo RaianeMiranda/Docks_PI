@@ -17,11 +17,11 @@ include "include/mysql.php";
             echo "<tr>";
             echo "<td>".$value['nome_etapas']."</td>";
             echo "<td>".$value['descricao']."</td>";
-            echo "<td><center><a href='altsnow.php?id=".$value['codSnowflake']."'>(+)</a></center></td>";
-            echo "<td><center><a href='delUsuario.php?id=".$value['codSnowflake']."'>(-)</a></center></td>";
+            echo "<td><center><a href='altEtapa.php?id=".$value['codEtapas']."'>(+)</a></center></td>";
+            echo "<td><center><a href='delUsuario.php?id=".$value['codEtapas']."'>(-)</a></center></td>";
             echo "</tr>";
         }
         echo "</table>";
     }
 ?>
-<input type="button" value="Cadastrar" onclick="parent.location='admsnow.php'">
+<input type="button" value="Cadastrar" onclick="parent.location='cadEtapa.php'">

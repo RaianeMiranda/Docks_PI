@@ -67,7 +67,7 @@
 <body>
     <form method="POST" enctype="multipart/form-data">
         <fieldset>
-            <legend>Alteração de cadastro de etapas</legend>
+            <legend>Alteração de etapas</legend>
 
             Nome da etapa: <br>
             <input type="text" name="nome_etapas" value="<?php echo $nome_etapas?>">
