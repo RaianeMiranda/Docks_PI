@@ -105,7 +105,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
                 </div>
             </form>
 
-<!--============================================T=R=O=U=X=A============================================================-->
+            <!--============================================T=R=O=U=X=A============================================================-->
             <!-- Button trigger modal -->
             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
                 Launch demo modal
@@ -123,31 +123,36 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
                         <div class="modal-body">
                             <div class="all-form">
                                 <?php
-                                $sql = $pdo->prepare('SELECT * FROM IMAGEM WHERE imagem=?');
-                                if ($sql->execute(array('1'))) {
+                                include "../include/MySql.php";
+                                session_start();
+                                $nomeLivro =
+
+                                    $sql = $pdo->prepare('SELECT * FROM livros WHERE idEmail=?');
+                                if ($sql->execute(array($_SESSION['idEmail']))) {
                                     $info = $sql->fetchAll(PDO::FETCH_ASSOC);
                                     if (count($info) > 0) {
                                         foreach ($info as $key => $values) {
-                                            $_SESSION['imagem'] = $imagem;
-                                            $imagem = "";
+                                            $_SESSION['nomeLivro'] = $nomeLivro;
+                                            $nomeLivro = "";
                                         }
                                         //header('location:paginas/list_usuario.php');
                                     }
-                                    echo "<table border='1'>";
-                                    echo "<tr>";
-                                    echo "  <th>Imagem</th>";
+                                    echo "|<div>";
+                                    echo "Código do Livro";
+                                    echo "Imagem";
                                     echo "  <th>Selecionar</th>";
-                                    echo "  <th>Excluir</th>";
                                     echo "</tr>";
                                     foreach ($info as $key => $value) {
-                                        echo "<tr>";
-                                        echo "<td>" . $value['imagem'] . "</td>";
-                                        echo '<td><img src="data:image/png;base64,' . base64_encode($value['capaLivro']) . '" />1</td>';
-                                        echo "</tr>";
+                                        echo  $value['nomeLivro'] . "</td>";
+                                        echo  $value['idEmail'] . "</td>";
+                                        echo '<img src="data:image/png;base64,' . base64_encode($value['capaLivro']) . '" />';
+                                        echo "<a href='../inicial.php?id=" . $value['nomeLivro'] . "'>(+)</a>";
+                                        echo "<a href='del_livro.php?id=" . $value['nomeLivro'] . "'>(-)</a>";
+                                        echo "<a href='alt_livro.php?id=" . $value['nomeLivro'] . "'>(😥)</a></td>";
+                                        echo "</div>";
                                     }
                                     echo "</table>";
-                                }
-                                ?>
+                                } ?>
                             </div>
                         </div>
                         <div class="modal-footer">
@@ -171,7 +176,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
                 }
             </script>
 
- <!--============================================T=R=O=U=X=A============================================================-->
+            <!--============================================T=R=O=U=X=A============================================================-->
             <span class="erro"><?php echo $msgErro ?></span>
 
 
