@@ -2,40 +2,44 @@
 session_start();
 include "include/mysql.php";
 
-$codPersonagens="";
 $value="";
+$codPersonagens="";
+$nome_persona = "";
+$codLivro = "";
 $texto = "";
 $msgErro="";
 
-if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
-    $texto = $_POST['texto'];
-    $sql = $pdo->prepare("INSERT INTO PERSONAGENS (codPersonagens, nome_persona, codLivro, descricao)
-    VALUES ( null,null,?,?)");
-    if ($sql->execute(array('5', $texto))) {
-        $msgErro = "Dados cadastrados com sucesso!";
-        $_SESSION['codPersonagens'] = $codPersonagens;
-        $codPersonagens="";
-    } else {
-        $msgErro = "Dados não cadastrados!";
+    if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
+        $texto = $_POST['texto'];
+        $sql = $pdo->prepare("INSERT INTO PERSONAGENS (codPersonagens, nome_persona, codLivro, descricao)
+        VALUES ( NULL, NULL, ?, ?)");
+        if ($sql->execute(array ('5', $texto))) {
+            $msgErro = "Dados cadastrados com sucesso!";
+            $_SESSION['codPersonagens'] = $codPersonagens;
+            $codPersonagens="";
+        } else {
+            $msgErro = "Dados não cadastrados!";
+        }
     }
-}
 
-?>
+    ?>
 
 <!DOCTYPE html>
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet">
+    <title>Cadastro-Personagem</title>
 </head>
 
 <body>
     <form method="POST">
         <fieldset>
-            <legend>cadastro de descricao de personagem</legend>
+            <legend>cadastro de descricao de Personagem</legend>
             <br>
-            texto personagem:<textarea name="texto" value="<?php echo $texto ?>">
-</textarea>
+           Descrição do Personagem:<br>
+           <textarea name="texto" > <?php echo $texto ?>
+        </textarea>
+           <br>
             <button type="submit" value="Salvar" name="submit">Salvar</button>
         </fieldset>
     </form>

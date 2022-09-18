@@ -1,40 +1,38 @@
 <?php
 
 session_start();
-include  "include/mysql.php";
+include "include/mysql.php";
 
-$codMundo = "";
+$codPersonagens = "";
 $codLivro = "";
-$descricao ="";
+$descricao = "";
 
 $msgErro = "";
 
 if (isset($_GET['id'])) {
-    $codMundo = $_GET['id'];
-    $sql = $pdo->prepare("SELECT * FROM MUNDO WHERE codMundo= ?");
-    if ($sql->execute(array($codMundo))) {
+    $codPersonagens = $_GET['id'];
+    $sql = $pdo->prepare("SELECT * FROM PERSONAGENS WHERE codPersonagens= ?");
+    if ($sql->execute(array($codPersonagens))) {
         $info = $sql->fetchAll(PDO::FETCH_ASSOC);
         foreach ($info as $key => $value) {
-            $codMundo = $value['codMundo'];
+            $codPersonagens = $value['codPersonagens'];
+            $nome_persona = $value['nome_persona'];
             $codLivro = $value['codLivro'];
             $descricao = $value['descricao'];
-          
         }
     }
 }
 
 if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) { //se isso for verdadeiro e isso prossiga
+if (!empty($_POST['descricao']))
+     $descricao = $_POST['descricao'];
 
-    if (!empty($_POST['descricao']))
-    $descricao = $_POST['descricao'];
+    if ($nome_persona || $descricao) {
 
+        $sql = $pdo->prepare("UPDATE PERSONAGENS SET codPersonagens = ? , nome_persona = ? , descricao = ? WHERE codPersonagens  = ?");
 
-    if ($descricao) {
-
-        $sql = $pdo->prepare("UPDATE MUNDO SET  codMundo = ? , descricao = ? WHERE codMundo= ? ");
-
-        if ($sql->execute(array($_SESSION['codMundo'], $descricao, $_SESSION['codMundo']))) {
-            $_SESSION['codMundo'] = $codMundo;
+        if ($sql->execute(array($_SESSION['codPersonagens'], $nome_persona, $descricao, $_SESSION['codPersonagens']))) {
+            $_SESSION['codPersonagens'] = $codPersonagens;
             $msgErro = "Dados alterados com sucesso!";
             //header('location:inicial.php'); //acima de header não pode ter echo de forma alguma
         } else {
@@ -53,15 +51,14 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) { //se isso
 <head>
     <meta charset="UTF-8">
 
-    <title>Alteração Mundo</title>
+    <title>Alteração Personagem</title>
 </head>
 
 <body>
     <form action="" method="POST">
         <fieldset>
-            <legend> Alteração de Descrição de Mundo</legend>
-            <br>
-            Descrição de Mundo: <br>
+            <legend> Alteração de Cadastro da Descrição do Personagem</legend>
+            Descrição do Personagem: <br>
             <textarea type="text" name="descricao"><?php echo $descricao ?></textarea>
             <br>
             <input type="submit" value="Salvar" name="submit">

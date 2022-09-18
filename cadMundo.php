@@ -10,8 +10,8 @@ $msgErro="";
     if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
         $texto = $_POST['texto'];
         $sql = $pdo->prepare("INSERT INTO MUNDO (codMundo, codLivro, descricao)
-        VALUES ( null,?,?)");
-        if ($sql->execute(array('1', $texto))) {
+        VALUES ( NULL,?,?)");
+        if ($sql->execute(array ('1',$texto))) {
             $msgErro = "Dados cadastrados com sucesso!";
             $_SESSION['codMundo'] = $codMundo;
             $codMundo="";
@@ -34,8 +34,10 @@ $msgErro="";
         <fieldset>
             <legend>cadastro de descricao de mundo</legend>
             <br>
-            texto personagem:<textarea name="texto" value="<?php echo $texto ?>">
-</textarea>
+           Descrição do mundo:<br>
+           <textarea name="texto" > <?php echo $texto ?>
+        </textarea>
+           <br>
             <button type="submit" value="Salvar" name="submit">Salvar</button>
         </fieldset>
     </form>

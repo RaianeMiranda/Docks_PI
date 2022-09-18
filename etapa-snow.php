@@ -32,7 +32,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
         $texto = $_POST['texto'];
 
 
-    $sql = $pdo->prepare("INSERT INTO etapas (codEtapas, codSnowflake, codLivro, nome_etapas, descricao)
+    $sql = $pdo->prepare("INSERT INTO ETAPAS (codEtapas, codSnowflake, codLivro, nome_etapas, descricao)
     VALUES ( NULL, NULL, NULL, ?, ?)");
     if ($sql->execute(array($_SESSION['codEtapas'],  " " . $texto . " "))) {
         $msgErro = "Dados cadastrados com sucesso!";

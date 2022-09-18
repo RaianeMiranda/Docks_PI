@@ -33,13 +33,11 @@ if (isset($_GET['id'])) {
 }
 
 if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) { //se isso for verdadeiro e isso prossiga
-    if (empty($_POST['nome_etapas']))
-        $nome_etapas = "Nome é obrigatório";
-    else $nome_etapas = $_POST['nome_etapas'];
+    if (!empty($_POST['nome_etapas']))
+     $nome_etapas = $_POST['nome_etapas'];
 
-    if (empty($_POST['descricao']))
-        $descricao = "Nome é obrigatório";
-    else $descricao = $_POST['descricao'];
+    if (!empty($_POST['descricao']))
+     $descricao = $_POST['descricao'];
 
     if ($nome_etapas || $descricao) {
 
@@ -65,13 +63,13 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) { //se isso
 <head>
     <meta charset="UTF-8">
 
-    <title>Cadastro de Usuário</title>
+    <title>Alteração Etapa</title>
 </head>
 
 <body>
     <form action="" method="POST">
         <fieldset>
-            <legend> alteraçaõ de cadastro de descrição</legend>
+            <legend> Alteração de Cadastro de Descrição do Snowflake</legend>
             Nome da etapa do Snowflake: <br>
             <input type="text" name="nome_etapas" value="<?php echo $nome_etapas ?>">
             <br>

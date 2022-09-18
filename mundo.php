@@ -7,6 +7,8 @@ $codMundo = "";
 $msgErro = "";
 $texto = "";
 
+echo"aqui: ".  $_SESSION['codMundo'];
+
 if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
     $texto = $_POST['texto'];
     $sql = $pdo->prepare("INSERT INTO mundo (codMundo, codLivro, descricao)
@@ -51,37 +53,32 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
                     </ul>
                 </nav>
                 <hr class="hr-mundo">
-               <form action="" method="POST" enctype="multipart/form-data">
+                <form action="" method="POST" enctype="multipart/form-data">
                     <div class="fase-mundo">
                         <div class="titulo1-mundo">
-                            <h1><b>Descreva seu mundo aqui!!!</b></h1>
+                            <h1><b>Descreva seu Mundo aqui!!!</b></h1>
                         </div>
                         <button type="submit" name="submit" class="salvar1-mundo"><b>Salvar</b></button>
                     </div>
-                   
                 </form>
-                <div class="texto1-mundo">
-                    <textarea>
 
-                <?php
-                $sql = $pdo->prepare('SELECT * FROM mundo'); //where codlivro = sessao
-                if ($sql->execute()) {
+                <textarea CLASS="descricao-mundo"> 
+
+                    <?php
+                    $sql = $pdo->prepare('SELECT * FROM MUNDO'); //where codlivro = sessao
+                    if ($sql->execute()) {
                     $info = $sql->fetchAll(PDO::FETCH_ASSOC);
 
                     foreach ($info as $key => $value) {
                         $_SESSION['codMundo'] = $value['codMundo'];
-                
                         echo $value['descricao'];
                     }
-                }
-               
+                 }
                 ?>
-            </textarea>
-            </form>
-                </div>
+                    </textarea>
+
             </div>
         </div>
-
     </section>
 
 

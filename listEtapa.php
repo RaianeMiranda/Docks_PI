@@ -18,7 +18,7 @@ include "include/mysql.php";
             echo "<td>".$value['nome_etapas']."</td>";
             echo "<td>".$value['descricao']."</td>";
             echo "<td><center><a href='altEtapa.php?id=".$value['codEtapas']."'>(+)</a></center></td>";
-            echo "<td><center><a href='delUsuario.php?id=".$value['codEtapas']."'>(-)</a></center></td>";
+            echo "<td><center><a href='delEtapa.php?id=".$value['codEtapas']."'>(-)</a></center></td>";
             echo "</tr>";
         }
         echo "</table>";

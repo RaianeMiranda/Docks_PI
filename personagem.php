@@ -4,14 +4,16 @@ include "include/MySql.php";
 
 
 $msgErro = "";
-$texto = "";
+$descricao = "";
+$nome_persona = "";
 
 if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
-    $texto = $_POST['texto'];
-    $_SESSION['nomeLivro'] = 1;
+    $descricao = $_POST['descricao'];
+    $nome_persona = $_POST['nome_persona'];
+  //_SESSION['nomeLivro'] = 1;
     $sql = $pdo->prepare("INSERT INTO personagens (codPersonagens, nome_persona, codLivro, descricao)
     VALUES (NULL ?, ?, ?,)");
-    if ($sql->execute(array( '1',  " ".$texto." "))) {
+    if ($sql->execute(array( '1',  " ".$descricao." "))) {
         $msgErro = "Dados cadastrados com sucesso!";
     } else {
         $msgErro = "Dados não cadastrados!";
@@ -54,14 +56,16 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
                 <form action="" method="POST" enctype="multipart/form-data">
                     <div class="fase-persona">
                         <div class="titulo1-personagem">
-                            <h1><b>Descreva seu personagem aqui!!!</b></h1>
+                            <h1> Nome do Personagem: <br>
+                                <input type="texto" name="nome_persona" value="<?php echo $nome_persona?>">
+                                <br>
+                                <h1>
                         </div>
                         <button type="submit" name="submit" class="salvar1-personagem"><b>Salvar</b></button>
                     </div>
                 </form>
-           
-                    <textarea class="descrição-a@2102
-                    personagem">
+
+                <textarea class="descricao-personagem">
 
                   <?php
                 $sql = $pdo->prepare('SELECT * FROM PERSONAGENS'); //where codlivro = sessao
@@ -77,12 +81,15 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
                 echo "teste";
                 ?>
                     </textarea>
-                
+
             </div>
         </div>
     </section>
 
-   
+
+
+
+
 
 
 

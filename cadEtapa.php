@@ -39,11 +39,12 @@ VALUES ( NULL, NULL, NULL, ?, ?)");
         <fieldset>
             <legend>cadastro de descricao de fase</legend>
             <br>
-            nome da etapa:<input type="texto" name="nome_etapas" value="<?php echo $nome_etapas?>">
+            nome da etapa: <br>
+            <input type="texto" name="nome_etapas" value="<?php echo $nome_etapas?>">
             <br>
+            descrição de etapa:<br>
+            <textarea name="texto"><?php echo $texto ?></textarea>
             <br>
-            <br>
-            descrição de etapa:<textarea name="texto" value="<?php echo $texto ?>"></textarea>
             <input type="submit" value="Salvar" name="submit">
         </fieldset>
     </form>

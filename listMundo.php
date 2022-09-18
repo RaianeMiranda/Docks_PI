@@ -15,11 +15,12 @@ include "include/mysql.php";
         foreach($info as $key => $value){
             echo "<tr>";
             echo "<td>".$value['descricao']."</td>";
-            echo "<td><center><a href='altmundo.php?id=".$value['codSnowflake']."'>(+)</a></center></td>";
-            echo "<td><center><a href='#'id=".$value['codSnowflake']."'>(-)</a></center></td>";
+            echo "<td><center><a href='altMundo.php?id=".$value['codMundo']."'>(+)</a></center></td>";
+            echo "<td><center><a href='delMundo.php'id=".$value['codMundo']."'>(-)</a></center></td>";
             echo "</tr>";
         }
         echo "</table>";
     }
 ?>
+<br>
 <input type="button" value="Cadastrar" onclick="parent.location='cadMundo.php'">
