@@ -46,25 +46,19 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
                         <li class="voltar-personagem"><a href="#"><img src="assets/images/voltar.png"></a></li>
                         <li class="personagem"><b>Criação de Personagem</b></li>
                         <li class="menu-personagem"><b>Menu</b></li>
-                        <div class="lupa-personagem">
-                            <li class="lupa1-personagem"><img src="assets/images/lupa.png"></li>
-
-                        </div>
                     </ul>
                 </nav>
                 <hr class="hr-personagem">
                 <form action="" method="POST" enctype="multipart/form-data">
-                    <div class="fase-persona">
-                        <div class="titulo1-personagem">
-                            <h1> Nome do Personagem: <br>
-                                <input type="texto" name="nome_persona" value="<?php echo $nome_persona?>">
-                                <br>
-                                <h1>
-                        </div>
-                        <button type="submit" name="submit" class="salvar1-personagem"><b>Salvar</b></button>
-                    </div>
-                </form>
+                <div class="fase-personagem">
+                        
+                        <h1 class="titulo1-personagem"><b>Nome do Personagem:<input type="texto" name="nome_persona" class="nome_persona" value="<?php echo $nome_persona?>"></b></h1>
+                    
+                    <input type="submit" value="Salvar" name="submit"  class="salvar1-personagem">
+                </div>
 
+                </form>
+             
                 <textarea class="descricao-personagem">
 
                   <?php

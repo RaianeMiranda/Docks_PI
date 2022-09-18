@@ -5,15 +5,15 @@ include "include/MySql.php";
 $value = "";
 $codMundo = "";
 $msgErro = "";
-$texto = "";
+$descricao = "";
 
 echo"aqui: ".  $_SESSION['codMundo'];
 
 if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
-    $texto = $_POST['texto'];
-    $sql = $pdo->prepare("INSERT INTO mundo (codMundo, codLivro, descricao)
+    $descricao = $_POST['descricao'];
+    $sql = $pdo->prepare("INSERT INTO MUNDO (codMundo, codLivro, descricao)
     VALUES (NULL, ?, ?,)");
-    if ($sql->execute(array('1',  " ".$texto." "))) {
+    if ($sql->execute(array('1', $descricao))) {
         $msgErro = "Dados cadastrados com sucesso!";
         $_SESSION['codMundo'] = $value['codMundo'];
     } else {
@@ -46,23 +46,20 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
                         <li class="voltar-mundo"><a href="#"><img src="assets/images/voltar.png"></a></li>
                         <li class="mundo"><b>Criação de Mundo</b></li>
                         <li class="menu-mundo"><b>Menu</b></li>
-                        <div class="lupa-mundo">
-                            <li class="lupa1-mundo"><img src="assets/images/lupa.png"></li>
-
-                        </div>
+                     
                     </ul>
                 </nav>
                 <hr class="hr-mundo">
                 <form action="" method="POST" enctype="multipart/form-data">
                     <div class="fase-mundo">
-                        <div class="titulo1-mundo">
-                            <h1><b>Descreva seu Mundo aqui!!!</b></h1>
-                        </div>
-                        <button type="submit" name="submit" class="salvar1-mundo"><b>Salvar</b></button>
+                        
+                            <h1 class="titulo1-mundo"><b>Descreva seu Mundo aqui!!!</b></h1>
+                        
+                        <input type="submit" value="Salvar" name="submit"  class="salvar1-mundo">
                     </div>
                 </form>
 
-                <textarea CLASS="descricao-mundo"> 
+                <textarea class="descricao-mundo"> 
 
                     <?php
                     $sql = $pdo->prepare('SELECT * FROM MUNDO'); //where codlivro = sessao

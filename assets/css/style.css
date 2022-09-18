@@ -66,7 +66,7 @@
  }
 
  .parte1-snow {
-     margin-top: 25px;
+
      margin-bottom: 20px;
      justify-content: space-between;
      justify-content: baseline;
@@ -80,6 +80,9 @@
      font-family: 'Open Sans';
      font-size: 25px;
  }
+
+
+
 
  .menu-snow {
      font-size: 25px;
@@ -101,7 +104,6 @@
  }
 
  .salvinho {
-     display: flex;
      display: flex;
      flex-direction: row;
      justify-content: flex-end;
@@ -136,14 +138,6 @@
      font-family: 'Open Sans';
  }
 
- .lupa1-snow img {
-     height: 25px;
- }
-
- .lupa-snow {
-     margin-left: 5px;
- }
-
  .nome-livro-snow {
      margin: 0 auto;
  }
@@ -164,7 +158,6 @@
 
  }
 
- /*parte esquerda da tela personagem*/
 
  .hr-personagem {
      width: 100%;
@@ -223,14 +216,14 @@
      width: 100%
  }
 
- .titulo1-personagem h1 {
+ .titulo1-personagem {
      justify-content: baseline;
-     text-align: left;
-
+     text-align: center;
+     margin-top: 20px;
      font-family: 'Open Sans';
-     font-size: 25px;
-     margin-right: 350px;
-     margin-bottom: 20px;
+     font-size: 20px;
+     margin-right: 300px;
+
  }
 
  .menu-personagem {
@@ -242,7 +235,7 @@
  .personagem {
      font-size: 25px;
      font-family: 'Open Sans';
-     margin-right: 30px;
+
  }
 
  .voltar-personagem {
@@ -256,19 +249,12 @@
      font-family: 'Open Sans';
  }
 
- .lupa1-personagem img {
-     height: 25px;
- }
 
- .lupa-personagem {
-     margin-left: 5px;
- }
 
- .fase-persona {
+ .SP {
      display: flex;
      flex-direction: row;
      justify-content: flex-end;
-     margin-top: 10px;
 
  }
 
@@ -277,10 +263,10 @@
      background-color: #CCCCCC;
      width: 65px;
      height: 30px;
-     margin-bottom: 20px;
      justify-content: baseline;
      font-family: 'Open Sans';
-
+     font-weight: bold;
+     margin-top: 20px
  }
 
 
@@ -293,6 +279,7 @@
      margin-bottom: 20px;
      justify-content: baseline;
      font-family: 'Open Sans';
+     font-weight: bold;
 
  }
 
@@ -315,6 +302,8 @@
      justify-content: baseline;
      font-size: medium;
      font-family: 'Open Sans';
+     font-weight: bold;
+     margin-top: 20px
  }
 
 
@@ -361,14 +350,14 @@
  }
 
 
- .titulo1-mundo h1 {
+ .titulo1-mundo {
      justify-content: baseline;
-     text-align: left;
-     margin-top: 20px;
      font-family: 'Open Sans';
-     font-size: 25px;
-     margin-right: 350px;
-     margin-bottom: 10px;
+     font-size: 20px;
+     margin-top: 20px;
+     margin-right: 380px;
+
+
  }
 
  .menu-mundo {
@@ -426,13 +415,6 @@
      font-family: 'Open Sans';
  }
 
- .lupa1-mundo img {
-     height: 25px;
- }
-
- .lupa-mundo {
-     margin-left: 5px;
- }
 
  .nome-livro-mundo {
      margin: 0 auto;
@@ -447,6 +429,16 @@
 
  }
 
+ .fase-personagem {
+     display: flex;
+     flex-direction: row;
+     justify-content: flex-end;
+     margin-top: 10px;
+     margin-bottom: 15px;
+
+ }
+
+
 
 
  #editor {
@@ -454,47 +446,38 @@
  }
 
 
-
-
-
- mark {
-     background: orange;
-     color: black;
- }
-
  .descricao-snowflake {
-    background-color: #F4CCC8;
-    padding: 20px;
-    font-family: 'Open Sans';
-    font-size: 20px;
-    border: 0;
-    outline: 0;
-    resize: none;
-    height: 300px;
+     background-color: #F4CCC8;
+     padding: 20px;
+     font-family: 'Open Sans';
+     font-size: 20px;
+     border: 0;
+     outline: 0;
+     resize: none;
+     height: 300px;
  }
- 
+
  .descricao-personagem {
-    background-color: #BCE4E4;
-    padding: 20px;
-    font-family: 'Open Sans';
-    font-size: 20px;
-    border: 0;
-    outline: 0;
-    resize: none;
-    height: 800px;
-    width: 1110px;
+     background-color: #BCE4E4;
+     padding: 20px;
+     font-family: 'Open Sans';
+     font-size: 20px;
+     border: 0;
+     outline: 0;
+     resize: none;
+     height: 800px;
+     width: 1110px;
  }
- .descricao-mundo  {
-    background-color: #D5ECB4;
-    border-color: #D5ECB4;
-    padding: 20px;
-    font-family: 'Open Sans';
-    font-size: 20px;
-    border: 0;
-    outline: 0;
-    resize: none;
-    height: 800px;
-    width: 1110px;
+
+ .descricao-mundo {
+     background-color: #D5ECB4;
+     border-color: #D5ECB4;
+     padding: 20px;
+     font-family: 'Open Sans';
+     font-size: 20px;
+     border: 0;
+     outline: 0;
+     resize: none;
+     height: 800px;
+     width: 1110px;
  }
- 
- 

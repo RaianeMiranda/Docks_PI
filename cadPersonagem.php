@@ -40,7 +40,7 @@ $msgErro="";
            <textarea name="texto" > <?php echo $texto ?>
         </textarea>
            <br>
-            <button type="submit" value="Salvar" name="submit">Salvar</button>
+           <input type="submit" value="Salvar" name="submit">
         </fieldset>
     </form>
     <?php echo $msgErro ?>

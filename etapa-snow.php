@@ -8,7 +8,7 @@ $texto = "";
 $nome_etapas = "";
 $codEtapas= "";
 
-echo"aqui1: ".  $_SESSION['codEtapas'];
+echo"aqui: ".  $_SESSION['codEtapas'];
 
 $sql = $pdo->prepare('SELECT * FROM ETAPAS WHERE codEtapas=?');
 if ($sql->execute(array($_SESSION['codEtapas']))) {
@@ -28,8 +28,8 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
         $texto = $_POST['texto'];
     else
         $texto = "Sem texto";
-    if (isset($_POST['texto']))
-        $texto = $_POST['texto'];
+    if (isset($_POST['nome_etapas']))
+        $nome_etapas = $_POST['nome_etapas'];
 
 
     $sql = $pdo->prepare("INSERT INTO ETAPAS (codEtapas, codSnowflake, codLivro, nome_etapas, descricao)
@@ -90,9 +90,6 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
                         <div class="nome-livro-snow">
                             <li class="nomelivro1-snow"><b>Alice</b></li>
                         </div>
-                        <div class="lupa-snow">
-                            <li class="lupa1-snow"><img src="assets/images/lupa.png"></li>
-                        </div>
                     </ul>
                 </nav>
                 <hr class="hr-snow">
@@ -100,8 +97,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
                     <div class="botoes-snow">
                         <p class="fase1-snow"><b> Fase 1 </b></p>
                         <div class="salvinho">
-                            <button type="submit" name="submit" class="salvar1-snow"><b> Salvar </b></button>
-
+                        <input type="submit" value="Salvar" name="submit"  class="salvar1-snow">
                         </div>
                     </div>
                     <div>
