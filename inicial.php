@@ -40,15 +40,14 @@ if ($sql->execute(array($_SESSION['idEmail']))) {
     ?>
     <?php if ($_SESSION['nome'] != "") { ?>
         <h1 class="title_welcome">Bem vindo(a) <?php echo $_SESSION['nome'] ?>!!</h1>
-    <?php } else { ?>
-        <h1 class="title_welcome">Voce não está logado!!</h1>
-        <h3><a href="login.php">Login</a></h3>
-    <?php } ?>
+    <?php } else { 
+        header('location:index.php');
+     } ?>
 
     <?php if ($_SESSION['nomeLivro'] != "") { ?>
-        <h3 class="before_course">Continue escrevendo: <span class="nome_livro"><?php echo $_SESSION['nomeLivro'] ?></span></h3>
+        <h3 class="before_course">Continue escrevendo: <span class="nome"><?php echo $_SESSION['nomeLivro'] ?></span></h3>
     <?php } else { ?>
-        <h3 class="before_course">Para desbloquear as fases, crie um livro</h3>
+        <h3 class="before_course">Para desbloquear as fases, crie ou  <a href="paginas/list_livro.php"><span class="nome">selecione</span></a> um livro</h3>
         <a href="paginas/cad_book.php"><button class="criar_livro" type="submit"> <i class="fa-solid fa-plus"></i> Criar novo Livro</button></a>
     <?php } ?>
 </header>

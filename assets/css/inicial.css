@@ -72,3 +72,14 @@ li{
   margin: 0 auto;
   text-align: justify;
 }
+
+.nome{
+  text-decoration: none ;
+  font-size: inherit;
+  color:#CD40A6;
+}
+
+.nome:hover{
+  color:#a40076;
+  text-decoration: underline;
+}
