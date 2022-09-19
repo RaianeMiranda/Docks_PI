@@ -1,6 +1,7 @@
 <nav>
     <div class="all-form">
         <div class="item">
+          <div class="container-menu_logo">
         <div class="container-menu">
         <div class="menu-btn">
           <i class="fas fa-bars"></i>
@@ -51,10 +52,13 @@
             </div>
           </div>
         </div>
+        <div class="image-nome">
                 <img src="assets/images/docks.png" class="logotipo">
                 <h1 class="nome">Docks</h1>
+</div>
             </div>
         </div>
+</div>
         <ul>
             <li><b><a class="link" href="personagens.php">Criação de Personagens</a></b></li>
             <li><b><a class="link" href="biblioteca.php">Biblioteca</a></b></li>
