@@ -11,9 +11,9 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
     $descricao = $_POST['descricao'];
     $nome_persona = $_POST['nome_persona'];
   //_SESSION['nomeLivro'] = 1;
-    $sql = $pdo->prepare("INSERT INTO personagens (codPersonagens, nome_persona, codLivro, descricao)
-    VALUES (NULL ?, ?, ?,)");
-    if ($sql->execute(array( '1',  " ".$descricao." "))) {
+    $sql = $pdo->prepare("INSERT INTO PERSONAGENS (codPersonagens, nome_persona, codLivro, descricao)
+    VALUES ( NULL,?, ?, ?,)");
+    if ($sql->execute(array( '1', $nome_persona, " ".$descricao." "))) {
         $msgErro = "Dados cadastrados com sucesso!";
     } else {
         $msgErro = "Dados não cadastrados!";
@@ -62,7 +62,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
                 <textarea class="descricao-personagem">
 
                   <?php
-                $sql = $pdo->prepare('SELECT * FROM PERSONAGENS'); //where codlivro = sessao
+                $sql = $pdo->prepare('SELECT * FROM PERSONAGENS '); //where codlivro = sessao
                 if ($sql->execute()) {
                     $info = $sql->fetchAll(PDO::FETCH_ASSOC);
 
@@ -72,7 +72,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
                         echo $value['descricao'];
                     }
                 }
-                echo "teste";
+               
                 ?>
                     </textarea>
 

@@ -1,6 +1,5 @@
 <?php
-session_start();
-include "include/mysql.php";
+    include "include/MySql.php";
 
     $sql = $pdo->prepare('SELECT * FROM MUNDO');
     if ($sql->execute()){
@@ -15,8 +14,9 @@ include "include/mysql.php";
         foreach($info as $key => $value){
             echo "<tr>";
             echo "<td>".$value['descricao']."</td>";
+
             echo "<td><center><a href='altMundo.php?id=".$value['codMundo']."'>(+)</a></center></td>";
-            echo "<td><center><a href='delMundo.php'id=".$value['codMundo']."'>(-)</a></center></td>";
+            echo "<td><center><a href='delMundo.php?id=".$value['codMundo']."'>(-)</a></center></td>";
             echo "</tr>";
         }
         echo "</table>";

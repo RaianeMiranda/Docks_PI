@@ -18,7 +18,7 @@
             }
         } else {
             $msgErro = "Erro ao excluir Descrição-Personagem!";
-        }
+        } 
     }
     echo " Mensagem de erro: $msgErro ";
     ?>

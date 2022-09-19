@@ -19,11 +19,10 @@ if ($sql->execute(array($_SESSION['codEtapas']))) {
             $nome_etapas = $values['nome_etapas'];
             $texto = $values['descricao'];
         }
-        //header('location:paginas/list_usuario.php');
     }
 }
 
-if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
+if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST["submit"])) {
     if (isset($_POST['texto']))
         $texto = $_POST['texto'];
     else

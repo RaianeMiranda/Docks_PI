@@ -1,5 +1,4 @@
 <?php
-    session_start();
     include "include/MySql.php";
 
     $msgErro = "";
@@ -11,15 +10,14 @@
         $sql = $pdo->prepare("DELETE FROM ETAPAS WHERE codEtapas = ?");
         if ($sql->execute(array($codEtapas))){
             if ($sql->rowCount() > 0){
-                $msgErro = "Etapa-Snowflake excluída com sucesso!";
+                $msgErro = "etapa excluído com sucesso!";
                 header('location:listEtapa.php');
             } else {
-                $msgErro = "Etapa-Snowflake não localizado!";
+                $msgErro = "Código não localizado!";
             }
         } else {
-            $msgErro = "Erro ao excluir Etapa-Snowflake!";
+            $msgErro = "Erro ao excluir usuário!";
         }
     }
-    echo " Mensagem de erro: $msgErro ";
-
+    echo "Mensagem de erro: $msgErro";
 ?>

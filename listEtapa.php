@@ -24,4 +24,5 @@ include "include/mysql.php";
         echo "</table>";
     }
 ?>
+<br>
 <input type="button" value="Cadastrar" onclick="parent.location='cadEtapa.php'">
