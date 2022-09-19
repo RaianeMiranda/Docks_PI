@@ -72,15 +72,6 @@ hr.linha {
     display: block;
 }
 
-main {
-    background-color: #D5ECB4;
-    display: inline-block;
-    justify-content: center;
-    align-items: center;
-
-
-}
-
 .menu-container {
     width: 60px;
     height: 45px;
