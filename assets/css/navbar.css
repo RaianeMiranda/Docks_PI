@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+body{
+    font-family: "Open Sans", sans-serif;
+    background-color:transparent;
+}
+button.nav-link{
+    color: black;
+    font-weight:bolder;
+    background-color:transparent;
+    text-align:left;
+   }
+   button.nav-link:hover{
+    color:black;
+}
+button#v-pills-home-tab2.nav-link{
+    margin-bottom: 15px;
+}
+button#v-pills-settings-tab1.nav-link{
+    margin-bottom:15px;
+}
+button#v-pills-settings-tab3.nav-link{
+    margin-bottom:15px;
+}
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    color: white;
+    background-color: grey;
+}
+div#v-pills-tab.nav.flex-column.nav-pills.me-3{
+    background-color:white;
+}
+.nav {
+    --bs-nav-link-padding-x: 42px;
+    --bs-nav-link-padding-y: 7px;
+    --bs-nav-link-font-weight: ;
+    --bs-nav-link-disabled-color: #6c757d;
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+.nav-pills .nav-link{
+    border-radius:0px;
+}
+img.image{
+    width:30px;
+    height:30px;
+    margin-bottom:5px;
+}
+img.image2{
+    width: 50px;
+    height:50px;
+}
+.nav-cabecalho{
+    background-color: #F4CCC8;
+    max-width: 13.7%;
+}
+div.nome-usuario{
+    display: flex;
+    margin-left:0px;
+}
+.container-perfil{
+    display: flex;
+}
+button.nav-link{
+    text-align:left;
+}
+.nome-fulana{
+    font-size:15px;
+    font-weight: bolder;
+}
+.email-fulana{
+    font-size:13px;
+}
