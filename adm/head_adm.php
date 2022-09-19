@@ -10,8 +10,8 @@
         echo $titulo;
         ?>
     </title>
-    <link rel="stylesheet" href="../assets/css/nav.css">
-    <link rel="stylesheet" href="../assets/css/burger.css">
+    <link rel="stylesheet" href="../assets/css/nav_adm.css">
+    <link rel="stylesheet" href="../assets/css/burger_adm.css">
 
 </head>
 

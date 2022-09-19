@@ -20,8 +20,6 @@ if ($sql->execute(array($_SESSION['idEmail']))) {
 
 ?>
 
-
-
 <link rel="stylesheet" href="assets/css/inicial.css">
 <link rel="stylesheet" href="assets/css/modal.css">
 <?php include "head.php" ?>

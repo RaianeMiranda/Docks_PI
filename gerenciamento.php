@@ -20,7 +20,7 @@
 <body>
   <form method="POST" enctype="multipart/form-data">
     <div class="nome-gerenciamento">
-      <p>Nome:</p><input type="text" name="nome">
+      <p>Nome:</p><input type="text" name="nome" readonly>
       <span class="obrigatorio">*</span>
       <button type="button" class="botao-alterar1" data-toggle="modal" data-target="#exampleModalLong" style=" background-color: #D5ECB4;
   border: 2px solid #BBBBBB;
@@ -36,7 +36,7 @@
       <br>
     </div>
     <div class="email-gerenciamento">
-      <p>Email: </p><input type="text" name="email">
+      <p>Email: </p><input type="text" name="email" readonly>
       <span class="obrigatorio">*</span>
       <!-- <input type="submit" value="Alterar" name="submit"> -->
       <button type="button" class="botao-alterar1" data-toggle="modal" data-target="#exampleModalLong" style=" background-color: #D5ECB4;
@@ -53,7 +53,7 @@
       <br>
     </div>
     <div class="senha-gerenciamento">
-      <p>Senha: </p><input type="password" name="senha">
+      <p>Senha: </p><input type="password" name="senha" value="*************************" readonly>
       <span class="obrigatorio">*</span>
       <button type="button" class="botao-alterar1" data-toggle="modal" data-target="#exampleModalLong" style=" background-color: #D5ECB4;
   border: 2px solid #BBBBBB;
@@ -94,9 +94,9 @@
   border-radius: 0.3rem;
   outline: 0;">
         <div class="modal-body">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
           <?php
           include "alt.php";
           ?>

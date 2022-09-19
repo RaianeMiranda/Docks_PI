@@ -43,10 +43,10 @@
                 <a class="links" href="#">
                   Sobre Nós
                 </a>
-                <a class="links" href="configuracoes.php">
+                <a class="links" href="configuracoes.php" id="<?php $value['idEmail'] ?>">
                   Configurações
                 </a>
-                <a class="links" href="#">
+                <a class=" links" href="#">
                   Sair (logout)
                 </a>
               </div>
