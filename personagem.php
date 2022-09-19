@@ -12,8 +12,8 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
     $nome_persona = $_POST['nome_persona'];
   //_SESSION['nomeLivro'] = 1;
     $sql = $pdo->prepare("INSERT INTO PERSONAGENS (codPersonagens, nome_persona, codLivro, descricao)
-    VALUES ( NULL,?, ?, ?,)");
-    if ($sql->execute(array( '1', $nome_persona, " ".$descricao." "))) {
+    VALUES ( NULL, ?, ?, ?)");
+    if ($sql->execute(array( $nome_persona, " ".$descricao." "))) {
         $msgErro = "Dados cadastrados com sucesso!";
     } else {
         $msgErro = "Dados não cadastrados!";
