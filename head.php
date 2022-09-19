@@ -12,6 +12,7 @@
     </title>
     <link rel="stylesheet" href="assets/css/nav.css">
     <link rel="stylesheet" href="assets/css/burger.css">
+    <link rel="stylesheet" href="assets/css/inicial.css">
 
 </head>
 

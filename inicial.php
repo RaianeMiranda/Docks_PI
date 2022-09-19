@@ -1,21 +1,21 @@
 <?php
 include "include/MySql.php";
 session_start();
-$msgErro= "";
+$msgErro = "";
 $titulo = "Página inicial";
-$nomeLivro="";
-
+$nomeLivro = "";
+echo "aqui:" . $_SESSION['nomeLivro'];
 
 $sql = $pdo->prepare('SELECT * FROM livros WHERE idEmail=?');
 if ($sql->execute(array($_SESSION['idEmail']))) {
-  $info = $sql->fetchAll(PDO::FETCH_ASSOC);
-  if (count($info) > 0) {
-    foreach ($info as $key => $values) {
-      $_SESSION['nomeLivro'] = $nomeLivro;
-      $nomeLivro = "";
+    $info = $sql->fetchAll(PDO::FETCH_ASSOC);
+    if (count($info) > 0) {
+        foreach ($info as $key => $values) {
+            $_SESSION['nomeLivro'] = $nomeLivro;
+            $nomeLivro = "";
+        }
+        //header('location:paginas/list_usuario.php');
     }
-    //header('location:paginas/list_usuario.php');
-  }
 }
 
 ?>
@@ -40,15 +40,24 @@ if ($sql->execute(array($_SESSION['idEmail']))) {
     ?>
     <?php if ($_SESSION['nome'] != "") { ?>
         <h1 class="title_welcome">Bem vindo(a) <?php echo $_SESSION['nome'] ?>!!</h1>
-    <?php } else { 
+    <?php } else {
         header('location:index.php');
-     } ?>
+    } ?>
 
     <?php if ($_SESSION['nomeLivro'] != "") { ?>
         <h3 class="before_course">Continue escrevendo: <span class="nome"><?php echo $_SESSION['nomeLivro'] ?></span></h3>
     <?php } else { ?>
-        <h3 class="before_course">Para desbloquear as fases, crie ou  <a href="paginas/list_livro.php"><span class="nome">selecione</span></a> um livro</h3>
-        <a href="paginas/cad_book.php"><button class="criar_livro" type="submit"> <i class="fa-solid fa-plus"></i> Criar novo Livro</button></a>
+        <h3 class="before_course">Para desbloquear as fases, crie ou <a href="paginas/list_livro.php"><span class="nome">selecione</span></a> um livro</h3>
+        <button class="criar_livro" type="submit" id="myBtn"><i class="fa-solid fa-plus"></i> Criar novo Livro</button>
+
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+
+            <!-- Modal content -->
+            <?php include "paginas/cad_book.php"; ?>
+
+        </div>
+
     <?php } ?>
 </header>
 <main>
@@ -61,19 +70,11 @@ if ($sql->execute(array($_SESSION['idEmail']))) {
 
     <h3><a href="paginas/logout.php">logout</a></h3>
 
-    <?php if ($_SESSION['nomeLivro'] != "") { 
-        include "paginas/list_capitulo.php"?>
-         <button id="myBtn">+ Adicionar novo Capítulo</button>
+    <?php if ($_SESSION['nomeLivro'] != "") {
+        include "paginas/list_capitulo.php" ?>
+       
 
-         <!-- The Modal -->
-         <div id="myModal" class="modal">
-     
-             <!-- Modal content -->
-             <?php include "paginas/cad_capitulo.php";?>
-     
-         </div>
-        
-   <?php } ?>
+    <?php } ?>
 
 </main>
 

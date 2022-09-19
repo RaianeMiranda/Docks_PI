@@ -11,7 +11,7 @@ $idEmailErro = "";
 $senhaErro = "";
 $msgErro = "";
 
-if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) { //se isso for verdadeiro e isso prossiga
+if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['continuar'])) { //se isso for verdadeiro e isso prossiga
     if (empty($_POST['nome']))
         $nomeErro = "Nome é obrigatório";
     else
@@ -62,33 +62,62 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) { //se isso
 
 ?>
 
-<!DOCTYPE html>
-
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="../css/estilo.css">
-    <title>Cadastro de Usuário</title>
+    <link rel="stylesheet" href="../assets/css/login.css">
+    <link rel="stylesheet" href="../assets/css/modal.css">
 </head>
+<form method="POST" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>">
+    <div class="login-form">
+        <div class="todoLogin">
+            <div class="login_cima">
+                <div class="container">
+                    <div class="flex2">
+                        <img class="logo" src="../assets/images/logo.png" alt="logo do site, sendo um círculo com nosso mascote docks, um pato dentro desse círculo.">
+                    </div>
+                    <div class="flex3">
+                        <span class="close">&times;</span>
+                    </div>
+                </div>
 
-<body>
-    <form action="" method="POST">
-        <fieldset>
-            <legend>Cadastro de Usuário</legend>
-            Nome: <input type="text" name="nome" value="<?php echo $nome ?>">
-            <span class="obrigatorio">*<?php echo $nomeErro ?></span>
-            <br>
-            Email: <input type="text" name="idEmail" value="<?php echo $idEmail ?>">
-            <span class="obrigatorio">*<?php echo $idEmailErro ?></span>
-            <br>
-            Senha: <input type="password" name="senha" value="<?php echo $senha ?>">
-            <span class="obrigatorio">*<?php echo $senhaErro ?></span>
-            <br>
-            <input type="checkbox" name="administrador"> Administrador
-            <br>
-            <input type="submit" value="Salvar" name="submit">
-        </fieldset>
-    </form>
-    <span><?php echo $msgErro ?></span>
-</body>
+                <h1 class="slogan">Bem vindo(a) ao Docks</h1>
+                <p class="slogan">Aqui é o lugar para suas histórias</p>
+            </div>
 
-</html>
+            <div class="login-meio">
+                <fieldset>
+                    <legend for="nome">Digite seu E-mail</legend>
+                    <input class="norm-login" type="text" name="nome" id="nome" placeholder="Nome" value="<?php echo $nome ?>">
+                </fieldset>
+                <fieldset>
+                    <legend for="idEmail">Digite seu E-mail</legend>
+                    <input class="norm-login" type="text" name="idEmail" id="idEmail" placeholder="E-mail" value="<?php echo $idEmail ?>">
+                </fieldset>
+
+                <fieldset>
+                    <legend for="Senha">Digite sua Senha</legend>
+                    <input class="norm-login" type="password" name="senha" id="Senha" placeholder="Senha" value="<?php echo $senha ?>">
+                </fieldset>
+                <span><?php echo $msgErro ?></span>
+                <input type="submit" name="continuar" id="continuar" value="Continuar" class="continuar"></input>
+
+                <p class="ou">OU</p>
+            </div>
+
+            <div class="login-baixo">
+
+
+                <p>Ainda não é um membro?</p>
+                <p><a href="paginas/cad_usuario.php"><button class="membro">Cadastre-se</button></a></p>
+
+            </div>
+        </div>
+    </div>
+</form>
+
+<!-- 
+            <div class="login-meio">
+            <label for="e-mail">E-mail</label>
+            <input class="" type="text" name="idEmail" id="e-mail" placeholder="Digite seu E-mail">
+            </div>
+        -->

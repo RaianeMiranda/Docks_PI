@@ -14,6 +14,11 @@ main{
   padding-right: 20%;
 }
  
+.nome_docks{
+  font-weight: 900;
+  font-size: 3rem ;
+}
+
 .title_welcome{
   font-size: 45px;
   font-weight: bold;
@@ -79,7 +84,7 @@ li{
   color:#CD40A6;
 }
 
-.nome:hover{
+a :hover{
   color:#a40076;
   text-decoration: underline;
 }

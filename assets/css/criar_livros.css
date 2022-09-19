@@ -31,7 +31,7 @@ div.container-escrita {
 
 div.container-capa {
     display: table;
-    border: 1px solid grey;
+    border: 1px solid rgb(218, 218, 218);
     margin-bottom: 0px;
 }
 
@@ -158,4 +158,9 @@ button.capa {
 #upload_image{
     width: 180px;
     height: 300px;
+}
+
+.capa_livro{
+    width: 240;
+    height: 350px;
 }

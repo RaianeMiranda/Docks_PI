@@ -1,10 +1,7 @@
 <?php
-include "../include/MySql.php";
-session_start();
 $nomeLivro = "";
 $nomeLivroErro = "";
 $msgErro = "";
-echo "aqui:" . $_SESSION['idEmail'];
 if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
     if (!empty($_FILES["image"]["name"])) {
         //Pegar informações do arquivo
@@ -34,12 +31,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
                         if ($sql->execute(array($nomeLivro, $imgContent, $_SESSION['idEmail']))) {
                             $msgErro = "Dados cadastrados com sucesso!";
                             $_SESSION['nomeLivro'] = $nomeLivro;
-
-                            $nomeLivro = "";
-                            $_SESSION['imagem'] = $imgContent;
-
-                            $imgContent = "";
-                            //header('location:../inicial.php');
+                            header('location:inicial.php');
                         } else {
                             $msgErro = "Dados não cadastrados!";
                         }
@@ -61,15 +53,10 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
     }
 }
 ?>
-<!DOCTYPE html>
-<html>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Criar Livros</title>
-    <link rel="stylesheet" href="../assets/css/criar_livros.css">
+    <link rel="stylesheet" href="assets/css/criar_livros.css">
+    <link rel="stylesheet" href="assets/css/modal.css">
 </head>
 
 <body>
@@ -79,8 +66,8 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
             <form method="POST" enctype="multipart/form-data">
                 <div class="container-cores">
                     <div class="container-capa">
-                        <?php if ('imagemTemp' != "") { ?>
-                            <img src="" alt="" id="imagemTemp">
+                        <?php if ("imagemTemp" != "") { ?>
+                            <img class="capa_livro" src="" alt="" id="imagemTemp">
                         <?php } else { ?>
                             <img class="azul" src="../assets/images/azul.png">
                             <img class="verde" src="../assets/images/verde.png">
@@ -95,7 +82,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
                     <div class="container-criar">
                         <div class="juncao-botao1">
                             <label for="upload_image" class="capa">
-                                <img class="botao" src="../assets/images/botao.png">
+                                <img class="botao" src="assets/images/botao.png">
                             </label>
                             <input type="file" id="upload_image" name="image">
                         </div>
@@ -107,8 +94,8 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
                 <h2 class="titulo-criar_livros">Título</h2>
                 <img src="" alt="" id="imagemTemp">
                 <div class="botao-criar_livros">
-                    <input type="text" name="nome" value="Adicione seu título">
-                    <span class="obrigatorio"> * <?php echo   $nomeLivroErro ?></span>
+                    <input type="text" name="nome" placeholder="Adicione seu título *">
+                    <span class="obrigatorio"><?php echo   $nomeLivroErro ?></span>
 
                     <div class="botao-flex">
                         <input class="botao-salvar" type="submit" value="Salvar" name="submit">
@@ -116,6 +103,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
                 </div>
             </form>
             <script>
+                <?php  ?>
                 const imgInp = document.getElementById("upload_image");
                 const imagemTemp = document.getElementById("imagemTemp");
 

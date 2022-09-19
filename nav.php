@@ -9,7 +9,7 @@
                     </a>
                 </div>
                 <img src="assets/images/docks.png" class="logotipo">
-                <h1 class="nome">Docks</h1>
+                <h1 class="nome_docks">Docks</h1>
             </div>
         </div>
         <ul>
