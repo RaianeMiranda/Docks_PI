@@ -10,17 +10,18 @@ $codEtapas = "";
 
 
 
-$sql = $pdo->prepare('SELECT * FROM ETAPAS WHERE codEtapas = ?');
-if ($sql->execute(array($_SESSION['codEtapas']))) {
-  $info = $sql->fetchAll(PDO::FETCH_ASSOC);
-   if (count($info) > 0) {
-    foreach ($info as $key => $values) {
-         $codEtapas= $values['codEtapas'];
-         $nome_etapas = $values['nome_etapas'];
-         $texto = $values['descricao'];
-        }
- }
-}
+
+//$sql = $pdo->prepare('SELECT * FROM ETAPAS WHERE codEtapas = ?');
+//if ($sql->execute(array($_SESSION['codEtapas']))) {
+  //$info = $sql->fetchAll(PDO::FETCH_ASSOC);
+   //if (count($info) > 0) {
+    //foreach ($info as $key => $values) {
+      //   $codEtapas= $values['codEtapas'];
+        // $nome_etapas = $values['nome_etapas'];
+        // $texto = $values['descricao'];
+       // }
+ //}
+//}
 
 if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST["submit"])) {
   if (isset($_POST['descricao']))
