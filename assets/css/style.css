@@ -5,6 +5,7 @@
      flex: 1;
      background: #FFF2D8;
      height: 1195px;
+    
  }
 
  .texto1-snow textarea {
@@ -62,6 +63,7 @@
      text-decoration: none;
      color: black;
      font-family: 'Open Sans';
+   
 
  }
 
@@ -70,8 +72,8 @@
      margin-bottom: 20px;
      justify-content: space-between;
      justify-content: baseline;
-     margin-left: 5px;
-     margin-right: 5px;
+     margin-top: 25px;
+    
  }
 
  .titulo1-snow h1 {
