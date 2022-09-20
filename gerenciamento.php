@@ -67,11 +67,11 @@
         <br>
     </div>
     <div class="botao-desativar-conta">
-      <input type="reset" value="Desativar Conta" name="reset">
+      <input class="desativar" type="button" value="Desativar alterações">
       <br>
     </div>
     <div class="botao-salvar-alteracoes">
-      <input type="button" value="Salvar alterações" name="button">
+      <input type="button" value="Salvar alterações" class="button">
     </div>
   </form>
   <span></span>

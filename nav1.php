@@ -1,20 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <link rel="stylesheet" href="assets/css/navbar1.css">
-</head>
-
-<body>
-  <header>
-    <nav id="nav">
-      <div class="container-menu">
+<nav>
+    <div class="all-form">
+        <div class="item">
+          <div class="container-menu_logo">
+        <div class="container-menu">
         <div class="menu-btn">
           <i class="fas fa-bars"></i>
         </div>
@@ -37,41 +25,50 @@
           </div>
           <div class="menu">
             <div class="item">
-              <a href="#">
+              <a class="links" href="#">
                 Biblioteca
               </a>
-              <a href="#">
+              <a class="links" href="#">
                 Jornada do Herói
               </a>
-              <a href="#">
+              <a class="links" href="#">
                 Snowflake
               </a>
-              <a href="#">
+              <a class="links" href="#">
                 Criação de Mundos
               </a>
-              <a href="#">
+              <a class="links" href="#">
                 Criação de Personagens
               </a>
-              <a href="#">
+              <a class="links" href="#">
                 Sobre Nós
               </a>
-              <a href="configuracoes.php">
+              <a class="links" href="configuracoes.php">
                 Configurações
               </a>
-              <a href="#">
+              <a class="links" href="#">
                 Sair (logout)
               </a>
             </div>
           </div>
         </div>
-        <!--<style>
-        .links:hover{
-          color:black;
-        }
-        </style> -->
-    </nav>
-  </header>
-  <script type="text/javascript">
+        <div class="image-nome">
+                <img src="assets/images/docks.png" class="logotipo">
+                <h1 class="nome">Docks</h1>
+</div>
+            </div>
+        </div>
+</div>
+        <ul>
+            <li><b><a class="link" href="personagens.php">Criação de Personagens</a></b></li>
+            <li><b><a class="link" href="biblioteca.php">Biblioteca</a></b></li>
+            <li><b><a class="link" href="jornada.php">Jornada do Herói</a></b></li>
+            <li><b><a class="link" href="snowflake.php">Snowflake</a></b></li>
+            <li><b><a class="link" href="mundos.php">Criação de Mundos</a></b></li>
+        </ul>
+        <hr class="linha">
+    </div>
+    <script type="text/javascript">
     $('.menu-btn').click(function() {
       $('.side-bar').addClass('active');
     });
@@ -80,6 +77,4 @@
       $('.side-bar').removeClass('active');
     });
   </script>
-</body>
-
-</html>
+</nav>

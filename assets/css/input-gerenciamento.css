@@ -21,7 +21,7 @@ input[type="password" i] {
     width: 380px;
 
 }
-input[type="reset" i]{
+/*input[type="reset" i]{
     margin-top: 10px;
     background-color: #F4CCC8;
     border: 2px solid #BBBBBB;
@@ -29,8 +29,24 @@ input[type="reset" i]{
     width: 130px;
     font-weight: bolder;
     font-size: 15px;
-}
+}*/
+input[type="button" i].desativar{
+    margin-top: 10px;
+    border: 2px solid #BBBBBB;
+    height: 40px;
+    width: 170px;
+    border-radius: 0px;
+    font-weight: bolder;
+    font-size: 15px;
+    background-color: #F4CCC8;
+    color: black;
+    cursor:pointer;
 
+}
+input[type="button" i].desativar:hover{
+    background-color: #F4CCC8;
+
+}
 
 input[type="button" i]{
     background-color: #D5ECB4;
@@ -40,4 +56,5 @@ input[type="button" i]{
     width: 137px;
     font-weight: bolder;
     font-size: 15px;
+    cursor:pointer;
 }

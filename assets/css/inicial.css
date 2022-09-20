@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #FAF5AE;
+}
+.container-site{
+    background-color: #FAF5AE;
+    margin-top: 0px;
+}
+.titulo-site{
+    font-size: 40px;
+    font-weight: bolder;
+}
+
+.paragrafo-site{
+    font-size:38px;
+    font-weight: bolder;
+    margin-top:0px;
+}
+
+.container-inicial{
+    text-align:center;
+}
+
+.btn-inicial{
+    color:#F79924;
+    background-color: white;
+    border:4px solid #F6EB60;
+    width:220px;
+    height: 55px;
+    font-size: 20px;
+    border-radius: 10px;
+}
+
+.container-btn{
+    text-align:center;
+}
+
+.container-personagens{
+    display: flex;
+    justify-content: flex-end;
+}
+.docks_personagem{
+    width: 270px;
+    height: 500px;
+}
+
+.pate_personagem{
+    width: 270px;
+    height: 500px;
+}
+.container-abaixo{
+    background-color: white;
+
+}

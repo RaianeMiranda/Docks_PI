@@ -30,7 +30,7 @@
         <input type="password" placeholder=" Sua nova senha">
         <br>
         <form>
-            <button>Salvar</button>
+            <button class="salvar">Salvar</button>
         </form>
     </div>
     </div>
