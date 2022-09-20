@@ -11,7 +11,7 @@ if(isset($_GET['id'])){
     if ($sql->execute(array($nomeLivro))){
         if ($sql->rowCount()>0){
             $msgErro = "Livro excluido com sucesso!";
-           // header('location:listUsuario.php');
+         header('location:list_livro.php');
         }else {
             $msgErro = "Código não localizado!";
         } 

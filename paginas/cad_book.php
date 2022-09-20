@@ -31,6 +31,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
                         if ($sql->execute(array($nomeLivro, $imgContent, $_SESSION['idEmail']))) {
                             $msgErro = "Dados cadastrados com sucesso!";
                             $_SESSION['nomeLivro'] = $nomeLivro;
+                            $nomeLivro = "";
                             header('location:inicial.php');
                         } else {
                             $msgErro = "Dados não cadastrados!";
@@ -54,14 +55,15 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
 }
 ?>
 
-    <title>Criar Livros</title>
-    <link rel="stylesheet" href="assets/css/criar_livros.css">
-    <link rel="stylesheet" href="assets/css/modal.css">
+<title>Criar Livros</title>
+<link rel="stylesheet" href="assets/css/criar_livros.css">
+<link rel="stylesheet" href="assets/css/modal.css">
 </head>
 
 <body>
     <div class="container">
         <div class="container-escrita">
+            <span class="close">&times;</span>
             <h1 class="livro">Criar Livros</h1>
             <form method="POST" enctype="multipart/form-data">
                 <div class="container-cores">

@@ -1,7 +1,9 @@
 <?php
 include "../include/mysql.php";
-echo "aqui email:" . $_SESSION['idEmail'];
-echo "aqui email:" . $_SESSION['nome'];
+session_start();
+echo "aqui:" . $_SESSION['nome'];
+echo "aqui:" . $_SESSION['idEmail'];
+
 $nome = "";
 $idEmail = "";
 $senha = "";
@@ -61,16 +63,16 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) { //se isso
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alterações da conta</title>
-    <?php
-    $titulo = "Alterações da conta";
-    ?>
+    <link rel="stylesheet" href="../css/estilo.css">
+    <title>Cadastro de Usuário</title>
+</head>
+
+<body>
+    <form action="" method="POST">
+        
     <link rel="stylesheet" href="../assets/css/alt.css">
 </head>
 
@@ -81,9 +83,9 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) { //se isso
                 <h1>Alterações da conta</h1>
                 <br>
             </div>
-            <p class="alt-1"><b>Altere suas Informações</b></p><input type="text" placeholder=" Seu E-mail Atual" value="<?php echo $_SESSION['idEmail']; ?>" readonly>
+            <p class="alt-1"><b>Altere suas Informações</b></p><input type="text" name="idEmail" value="<?php echo $idEmail ?>" placeholder=" Seu E-mail Atual" readonly>
             <br>
-            <input type="text" name="nome" placeholder="Altere Nome" value="<?php echo $_SESSION['nome']; ?>">
+            <input type="text" name="nome" placeholder="Altere Nome" value="<?php echo $nome ?>">
             <span class="obrigatorio">*<?php echo $nomeErro ?></span>
             <br>
             <p class="alt-2"><b>Altere sua senha</b></p><input type="password" placeholder=" Sua senha atual">
@@ -92,12 +94,31 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) { //se isso
             <span class="obrigatorio">*<?php echo $senhaErro ?></span>
             <br>
             <form>
-                <button>Salvar</button>
+               <input type="submit" class="button" name="submit">
             </form>
             <span><?php echo $msgErro ?></span>
         </div>
     </div>
 
+
+    </form>
+
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alterações da conta</title>
+    <?php
+    $titulo = "Alterações da conta";
+    ?>
+   
 
 </body>
 

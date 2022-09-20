@@ -1,10 +1,10 @@
-// alt_livros
-
-
 <?php
 include "../include/MySql.php";
 session_start();
-
+echo "aqui:" . $_SESSION['nome'];
+echo "aqui:" . $_SESSION['idEmail'];
+echo "aqui:" . $_SESSION['nomeLivro'];
+echo "aqui:" . $_SESSION['codLivro'];
 $codLivro = "";
 $nomeLivro = "";
 $idEmail = "";
@@ -91,9 +91,9 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
 <body>
     <form method="POST" enctype="multipart/form-data">
         <fieldset>
-            <legend>Cadastro de Usuário</legend>
+            <legend>Alteração de Livros</legend>
 
-            nomeLivro: <input type="text" name="nomeLivro" value="<?php echo $nomeLivro ?>">
+            nomeLivro: <input type="text" name="nomeLivro" value="<?php echo $_SESSION['nomeLivro'] ?>">
             <span class="obrigatorio">*<?php echo $nomeLivroErro ?></span>
             <br>
             <input type="file" name="image">

@@ -54,7 +54,7 @@ p.alt-2{
     margin-bottom: 1px;
 }
 
-button{
+.button{
     border: none;
     background-color: #D5ECB4;
     height: 40px;
@@ -64,7 +64,7 @@ button{
     font-size:15px;
     color: black;
 }
-button:hover{
+.button:hover{
     background-color: #778B5B;
 }
 div.container-alteracao{
