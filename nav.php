@@ -17,15 +17,15 @@
                     <img class="image2" src="assets/images/usuario.png" alt="">
                   </div>
                   <div class="nome-email">
-                    <h4 class="nome-fulana">Fulana Ciclana</h4>
-                    <p class="email-fulana">fulana65@gmail.com</p>
+                    <h4 class="nome-fulana"><?php echo $_SESSION['nome']; ?></h4>
+                    <p class="email-fulana"><?php echo $_SESSION['idEmail']; ?></p>
                   </div>
                 </div>
               </div>
             </div>
             <div class="menu">
               <div class="item">
-                <a class="links" href="#">
+                <a class="links" href="paginas/list_livro.php">
                   Biblioteca
                 </a>
                 <a class="links" href="#">
@@ -46,7 +46,7 @@
                 <a class="links" href="configuracoes.php" id="<?php $value['idEmail'] ?>">
                   Configurações
                 </a>
-                <a class=" links" href="#">
+                <a class=" links" href="paginas/logout.php">
                   Sair (logout)
                 </a>
               </div>
@@ -61,7 +61,7 @@
     </div>
     <ul>
       <li><b><a class="link" href="personagens.php">Criação de Personagens</a></b></li>
-      <li><b><a class="link" href="biblioteca.php">Biblioteca</a></b></li>
+      <li><b><a class="link" href="paginas/list_livro.php">Biblioteca</a></b></li>
       <li><b><a class="link" href="jornada.php">Jornada do Herói</a></b></li>
       <li><b><a class="link" href="snowflake.php">Snowflake</a></b></li>
       <li><b><a class="link" href="mundos.php">Criação de Mundos</a></b></li>

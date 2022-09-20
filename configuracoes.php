@@ -1,5 +1,8 @@
 <?php
 include "include/mysql.php";
+session_start();
+echo "aqui email:" . $_SESSION['idEmail'];
+echo "aqui email:" . $_SESSION['nome'];
 
 $titulo = "Configurações";
 

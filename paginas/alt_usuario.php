@@ -1,5 +1,7 @@
 <?php
 include "../include/mysql.php";
+echo "aqui email:" . $_SESSION['idEmail'];
+echo "aqui email:" . $_SESSION['nome'];
 $nome = "";
 $idEmail = "";
 $senha = "";
@@ -59,34 +61,6 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) { //se isso
 ?>
 
 <!DOCTYPE html>
-
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="../css/estilo.css">
-    <title>Cadastro de Usuário</title>
-</head>
-
-<body>
-    <form action="" method="POST">
-        <fieldset>
-            <legend>Cadastro de Usuário</legend>
-            Email: <input type="text" name="idEmail" value="<?php echo $idEmail ?>" readonly>
-            <br>
-            Nome: <input type="text" name="nome" value="<?php echo $nome ?>">
-            <span class="obrigatorio">*<?php echo $nomeErro ?></span>
-            <br>
-
-            <br>
-
-            <input type="submit" value="Salvar" name="submit">
-        </fieldset>
-    </form>
-
-</body>
-
-</html>
-
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -97,7 +71,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) { //se isso
     <?php
     $titulo = "Alterações da conta";
     ?>
-    <link rel="stylesheet" href="assets/css/alt.css">
+    <link rel="stylesheet" href="../assets/css/alt.css">
 </head>
 
 <body>
@@ -107,9 +81,9 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) { //se isso
                 <h1>Alterações da conta</h1>
                 <br>
             </div>
-            <p class="alt-1"><b>Altere suas Informações</b></p><input type="text" placeholder=" Seu E-mail Atual" readonly>
+            <p class="alt-1"><b>Altere suas Informações</b></p><input type="text" placeholder=" Seu E-mail Atual" value="<?php echo $_SESSION['idEmail']; ?>" readonly>
             <br>
-            <input type="text" name="nome" placeholder="Altere Nome" value="<?php echo $nome ?>">
+            <input type="text" name="nome" placeholder="Altere Nome" value="<?php echo $_SESSION['nome']; ?>">
             <span class="obrigatorio">*<?php echo $nomeErro ?></span>
             <br>
             <p class="alt-2"><b>Altere sua senha</b></p><input type="password" placeholder=" Sua senha atual">

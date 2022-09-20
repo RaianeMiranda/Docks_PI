@@ -69,11 +69,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
                         <?php if ("imagemTemp" != "") { ?>
                             <img class="capa_livro" src="" alt="" id="imagemTemp">
                         <?php } else { ?>
-                            <img class="azul" src="../assets/images/azul.png">
-                            <img class="verde" src="../assets/images/verde.png">
-                            <img class="rosa" src="../assets/images/rosa.png">
-                            <img class="laranja" src="../assets/images/laranja.png">
-                            <img class="roxo" src="../assets/images/roxo.png">
+                            <img class="capa_livro" src="../assets/images/criar_livros.png" alt="">
                         <?php } ?>
 
 
