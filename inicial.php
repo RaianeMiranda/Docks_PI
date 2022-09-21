@@ -1,7 +1,4 @@
-<?php 
-$titulo = "Página Inicial";
-include "head1.php";
-?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,10 +6,14 @@ include "head1.php";
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Página Inicial</title>
-    <link rel="stylesheet" href="assets/css/inicial.css">
+    <link rel="stylesheet" href="assets/css/pagina_inicial.css">
 </head>
 <body>
     <div class="container-site">
+    <?php 
+$titulo = "Página Inicial";
+include "head1.php";
+?>
     <div class="container-inicial">
     <h1 class="titulo-site">Docks</h1>
     <p class="paragrafo-site">Aqui é o lugar para as suas histórias</p>
@@ -25,9 +26,9 @@ include "head1.php";
 <img class="pate_personagem" src="assets/images/pate_personagem.png" alt="">
 </div>
 </div>
-<div class="container-abaixo">
-    <p>rodapé</p>
-</div>
+<?php
+include "footer.php";
+?>
 
 
 </body>
