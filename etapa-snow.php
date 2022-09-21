@@ -22,14 +22,14 @@ if ($sql->execute()) {
     }
 }
 if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST["submit"])) {
-  if (isset($_POST['descricao']))
-      $texto = $_POST['descricao'];//TEXTO QUE VEM DO BANCO, arrumar o inseriri etapas para enviar ao banco e deixar o texto na tela
+  if (isset($_POST['texto']))
+      $texto = $_POST['texto'];//TEXTO QUE VEM DO BANCO, arrumar o inseriri etapas para enviar ao banco e deixar o texto na tela
   else
-      $texto = "Sem texto";
+      $msgErro = "Sem texto";
  
  $sql = $pdo->prepare("INSERT INTO ETAPAS (codEtapas, codSnowflake, codLivro, nome_etapas, descricao)
-    VALUES ( NULL, NULL, NULL, ?, ?)");
-   if ($sql->execute(array( $_SESSION['codEtapas']))) {
+    VALUES ( NULL, NULL, NULL, NULL, ?)");
+   if ($sql->execute(array( $texto))) {
       $msgErro = "Dados cadastrados com sucesso!";
    } else {
       $msgErro = "Dados não cadastrados!";
