@@ -23,7 +23,7 @@ if ($sql->execute()) {
 }
 if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST["submit"])) {
   if (isset($_POST['descricao']))
-      $texto = $_POST['descricao'];//TEXTO QUE VEM DO BANCO
+      $texto = $_POST['descricao'];//TEXTO QUE VEM DO BANCO, arrumar o inseriri etapas para enviar ao banco e deixar o texto na tela
   else
       $texto = "Sem texto";
  
