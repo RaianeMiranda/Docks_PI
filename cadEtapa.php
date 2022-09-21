@@ -3,21 +3,21 @@ session_start();
 include "include/mysql.php";
 
 $value="";
-$codEtapas="";
+$codSnowflake="";
 $texto = "";
 $msgErro="";
-$nome_etapas="";
+$nome_snow="";
 
 
     if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
         $texto = $_POST['texto'];
-        $nome_etapas = $_POST['nome_etapas'];
-        $sql = $pdo->prepare("INSERT INTO etapas (codEtapas, codSnowflake, codLivro, nome_etapas, descricao)
-VALUES ( NULL, NULL, NULL, ?, ?)");
-        if ($sql->execute(array($nome_etapas, $texto))) {
+        $nome_snow = $_POST['nome_snow'];
+        $sql = $pdo->prepare("INSERT INTO snowflake (codSnowflake, nome_snow, descricao)
+VALUES ( NULL, ?, ?)");
+        if ($sql->execute(array($nome_snow, $texto))) {
             $msgErro = "Dados cadastrados com sucesso!";
-            $_SESSION['codEtapas'] = $codEtapas;
-            $codEtapas="";
+            $_SESSION['codSnowflake'] = $codSnowflake;
+            $codSnowflake="";
         }
          else {
             $msgErro = "Dados não cadastrados!";
@@ -30,7 +30,7 @@ VALUES ( NULL, NULL, NULL, ?, ?)");
 
 <head>
     <meta charset="UTF-8">
-    <title>cadastro de usuário</title>
+    <title>cadastro-Etapa</title>
     <link rel="stylesheet">
 </head>
 
@@ -40,7 +40,7 @@ VALUES ( NULL, NULL, NULL, ?, ?)");
             <legend>cadastro de descricao de fase</legend>
             <br>
             nome da etapa: <br>
-            <input type="texto" name="nome_etapas" value="<?php echo $nome_etapas?>">
+            <input type="texto" name="nome_snow" value="<?php echo $nome_snow?>">
             <br>
             descrição de etapa:<br>
             <textarea name="texto"><?php echo $texto ?></textarea>

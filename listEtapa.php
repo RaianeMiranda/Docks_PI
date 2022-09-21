@@ -2,7 +2,7 @@
 session_start();
 include "include/mysql.php";
 
-    $sql = $pdo->prepare('SELECT * FROM ETAPAS');
+    $sql = $pdo->prepare('SELECT * FROM snowflake');
     if ($sql->execute()){
         $info = $sql->fetchAll(PDO::FETCH_ASSOC);
 
@@ -15,10 +15,10 @@ include "include/mysql.php";
         echo "</tr>";
         foreach($info as $key => $value){
             echo "<tr>";
-            echo "<td>".$value['nome_etapas']."</td>";
+            echo "<td>".$value['nome_snow']."</td>";
             echo "<td>".$value['descricao']."</td>";
-            echo "<td><center><a href='altEtapa.php?id=".$value['codEtapas']."'>(+)</a></center></td>";
-            echo "<td><center><a href='delEtapa.php?id=".$value['codEtapas']."'>(-)</a></center></td>";
+            echo "<td><center><a href='altEtapa.php?id=".$value['codSnowflake']."'>(+)</a></center></td>";
+            echo "<td><center><a href='delEtapa.php?id=".$value['codSnowflake']."'>(-)</a></center></td>";
             echo "</tr>";
         }
         echo "</table>";

@@ -2,13 +2,13 @@
     include "include/MySql.php";
 
     $msgErro = "";
-    $codEtapas = "";
+    $codSnowflake = "";
 
     if (isset($_GET['id'])){
-        $codEtapas = $_GET['id'];
+        $codSnowflake = $_GET['id'];
 
-        $sql = $pdo->prepare("DELETE FROM ETAPAS WHERE codEtapas = ?");
-        if ($sql->execute(array($codEtapas))){
+        $sql = $pdo->prepare("DELETE FROM snowflake WHERE codSnowflake = ?");
+        if ($sql->execute(array($codSnowflake))){
             if ($sql->rowCount() > 0){
                 $msgErro = "etapa excluído com sucesso!";
                 header('location:listEtapa.php');

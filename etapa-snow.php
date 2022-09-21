@@ -5,41 +5,36 @@ include "include/MySql.php";
 
 $msgErro = "";
 $texto = "";
-$nome_etapas = "";
+$nome_snow = "";
 $codEtapas = "";
+$descricao = "";
 
 
+$sql = $pdo->prepare('SELECT * FROM snowflake '); //where codlivro = sessao
+if ($sql->execute()) {
+    $info = $sql->fetchAll(PDO::FETCH_ASSOC);
 
-
-//$sql = $pdo->prepare('SELECT * FROM ETAPAS WHERE codEtapas = ?');
-//if ($sql->execute(array($_SESSION['codEtapas']))) {
-  //$info = $sql->fetchAll(PDO::FETCH_ASSOC);
-   //if (count($info) > 0) {
-    //foreach ($info as $key => $values) {
-      //   $codEtapas= $values['codEtapas'];
-        // $nome_etapas = $values['nome_etapas'];
-        // $texto = $values['descricao'];
-       // }
- //}
-//}
-
+    foreach ($info as $key => $value) {
+       
+      //  echo $value['codPersonagens'];
+     
+    
+    }
+}
 if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST["submit"])) {
   if (isset($_POST['descricao']))
-       $texto = $_POST['descricao'];//TEXTO QUE VEM DO BANCO
+      $texto = $_POST['descricao'];//TEXTO QUE VEM DO BANCO
   else
-       $texto = "Sem texto";
-  if (isset($_POST['nome_etapas']))
-       $nome_etapas = $_POST['nome_etapas'];
-
-
-   $sql = $pdo->prepare("INSERT INTO ETAPAS (codEtapas, codSnowflake, codLivro, nome_etapas, descricao)
+      $texto = "Sem texto";
+ 
+ $sql = $pdo->prepare("INSERT INTO ETAPAS (codEtapas, codSnowflake, codLivro, nome_etapas, descricao)
     VALUES ( NULL, NULL, NULL, ?, ?)");
-   if ($sql->execute(array($_SESSION['codEtapas'],  " " . $texto . " ", $nome_etapas))) {
-       $msgErro = "Dados cadastrados com sucesso!";
+   if ($sql->execute(array( $texto))) {
+      $msgErro = "Dados cadastrados com sucesso!";
    } else {
       $msgErro = "Dados não cadastrados!";
     }
-}
+ }
 ?>
 
 
@@ -71,14 +66,14 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST["submit"])) {
                 <div class="titulo1-snow">
                     <h1>
                         <?php
-                        echo $nome_etapas;
+                      echo $value['nome_snow'];
                         ?>
                     </h1>
                 </div>
                 <div class="texto1-snow">
                     <div class="descricao-snowflake">
                         <?php
-                        echo $texto;
+                          echo $value['descricao'];
                         ?>
                     </div>
                 </div>
