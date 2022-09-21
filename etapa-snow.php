@@ -29,7 +29,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST["submit"])) {
  
  $sql = $pdo->prepare("INSERT INTO ETAPAS (codEtapas, codSnowflake, codLivro, nome_etapas, descricao)
     VALUES ( NULL, NULL, NULL, ?, ?)");
-   if ($sql->execute(array( $texto))) {
+   if ($sql->execute(array( $_SESSION['codEtapas']))) {
       $msgErro = "Dados cadastrados com sucesso!";
    } else {
       $msgErro = "Dados não cadastrados!";
