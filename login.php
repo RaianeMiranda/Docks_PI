@@ -95,7 +95,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     </div>
                 </fieldset>
                 <p>Ainda não é um membro?</p>
-                <p><a href="paginas/cad_usuario.php"><button class="membro">Cadastre-se</button></a></p>
+                <p><button class="membro"><a href="paginas/cad_usuario.php">Cadastre-se</a></button></p>
 
             </div>
         </div>
