@@ -55,6 +55,9 @@
         <div class="image-nome">
                 <img src="assets/images/docks.png" class="logotipo">
                 <h1 class="nome">Docks</h1>
+                <div class="btn-login">
+                <button class="btn-log"><a class="a-log" href="#">Login</a></button>
+                <a class="a-log_adm" href="#">Administrador</a>
 </div>
             </div>
         </div>

@@ -1,0 +1,67 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+body {
+
+    background-color: #FFF2D8;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.logo-img{
+    width:90px;
+    height:90px;
+}
+
+.container_inicial{
+    background-color: #FFFFFF;
+    text-align: center;
+    display: table;
+    text-align: center;
+    margin: 0 auto;
+    padding: 17px;
+    border-radius: 20px;
+    margin-top: auto;
+    width: 360px;
+    height: 550px;
+}
+h1.slogan{
+    font-size:35px;
+    margin-top:0px;
+    margin-bottom:0px;
+}
+p.slogan{
+    font-size: 15px;
+    font-weight: normal;
+    margin-top: 0px;
+}
+input#nome{
+    border:5px solid #EDEDED;
+    width: 220px;
+    height:30px;
+    border-radius: 10px;
+    padding: 8px;
+}
+
+input#e-mail{
+    margin-top: 10px;
+    border:5px solid #EDEDED;
+    width: 220px;
+    height:30px;
+    border-radius: 10px;
+    padding: 8px;
+}
+input#senha{
+    margin-top: 10px;
+    border:5px solid #EDEDED;
+    width: 220px;
+    height:30px;
+    border-radius: 10px;
+    padding: 8px;
+}
+input#continuar.continuar{
+    border: 1px dashed #ded559;
+    border-radius: 5px;
+    background-color: #F6EB60;
+    padding: 10px;
+    width: 150px;
+    font-size: medium;
+}
