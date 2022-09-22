@@ -6,6 +6,19 @@ $titulo = "Página inicial";
 $nomeLivro = "";
 echo "aqui:" . $_SESSION['nomeLivro'];
 
+
+if (isset($_GET['id'])) {
+    $nomeLivro = $_GET['id'];
+    $sql = $pdo->prepare("SELECT * FROM LIVROS WHERE nomeLivro= ?");
+    if ($sql->execute(array($_SESSION['nomeLivro']))) {
+        $info = $sql->fetchAll(PDO::FETCH_ASSOC);
+        foreach ($info as $key => $value) {
+            $_SESSION['nomeLivro'] = $value['nomeLivro'];
+            $nomeLivro = "";
+        }
+    }
+}
+
 $sql = $pdo->prepare('SELECT * FROM livros WHERE idEmail=?');
 if ($sql->execute(array($_SESSION['idEmail']))) {
     $info = $sql->fetchAll(PDO::FETCH_ASSOC);
@@ -42,6 +55,7 @@ if ($sql->execute(array($_SESSION['idEmail']))) {
         header('location:index.php');
     } ?>
 
+
     <?php if ($_SESSION['nomeLivro'] != "") { ?>
         <h3 class="before_course">Continue escrevendo: <span class="nome"><?php echo $_SESSION['nomeLivro'] ?></span></h3>
     <?php } else { ?>
@@ -70,7 +84,7 @@ if ($sql->execute(array($_SESSION['idEmail']))) {
 
     <?php if ($_SESSION['nomeLivro'] != "") {
         include "paginas/list_capitulo.php" ?>
-       
+
 
     <?php } ?>
 

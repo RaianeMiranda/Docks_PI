@@ -1,58 +1,56 @@
 <?php
-$nomeLivro = "";
-$nomeLivroErro = "";
-$msgErro = "";
-if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
-    if (!empty($_FILES["image"]["name"])) {
-        //Pegar informações do arquivo
-        $fileName = basename($_FILES['image']['name']);
-        $fileType = pathinfo($fileName, PATHINFO_EXTENSION);
-        //Array de extensoes permitidas
-        $allowTypes = array('jpg', 'png', 'jpeg', 'gif');
+    include "../include/MySql.php";
+    session_start();
+    $nomeLivro = "";
 
-        if (in_array($fileType, $allowTypes)) {
-            $image = $_FILES['image']['tmp_name'];
-            $imgContent = file_get_contents($image);
+    $nomeLivroErro = "";
+    $msgErro = "";
 
-            if (empty($_POST['nome']))
-                $nomeLivroErro = "Nome é obrigatório!";
-            else
-                $nomeLivro = $_POST['nome'];
+    if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
+        if (!empty($_FILES["image"]["name"])) {
+            //Pegar informações do arquivo
+            $fileName = basename($_FILES['image']['name']);
+            $fileType = pathinfo($fileName, PATHINFO_EXTENSION);
+            //Array de extensoes permitidas
+            $allowTypes = array('jpg', 'png', 'jpeg', 'gif');
 
-            if ($nomeLivro) {
-                //Verificar se ja existe o idEmail
-                $sql = $pdo->prepare("SELECT * FROM LIVROS WHERE nomeLivro = ?");
-                if ($sql->execute(array($nomeLivro))) {
-                    if ($sql->rowCount() <= 0) {
-                        $sql = $pdo->prepare("INSERT INTO LIVROS (codLivro, nomeLivro, capaLivro, idEmail)
-                              VALUES (NULL, ?, ?, ?)");
+            if (in_array($fileType, $allowTypes)) {
+                $image = $_FILES['image']['tmp_name'];
+                $imgContent = file_get_contents($image);
 
+                if (empty($_POST['nome']))
+                    $nomeLivroErro = "Nome é obrigatório!";
+                else
+                    $nomeLivro = $_POST['nome'];
+
+                if ($nomeLivro) {
+                    //Verificar se ja existe o idEmail
+                    $sql = $pdo->prepare("SELECT * FROM LIVROS WHERE nomeLivro = ?");
+                    if ($sql->execute(array($nomeLivro))) {
+                        if ($sql->rowCount() <= 0) {
+                            $sql = $pdo->prepare("INSERT INTO LIVROS (codLivro, nomeLivro, capaLivro, idEmail)
+                                                VALUES (NULL, ?, ?, ?)");
+                            if ($sql->execute(array($nomeLivro, $imgContent, "admin1"))) {
+                                $msgErro = "Dados cadastrados com sucesso!";
+                                $nomeLivro = "";
+                               // header('location:../inicial.php');
+                            } else {
+                                $msgErro = "Dados não cadastrados!";
+                            }
+                        } 
+                    } else {
                         $msgErro = "Erro no comando SELECT!";
-                        if ($sql->execute(array($nomeLivro, $imgContent, $_SESSION['idEmail']))) {
-                            $msgErro = "Dados cadastrados com sucesso!";
-                            $_SESSION['nomeLivro'] = $nomeLivro;
-                            $nomeLivro = "";
-                            header('location:inicial.php');
-                        } else {
-                            $msgErro = "Dados não cadastrados!";
-                        }
                     }
                 } else {
                     $msgErro = "Dados não cadastrados!";
-                    $msgErro = "Erro no comando SELECT!";
                 }
             } else {
                 $msgErro = "Somente arquivos JPG, JPEG, PNG e GIFF são permitidos";
-                $msgErro = "Dados não cadastrados!";
             }
         } else {
             $msgErro = "Imagem não selecionada!!";
-            $msgErro = "Somente arquivos JPG, JPEG, PNG e GIFF são permitidos";
         }
-    } else {
-        $msgErro = "Imagem não selecionada!!";
     }
-}
 ?>
 
 <title>Criar Livros</title>
