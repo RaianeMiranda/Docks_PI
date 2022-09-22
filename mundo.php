@@ -18,7 +18,7 @@ if ($sql->execute(array('5'))) {
     }
 
     $sql = $pdo->prepare('SELECT * FROM MUNDO '); //where codlivro = sessao
-    if ($sql->execute(array('1'))) {
+    //if ($sql->execute(array('1'))) {
         $info = $sql->fetchAll(PDO::FETCH_ASSOC);
 
         foreach ($info as $key => $value) {
@@ -29,17 +29,17 @@ if ($sql->execute(array('5'))) {
             //  echo $value['codMundo'];
         }
     }
-}
+//}
 
 if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
 
     if (isset($_POST['texto']))
-        $texto = $_POST['texto']; //TEXTO QUE VEM DO BANCO, arrumar o inseriri etapas para enviar ao banco e deixar o texto na tela
+        $texto = $_POST['texto']; 
     else
         $msgErro = "Sem texto";
 
     if (isset($_POST['nome_mundo']))
-        $nome_mundo = $_POST['nome_mundo']; //TEXTO QUE VEM DO BANCO, arrumar o inseriri etapas para enviar ao banco e deixar o texto na tela
+        $nome_mundo = $_POST['nome_mundo']; 
     else
         $msgErro = "Sem texto";
 
@@ -64,62 +64,43 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Docks</title>
 </head>
 
 <body>
-    <section class="container">
-        <div class="row">
-            <div class="col-md-6">
-                <nav class="parte1-snow">
+<section class="container">
+        <div class="persona">
+            <div class="p">
+                <nav class="parte1">
                     <ul>
-                        <li class="voltar-snow"><a href="#"><img src="assets/images/voltar.png"></a></li>
-                        <li class="snow"><b>Snowflake</b></li>
-                        <li class="menu-snow"><b>Menu</b></li>
+                        <li class="voltar"><a href="#"><img src="assets/images/voltar.png"></a></li>
+                        <li class="nome-conteudo"><b>Criação de Mundo</b></li>
+                        <li class="menu"><b>Menu</b></li>
                     </ul>
                 </nav>
-                <hr class="hr-snow">
-
-
-                <div class="col-md-6">
-                    <nav class="parte2-snow">
-                        <ul>
-                            <div class="nome-livro-snow">
-                                <li class="nomelivro1-snow"><b>Alice</b></li>
-                            </div>
-                        </ul>
-                    </nav>
-                    <hr class="hr-snow">
-                    <form action="" method="POST" enctype="multipart/form-data">
-                        <div class="titulo1-snow">
-                            <h1 class="titulo1-personagem"><b>Nome do Personagem:</b>
-                                <?php
+                <hr class="hr-mundo">
+                <form action="" method="POST" enctype="multipart/form-data">
+                    <div class="fase">
+                        <p class="titulo"><b>
+                       <?php
 
                                 if ($nome_mundo == "") { ?>
-                                    <input type="texto" name="nome_mundo" class="nome_mundo"> <?php
+                                  Nome do Mundo: <input type="texto" name="nome_mundo" class="input-nome"> <?php
                                                                                                 } else { ?>
-                                    <input type="texto" name="nome_mundo" class="nome_mundo" value="<?php echo $nome_mundo; ?>"><?php } ?>
-                            </h1>
+                                    <input type="texto" name="nome_mundo" class="input_nome" value="<?php echo $nome_mundo; ?>"><?php } ?>
+                                </b></p>
+                                <input type="submit" name="salvar"value="salvar" class="salvar">
                         </div>
-                        <div class="botoes-snow">
-                            <p class="fase1-snow"><b> Fase 1 </b></p>
-                            <div class="salvinho">
-                                <input type="submit" value="Salvar" name="submit" class="salvar1-snow">
-                            </div>
-                        </div>
-                        <div>
-
                             <textarea id="texto" name="texto">
                         <?php
                         if ($texto == "") {
                             echo $value['descricao'];
                         } else echo $texto;
                         ?>
-
                         </textarea>
-
                         </div>
                     </form>
                     <?php echo $msgErro ?>
@@ -130,23 +111,26 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
     <!-- Inicia o CK editor -->
     <script src="https://cdn.ckeditor.com/ckeditor5/35.1.0/classic/ckeditor.js"></script>
     <script>
-        ClassicEditor
-            .create(document.querySelector('#texto'))
-            .then(editor => {
-                console.log(editor);
+    ClassicEditor
+        .create(document.querySelector('#texto'))
+        .then(editor => {
+            console.log(editor);
 
-            })
-            .catch(error => {
-                console.error(error);
-            });
+        })
+        .catch(error => {
+            console.error(error);
+        });
     </script>
 
 
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
     </script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
     </script>
 </body>
 

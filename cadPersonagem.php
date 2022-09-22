@@ -37,7 +37,7 @@ $msgErro="";
             <legend>cadastro de descricao de Personagem</legend>
             <br>
            Descrição do Personagem:<br>
-           <textarea name="texto" > <?php echo $texto ?>
+           <textarea  id="texto" name="texto" > <?php echo $texto ?>
         </textarea>
            <br>
            <input type="submit" value="Salvar" name="submit">
@@ -45,5 +45,18 @@ $msgErro="";
     </form>
     <?php echo $msgErro ?>
 </body>
+
+<script src="https://cdn.ckeditor.com/ckeditor5/35.1.0/classic/ckeditor.js"></script>
+    <script>
+    ClassicEditor
+        .create(document.querySelector('#texto'))
+        .then(editor => {
+            console.log(editor);
+
+        })
+        .catch(error => {
+            console.error(error);
+        });
+    </script>
 
 </html>

@@ -62,12 +62,24 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) { //se isso
             <legend> Alteração de Descrição de Mundo</legend>
             <br>
             Descrição de Mundo: <br>
-            <textarea type="text" name="descricao"><?php echo $descricao ?></textarea>
+            <textarea id="texto" type="text" name="descricao"><?php echo $descricao ?></textarea>
             <br>
             <input type="submit" value="Salvar" name="submit">
         </fieldset>
     </form>
     <span><?php echo $msgErro ?></span>
 </body>
+<script src="https://cdn.ckeditor.com/ckeditor5/35.1.0/classic/ckeditor.js"></script>
+    <script>
+    ClassicEditor
+        .create(document.querySelector('#texto'))
+        .then(editor => {
+            console.log(editor);
+
+        })
+        .catch(error => {
+            console.error(error);
+        });
+    </script>
 
 </html>
