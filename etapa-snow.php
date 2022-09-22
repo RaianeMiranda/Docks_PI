@@ -1,4 +1,5 @@
 <?php
+/*
 session_start();
 include "include/MySql.php";
 
@@ -14,9 +15,9 @@ $sql = $pdo->prepare('SELECT * FROM snowflake '); //where codlivro = sessao
 if ($sql->execute()) {
     $info = $sql->fetchAll(PDO::FETCH_ASSOC);
 
-    foreach ($info as $key => $value) {
+    foreach ($info as $key => $values) {
        
-      //  echo $value['codPersonagens'];
+      //  echo $values['codPersonagens'];
      
     
     }
@@ -28,15 +29,77 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST["submit"])) {
       $msgErro = "Sem texto";
  
  $sql = $pdo->prepare("INSERT INTO ETAPAS (codEtapas, codSnowflake, codLivro, nome_etapas, descricao)
-    VALUES ( NULL, NULL, NULL, NULL, ?)");
+    valuesS ( NULL, NULL, NULL, NULL, ?)");
    if ($sql->execute(array( $texto))) {
       $msgErro = "Dados cadastrados com sucesso!";
    } else {
       $msgErro = "Dados não cadastrados!";
     }
- }
+ }*/
 ?>
 
+<?php
+session_start();
+include "include/MySql.php";
+
+$codEtapas = "";
+$nome_etapas = "";
+$codLivro = "";
+$descricao = "";
+$texto = "";
+$msgErro = "";
+
+$sql = $pdo->prepare('SELECT * FROM snowflake WHERE codSnowflake=?');
+if ($sql->execute(array('6'))) { //no lugar do '6' confirmar a session do snowflake
+    $info = $sql->fetchAll(PDO::FETCH_ASSOC);
+    if (count($info) > 0) {
+        foreach ($info as $key => $values) {
+            $_SESSION['codSnowflake'] = $values['codSnowflake'];
+            $_SESSION['nome_snow'] = $values['nome_snow'];
+            $_SESSION['descricao'] = $values['descricao'];
+            $descricao = "";
+        }
+    }
+
+    $sql2 = $pdo->prepare('SELECT * FROM ETAPAS '); //where codlivro = sessao
+    if ($sql2->execute()) {
+        $info2 = $sql2->fetchAll(PDO::FETCH_ASSOC);
+
+        foreach ($info2 as $key => $values2) {
+            $_SESSION['codEtapas'] = $values2['codEtapas'];
+            $_SESSION['nome_etapas'] = $values2['nome_etapas'];
+            $_SESSION['texto'] = $values2['descricao'];
+            $texto = "";
+            //  echo $values['codEtapas'];
+        }
+    }
+}
+
+if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
+
+    if (isset($_POST['texto']))
+        $texto = $_POST['texto'];
+    else
+        $msgErro = "Sem texto";
+
+    if (isset($_POST['nome_etapas']))
+        $nome_etapas = $_POST['nome_etapas'];
+    else
+        $msgErro = "Sem texto";
+
+    //_SESSION['nomeLivro'] = 1;
+    $sql = $pdo->prepare("INSERT INTO ETAPAS (codEtapas, codSnowflake, codLivro, nome_etapas, descricao)
+    values ( NULL, ?, ?, ?, ?)");
+    if ($sql->execute(array("1", "1", $nome_etapas, $texto))) {
+        $msgErro = "Dados cadastrados com sucesso!";
+        $_SESSION['codEtapas'] = $codEtapas;
+        $codEtapas = "";
+    } else {
+        $msgErro = "Dados não cadastrados!";
+    }
+}
+
+?>
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -45,8 +108,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST["submit"])) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Docks</title>
 </head>
@@ -66,14 +128,14 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST["submit"])) {
                 <div class="titulo1-snow">
                     <h1>
                         <?php
-                      echo $value['nome_snow'];
+                      echo $values['nome_snow'];
                         ?>
                     </h1>
                 </div>
                 <div class="texto1-snow">
                     <div class="descricao-snowflake">
                         <?php
-                          echo $value['descricao'];
+                        echo $values['descricao'];
                         ?>
                     </div>
                 </div>
@@ -91,11 +153,16 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST["submit"])) {
                 <form action="" method="POST" enctype="multipart/form-data">
                     <div class="botoes-snow">
                         <p class="fase1-snow"><b> Fase 1 </b></p>
-                            <input type="submit" value="Salvar" name="submit" class="salvar1-snow">
-                     
+                        <input type="submit" values="Salvar" name="submit" class="salvar1-snow">
+
                     </div>
                     <div>
-                        <textarea id="texto" name="texto"><?php echo $texto ?></textarea>
+                        <textarea id="texto" name="texto"><?php
+                                                            if ($texto != "") {
+                                                                echo "comece sua história agora!!";
+                                                            } else  echo $values2['descricao']
+                                                            ?>
+                    </textarea>
                     </div>
                 </form>
                 <?php echo $msgErro ?>
@@ -106,26 +173,23 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST["submit"])) {
     <!-- Inicia o CK editor -->
     <script src="https://cdn.ckeditor.com/ckeditor5/35.1.0/classic/ckeditor.js"></script>
     <script>
-    ClassicEditor
-        .create(document.querySelector('#texto'))
-        .then(editor => {
-            console.log(editor);
+        ClassicEditor
+            .create(document.querySelector('#texto'))
+            .then(editor => {
+                console.log(editor);
 
-        })
-        .catch(error => {
-            console.error(error);
-        });
+            })
+            .catch(error => {
+                console.error(error);
+            });
     </script>
 
 
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
     </script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
     </script>
 </body>
 

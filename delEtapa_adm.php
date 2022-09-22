@@ -2,16 +2,16 @@
 include "include/mysql.php";
 
 $msgErro = "";
-$codEtapas = "";
+$codSnowflake = "";
 
 if(isset($_GET['id'])){
-    $codEtapas = $_GET['id'];
+    $codSnowflake = $_GET['id'];
 
-    $sql = $pdo->prepare("DELETE FROM ETAPAS WHERE codEtapas = ?");
-    if ($sql->execute(array($codEtapas))){
+    $sql = $pdo->prepare("DELETE FROM SNOWFLAKE WHERE codSnowflake = ?");
+    if ($sql->execute(array($codSnowflake))){
         if ($sql->rowCount()>0){
             $msgErro = "Etapa excluida com sucesso!";
-           header('location:listEtapas.php');
+            header('location:listEtapas.php');
         }else {
             $msgErro = "Código não localizado!";
         } 
