@@ -23,7 +23,7 @@ if ($sql->execute()) {
 }
 if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST["submit"])) {
   if (isset($_POST['texto']))
-      $texto = $_POST['texto'];//TEXTO QUE VEM DO BANCO, arrumar o inseriri etapas para enviar ao banco e deixar o texto na tela
+      $texto = $_POST['texto'];//TEXTO QUE VEM DO BANCO
   else
       $msgErro = "Sem texto";
  
@@ -91,14 +91,11 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST["submit"])) {
                 <form action="" method="POST" enctype="multipart/form-data">
                     <div class="botoes-snow">
                         <p class="fase1-snow"><b> Fase 1 </b></p>
-                        <div class="salvinho">
                             <input type="submit" value="Salvar" name="submit" class="salvar1-snow">
-                        </div>
+                     
                     </div>
                     <div>
-
                         <textarea id="texto" name="texto"><?php echo $texto ?></textarea>
-
                     </div>
                 </form>
                 <?php echo $msgErro ?>
