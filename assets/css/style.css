@@ -1,0 +1,287 @@
+ 
+body {
+    border: 0;
+    padding: 0;
+    margin: 0;
+    background-color: #FFF2D8;
+}
+
+ .item1-snow {
+     flex: 1;
+     background: #FFF2D8;
+     height: 1195px;
+ }
+
+ .hr-snow {
+     width: 100%;
+     height: 20px;
+     background-color: #F4CCC8;
+     border-color: #F4CCC8;
+     margin: 0;
+     border-width: 0;
+ }
+
+ .parte1-snow ul {
+     list-style: none;
+     display: flex;
+     justify-content: space-between;
+     padding: 0px;
+ }
+
+ .parte1-snow a {
+     font-size: 20px;
+     text-decoration: none;
+     color: black;
+     font-family: 'Open Sans';
+ }
+
+ .parte1-snow {
+
+     margin-bottom: 20px;
+     justify-content: space-between;
+     justify-content: baseline;
+     margin-top: 25px;
+ }
+
+ .titulo1-snow h1 {
+     justify-content: baseline;
+     margin: 20px;
+     font-family: 'Open Sans';
+     font-size: 25px;
+ }
+
+ .menu-snow {
+     font-size: 25px;
+     font-family: 'Open Sans';
+     margin-left: 30px;
+     margin: 0;
+
+ }
+
+ .snow {
+     font-size: 25px;
+     font-family: 'Open Sans';
+ }
+
+ .voltar-snow {
+     font-size: 25px;
+     font-family: 'Open Sans';
+
+ }
+
+ .salvar1-snow {
+     border-color: #9F9F9F;
+     background-color: #CCCCCC;
+     width: 65px;
+     height: 30px;
+     margin-bottom: 20px;
+     justify-content: baseline;
+     font-family: 'Open Sans';
+     font-weight: bold;
+
+ }
+
+ .descricao-snowflake {
+    background-color: #F4CCC8;
+    padding: 20px;
+    font-family: 'Open Sans';
+    font-size: 20px;
+    border: 0;
+    outline: 0;
+    resize: none;
+    height: 300px;
+}
+
+.botoes-snow{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+
+.fase1-snow{
+    margin-right:150px;
+    font-family: 'Open Sans';
+    font-size: 25px;
+}
+
+.nomelivro1-snow {
+    font-size: 25px;
+    font-family: 'Open Sans';
+    margin-top:30px;
+    text-align: center;
+    list-style: none;
+}
+
+ #editor {
+     background-color: #FFF2D8;
+ }
+
+
+/*PERSONAGEM*/
+
+.input-nome{
+    width: 250px;
+    height:25px;
+    margin-right:300px;
+   
+}
+
+.hr-personagem {
+    width: 100%;
+    height: 20px;
+    background-color: #BCE4E4;
+    border-color: #BCE4E4;
+    margin: 0;
+    border-width: 0;
+}
+
+/*MUNDO*/
+
+.hr-mundo {
+    width: 100%;
+    height: 20px;
+    background-color: #D5ECB4;
+    border-color: #D5ECB4;
+    margin: 0;
+    border-width: 0;
+}
+
+/*MUNDO*/
+
+.parte1 ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px;
+}
+
+.parte1 a {
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+    font-family: 'Open Sans';
+}
+
+.parte1 {
+    margin-top: 25px;
+    margin-bottom: 20px;
+    justify-content: space-around;
+    justify-content: baseline;
+    width: 100%
+}
+
+.titulo p {
+    justify-content: baseline;
+    text-align: right;
+    font-family: 'Open Sans';
+}
+
+.menu {
+    font-size: 25px;
+    font-family: 'Open Sans';
+    margin-left: 20px;
+}
+
+.nome-conteudo {
+    font-size: 25px;
+    font-family: 'Open Sans';
+    margin-right: 15px;
+}
+
+.voltar {
+    font-size: 25px;
+    font-family: 'Open Sans';
+}
+
+.fase {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+
+.salvar {
+    border-color: #9F9F9F;
+    background-color: #CCCCCC;
+    width: 65px;
+    height: 30px;
+    margin-bottom: 20px;
+    justify-content: baseline;
+    font-family: 'Open Sans';
+}
+
+
+
+/*FOOTER
+
+.nome_docks{
+    font-weight: 900;
+    font-size: 3rem ;
+  }
+  
+  .title_welcome{
+    font-size: 45px;
+    font-weight: bold;
+  }
+   
+  .before_course{
+  color: #646464;
+  }
+   
+  .criar_livro{
+    margin: 15px 0 15px 0;
+    background-color: #FFF2D8;
+    border: 4px solid #FED576;
+    border-radius: 10px;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 25px;
+    font-weight: bolder;
+    cursor: pointer;
+  }
+   
+   ul{
+    display: flex;
+    list-style: none;
+    padding: 0;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 0;
+  
+   }
+  
+  li a:hover {
+    color: rgb(159, 159, 159);
+  }
+  
+  li{
+    text-decoration: none;
+  }
+  
+  .logo{
+    width: 80px;
+    height: 80px;
+  }
+  
+  .logo_footer{
+    max-width: 220px;
+    min-width: 180px;
+  }
+  
+  .logo_flex{
+    display: flex;
+    align-items: center;
+  }
+  .text_footer{
+    margin: 0 auto;
+    text-align: justify;
+  }
+  
+  .nome{
+    text-decoration: none ;
+    font-size: inherit;
+    color:#CD40A6;
+  }
+*/
