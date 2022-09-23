@@ -17,7 +17,7 @@
                         <div class="card-img-top1">
                             <img class="card-img-top1 logo" src="assets/images/docks.png" alt="Card image cap">
                         </div>
-                        <h4 class="titulo_top-card mundo-title">Jornada do Herói</h4>
+                        <h4 class="titulo_top-card mundo-title"> <a href="../metodo_criacao_de_mundo.php"> Criação de Mundo</a></h4>
                         <div class="card-body">
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk
                                 of the card's

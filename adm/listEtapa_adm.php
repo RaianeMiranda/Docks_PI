@@ -1,6 +1,6 @@
 <?php
 session_start();
-include "include/mysql.php";
+include "../include/MySql.php";
 
     $sql = $pdo->prepare('SELECT * FROM snowflake');
     if ($sql->execute()){
@@ -25,4 +25,4 @@ include "include/mysql.php";
     }
 ?>
 <br>
-<input type="button" value="Cadastrar" onclick="parent.location='cadEtapa.php'">
+<input type="button" value="Cadastrar" onclick="parent.location='../paginas/cadEtapa.php'">

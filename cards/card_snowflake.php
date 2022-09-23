@@ -17,7 +17,7 @@
                         <div class="card-img-top1">
                             <img class="card-img-top1 logo" src="assets/images/docks.png" alt="Card image cap">
                         </div>
-                        <h4 class="titulo_top-card snow-title">Jornada do Herói</h4>
+                        <h4 class="titulo_top-card snow-title"> <a href="../metodo_snowflake.php"> Método Snowflake</a></h4>
                         <div class="card-body">
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk
                                 of the card's

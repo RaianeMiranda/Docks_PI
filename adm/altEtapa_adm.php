@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-include "include/mysql.php";
+include "../include/mysql.php";
 
 $codEtapas = "";
 $codSnowflake = "";
