@@ -1,58 +1,3 @@
-<?php
-    include "../include/MySql.php";
-    session_start();
-    $nomeLivro = "";
-
-    $nomeLivroErro = "";
-    $msgErro = "";
-
-    if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
-        if (!empty($_FILES["image"]["name"])) {
-            //Pegar informações do arquivo
-            $fileName = basename($_FILES['image']['name']);
-            $fileType = pathinfo($fileName, PATHINFO_EXTENSION);
-            //Array de extensoes permitidas
-            $allowTypes = array('jpg', 'png', 'jpeg', 'gif');
-
-            if (in_array($fileType, $allowTypes)) {
-                $image = $_FILES['image']['tmp_name'];
-                $imgContent = file_get_contents($image);
-
-                if (empty($_POST['nome']))
-                    $nomeLivroErro = "Nome é obrigatório!";
-                else
-                    $nomeLivro = $_POST['nome'];
-
-                if ($nomeLivro) {
-                    //Verificar se ja existe o idEmail
-                    $sql = $pdo->prepare("SELECT * FROM LIVROS WHERE nomeLivro = ?");
-                    if ($sql->execute(array($nomeLivro))) {
-                        if ($sql->rowCount() <= 0) {
-                            $sql = $pdo->prepare("INSERT INTO LIVROS (codLivro, nomeLivro, capaLivro, idEmail)
-                                                VALUES (NULL, ?, ?, ?)");
-                            if ($sql->execute(array($nomeLivro, $imgContent, "admin1"))) {
-                                $msgErro = "Dados cadastrados com sucesso!";
-                                $nomeLivro = "";
-                               // header('location:../inicial.php');
-                            } else {
-                                $msgErro = "Dados não cadastrados!";
-                            }
-                        } 
-                    } else {
-                        $msgErro = "Erro no comando SELECT!";
-                    }
-                } else {
-                    $msgErro = "Dados não cadastrados!";
-                }
-            } else {
-                $msgErro = "Somente arquivos JPG, JPEG, PNG e GIFF são permitidos";
-            }
-        } else {
-            $msgErro = "Imagem não selecionada!!";
-        }
-    }
-?>
-
 <title>Criar Livros</title>
 <link rel="stylesheet" href="assets/css/criar_livros.css">
 <link rel="stylesheet" href="assets/css/modal.css">
@@ -66,11 +11,8 @@
             <form method="POST" enctype="multipart/form-data">
                 <div class="container-cores">
                     <div class="container-capa">
-                        <?php if ("imagemTemp" != "") { ?>
-                            <img class="capa_livro" src="" alt="" id="imagemTemp">
-                        <?php } else { ?>
-                            <img class="capa_livro" src="../assets/images/criar_livros.png" alt="">
-                        <?php } ?>
+           
+                           <img class="capa_livro" src="./assets/images/criar_livros.png" alt="" id="imagemTemp">
 
 
                     </div>
@@ -88,7 +30,7 @@
                     </div>
                 </div>
                 <h2 class="titulo-criar_livros">Título</h2>
-                <img src="" alt="" id="imagemTemp">
+                <!-- <img src="" alt="" id="imagemTemp"> -->
                 <div class="botao-criar_livros">
                     <input type="text" name="nome" placeholder="Adicione seu título *">
                     <span class="obrigatorio"><?php echo   $nomeLivroErro ?></span>
@@ -102,7 +44,6 @@
                 <?php  ?>
                 const imgInp = document.getElementById("upload_image");
                 const imagemTemp = document.getElementById("imagemTemp");
-
                 imgInp.onchange = evt => {
                     const [file] = imgInp.files
                     if (file) {

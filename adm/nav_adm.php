@@ -16,7 +16,7 @@
             <li><b><a class="link" href="../adm/listEtapa_adm.php">Cadastro de Snowflake</a></b></li>
             <li><b><a class="link" href="../adm/listMundo_adm.php">Cadastro de Mundo</a></b></li>
             <li><b><a class="link" href="../adm/listPersonagem_adm.php">Cadastro de Personagens</a></b></li>
-            <li><b><a class="link" href="../adm/cadcapa_adm.php">Imagens</a></b></li>
+            <li><b><a class="link" href="../paginas/cadcapa_adm.php">Imagens</a></b></li>
         </ul>
         <hr class="linha">
     </div>

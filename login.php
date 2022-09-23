@@ -30,7 +30,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 foreach ($info as $key => $values) {
                     $_SESSION['nome'] = $values['nome'];
                     $_SESSION['idEmail'] = $values['idEmail'];
-                    $_SESSION['administrador'] = '1';
+                    $_SESSION['administrador'] = '';
                 }
                 header('location:inicial.php');
             } else {

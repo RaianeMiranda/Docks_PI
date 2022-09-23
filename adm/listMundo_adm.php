@@ -24,4 +24,4 @@
     }
 ?>
 <br>
-<input type="button" value="Cadastrar" onclick="parent.location='cadMundo.php'">
+<input type="button" value="Cadastrar" onclick="parent.location='../paginas/cadMundo.php'">

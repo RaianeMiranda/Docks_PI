@@ -25,4 +25,4 @@ include "../include/mysql.php";
     }
 ?>
 <br>
-<input type="button" value="Cadastrar" onclick="parent.location='cadPersonagem.php'">
+<input type="button" value="Cadastrar" onclick="parent.location='../paginas/cadPersonagem.php'">
