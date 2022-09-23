@@ -1,5 +1,5 @@
 <?php
-include "include/mysql.php";
+include "../include/mysql.php";
 
 $msgErro = "";
 $codSnowflake = "";
@@ -11,7 +11,7 @@ if(isset($_GET['id'])){
     if ($sql->execute(array($codSnowflake))){
         if ($sql->rowCount()>0){
             $msgErro = "Etapa excluida com sucesso!";
-            header('location:listEtapas.php');
+            header('location:listEtapas_adm.php');
         }else {
             $msgErro = "Código não localizado!";
         } 

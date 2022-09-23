@@ -84,7 +84,15 @@ if ($sql->execute(array($_SESSION['idEmail']))) {
 
     <?php if ($_SESSION['nomeLivro'] != "") {
         include "paginas/list_capitulo.php" ?>
+      <button class="criar_livro" type="submit" id="my2Btn"><i class="fa-solid fa-plus"></i> Criar capítulo</button>
 
+      <!-- The Modal -->
+        <div id="my2Modal" class="modal">
+
+            <!-- Modal content -->
+            <?php include "paginas/cad_capitulo.php"; ?>
+
+        </div>
 
     <?php } ?>
 

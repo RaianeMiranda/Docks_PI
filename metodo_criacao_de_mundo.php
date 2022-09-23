@@ -1,5 +1,5 @@
 <?php
-$titulo = "Método Criação de Personagem";
+$titulo = "Método Criação de Mundo";
 include "head.php"
 ?>
 <!DOCTYPE html>
@@ -9,10 +9,7 @@ include "head.php"
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Método Criação de Personagem</title>
-    <?php
-    $titulo = "Método Criação de Personagem"
-    ?>
+    <title>Método Criação de Mundo</title>
     <link rel="stylesheet" href="assets/css/metodo_criacao_de_personagem.css">
 </head>
 
@@ -26,7 +23,6 @@ include "head.php"
         
             <p class="separado">Na metodologia a ser apresentada, trabalharemos com três níveis de criação. </p>
         </div>
-        <br>
         <ul class="camadas-container">
 
             <li>

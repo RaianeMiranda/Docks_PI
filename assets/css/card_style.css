@@ -85,20 +85,10 @@ body {
     background-color: #FFF2D8;
 }
  
-.carousel-control-prev,
-.carousel-control-next {
-    background-color: #e1e1e1;
-    width: 5vh;
-    height: 5vh;
-    border-radius: 50%;
-    top: 50%;
-    transform: translateY(-50%);
-}
- 
  
 .card-wrapper {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
 }
  
 .logo {
@@ -119,10 +109,19 @@ body {
     cursor: pointer;
 }
  
-.card-text {
+.card-text  {
     font-weight: bold;
     display: flex;
     margin: 0 auto;
+    font-size: 1rem;
+    align-items: center;
+}
+ 
+h2  {
+    font-weight: bold;
+    display: flex;
+    margin: 0 auto;
+    font-size: 1rem;
     align-items: center;
 }
  

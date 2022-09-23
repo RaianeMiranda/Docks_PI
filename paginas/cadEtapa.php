@@ -1,6 +1,6 @@
 <?php
 session_start();
-include "include/mysql.php";
+include "../include/MySql.php";
 
 $value="";
 $codSnowflake="";

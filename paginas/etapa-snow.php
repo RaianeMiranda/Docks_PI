@@ -40,7 +40,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST["submit"])) {
 
 <?php
 session_start();
-include "include/MySql.php";
+include "../include/MySql.php";
 
 $codEtapas = "";
 $nome_etapas = "";
@@ -49,32 +49,34 @@ $descricao = "";
 $texto = "";
 $msgErro = "";
 
-$sql = $pdo->prepare('SELECT * FROM snowflake WHERE codSnowflake=?');
-if ($sql->execute(array('6'))) { //no lugar do '6' confirmar a session do snowflake
-    $info = $sql->fetchAll(PDO::FETCH_ASSOC);
-    if (count($info) > 0) {
-        foreach ($info as $key => $values) {
-            $_SESSION['codSnowflake'] = $values['codSnowflake'];
-            $_SESSION['nome_snow'] = $values['nome_snow'];
-            $_SESSION['descricao'] = $values['descricao'];
-            $descricao = "";
+if (isset($_GET['id'])) {
+    $codSnowflake = $_GET['id'];
+    $sql = $pdo->prepare('SELECT * FROM snowflake WHERE codSnowflake=?');
+    if ($sql->execute(array($codSnowflake))) { //no lugar do '6' confirmar a session do snowflake
+        $info = $sql->fetchAll(PDO::FETCH_ASSOC);
+        if (count($info) > 0) {
+            foreach ($info as $key => $values) {
+                $_SESSION['codSnowflake'] = $values['codSnowflake'];
+                $_SESSION['nome_snow'] = $values['nome_snow'];
+                $_SESSION['descricao'] = $values['descricao'];
+                $descricao = "";
+            }
         }
-    }
 
-    $sql2 = $pdo->prepare('SELECT * FROM ETAPAS '); //where codlivro = sessao
-    if ($sql2->execute()) {
-        $info2 = $sql2->fetchAll(PDO::FETCH_ASSOC);
+        $sql2 = $pdo->prepare('SELECT * FROM ETAPAS '); //where codlivro = sessao
+        if ($sql2->execute()) {
+            $info2 = $sql2->fetchAll(PDO::FETCH_ASSOC);
 
-        foreach ($info2 as $key => $values2) {
-            $_SESSION['codEtapas'] = $values2['codEtapas'];
-            $_SESSION['nome_etapas'] = $values2['nome_etapas'];
-            $_SESSION['texto'] = $values2['descricao'];
-            $texto = "";
-            //  echo $values['codEtapas'];
+            foreach ($info2 as $key => $values2) {
+                $_SESSION['codEtapas'] = $values2['codEtapas'];
+                $_SESSION['nome_etapas'] = $values2['nome_etapas'];
+                $_SESSION['texto'] = $values2['descricao'];
+                $values2['descricao']= $texto;
+                //  echo $values['codEtapas'];
+            }
         }
     }
 }
-
 if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
 
     if (isset($_POST['texto']))
@@ -101,6 +103,10 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
 
 ?>
 
+<?php
+$titulo = "Método Snowflake";
+include "../head.php";
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -109,7 +115,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
     <title>Docks</title>
 </head>
 
@@ -128,7 +134,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
                 <div class="titulo1-snow">
                     <h1>
                         <?php
-                      echo $values['nome_snow'];
+                        echo $values['nome_snow'];
                         ?>
                     </h1>
                 </div>
@@ -158,9 +164,9 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
                     </div>
                     <div>
                         <textarea id="texto" name="texto"><?php
-                                                            if ($texto != "") {
-                                                                echo "comece sua história agora!!";
-                                                            } else  echo $values2['descricao']
+                                                            if ($texto == "") {
+                                                                echo "Comece a escrever a sua história!!";
+                                                            } else  echo $texto;
                                                             ?>
                     </textarea>
                     </div>

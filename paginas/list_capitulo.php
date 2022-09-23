@@ -41,6 +41,7 @@ if ($sql->execute(array($_SESSION['codLivro']))) {
         echo "<td>" . $value['codLivro'] . "</td>";
         echo "<td><center><a href='paginas/alt_capitulo.php?id=" . $value['codCapitulo'] . "'>(+)</a></center></td>";
         echo "<td><center><a href='paginas/del_capitulo.php?id=" . $value['codCapitulo'] . "'>(-)</a></center></td>";
+        echo "<td><center><a href='paginas/escrever_cap.php?id=" . $value['codCapitulo'] . "'>CAD</a></center></td>";
         echo "</tr>";
     }
     echo "</table>";

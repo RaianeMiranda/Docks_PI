@@ -5,8 +5,7 @@ body{
     background-color: #FFF2D8;
 }
 div.container{
-    margin-left: 180px;
-    margin-right: 290px;
+    max-width: 1200px;
 }
 div.descricao-container{
     font-size: 20px;
@@ -25,6 +24,12 @@ h1.metodo-cp-titulo{
 .camadas-container{
     font-size: 20px;
 }
+
+
+ul{
+    display: inherit;
+}
+
 li{
     margin-bottom:10px;
 }

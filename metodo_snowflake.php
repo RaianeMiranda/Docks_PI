@@ -1,5 +1,10 @@
-<?php 
- $titulo = "Método Snowflake";
+<?php
+session_start();
+include "include/mysql.php";
+?>
+
+<?php
+$titulo = "Método Snowflake";
 include "head.php"
 ?>
 <!DOCTYPE html>
@@ -14,28 +19,31 @@ include "head.php"
 </head>
 
 <body>
-<div class="container">
-    <h1 class="titulo-snowflake">Snowflake</h1>
-    <p>O nome deriva do inglês e significa “floco de neve”, e a ideia é visualizar o floco de neve como uma figura complexa, que é desenvolvida por formas simples que, quando colocadas uma junto à outra, evoluem até formar uma figura bem desenvolvida.
-        Esse método é ótimo para você que tem uma ideia na cabeça, mas ainda não sabe como passá-la para o papel ou como organizá-la sem furos. O método pega o comecinho dessa ideia, da forma que ela surgiu e desenvolve através de alguns passos.
-    </p>
-    <div class="etapa_1-container">
-        <h2 class="etapa">Etapa 1: </h2>
-        <p class="etapa-descricao">escrever a história em uma frase</p>
+    <div class="container">
+        <h1 class="titulo-snowflake">Snowflake</h1>
+        <p>O nome deriva do inglês e significa “floco de neve”, e a ideia é visualizar o floco de neve como uma figura complexa, que é desenvolvida por formas simples que, quando colocadas uma junto à outra, evoluem até formar uma figura bem desenvolvida.
+            Esse método é ótimo para você que tem uma ideia na cabeça, mas ainda não sabe como passá-la para o papel ou como organizá-la sem furos. O método pega o comecinho dessa ideia, da forma que ela surgiu e desenvolve através de alguns passos.
+        </p>
+        <?php
+        $sql = $pdo->prepare('SELECT * FROM SNOWFLAKE');
+        if ($sql->execute()) {
+            $info = $sql->fetchAll(PDO::FETCH_ASSOC);
+            foreach ($info as $key => $value) {
+        ?>
+                <div class="etapa_1-container">
+                    <h2 class="etapa">Etapa 1: </h2>
+                    <?php echo "<a href='paginas/etapa-snow.php?id=" . $value['codSnowflake'] . "'>" ?> <p class="etapa-descricao"><?php echo $value['nome_snow'] ?></p><?php "</a>" ?>
+                </div>
+
+
+        <?php
+
+            }
+        }
+        ?>
+
     </div>
-    <div class="etapa_2-container">
-    <h2 class="etapa">Etapa 2: </h2>
-    <p class="etapa-descricao">expandir a frase em um parágrafo</p>
-</div>
-<div class="etapa_3-container">
-    <h2 class="etapa">Etapa 3: </h2>
-    <p class="etapa-descricao">criar fichas para os personagens</p>
-</div>
-<div class="etapa_4-container">
-    <h2 class="etapa">Etapa 4: </h2>
-    <p class="etapa-descricao">expandir o parágrafo inicial em vários parágrafos</p>
-</div>
-</div>
+    </div>
 </body>
 
 </html>

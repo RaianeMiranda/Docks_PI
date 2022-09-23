@@ -1,6 +1,6 @@
 <?php
     session_start();
-    include "include/MySql.php";
+    include "../include/MySql.php";
 
     $msgErro = "";
     $codPersonagens = "";
@@ -12,7 +12,7 @@
         if ($sql->execute(array($codPersonagens))){
             if ($sql->rowCount() > 0){
                 $msgErro = "Descrição-Personagem excluída com sucesso!";
-                header('location:listPersonagem.php');
+                header('location:listPersonagem_adm.php');
             } else {
                 $msgErro = "Descrição-Personagem não localizado!";
             }

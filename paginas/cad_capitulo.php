@@ -1,6 +1,6 @@
 <?php
 $nome_cap = "";
-$nota_cap = "";
+$descricao = "";
 $codCapitulo = "";
 $nome_capErro = "";
 $msgErro = "";
@@ -35,13 +35,13 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['enviarcap'])) {
         $sql = $pdo->prepare("SELECT * FROM CAPITULO WHERE nome_cap = ?");
         if ($sql->execute(array($nome_cap))) {
             if ($sql->rowCount() <= 0) {
-                $sql = $pdo->prepare("INSERT INTO CAPITULO (codCapitulo, codLivro, nome_cap, nota_cap)
+                $sql = $pdo->prepare("INSERT INTO CAPITULO (codCapitulo, codLivro, nome_cap, descricao)
                                             VALUES (NULL, ?, ?, NULL)");
                 if ($sql->execute(array($_SESSION['codLivro'], $nome_cap))) {
                     $msgErro = "Dados cadastrados com sucesso!";
                     $_SESSION['nome_cap'] = $nome_cap;
                     $nome_cap = "";
-                    header('location:../inicial.php');
+                    //header('location:../inicial.php');
                 } else {
                     $msgErro = "Dados não cadastrados!";
                 }
@@ -68,6 +68,8 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['enviarcap'])) {
 
 <body>
     <form method="POST" enctype="multipart/form-data">
+        <button type="click"> <span class="c2lose">&times;</span></button>
+   
         <fieldset>
             <legend>Cadastro de Capítulos</legend>
 

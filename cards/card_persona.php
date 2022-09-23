@@ -24,101 +24,46 @@
                                 content.</p>
                         </div>
                     </div>
-                    <div class="persona-card card">
-                        <div class="persona-top card-top">
-                            <h4 class="card-text">1. O chamado</h4>
-                        </div>
-                        <div class="card-body">
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of the card's
-                                content.</p>
-                        </div>
-                    </div>
-                    <div class="persona-card card">
-                        <div class="persona-top card-top">
-                            <h4 class="card-text">1. O chamado</h4>
-                        </div>
-                        <div class="card-body">
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of the card's
-                                content.</p>
-                        </div>
-                    </div>
-                    <div class="persona-card card">
-                        <div class="persona-top card-top">
-                            <h4 class="card-text">1. O chamado</h4>
-                        </div>
-                        <div class="card-body">
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of the card's
-                                content.</p>
-                        </div>
-                    </div>
-                    <div class="persona-card card">
-                        <div class="persona-top card-top">
-                            <h4 class="card-text">1. O chamado</h4>
-                        </div>
-                        <div class="card-body">
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of the card's
-                                content.</p>
-                        </div>
-                    </div>
+                    <?php
+                    $sql = $pdo->prepare('SELECT * FROM personagens');
+                    if ($sql->execute()) {
+                        $info = $sql->fetchAll(PDO::FETCH_ASSOC);
+                        if (count($info) > 0) {
+                            foreach ($info as $key => $values) {
+                    ?>
+
+                                <div class="persona-card card">
+                                    <div class="persona-top card-top">
+                                        <h4 class="card-text"><?php echo $values['nome_persona'] ?></h4>
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="card-text"><?php echo $values['descricao'] ?></p>
+                                    </div>
+                                </div>
+
+                    <?php
+
+                            }
+                        }
+                    }
+                    ?>
+
+
+
+
                 </div>
             </div>
-            <div class="carousel-item">
-                <div class="card-wrapper">
-                    <div class="persona-card card">
-                        <div class="persona-top card-top">
-                            <h4 class="card-text">1. O chamado</h4>
-                        </div>
-                        <div class="card-body">
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of the card's
-                                content.</p>
-                        </div>
-                    </div>
-                    <div class="persona-card card">
-                        <div class="persona-top card-top">
-                            <h4 class="card-text">1. O chamado</h4>
-                        </div>
-                        <div class="card-body">
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of the card's
-                                content.</p>
-                        </div>
-                    </div>
-                    <div class="persona-card card">
-                        <div class="persona-top card-top">
-                            <h4 class="card-text">1. O chamado</h4>
-                        </div>
-                        <div class="card-body">
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of the card's
-                                content.</p>
-                        </div>
-                    </div>
-                    <div class="persona-card card">
-                        <div class="persona-top card-top">
-                            <h4 class="card-text">1. O chamado</h4>
-                        </div>
-                        <div class="card-body">
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of the card's
-                                content.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
         </div>
-        <a class="carousel-control-prev" href="#carouselExampleControls4" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="false"></span>
-            <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleControls4" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="false"></span>
-            <span class="sr-only">Next</span>
-        </a>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleControls4" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="false"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleControls4" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="false"></span>
+        <span class="sr-only">Next</span>
+    </a>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
