@@ -144,3 +144,22 @@ h4.card-text{
     box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
  
 }
+
+
+.dropdown-item:focus {
+    background-color: #FED576;
+    border-color: #FED576;
+  }
+
+  .dropdown-menu>a:hover {
+    background-color: transparent;
+    border-color: #FED576;
+  }
+
+  .dropdown-menu show {
+    border-color: #FED576;
+  }
+
+  .dropdown-menu {
+    border: 1px solid #FED576;
+  }
