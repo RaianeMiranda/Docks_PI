@@ -19,11 +19,11 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-body" style="position: fixed;">
-      <div class="modal-header">
+      <div class="modal-header2">
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
         <?php
-        include "login1_0.php";
+        include "login2_0.php";
         ?>
       </div>
     </div>

@@ -28,34 +28,32 @@ h1.slogan{
     margin-top:0px;
     margin-bottom:0px;
 }
+.slogan{
+    margin: 10px;
+}
 p.slogan{
     font-size: 15px;
     font-weight: normal;
-    margin-top: 0px;
+    margin: 0px 80px 10px;
 }
 input#nome{
-    border:5px solid #EDEDED;
-    width: 220px;
-    height:30px;
-    border-radius: 10px;
+    border: none;
     padding: 8px;
+    font-size: 15px;
+    color: #a2a2a2;
 }
 
 input#e-mail{
-    margin-top: 10px;
-    border:5px solid #EDEDED;
-    width: 220px;
-    height:30px;
-    border-radius: 10px;
+    border: none;
     padding: 8px;
+    font-size: 15px;
+    color: #a2a2a2;
 }
 input#senha{
-    margin-top: 10px;
-    border:5px solid #EDEDED;
-    width: 220px;
-    height:30px;
-    border-radius: 10px;
+    border: none;
     padding: 8px;
+    font-size: 15px;
+    color: #a2a2a2;
 }
 input#continuar.continuar{
     border: 1px dashed #ded559;
@@ -64,4 +62,80 @@ input#continuar.continuar{
     padding: 10px;
     width: 150px;
     font-size: medium;
+    margin-top:5px;
+}
+fieldset{margin: 10px auto;
+    text-align: initial;
+    border-radius: 10px;
+    border: 5px solid #EDEDED;
+    width: 215px;
+    color: #a2a2a2;
+    padding: 5px;
+}
+.login-with {
+    border: none;
+    background-color: white;
+    color: #a2a2a2;
+    padding: 10px;
+    font-size: medium;
+    font-size: 15px;
+    max-width: 150px;
+    margin: 0;
+    padding: 0;
+}
+
+.icon-login {
+    width: 42px;
+}
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 230px;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.membro-cadastro{
+    font-size: 15px;
+}
+.form-fieldset{
+    margin: 10px auto;
+    text-align: initial;
+    border-radius: 10px;
+    border: 5px solid #EDEDED;
+    width: 220px;
+    color: #a2a2a2;
+    padding: 5px;
+}
+.membro-cadastro2{
+    margin: 0px 80px 0px;
+    font-size:15px
+}
+.membro-cadastro3{
+    margin: 0px 60px 0px;
+    font-size:15px
+}
+.container_inicial2{
+    background-color: #FFFFFF;
+    text-align: center;
+    display: table;
+    text-align: center;
+    margin: 0 auto;
+    padding: 17px;
+    border-radius: 20px;
+    margin-top: auto;
+    width: 390px;
+    height: 550px;
+}
+.container_inicial3{
+    background-color: #FFFFFF;
+    text-align: center;
+    display: table;
+    text-align: center;
+    margin: 0 auto;
+    padding: 17px;
+    border-radius: 20px;
+    margin-top: auto;
+    width: 390px;
+    height: 500px;
 }

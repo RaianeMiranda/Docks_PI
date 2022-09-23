@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="assets/css/login1_0.css">
 </head>
 <body>
-    <div class="container_inicial">
+    <div class="container_inicial2">
     <div class="image_top">
         <img class="logo-img" src="assets/images/docks.png" alt="">
     </div>
@@ -17,13 +17,10 @@
         <p class="slogan">Aqui é o lugar para suas histórias</p>
     </div>
     <fieldset class="form-fieldset">
-        <input type="text" id="nome" placeholder="Nome">
+        <input type="text" id="nome" placeholder="E-mail">
         </fieldset>
         <fieldset class="form-fieldset">
-        <input type="text" id="e-mail" placeholder="E-mail">
-        </fieldset>
-        <fieldset class="form-fieldset">
-        <input type="text" id="senha" placeholder="Crie uma senha">
+        <input type="text" id="e-mail" placeholder="Insira sua senha">
         </fieldset>
     <div class="btn-continuar">
          <input type="submit" name="continuar" id="continuar" value="Continuar" class="continuar">
@@ -32,17 +29,17 @@
     <fieldset>
     <div class="flex">
                         <img class="icon-login" src="assets/images/facebook.png" alt="Faça seu login com o Facebook">
-                        <a href="#"><button class="login-with">Cadastre-se com o Facebook </button></a>
+                        <a href="#"><button class="login-with">Continuar com o Facebook </button></a>
                     </div>
     </fieldset>
     <fieldset>
                     <div class="flex">
 
                         <img class="icon-login" src="assets/images/google.png" alt="Faça seu login com o Facebook">
-                        <a href="#"><button class="login-with">Cadastre-se com o Google </button></a>
+                        <a href="#"><button class="login-with">Continuar com o Google </button></a>
                     </div>
                 </fieldset>
-                <p class="membro-cadastro">Já é um membro? Entrar</p>
+                <p class="membro-cadastro2">Ainda não é um membro? Criar uma conta</p>
 </div>
 </body>
 </html>
