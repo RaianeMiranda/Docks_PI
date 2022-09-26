@@ -59,8 +59,7 @@ $titulo = "Página inicial";
 
 ?>
 
-<link rel="stylesheet" href="assets/css/inicial.css">
-<link rel="stylesheet" href="assets/css/modal.css">
+
 <?php include "head.php" ;
 echo "aqui:". $_SESSION['idEmail'];?>
 <header>

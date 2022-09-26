@@ -31,7 +31,6 @@ VALUES ( NULL, ?, ?)");
 <head>
     <meta charset="UTF-8">
     <title>cadastro-Etapa</title>
-    <link rel="stylesheet">
 </head>
 
 <body>

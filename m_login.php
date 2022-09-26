@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="assets/css/modal.css">
+
 
 <?php
 include "head.php"
