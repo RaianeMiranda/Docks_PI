@@ -94,7 +94,7 @@
   border-radius: 0.3rem;
   outline: 0;">
         <div class="modal-body">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" style=" margin-top: 10px;">
           <span aria-hidden="true">&times;</span>
         </button>
           <?php
