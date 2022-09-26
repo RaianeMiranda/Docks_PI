@@ -9,7 +9,7 @@
     <?php
     $titulo = "Alterações da conta";
     ?>
-
+    <link rel="stylesheet" href="assets/css/alt.css">
 </head>
 
 <body>

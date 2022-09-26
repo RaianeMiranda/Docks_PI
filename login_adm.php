@@ -44,7 +44,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 
 ?>
-
+<link rel="stylesheet" href="assets/css/login.css">
+<link rel="stylesheet" href="assets/css/modal.css">
 <form method="POST" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>">
     <div class="login-form">
         <div class="todoLogin">

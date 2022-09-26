@@ -1,3 +1,6 @@
+<head>
+    <link rel="stylesheet" href="assets/css/inicial.css">
+</head>
 </main>
 <hr class="linha">
 <ul>

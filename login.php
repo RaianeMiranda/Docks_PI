@@ -44,6 +44,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 
 ?>
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 
@@ -54,7 +55,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <title>Document</title>
     <link rel="stylesheet" href="assets/css/login1.css">
 </head>
-
 <body>
     <form method="POST" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>">
         <div class="container_inicial2">

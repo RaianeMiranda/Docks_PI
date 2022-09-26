@@ -13,6 +13,7 @@ include "head.php"
     <?php
     $titulo = "Método Criação de Personagem"
     ?>
+    <link rel="stylesheet" href="assets/css/metodo_criacao_de_personagem.css">
 </head>
 
 <body>

@@ -1,4 +1,6 @@
 <title>Criar Livros</title>
+<link rel="stylesheet" href="assets/css/criar_livros.css">
+<link rel="stylesheet" href="assets/css/modal.css">
 </head>
 
 <body>
