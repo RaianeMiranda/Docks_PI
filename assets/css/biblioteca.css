@@ -21,6 +21,15 @@ main {
     max-width: 1600px;
     overflow: hidden;
 }
+.container_nome {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2em;
+    position: relative;
+    max-width: 1600px;
+    overflow: hidden;
+}
 
 
 
