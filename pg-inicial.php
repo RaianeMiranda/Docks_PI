@@ -8,6 +8,7 @@
     <title>Página Inicial</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/pagina_inicial.css">
+    <link rel="stylesheet" href="assets/css/modal_login.css">
 </head>
 <body>
     <div class="container-site">
@@ -35,7 +36,7 @@ include "head1.php";
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
        <?php
-       include "login2_0.php";
+       include "login1_0.php";
        ?>
       </div>
     </div>

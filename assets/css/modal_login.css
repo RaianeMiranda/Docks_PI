@@ -6,7 +6,17 @@
     border:none;
     border-top-right-radius: calc(0.3rem - 1px);
     position: fixed;
-    margin-left: 305px;
+    margin-left: 330px;
+}
+.modal-header3{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1rem;
+    border:none;
+    border-top-right-radius: calc(0.3rem - 1px);
+    position: fixed;
+    margin-left: 330px;
 }
 .modal-content{
         position: relative;
@@ -63,5 +73,5 @@
     border: none;
     border-top-right-radius: calc(0.3rem - 1px);
     position: fixed;
-    margin-left: 330px;
+    margin-left: 310px;
 }

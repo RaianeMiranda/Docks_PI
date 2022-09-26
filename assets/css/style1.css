@@ -128,3 +128,22 @@ main {
  margin-left: 1250px;
  text-align:center;
 }
+
+.log-adm{
+    display:flex;
+}
+
+hr {
+    margin: 1rem 0;
+    color: inherit;
+    background-color: currentColor;
+    border: 0;
+    opacity: none;
+}
+hr:not([size]) {
+    height:15px;
+}
+
+hr:not([opacity]){
+    opacity: 25;
+}
