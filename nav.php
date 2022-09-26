@@ -23,9 +23,10 @@
                 </div>
               </div>
             </div>
+
             <div class="menu">
               <div class="item">
-                <a class="links" href="paginas/list_livro.php">
+              <a class="links" href="paginas/list_livro.php">
                   Biblioteca
                 </a>
                 <a class="links" href="#">
@@ -60,7 +61,7 @@
       </div>
     </div>
     <ul>
-      <li><b><a class="link" href="metodo_criacao_de_personagem.php">Criação de Personagens</a></b></li>
+    <li><b><a class="link" href="metodo_criacao_de_personagem.php">Criação de Personagens</a></b></li>
       <li><b><a class="link" href="paginas/list_livro.php">Biblioteca</a></b></li>
       <li><b><a class="link" href="jornada.php">Jornada do Herói</a></b></li>
       <li><b><a class="link" href="metodo_snowflake.php">Snowflake</a></b></li>
@@ -72,7 +73,6 @@
     $('.menu-btn').click(function() {
       $('.side-bar').addClass('active');
     });
-
     $('.close-btn').click(function() {
       $('.side-bar').removeClass('active');
     });

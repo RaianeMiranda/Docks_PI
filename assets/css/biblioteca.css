@@ -1,0 +1,56 @@
+.titulo_biblioteca {
+    text-align: center;
+    font-weight: 800;
+    display: block;
+    margin-top: 30px;
+    margin-bottom: 0;
+}
+
+main {
+    padding-left: 20%;
+    padding-right: 20%;
+    margin: 0 auto;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 2em;
+    position: relative;
+    max-width: 1600px;
+    overflow: hidden;
+}
+
+
+
+.capa_livro-img {
+    width: 180px;
+    height: 240px;
+}
+
+.nome_livro {
+   margin: 0 auto;
+    text-decoration: none;
+    justify-content: center;
+    color: black;
+    font-size: 20px;
+}
+
+.nome_livro:hover {
+    color: #FED576;
+    text-decoration: underline;
+}
+
+.criar_livro {
+    margin: 15px 0 15px 0;
+    background-color: #FFF2D8;
+    border: 4px solid #FED576;
+    border-radius: 10px;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 25px;
+    font-weight: bolder;
+    cursor: pointer;
+}
