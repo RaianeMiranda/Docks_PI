@@ -13,7 +13,7 @@
 <body>
     <div class="container-site">
     <?php 
-$titulo = "Página Inicial";
+$titulo = "Página Cadastro/Login";
 include "head1.php";
 ?>
     <div class="container-inicial">
