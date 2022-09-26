@@ -62,7 +62,7 @@
  background-color: #F4CCC8;
     border: 2px solid #DBACA7;
     width:50px;
-    font-size: 11px;
+    font-size: 13px;
     height:23px;
     border-radius:3px;
     font-weight: bolder;
