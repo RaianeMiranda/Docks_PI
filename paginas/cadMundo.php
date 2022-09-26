@@ -18,15 +18,15 @@ if ($sql->execute(array('5'))) {
     }
 
         $sql = $pdo->prepare('SELECT * FROM MUNDO WHERE codMundo=? '); //where codlivro = sessao
-        if ($sql->execute(array($codMundo))) {
+        if ($sql->execute(array('1'))) {
             $info = $sql->fetchAll(PDO::FETCH_ASSOC);
 
             foreach ($info as $key => $values) {
-                $_SESSION['codMundo'] = $values['codMundo'];
-                $_SESSION['nome_mundo'] = $values['nome_mundo'];
-                $_SESSION['descricao'] = $values['descricao'];
-                $values['descricao']= $descricao;
-                $values['nome_mundo']= $nome_mundo;
+                $codMundo = $values['codMundo'];
+                $nome_mundo = $values['nome_mundo'];
+                $descricao = $values['descricao'];
+                $descricao = $descricao;
+                $nome_mundo = $nome_mundo;
                 //  echo $value['codMundo'];
             }
         }
@@ -61,15 +61,9 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
 
 <!DOCTYPE html>
 <html lang="pt-br">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <title>Docks</title>
-</head>
+<?php
+include "../head.php";
+?>
 
 <body>
     <section class="container">

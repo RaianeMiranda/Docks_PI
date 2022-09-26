@@ -3,11 +3,11 @@ include "../include/mysql.php";
 $codCapitulo = "";
 $codLivro = "";
 $nome_cap_cap = "";
-$nota_cap = "";
+$descricao = "";
 
-$nota_capErro = "";
+$descricaoErro = "";
 $nome_capErro = "";
-$nota_capErro = "";
+$descricaoErro = "";
 $msgErro = "";
 
 if (isset($_GET['id'])) {
@@ -18,7 +18,7 @@ if (isset($_GET['id'])) {
         foreach ($info as $key => $value) {
             $nome_cap = $value['nome_cap'];
             $codCapitulo = $value['codCapitulo'];
-            $nota_cap = $value['nota_cap'];
+            $descricao = $value['descricao'];
             $codLivro = $value['codLivro'];
         }
     }
@@ -34,9 +34,9 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) { //se isso
     if ($nome_cap) { //se o codCapitulo e o nome_cap e[...] não estiverem preenhidos ele não irá prosseguir e aparecera o erro do else
         // verificar se já existe o codCapitulo
 
-        $sql = $pdo->prepare("UPDATE CAPITULO SET nome_cap = ?, codCapitulo = ?, nota_cap = ? WHERE codCapitulo  = ?");
+        $sql = $pdo->prepare("UPDATE CAPITULO SET nome_cap = ?, codCapitulo = ?, descricao = ? WHERE codCapitulo  = ?");
 
-        if ($sql->execute(array($nome_cap, $codCapitulo, md5($nota_cap), $codCapitulo))) {
+        if ($sql->execute(array($nome_cap, $codCapitulo, md5($descricao), $codCapitulo))) {
             $_SESSION['codCapitulo'] = $codCapitulo;
             $msgErro = "Dados alterados com sucesso!";
             //header('location:inicial.php'); //acima de header não pode ter echo de forma alguma

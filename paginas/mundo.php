@@ -1,6 +1,6 @@
 <?php
 session_start();
-include "include/MySql.php";
+include "../include/MySql.php";
 
 $codMundo = "";
 $nome_mundo = "";

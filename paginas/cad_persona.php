@@ -4,8 +4,8 @@ include "../include/MySql.php";
 
 $codPersonagens = "";
 $msgErro = "";
-$descricao = "";
 $nome_persona = "";
+$descricao="";
 $codLivro = "";
 $texto = "";
 
@@ -14,7 +14,7 @@ if ($sql->execute(array($_SESSION['nomeLivro']))) {
     $info = $sql->fetchAll(PDO::FETCH_ASSOC);
     if (count($info) > 0) {
         foreach ($info as $key => $values) {
-            $_SESSION['codLivro'] = $value['codLivro'];
+            $_SESSION['codLivro'] = $values['codLivro'];
         }
     } else {
         $_SESSION['codLivro'] = 0;
@@ -31,10 +31,8 @@ if ($sql->execute(array($_SESSION['codLivro']))) { //no Lugar do '5' inserir a s
         }
     }
 
-    if (isset($_GET['id'])) {
-        $codPersonagens = $_GET['id'];
         $sql = $pdo->prepare('SELECT * FROM PERSONAGENS WHERE codPersonagens=?'); //where codlivro = sessao
-        if ($sql->execute(array($codPersonagens))) {
+        if ($sql->execute(array('1'))) {
             $info = $sql->fetchAll(PDO::FETCH_ASSOC);
 
             foreach ($info as $key => $value) {
@@ -45,7 +43,7 @@ if ($sql->execute(array($_SESSION['codLivro']))) { //no Lugar do '5' inserir a s
             }
         }
     }
-}
+
 if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
 
     if (isset($_POST['texto']))

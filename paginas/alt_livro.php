@@ -60,18 +60,18 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
     if ($idEmail && $nomeLivro) {
 
 
-                $sql = $pdo->prepare("UPDATE LIVROS SET codLivro=?, 
+        $sql = $pdo->prepare("UPDATE LIVROS SET codLivro=?, 
                                                              nomeLivro=?, 
                                                              idEmail=?, 
                                                              capaLivro=?
                                                        WHERE codLivro=?");
 
-                if ($sql->execute(array($_SESSION['codLivro'], $nomeLivro, $_SESSION['idEmail'], $capaLivro, $_SESSION['codLivro']))) {
-                    $msgErro = "Dados alterados com sucesso!";
-                    //header('location:listLIVROS.php');
-                } else {
-                    $msgErro = "Dados não cadastrados!";
-                }
+        if ($sql->execute(array($_SESSION['codLivro'], $nomeLivro, $_SESSION['idEmail'], $capaLivro, $_SESSION['codLivro']))) {
+            $msgErro = "Dados alterados com sucesso!";
+            //header('location:listLIVROS.php');
+        } else {
+            $msgErro = "Dados não cadastrados!";
+        }
     } else {
         $msgErro = "Dados não alteardos!";
     }
@@ -93,7 +93,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
         <fieldset>
             <legend>Alteração de Livros</legend>
 
-            nomeLivro: <input type="text" name="nomeLivro" value="<?php echo $_SESSION['nomeLivro'] ?>">
+            nomeLivro: <input type="text" name="<?php echo $value['nomeLivro'] ?>" value="<?php echo $_SESSION['nomeLivro'] ?>">
             <span class="obrigatorio">*<?php echo $nomeLivroErro ?></span>
             <br>
             <input type="file" name="image">

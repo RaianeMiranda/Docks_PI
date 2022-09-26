@@ -40,35 +40,30 @@ echo "aqui:" . $_SESSION['codLivro'];
                 </div>
                 <?php
 
-                        $sql = $pdo->prepare('SELECT * FROM personagens WHERE codLivro=?');
-                        if ($sql->execute(array($values['codLivro']))) {
-                            $info = $sql->fetchAll(PDO::FETCH_ASSOC);
-                            if (count($info) > 0) {
-                                foreach ($info as $key => $values) {
+                $sql = $pdo->prepare('SELECT * FROM personagens WHERE codLivro=?');
+                if ($sql->execute(array($values['codLivro']))) {
+                    $info = $sql->fetchAll(PDO::FETCH_ASSOC);
+                    if (count($info) > 0) {
+                        foreach ($info as $key => $values) {
                 ?>
 
-                                    <div class="persona-card card">
-                                        <div class="persona-top card-top">
-                                            <a href="<?php echo 'paginas/personagem.php?id=' . $values['codPersonagens'] ?>">
-                                                <h4 class="card-text"><?php echo $values['nome_persona'] ?></h4>
-                                            </a>
-                                            <div class="dropdown container-bt">
-                                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false"></button>
-                                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                                    <li><a class="dropdown-item" href="<?php echo 'paginas/delPersonagem.php?id=' . $values['codPersonagens'] ?>">Excluir Livro</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="card-body">
-                                            <p class="card-text"><?php echo $values['descricao'] ?></p>
-                                        </div>
-                                    </div>
+                            <div class="persona-card card">
+                                <div class="persona-top card-top">
+                                    <a href="<?php echo 'paginas/personagem.php?id=' . $values['codPersonagens'] ?>">
+                                        <h4 class="card-text"><?php echo $values['nome_persona'] ?></h4>
+                                    </a>
+
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-text"><?php echo $values['descricao'] ?></p>
+                                </div>
+                            </div>
 
                 <?php
 
-                                }
-                            }
                         }
+                    }
+                }
                 ?>
 
                 <div class="criando">

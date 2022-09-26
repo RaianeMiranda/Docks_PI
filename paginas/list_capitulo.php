@@ -7,7 +7,7 @@ if ($sql->execute(array($_SESSION['nomeLivro']))) {
     $info = $sql->fetchAll(PDO::FETCH_ASSOC);
     if (count($info) > 0) {
         foreach ($info as $key => $values) {
-            $_SESSION['codLivro'] = $value['codLivro'];
+            $_SESSION['codLivro'] = $values['codLivro'];
         }
     } else {
         $_SESSION['codLivro'] = 0;

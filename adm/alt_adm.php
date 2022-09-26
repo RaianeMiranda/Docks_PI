@@ -1,4 +1,6 @@
 <?php
+echo "aqui:" . $_SESSION['nome'];
+echo "aqui:" . $_SESSION['idEmail'];
 
 $nome = "";
 $idEmail = "";
@@ -8,8 +10,6 @@ $nomeErro = "";
 $idEmailErro = "";
 $senhaErro = "";
 $msgErro = "";
-
-
 
 if (isset($_GET['id'])) {
     $idEmail = $_GET['id'];
@@ -40,7 +40,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) { //se isso
     else
         $senha = $_POST['senha'];
 
-    if ($idEmail && $nome && $senha) { //se o idEmail e o nome e[...] não estiverem preenhidos ele não irá prosseguir e aparecera o erro do else
+    if ($nome || $senha) { //se o idEmail e o nome e[...] não estiverem preenhidos ele não irá prosseguir e aparecera o erro do else
         // verificar se já existe o idEmail
 
         $sql = $pdo->prepare("UPDATE USUARIO SET nome = ?, idEmail = ?, senha = ? WHERE idEmail  = ?");
@@ -48,7 +48,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) { //se isso
         if ($sql->execute(array($nome, $idEmail, md5($senha), $idEmail))) {
             $_SESSION['idEmail'] = $idEmail;
             $msgErro = "Dados alterados com sucesso!";
-          //  header('location:list_usuario.php'); //acima de header não pode ter echo de forma alguma
+            header('location:list_adm.php'); //acima de header não pode ter echo de forma alguma
         } else {
             $msgErro = "Dados não cadastrados!";
         }
@@ -72,6 +72,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) { //se isso
     <form action="" method="POST">
         
     <link rel="stylesheet" href="../assets/css/alt.css">
+</head>
 
 <body>
     <div class="alt-container">
@@ -80,10 +81,10 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) { //se isso
                 <h1>Alterações da conta</h1>
                 <br>
             </div>
-            <form action="" method="post"></form>
-            <p class="alt-1"><b>Altere suas Informações</b></p><input type="text" name="idEmail" value="<?php echo $idEmail ?>" placeholder=" Seu E-mail Atual" readonly>
+            <p class="alt-1"><b>Altere suas Informações</b></p>
+            <input type="text" name="idEmail" value="<?php echo $_SESSION['idEmail'] ?>" readonly>
             <br>
-            <input type="text" name="nome" placeholder="Altere Nome" value="<?php echo $nome ?>">
+            <input type="text" name="nome" placeholder="Altere Nome" value="<?php echo $_SESSION['nome'] ?>">
             <span class="obrigatorio">*<?php echo $nomeErro ?></span>
             <br>
             <p class="alt-2"><b>Altere sua senha</b></p><input type="password" placeholder=" Sua senha atual">

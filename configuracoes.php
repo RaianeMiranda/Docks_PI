@@ -1,8 +1,8 @@
 <?php
-include "include/mysql.php";
+include "include/MySql.php";
 session_start();
 echo "aqui email:" . $_SESSION['idEmail'];
-echo "aqui email:" . $_SESSION['nome'];
+echo "aqui nome:" . $_SESSION['nome'];
 
 $titulo = "Configurações";
 

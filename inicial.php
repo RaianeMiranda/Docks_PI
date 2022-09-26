@@ -7,7 +7,7 @@ $nomeLivro = "";
 $nomeLivroErro = "";
 $msgErro = "";
 
- if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
+if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
     if (!empty($_FILES["image"]["name"])) {
         //Pegar informações do arquivo
         $fileName = basename($_FILES['image']['name']);
@@ -31,8 +31,8 @@ $msgErro = "";
                     if ($sql->rowCount() <= 0) {
                         $sql = $pdo->prepare("INSERT INTO LIVROS (codLivro, nomeLivro, capaLivro, idEmail)
                                                 VALUES (NULL, ?, ?, ?)");
-                                                $result =$sql->execute(array($nomeLivro, $imgContent, $_SESSION['idEmail']));
-                        if ( $result) {
+                        $result = $sql->execute(array($nomeLivro, $imgContent, $_SESSION['idEmail']));
+                        if ($result) {
                             $msgErro = "Dados cadastrados com sucesso!";
                             $_SESSION['nomeLivro'] = $nomeLivro;
                             $nomeLivro = "";
@@ -61,7 +61,8 @@ $titulo = "Página inicial";
 
 <link rel="stylesheet" href="assets/css/inicial.css">
 <link rel="stylesheet" href="assets/css/modal.css">
-<?php include "head.php" ?>
+<?php include "head.php" ;
+echo "aqui:". $_SESSION['idEmail'];?>
 <header>
     <?php if (isset($_GET['id'])) {
         $nomeLivro = $_GET['id'];
@@ -109,14 +110,24 @@ $titulo = "Página inicial";
 
     <?php if ($_SESSION['nomeLivro'] != "") {
         include "paginas/list_capitulo.php" ?>
-        <button class="criar_livro" type="submit" id="my2Btn"><i class="fa-solid fa-plus"></i> Criar capítulo</button>
 
-        <!-- The Modal -->
-        <div id="my2Modal" class="modal">
 
-            <!-- Modal content -->
-            <?php include "paginas/cad_capitulo.php"; ?>
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+            <i class="fa-solid fa-plus"></i> Criar capítulo
+        </button>
 
+        <!-- Modal -->
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <div class="modal-body">
+                        <?php include "paginas/cad_capitulo.php"; ?>
+                    </div>
+
+                </div>
+            </div>
         </div>
 
     <?php } ?>

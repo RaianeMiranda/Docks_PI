@@ -1,5 +1,4 @@
 <?php
-$nome_cap = "";
 $descricao = "";
 $codCapitulo = "";
 $nome_capErro = "";
@@ -41,7 +40,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['enviarcap'])) {
                     $msgErro = "Dados cadastrados com sucesso!";
                     $_SESSION['nome_cap'] = $nome_cap;
                     $nome_cap = "";
-                    //header('location:../inicial.php');
+                    header("Refresh:0");
                 } else {
                     $msgErro = "Dados não cadastrados!";
                 }
@@ -68,7 +67,6 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['enviarcap'])) {
 
 <body>
     <form method="POST" enctype="multipart/form-data">
-        <button type="click"> <span class="c2lose">&times;</span></button>
    
         <fieldset>
             <legend>Cadastro de Capítulos</legend>

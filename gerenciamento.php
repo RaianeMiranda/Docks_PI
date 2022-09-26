@@ -22,7 +22,7 @@
     <div class="nome-gerenciamento">
       <p>Nome:</p><input type="text" name="nome" value="<?php echo $_SESSION['nome']; ?>" readonly>
       <span class="obrigatorio">*</span>
-      <button type="button" class="botao-alterar1" data-toggle="modal" data-target="#exampleModalLong" style=" background-color: #D5ECB4;
+      <button type="button" class="botao-alterar1" id="<?php $value['idEmail'] ?>" data-toggle="modal" data-target="#exampleModalLong" style=" background-color: #D5ECB4;
   border: 2px solid #BBBBBB;
   height: 25px;
   width: 80px;
@@ -39,7 +39,7 @@
       <p>Email: </p><input type="text" name="email" value="<?php echo $_SESSION['idEmail']; ?>" readonly>
       <span class="obrigatorio">*</span>
       <!-- <input type="submit" value="Alterar" name="submit"> -->
-      <button type="button" class="botao-alterar1" data-toggle="modal" data-target="#exampleModalLong" style=" background-color: #D5ECB4;
+      <button type="button" class="botao-alterar1" id="<?php $value['nome'] ?>" data-toggle="modal" data-target="#exampleModalLong" style=" background-color: #D5ECB4;
   border: 2px solid #BBBBBB;
   height: 25px;
   width: 80px;
@@ -98,7 +98,7 @@
             <span aria-hidden="true">&times;</span>
           </button>
           <?php
-          include "paginas/alt_usuario.php";
+          include 'paginas/alt_usuario.php?id=' . $values['codMundo'];
           ?>
         </div>
       </div>
