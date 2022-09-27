@@ -61,59 +61,62 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['continuar'])) { //se i
 
 
 ?>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/login1_0.css">
 </head>
-<form method="POST" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>">
-    <div class="login-form">
-        <div class="todoLogin">
-            <div class="login_cima">
-                <div class="container">
-                    <div class="flex2">
-                        <img class="logo" src="assets/images/logo.png" alt="logo do site, sendo um círculo com nosso mascote docks, um pato dentro desse círculo.">
-                    </div>
-                    <div class="flex3">
-                        <span class="close">&times;</span>
-                    </div>
-                </div>
 
+<body>
+    <form method="POST" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>">
+
+
+        <div class="container_inicial">
+            <div class="image_top">
+                <img class="logo-img" src="assets/images/docks.png" alt="">
+            </div>
+            <div class="bem-vindo">
                 <h1 class="slogan">Bem vindo(a) ao Docks</h1>
                 <p class="slogan">Aqui é o lugar para suas histórias</p>
             </div>
-
-            <div class="login-meio">
-                <fieldset>
-                    <legend for="nome">Digite seu E-mail</legend>
-                    <input class="norm-login" type="text" name="nome" id="nome" placeholder="Nome" value="<?php echo $nome ?>">
-                </fieldset>
-                <fieldset>
-                    <legend for="idEmail">Digite seu E-mail</legend>
-                    <input class="norm-login" type="text" name="idEmail" id="idEmail" placeholder="E-mail" value="<?php echo $idEmail ?>">
-                </fieldset>
-
-                <fieldset>
-                    <legend for="Senha">Digite sua Senha</legend>
-                    <input class="norm-login" type="password" name="senha" id="Senha" placeholder="Senha" value="<?php echo $senha ?>">
-                </fieldset>
-                <span><?php echo $msgErro ?></span>
-                <input type="submit" name="continuar" id="continuar" value="Continuar" class="continuar"></input>
-
-                <p class="ou">OU</p>
+            <fieldset class="form-fieldset">
+                <input type="text" name="nome" id="nome" placeholder="Nome">
+            </fieldset>
+            <fieldset class="form-fieldset">
+                <input type="text" id="e-mail" name="idEmail" placeholder="E-mail">
+            </fieldset>
+            <fieldset class="form-fieldset">
+                <input type="text" id="senha" name="senha" placeholder="Crie uma senha">
+            </fieldset>
+            <div class="btn-continuar">
+                <input type="submit" name="continuar" id="continuar" value="Continuar" class="continuar">
             </div>
-
-            <div class="login-baixo">
-
-
-                <p>Ainda não é um membro?</p>
-                <p><a href="cad_usuario.php"><button class="membro">Cadastre-se</button></a></p>
-
-            </div>
+            <p class="ou">OU</p>
+            <fieldset>
+                <div class="flex">
+                    <img class="icon-login" src="assets/images/facebook.png" alt="Faça seu login com o Facebook">
+                    <a href="#"><button class="login-with">Cadastre-se com o Facebook </button></a>
+                </div>
+            </fieldset>
+            <fieldset>
+                <div class="flex">
+                    <img class="icon-login" src="assets/images/google.png" alt="Faça seu login com o Facebook">
+                    <a href="#"><button class="login-with">Cadastre-se com o Google </button></a>
+                </div>
+            </fieldset>
+            <p class="membro-cadastro">Já é um membro? Entrar</p>
         </div>
-    </div>
-</form>
 
+
+    </form>
+</body>
+
+</html>
 <!-- 
             <div class="login-meio">
             <label for="e-mail">E-mail</label>
