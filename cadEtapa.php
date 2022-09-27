@@ -1,6 +1,6 @@
 <?php
 session_start();
-include "../include/MySql.php";
+include "include/MySql.php";
 
 $value="";
 $codSnowflake="";
@@ -31,7 +31,6 @@ VALUES ( NULL, ?, ?)");
 <head>
     <meta charset="UTF-8">
     <title>cadastro-Etapa</title>
-    <link rel="stylesheet">
 </head>
 
 <body>

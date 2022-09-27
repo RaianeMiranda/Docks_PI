@@ -64,14 +64,13 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) { //se isso
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="../css/estilo.css">
     <title>Cadastro de Usuário</title>
 </head>
 
 <body>
     <form action="" method="POST">
         
-    <link rel="stylesheet" href="../assets/css/alt.css">
+
 
 <body>
     <div class="alt-container">

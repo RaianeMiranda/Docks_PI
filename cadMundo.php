@@ -1,6 +1,6 @@
 <?php
 session_start();
-include "../include/MySql.php";
+include "include/MySql.php";
 
 $codMundo = "";
 $nome_mundo = "";
@@ -17,21 +17,21 @@ if ($sql->execute(array('5'))) {
         }
     }
 
-    if (isset($_GET['id'])) {
-        $codMundo = $_GET['id'];
         $sql = $pdo->prepare('SELECT * FROM MUNDO WHERE codMundo=? '); //where codlivro = sessao
-        if ($sql->execute(array($codMundo))) {
+        if ($sql->execute(array('1'))) {
             $info = $sql->fetchAll(PDO::FETCH_ASSOC);
 
-            foreach ($info as $key => $value) {
-                $codMundo = $value['codMundo'];
-                $nome_mundo = $value['nome_mundo'];
-                $descricao = $value['descricao'];
+            foreach ($info as $key => $values) {
+                $codMundo = $values['codMundo'];
+                $nome_mundo = $values['nome_mundo'];
+                $descricao = $values['descricao'];
+                $descricao = $descricao;
+                $nome_mundo = $nome_mundo;
                 //  echo $value['codMundo'];
             }
         }
     }
-}
+
 
 if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
 
@@ -46,8 +46,9 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
         $msgErro = "Sem texto";
 
     //_SESSION['nomeLivro'] = 1;
-    $sql = $pdo->prepare(" UPDATE MUNDO SET  codMundo=?, codLivro=?, nome_mundo=?, descricao=? WHERE codMundo=?");
-    if ($sql->execute(array($codMundo, "1", $nome_mundo, $texto, $codMundo,))) {
+    $sql = $pdo->prepare("INSERT INTO MUNDO (codMundo, codLivro, nome_mundo, descricao)
+    VALUES ( NULL, ?, ?, ?)");
+    if ($sql->execute(array("1", $nome_mundo, $texto))) {
         $msgErro = "Dados cadastrados com sucesso!";
         $_SESSION['codMundo'] = $codMundo;
         $codMundo = "";
@@ -60,15 +61,9 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
 
 <!DOCTYPE html>
 <html lang="pt-br">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <title>Docks</title>
-</head>
+<?php
+include "head.php";
+?>
 
 <body>
     <section class="container">
@@ -88,7 +83,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
                                 <?php
 
                                 if ($nome_mundo == "") { ?>
-                                    Nome do Mundo: <input type="texto" name="nome_mundo" class="input-nome" value="<?php echo $value['nome_mundo'] ?>"> <?php
+                                    Nome do Mundo: <input type="texto" name="nome_mundo" class="input-nome" value="<?php echo $nome_mundo ?>"> <?php
                                                                                                                                                     } else { ?>
                                     <input type="texto" name="nome_mundo" class="input_nome" value="<?php echo $nome_mundo; ?>"><?php } ?>
                             </b></p>

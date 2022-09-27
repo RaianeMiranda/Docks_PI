@@ -52,7 +52,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="assets/css/login1.css">
 </head>
 <body>
     <form method="POST" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>">
@@ -88,7 +87,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     <a href="#"><button class="login-with">Continuar com o Google </button></a>
                 </div>
             </fieldset>
-            <p class="membro2">Ainda não é um membro?<a href="paginas/cad_usuario.php" class="membro-cadastro2"> Criar uma conta</a></p>
+            <p class="membro2">Ainda não é um membro?<a href="cad_usuario.php" class="membro-cadastro2"> Criar uma conta</a></p>
         </div>
 </body>
 

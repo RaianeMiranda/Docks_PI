@@ -1,37 +1,37 @@
 <?php
 session_start();
-include "../include/MySql.php";
-
-$codMundo = "";
-$nome_mundo = "";
+include "include/MySql.php";
+echo "aqui" . $_SESSION['codLivro'];
+$codCapitulo = "";
+$nome_cap = "";
 $codLivro = "";
 $descricao = "";
 $texto = "";
 $msgErro = "";
 
 $sql = $pdo->prepare('SELECT * FROM livros WHERE codLivro=?');
-if ($sql->execute(array('5'))) {
+if ($sql->execute(array($_SESSION['codLivro']))) {
     $info = $sql->fetchAll(PDO::FETCH_ASSOC);
     if (count($info) > 0) {
         foreach ($info as $key => $values) {
         }
     }
 
-        $sql = $pdo->prepare('SELECT * FROM MUNDO WHERE codMundo=? '); //where codlivro = sessao
-        if ($sql->execute(array('1'))) {
+    if (isset($_GET['id'])) {
+        $codCapitulo = $_GET['id'];
+        $sql = $pdo->prepare('SELECT * FROM CAPITULO WHERE codCapitulo=? '); //where codlivro = sessao
+        if ($sql->execute(array($codCapitulo))) {
             $info = $sql->fetchAll(PDO::FETCH_ASSOC);
 
-            foreach ($info as $key => $values) {
-                $codMundo = $values['codMundo'];
-                $nome_mundo = $values['nome_mundo'];
-                $descricao = $values['descricao'];
-                $descricao = $descricao;
-                $nome_mundo = $nome_mundo;
-                //  echo $value['codMundo'];
+            foreach ($info as $key => $value) {
+                $codCapitulo = $value['codCapitulo'];
+                $nome_cap = $value['nome_cap'];
+                $descricao = $value['descricao'];
+                //  echo $value['codCapitulo'];
             }
         }
     }
-
+}
 
 if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
 
@@ -40,18 +40,17 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
     else
         $msgErro = "Sem texto";
 
-    if (isset($_POST['nome_mundo']))
-        $nome_mundo = $_POST['nome_mundo'];
+    if (isset($_POST['nome_cap']))
+        $nome_cap = $_POST['nome_cap'];
     else
         $msgErro = "Sem texto";
 
     //_SESSION['nomeLivro'] = 1;
-    $sql = $pdo->prepare("INSERT INTO MUNDO (codMundo, codLivro, nome_mundo, descricao)
-    VALUES ( NULL, ?, ?, ?)");
-    if ($sql->execute(array("1", $nome_mundo, $texto))) {
+    $sql = $pdo->prepare(" UPDATE CAPITULO SET  codCapitulo=?, codLivro=?, nome_cap=?, descricao=? WHERE codCapitulo=?");
+    if ($sql->execute(array($codCapitulo, $_SESSION['codLivro'], $nome_cap, $texto, $codCapitulo,))) {
         $msgErro = "Dados cadastrados com sucesso!";
-        $_SESSION['codMundo'] = $codMundo;
-        $codMundo = "";
+        $_SESSION['codCapitulo'] = $codCapitulo;
+        $codCapitulo = "";
     } else {
         $msgErro = "Dados não cadastrados!";
     }
@@ -61,9 +60,15 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
 
 <!DOCTYPE html>
 <html lang="pt-br">
-<?php
-include "../head.php";
-?>
+
+<?php include "head.php" ?>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Docks</title>
+</head>
 
 <body>
     <section class="container">
@@ -82,10 +87,12 @@ include "../head.php";
                         <p class="titulo"><b>
                                 <?php
 
-                                if ($nome_mundo == "") { ?>
-                                    Nome do Mundo: <input type="texto" name="nome_mundo" class="input-nome" value="<?php echo $nome_mundo ?>"> <?php
-                                                                                                                                                    } else { ?>
-                                    <input type="texto" name="nome_mundo" class="input_nome" value="<?php echo $nome_mundo; ?>"><?php } ?>
+//FAZER UM LOOP PARA ENUMERAR OS CAPÍTULOS EM UM SMALL
+//COLOCAR OS CAPITULOS EM UM INPUT TYPE="SUBMIT" PARA IR PARA A PÁGINA DE CADASTRO DA DESCRICAO
+                                if ($nome_cap == "") { ?>
+                                    Nome do Mundo: <input type="texto" name="nome_cap" class="input-nome" value="<?php echo $value['nome_cap'] ?>"> <?php
+                                                                                                                                                } else { ?>
+                                    <input type="texto" name="nome_cap" class="input_nome" value="<?php echo $nome_cap; ?>"><?php } ?>
                             </b></p>
                         <input type="submit" name="submit" value="salvar" class="salvar">
                     </div>

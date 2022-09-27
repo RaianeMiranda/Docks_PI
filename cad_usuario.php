@@ -1,5 +1,5 @@
 <?php
-include "../include/MySql.php";
+include "include/MySql.php";
 
 $nome = "";
 $idEmail = "";
@@ -44,7 +44,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['continuar'])) { //se i
                     $nome = "";
                     $idEmail = "";
                     $senha = ""; //isso serve para zerar as variáveis e não manter os dados no formulário
-                    header('location:../login.php'); //acima de header não pode ter echo de forma alguma
+                    header('location:login.php'); //acima de header não pode ter echo de forma alguma
                 } else {
                     $msgErro = "Dados não cadastrados!";
                 }
@@ -64,8 +64,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['continuar'])) { //se i
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="../assets/css/login.css">
-    <link rel="stylesheet" href="../assets/css/modal.css">
+    
 </head>
 <form method="POST" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>">
     <div class="login-form">
@@ -73,7 +72,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['continuar'])) { //se i
             <div class="login_cima">
                 <div class="container">
                     <div class="flex2">
-                        <img class="logo" src="../assets/images/logo.png" alt="logo do site, sendo um círculo com nosso mascote docks, um pato dentro desse círculo.">
+                        <img class="logo" src="assets/images/logo.png" alt="logo do site, sendo um círculo com nosso mascote docks, um pato dentro desse círculo.">
                     </div>
                     <div class="flex3">
                         <span class="close">&times;</span>
@@ -108,7 +107,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['continuar'])) { //se i
 
 
                 <p>Ainda não é um membro?</p>
-                <p><a href="paginas/cad_usuario.php"><button class="membro">Cadastre-se</button></a></p>
+                <p><a href="cad_usuario.php"><button class="membro">Cadastre-se</button></a></p>
 
             </div>
         </div>

@@ -1,5 +1,5 @@
 <?php
-include "../include/mysql.php";
+include "include/mysql.php";
 $codCapitulo = "";
 $codLivro = "";
 $nome_cap_cap = "";
@@ -55,7 +55,6 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) { //se isso
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="../css/estilo.css">
     <title>Cadastro de Usuário</title>
 </head>
 

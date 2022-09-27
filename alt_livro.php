@@ -1,5 +1,5 @@
 <?php
-include "../include/MySql.php";
+include "include/MySql.php";
 session_start();
 echo "aqui:" . $_SESSION['nome'];
 echo "aqui:" . $_SESSION['idEmail'];
@@ -85,7 +85,6 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
 <head>
     <meta charset="UTF-8">
     <title>Cadastro de Usuário</title>
-    <link rel="stylesheet" href="../css/estilo.css">
 </head>
 
 <body>

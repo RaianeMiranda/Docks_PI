@@ -32,7 +32,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     $_SESSION['idEmail'] = $values['idEmail'];
                     $_SESSION['administrador'] = '1';
                 }
-                header('location:paginas/list_usuario.php');
+                header('location:list_usuario.php');
             } else {
                 $msgErro = "Usuário não cadastrado!";
             }
@@ -44,8 +44,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 
 ?>
-<link rel="stylesheet" href="assets/css/login.css">
-<link rel="stylesheet" href="assets/css/modal.css">
+
 <form method="POST" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>">
     <div class="login-form">
         <div class="todoLogin">
@@ -96,7 +95,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     </div>
                 </fieldset>
                 <p>Ainda não é um membro?</p>
-                <p><a href="paginas/cad_usuario.php"><button class="membro">Cadastre-se</button></a></p>
+                <p><a href="cad_usuario.php"><button class="membro">Cadastre-se</button></a></p>
 
             </div>
         </div>

@@ -1,6 +1,6 @@
 <?php
 session_start();
-include "../include/mysql.php";
+include "include/mysql.php";
 
     $sql = $pdo->prepare('SELECT * FROM ETAPAS');
     if ($sql->execute()){
