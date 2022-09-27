@@ -32,7 +32,7 @@ include "head.php"
         ?>
                 <div class="etapa_1-container">
                     <h2 class="etapa">Etapa 1: </h2>
-                    <?php echo "<a href='paginas/etapa-snow.php?id=" . $value['codSnowflake'] . "'>" ?> <p class="etapa-descricao"><?php echo $value['nome_snow'] ?></p><?php "</a>" ?>
+                    <?php echo "<a href='etapa-snow.php?id=" . $value['codSnowflake'] . "'>" ?> <p class="etapa-descricao"><?php echo $value['nome_snow'] ?></p><?php "</a>" ?>
                 </div>
 
 

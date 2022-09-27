@@ -49,7 +49,7 @@ echo "aqui:" . $_SESSION['codLivro'];
 
                             <div class="persona-card card">
                                 <div class="persona-top card-top">
-                                    <a href="<?php echo 'paginas/personagem.php?id=' . $values['codPersonagens'] ?>">
+                                    <a href="<?php echo 'personagem.php?id=' . $values['codPersonagens'] ?>">
                                         <h4 class="card-text"><?php echo $values['nome_persona'] ?></h4>
                                     </a>
 
@@ -67,7 +67,7 @@ echo "aqui:" . $_SESSION['codLivro'];
                 ?>
 
                 <div class="criando">
-                    <input type="button" value="(+)" onclick="parent.location='paginas/cad_persona.php'">
+                    <input type="button" value="(+)" onclick="parent.location='cad_persona.php'">
                 </div>
 
 

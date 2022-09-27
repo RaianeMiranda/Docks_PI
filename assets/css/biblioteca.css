@@ -12,15 +12,16 @@ main {
     margin: 0 auto;
 }
 
-.container {
+.container-livros {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
-    gap: 2em;
+    gap: 2rem;
     position: relative;
     max-width: 1600px;
     overflow: hidden;
 }
+
 .container_nome {
     display: flex;
     flex-wrap: wrap;
@@ -31,24 +32,29 @@ main {
     overflow: hidden;
 }
 
-
-
 .capa_livro-img {
-    width: 180px;
-    height: 240px;
+    width: 210px;
+    height: 270px;
 }
 
-.nome_livro {
-   margin: 0 auto;
+.container_nome {
+    margin: 0 auto;
     text-decoration: none;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
     color: black;
-    font-size: 20px;
+    font-size: 22px;
 }
 
-.nome_livro:hover {
+.container2 {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.container_nome:hover {
     color: #FED576;
     text-decoration: underline;
+
 }
 
 .criar_livro {

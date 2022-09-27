@@ -83,14 +83,14 @@ echo "aqui:". $_SESSION['idEmail'];?>
     <?php if (@$_SESSION['nomeLivro'] != "") { ?>
         <h3 class="before_course">Continue escrevendo: <span class="nome"><?php echo $_SESSION['nomeLivro'] ?></span></h3>
     <?php } else { ?>
-        <h3 class="before_course">Para desbloquear as fases, crie ou <a href="paginas/list_livro.php"><span class="nome">selecione</span></a> um livro</h3>
+        <h3 class="before_course">Para desbloquear as fases, crie ou <a href="list_livro.php"><span class="nome">selecione</span></a> um livro</h3>
         <button class="criar_livro" type="submit" id="myBtn"><i class="fa-solid fa-plus"></i> Criar novo Livro</button>
 
         <!-- The Modal -->
         <div id="myModal" class="modal">
 
             <!-- Modal content -->
-            <?php include "paginas/cad_book.php"; ?>
+            <?php include "cad_book.php"; ?>
 
         </div>
 
@@ -104,10 +104,8 @@ echo "aqui:". $_SESSION['idEmail'];?>
     include "cards/card_persona.php";
     ?>
 
-    <h3><a href="paginas/logout.php">logout</a></h3>
-
     <?php if ($_SESSION['nomeLivro'] != "") {
-        include "paginas/list_capitulo.php" ?>
+        include "list_capitulo.php" ?>
 
 
         <!-- Button trigger modal -->
@@ -121,7 +119,7 @@ echo "aqui:". $_SESSION['idEmail'];?>
                 <div class="modal-content">
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     <div class="modal-body">
-                        <?php include "paginas/cad_capitulo.php"; ?>
+                        <?php include "cad_capitulo.php"; ?>
                     </div>
 
                 </div>

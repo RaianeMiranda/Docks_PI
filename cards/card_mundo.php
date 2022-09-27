@@ -49,7 +49,7 @@ echo "aqui:" . $_SESSION['codLivro'];
 
                             <div class="mundo-card card">
                                 <div class="mundo-top card-top">
-                                    <a href="<?php echo 'paginas/mundo.php?id=' . $values['codMundo'] ?>">
+                                    <a href="<?php echo 'mundo.php?id=' . $values['codMundo'] ?>">
                                         <h4 class="card-text"><?php echo $values['nome_mundo'] ?></h4>
                                     </a>
                                     <div class="dropdown">
@@ -57,7 +57,7 @@ echo "aqui:" . $_SESSION['codLivro'];
                                         <i class="fa-solid fa-ellipsis-vertical"></i>
                                         </button>
                                         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                            <li><a class="dropdown-item" href="<?echo 'paginas/delMundo'.$value['codMundo']?>">Action</a></li>
+                                            <li><a class="dropdown-item" href="<?echo 'delMundo'.$value['codMundo']?>">Action</a></li>
                                             <li><a class="dropdown-item" href="#">Another action</a></li>
                                             <li><a class="dropdown-item" href="#">Something else here</a></li>
                                         </ul>
@@ -76,7 +76,7 @@ echo "aqui:" . $_SESSION['codLivro'];
                 ?>
 
                 <div class="criando">
-                    <input type="button" value="(+)" onclick="parent.location='paginas/cadMundo.php'">
+                    <input type="button" value="(+)" onclick="parent.location='cadMundo.php'">
                 </div>
 
 

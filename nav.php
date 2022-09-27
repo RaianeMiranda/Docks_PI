@@ -14,7 +14,7 @@
               <div class="imagens">
                 <div class="container-perfil">
                   <div class="nome-usuario">
-                    <img class="image2" src="assets/images/usuario.png" alt="">
+                    <a href="inicial.php"><img class="image2" src="assets/images/usuario.png" alt=""></a>
                   </div>
                   <div class="nome-email">
                     <h4 class="nome-fulana"><?php echo $_SESSION['nome']; ?></h4>
@@ -26,7 +26,7 @@
 
             <div class="menu">
               <div class="item">
-              <a class="links" href="paginas/list_livro.php">
+                <a class="links" href="list_livro.php">
                   Biblioteca
                 </a>
                 <a class="links" href="#">
@@ -47,7 +47,7 @@
                 <a class="links" href="configuracoes.php" id="<?php $value['idEmail'] ?>">
                   Configurações
                 </a>
-                <a class=" links" href="paginas/logout.php">
+                <a class=" links" href="logout.php">
                   Sair (logout)
                 </a>
               </div>
@@ -55,14 +55,14 @@
           </div>
           <div class="image-nome">
             <img src="assets/images/docks.png" class="logotipo">
-            <h1 class="nome_docks">Docks</h1>
+            <a class=".nome_docks" href="inicial.php"><h1 class="nome_docks">Docks</h1></a>
           </div>
         </div>
       </div>
     </div>
     <ul>
-    <li><b><a class="link" href="metodo_criacao_de_personagem.php">Criação de Personagens</a></b></li>
-      <li><b><a class="link" href="paginas/list_livro.php">Biblioteca</a></b></li>
+      <li><b><a class="link" href="metodo_criacao_de_personagem.php">Criação de Personagens</a></b></li>
+      <li><b><a class="link" href="list_livro.php">Biblioteca</a></b></li>
       <li><b><a class="link" href="jornada.php">Jornada do Herói</a></b></li>
       <li><b><a class="link" href="metodo_snowflake.php">Snowflake</a></b></li>
       <li><b><a class="link" href="#">Criação de Mundos</a></b></li>

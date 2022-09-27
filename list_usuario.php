@@ -1,6 +1,6 @@
 <?php
-include "../include/MySql.php";
-include "../adm/head_adm.php";
+include "include/MySql.php";
+include "adm/head_adm.php";
 $idEmail =
 
 $sql = $pdo->prepare('SELECT * FROM usuario');
@@ -33,8 +33,7 @@ if ($sql->execute()) {
   echo "</table>";
 }
 ?>
-    <link rel="stylesheet" href="../assets/css/nav.css">
-    <link rel="stylesheet" href="../assets/css/burger.css">
+
 <input type="button" value="Cadastrar" onclick="parent.location='cad_usuario.php'">
 <!--Onclick= ao clicar redirecione para cadusuario-->
-<h3><a href="../inicial.php">Principal</a></h3>
+<h3><a href="inicial.php">Principal</a></h3>

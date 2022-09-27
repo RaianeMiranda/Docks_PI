@@ -1,27 +1,38 @@
 <?php
 session_start();
-include "../include/MySql.php";
+include "include/MySql.php";
 
 $codPersonagens = "";
 $msgErro = "";
-$descricao = "";
 $nome_persona = "";
+$descricao="";
 $codLivro = "";
 $texto = "";
 
+$sql = $pdo->prepare("SELECT * FROM LIVROS WHERE nomeLivro = ?");
+if ($sql->execute(array($_SESSION['nomeLivro']))) {
+    $info = $sql->fetchAll(PDO::FETCH_ASSOC);
+    if (count($info) > 0) {
+        foreach ($info as $key => $values) {
+            $_SESSION['codLivro'] = $values['codLivro'];
+        }
+    } else {
+        $_SESSION['codLivro'] = 0;
+    }
+}
+
+echo "aqui:" . $_SESSION['codLivro'];
 
 $sql = $pdo->prepare('SELECT * FROM livros WHERE codLivro=?');
-if ($sql->execute(array('5'))) { //no Lugar do '5' inserir a session do livro
+if ($sql->execute(array($_SESSION['codLivro']))) { //no Lugar do '5' inserir a session do livro
     $info = $sql->fetchAll(PDO::FETCH_ASSOC);
     if (count($info) > 0) {
         foreach ($info as $key => $values) {
         }
     }
 
-    if (isset($_GET['id'])) {
-        $codPersonagens = $_GET['id'];
         $sql = $pdo->prepare('SELECT * FROM PERSONAGENS WHERE codPersonagens=?'); //where codlivro = sessao
-        if ($sql->execute(array($codPersonagens))) {
+        if ($sql->execute(array('1'))) {
             $info = $sql->fetchAll(PDO::FETCH_ASSOC);
 
             foreach ($info as $key => $value) {
@@ -32,7 +43,7 @@ if ($sql->execute(array('5'))) { //no Lugar do '5' inserir a session do livro
             }
         }
     }
-}
+
 if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
 
     if (isset($_POST['texto']))
@@ -46,8 +57,8 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
         $msgErro = "Sem texto";
 
     //_SESSION['nomeLivro'] = 1;
-    $sql = $pdo->prepare(" UPDATE PERSONAGENS SET  codPersonagens=?, nome_persona=?, codLivro=?, descricao=? WHERE codPersonagens=?");
-    if ($sql->execute(array($codPersonagens, $nome_persona, "1", $texto, $codPersonagens,))) {
+    $sql = $pdo->prepare(" INSERT INTO PERSONAGENS  (codPersonagens, nome_persona, codLivro, descricao) VALUES (NULL, ?,?,?)");
+    if ($sql->execute(array($nome_persona, $_SESSION['codLivro'], $texto))) {
         $msgErro = "Dados cadastrados com sucesso!";
         $_SESSION['codPersonagens'] = $codPersonagens;
         $codPersonagens = "";
@@ -60,7 +71,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
 
 <!DOCTYPE html>
 <html lang="pt-br">
-<?php include "../head.php";
+<?php include "head.php";
 $titulo="Criação de Personagem";
 ?>
 

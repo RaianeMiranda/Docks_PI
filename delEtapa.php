@@ -1,5 +1,5 @@
 <?php
-include "../include/mysql.php";
+include "include/mysql.php";
 
 $msgErro = "";
 $codEtapas = "";

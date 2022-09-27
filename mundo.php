@@ -1,67 +1,56 @@
 <?php
 session_start();
-include "../include/MySql.php";
+include "include/MySql.php";
 
-$codPersonagens = "";
-$msgErro = "";
-$nome_persona = "";
-$descricao="";
+$codMundo = "";
+$nome_mundo = "";
 $codLivro = "";
+$descricao = "";
 $texto = "";
-
-$sql = $pdo->prepare("SELECT * FROM LIVROS WHERE nomeLivro = ?");
-if ($sql->execute(array($_SESSION['nomeLivro']))) {
-    $info = $sql->fetchAll(PDO::FETCH_ASSOC);
-    if (count($info) > 0) {
-        foreach ($info as $key => $values) {
-            $_SESSION['codLivro'] = $values['codLivro'];
-        }
-    } else {
-        $_SESSION['codLivro'] = 0;
-    }
-}
-
-echo "aqui:" . $_SESSION['codLivro'];
+$msgErro = "";
 
 $sql = $pdo->prepare('SELECT * FROM livros WHERE codLivro=?');
-if ($sql->execute(array($_SESSION['codLivro']))) { //no Lugar do '5' inserir a session do livro
+if ($sql->execute(array('5'))) {
     $info = $sql->fetchAll(PDO::FETCH_ASSOC);
     if (count($info) > 0) {
         foreach ($info as $key => $values) {
         }
     }
 
-        $sql = $pdo->prepare('SELECT * FROM PERSONAGENS WHERE codPersonagens=?'); //where codlivro = sessao
-        if ($sql->execute(array('1'))) {
+    if (isset($_GET['id'])) {
+        $codMundo = $_GET['id'];
+        $sql = $pdo->prepare('SELECT * FROM MUNDO WHERE codMundo=? '); //where codlivro = sessao
+        if ($sql->execute(array($codMundo))) {
             $info = $sql->fetchAll(PDO::FETCH_ASSOC);
 
             foreach ($info as $key => $value) {
-                $codPersonagens = $value['codPersonagens'];
+                $codMundo = $value['codMundo'];
+                $nome_mundo = $value['nome_mundo'];
                 $descricao = $value['descricao'];
-                $nome = $value['nome_persona'];
-                //  echo $value['codPersonagens'];
+                //  echo $value['codMundo'];
             }
         }
     }
+}
 
 if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
 
     if (isset($_POST['texto']))
-        $texto = $_POST['texto']; //TEXTO QUE VEM DO BANCO, arrumar o inseriri etapas para enviar ao banco e deixar o texto na tela
+        $texto = $_POST['texto'];
     else
         $msgErro = "Sem texto";
 
-    if (isset($_POST['nome_persona']))
-        $nome_persona = $_POST['nome_persona']; //TEXTO QUE VEM DO BANCO, arrumar o inseriri etapas para enviar ao banco e deixar o texto na tela
+    if (isset($_POST['nome_mundo']))
+        $nome_mundo = $_POST['nome_mundo'];
     else
         $msgErro = "Sem texto";
 
     //_SESSION['nomeLivro'] = 1;
-    $sql = $pdo->prepare(" INSERT INTO PERSONAGENS  (codPersonagens, nome_persona, codLivro, descricao) VALUES (NULL, ?,?,?)");
-    if ($sql->execute(array($nome_persona, $_SESSION['codLivro'], $texto))) {
+    $sql = $pdo->prepare(" UPDATE MUNDO SET  codMundo=?, codLivro=?, nome_mundo=?, descricao=? WHERE codMundo=?");
+    if ($sql->execute(array($codMundo, "1", $nome_mundo, $texto, $codMundo,))) {
         $msgErro = "Dados cadastrados com sucesso!";
-        $_SESSION['codPersonagens'] = $codPersonagens;
-        $codPersonagens = "";
+        $_SESSION['codMundo'] = $codMundo;
+        $codMundo = "";
     } else {
         $msgErro = "Dados não cadastrados!";
     }
@@ -71,10 +60,15 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
 
 <!DOCTYPE html>
 <html lang="pt-br">
-<?php include "../head.php";
-$titulo="Criação de Personagem";
-?>
 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Docks</title>
+</head>
 
 <body>
     <section class="container">
@@ -83,37 +77,36 @@ $titulo="Criação de Personagem";
                 <nav class="parte1">
                     <ul>
                         <li class="voltar"><a href="#"><img src="assets/images/voltar.png"></a></li>
-                        <li class="nome-conteudo"><b>Criação de Personagem</b></li>
+                        <li class="nome-conteudo"><b>Criação de Mundo</b></li>
                         <li class="menu"><b>Menu</b></li>
                     </ul>
                 </nav>
-                <hr class="hr-personagem">
+                <hr class="hr-mundo">
                 <form action="" method="POST" enctype="multipart/form-data">
                     <div class="fase">
                         <p class="titulo"><b>
                                 <?php
-                                if ($nome_persona == "") { ?>
-                                    Nome do Personagem: <input type="texto" name="nome_persona" class="input-nome" value="<?php echo $nome ?>">
-                                <?php
-                                } else { ?>
-                                    <input type="texto" name="nome_persona" class="input-nome" value="<?php echo $nome_persona; ?>"><?php } ?>
+
+                                if ($nome_mundo == "") { ?>
+                                    Nome do Mundo: <input type="texto" name="nome_mundo" class="input-nome" value="<?php echo $value['nome_mundo'] ?>"> <?php
+                                                                                                                                                    } else { ?>
+                                    <input type="texto" name="nome_mundo" class="input_nome" value="<?php echo $nome_mundo; ?>"><?php } ?>
                             </b></p>
                         <input type="submit" name="submit" value="salvar" class="salvar">
                     </div>
-
                     <textarea id="texto" name="texto">
-                    <?php
-                    if ($texto == "") {
-                        echo $descricao;
-                    } else echo $texto;
-                    ?>
-                    </textarea>
-                </form>
-                <?php echo $msgErro ?>
+                        <?php
+                        if ($texto == "") {
+                            echo $descricao;
+                        } else echo $texto;
+                        ?>
+                        </textarea>
             </div>
+            </form>
+            <?php echo $msgErro ?>
+        </div>
         </div>
     </section>
-
 
     <!-- Inicia o CK editor -->
     <script src="https://cdn.ckeditor.com/ckeditor5/35.1.0/classic/ckeditor.js"></script>

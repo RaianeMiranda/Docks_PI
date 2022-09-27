@@ -54,8 +54,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <title>Document</title>
     <link rel="stylesheet" href="assets/css/login1.css">
 </head>
+
 <body>
-    <form method="POST" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>">
+    <form action="" method="POST">
         <div class="container_inicial2">
             <div class="image_top">
                 <img class="logo-img" src="assets/images/docks.png" alt="">
@@ -65,15 +66,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <p class="slogan">Aqui é o lugar para suas histórias</p>
             </div>
             <fieldset class="form-fieldset">
-                <legend for="idEmail">Digite seu E-mail</legend>
-                <input type="text" id="idEmail" name="idEmail" placeholder="E-mail">
+                <input type="text" name="idEmail" id="nome" placeholder="E-mail">
             </fieldset>
             <fieldset class="form-fieldset">
-                <legend for="Senha">Digite sua Senha</legend>
-                <input type="password" id="Senha" name="senha" placeholder="Insira sua senha">
+                <input type="password" name="senha" id="e-mail" placeholder="Insira sua senha">
             </fieldset>
             <div class="btn-continuar">
-                <input type="submit" name="continuar" id="continuar" value="Continuar" class="continuar">
+                <input type="submit" name="submit" id="continuar" value="Continuar" class="continuar">
             </div>
             <p class="ou">OU</p>
             <fieldset>
@@ -88,8 +87,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     <a href="#"><button class="login-with">Continuar com o Google </button></a>
                 </div>
             </fieldset>
-            <p class="membro2">Ainda não é um membro?<a href="paginas/cad_usuario.php" class="membro-cadastro2"> Criar uma conta</a></p>
+            <p class="membro-cadastro2">Ainda não é um membro? Criar uma conta</p>
         </div>
+    </form>
+    <span><?php echo $msgErro ?></span>
 </body>
 
 </html>
