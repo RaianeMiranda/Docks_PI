@@ -59,8 +59,8 @@ $titulo = "Página inicial";
 
 ?>
 
-<?php include "head.php" ;
-echo "aqui:". $_SESSION['idEmail'];?>
+<?php include "head.php";
+echo "aqui:" . $_SESSION['idEmail']; ?>
 <header>
     <?php if (isset($_GET['id'])) {
         $nomeLivro = $_GET['id'];
@@ -107,24 +107,11 @@ echo "aqui:". $_SESSION['idEmail'];?>
     <?php if ($_SESSION['nomeLivro'] != "") {
         include "list_capitulo.php" ?>
 
-
-        <!-- Button trigger modal -->
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-            <i class="fa-solid fa-plus"></i> Criar capítulo
+        <button type="button" class="button-cap"> <a class="criar-cap" href="cad_cap.php">
+                <i class="fa-solid fa-plus"></i> Adicionar novo capítulo
+            </a>
         </button>
 
-        <!-- Modal -->
-        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    <div class="modal-body">
-                        <?php include "cad_capitulo.php"; ?>
-                    </div>
-
-                </div>
-            </div>
-        </div>
 
     <?php } ?>
 

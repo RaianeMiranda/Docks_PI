@@ -1,37 +1,36 @@
 <?php
 session_start();
-include "include/mysql.php";
+include "include/MySql.php";
 
-$value="";
-$codPersonagens="";
+$codPersonagens = "";
 $nome_persona = "";
 $codLivro = "";
-$texto = "";
 $descricao = "";
-$msgErro="";
+$texto = "";
+$msgErro = "";
 
 $sql = $pdo->prepare('SELECT * FROM livros WHERE codLivro=?');
-if ($sql->execute(array('5'))) {
+if ($sql->execute(array($_SESSION['codLivro']))) {
     $info = $sql->fetchAll(PDO::FETCH_ASSOC);
     if (count($info) > 0) {
         foreach ($info as $key => $values) {
         }
     }
 
-        $sql = $pdo->prepare('SELECT * FROM PERSONAGENS WHERE codPersonagens=? '); //where codlivro = sessao
-        if ($sql->execute(array($codPersonagens))) {
-            $info = $sql->fetchAll(PDO::FETCH_ASSOC);
+    $sql = $pdo->prepare('SELECT * FROM PERSONAGENS WHERE codPersonagens=? '); //where codlivro = sessao
+    if ($sql->execute(array('1'))) {
+        $info = $sql->fetchAll(PDO::FETCH_ASSOC);
 
-            foreach ($info as $key => $values) {
-                $_SESSION['codPersonagens'] = $values['codPersonagens'];
-                $_SESSION['nome_persona'] = $values['nome_persona'];
-                $_SESSION['descricao'] = $values['descricao'];
-                $values['descricao']= $descricao;
-                $values['nome_persona']= $nome_persona;
-                //  echo $value['codPersonagens'];
-            }
+        foreach ($info as $key => $values) {
+            $codPersonagens = $values['codPersonagens'];
+            $nome_persona = $values['nome_persona'];
+            $descricao = $values['descricao'];
+            $descricao = $descricao;
+            $nome_persona = $nome_persona;
+            //  echo $value['codPersonagens'];
         }
     }
+}
 
 
 if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
@@ -41,15 +40,15 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
     else
         $msgErro = "Sem texto";
 
-    if (isset($_POST['nome$nome_persona']))
-        $nome_persona = $_POST['nome$nome_persona'];
+    if (isset($_POST['nome_persona']))
+        $nome_persona = $_POST['nome_persona'];
     else
         $msgErro = "Sem texto";
 
     //_SESSION['nomeLivro'] = 1;
     $sql = $pdo->prepare("INSERT INTO PERSONAGENS (codPersonagens, codLivro, nome_persona, descricao)
     VALUES ( NULL, ?, ?, ?)");
-    if ($sql->execute(array("1", $nome_persona, $texto))) {
+    if ($sql->execute(array($_SESSION['codLivro'], $nome_persona, $texto))) {
         $msgErro = "Dados cadastrados com sucesso!";
         $_SESSION['codPersonagens'] = $codPersonagens;
         $codPersonagens = "";
@@ -64,35 +63,40 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Docks</title>
+    <?php
+    include "head.php";
+    $titulo="Criação de Personagem"
+    ?>
+
+    <link rel="stylesheet" href="assets/css/cads_usuario.css">
 </head>
+
 
 <body>
     <section class="container">
-        <div class="persona">
+        <div class="personagem">
             <div class="p">
-                <nav class="parte1">
+                <section class="parte1">
                     <ul>
-                        <li class="voltar"><a href="#"><img src="assets/images/voltar.png"></a></li>
-                        <li class="nome-conteudo"><b>Criação de Personagens</b></li>
-                        <li class="menu"><b>Menu</b></li>
+                        <li class="voltar"><a href="inicial.php"><img src="assets/images/voltar.png"></a></li>
+                        <li class="nome-conteudo">
+                            <h3><b>Criação de Personagem</b></h3>
+                        </li>
+                        <li><a class="menu" href="inicial.php"><b>Menu</b></a></li>
                     </ul>
-                </nav>
+                </section>
                 <hr class="hr-personagem">
                 <form action="" method="POST" enctype="multipart/form-data">
                     <div class="fase">
-                        <p class="titulo"><b>
+                        <h4 class="titulo"><b>
                                 <?php
 
                                 if ($nome_persona == "") { ?>
-                                    Nome do Personagem: <input type="texto" name="nome$nome_persona" class="input-nome" value="<?php echo $nome_persona ?>"> <?php
+                                    Nome do Personagem: <input type="texto" name="nome_persona" class="input-nome" value="<?php echo $nome_persona ?>"> <?php
                                                                                                                                                     } else { ?>
-                                    <input type="texto" name="nome$nome_persona" class="input_nome" value="<?php echo $nome_persona; ?>"><?php } ?>
-                            </b></p>
-                        <input type="submit" name="submit" value="salvar" class="salvar">
+                                    <input type="texto" name="nome_persona" class="input_nome" value="<?php echo $nome_persona; ?>"><?php } ?>
+                            </b></h4>
+                        <input type="submit" name="submit" value="salvar" class="salvar save-persona">
                     </div>
                     <textarea id="texto" name="texto">
                         <?php

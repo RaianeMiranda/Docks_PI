@@ -1,41 +1,41 @@
-body{
-    font-family: 'Open Sans', 'Helvetica Neue';
-    background-color: #FFF2D8;
+body {
+  font-family: 'Open Sans', 'Helvetica Neue';
+  background-color: #FFF2D8;
 }
- 
-header{
-  padding-left:23% ;
+
+header {
+  padding-left: 23%;
   padding-right: 23%;
   padding-top: 3%;
 }
- 
-main{
-  padding-left:20% ;
+
+main {
+  padding-left: 20%;
   padding-right: 20%;
 }
- 
-.nome_docks{
+
+.nome_docks {
   font-weight: 900;
-  font-size: 3.2em ;
+  font-size: 3.2em;
   text-decoration: none;
   color: black;
 }
 
-.nome_docks:hover{
+.nome_docks:hover {
   color: black;
   text-decoration: underline;
 }
 
-.title_welcome{
+.title_welcome {
   font-size: 45px;
   font-weight: bold;
 }
- 
-.before_course{
-color: #646464;
+
+.before_course {
+  color: #646464;
 }
- 
-.criar_livro{
+
+.criar_livro {
   margin: 15px 0 15px 0;
   background-color: #FFF2D8;
   border: 4px solid #FED576;
@@ -47,8 +47,8 @@ color: #646464;
   font-weight: bolder;
   cursor: pointer;
 }
- 
- ul{
+
+ul {
   display: flex;
   list-style: none;
   padding: 0;
@@ -56,42 +56,57 @@ color: #646464;
   justify-content: space-between;
   margin-top: 0;
 
- }
+}
 
 li a:hover {
   color: rgb(159, 159, 159);
 }
 
-li{
+li {
   text-decoration: none;
 }
 
-.logo{
+.logo {
   width: 80px;
   height: 80px;
 }
 
-.logo_footer{
+.logo_footer {
   max-width: 220px;
   min-width: 180px;
 }
 
-.logo_flex{
+.logo_flex {
   display: flex;
   align-items: center;
 }
-.text_footer{
+
+.text_footer {
   margin: 0 auto;
   text-align: justify;
 }
 
-.nome{
-  text-decoration: none ;
+.nome {
+  text-decoration: none;
   font-size: inherit;
-  color:#CD40A6;
+  color: #CD40A6;
 }
 
-a :hover{
-  color:#a40076;
+a :hover {
+  color: #a40076;
   text-decoration: underline;
+}
+
+.button-cap {
+  padding: 5px;
+  border: solid 8px #F1C4A5;
+  background-color: #FFA974;
+  border-radius: 8%;
+}
+
+.criar-cap {
+  font-size: 25px;
+  text-decoration: none;
+  color: black;
+
 }

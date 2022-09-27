@@ -13,36 +13,36 @@ if ($sql->execute(array($_SESSION['nomeLivro']))) {
         $_SESSION['codLivro'] = 0;
     }
 }
+?>
 
-echo "aqui:" . $_SESSION['codLivro'];
-$sql = $pdo->prepare('SELECT * FROM capitulo WHERE codLivro=?');
-if ($sql->execute(array($_SESSION['codLivro']))) {
-    $info = $sql->fetchAll(PDO::FETCH_ASSOC);
-    if (count($info) > 0) {
-        foreach ($info as $key => $values) {
+<link rel="stylesheet" href="assets/css/cads_usuario.css">
 
-            $_SESSION['nome_cap'] = $nome_cap;
-            $nome_cap = "";
+<h1 class="title_cap">Capítulos</h1>
+<div class="list_cap">
+    <?php
+    $sql = $pdo->prepare('SELECT * FROM capitulo WHERE codLivro=?');
+    if ($sql->execute(array($values['codLivro']))) {
+        $info = $sql->fetchAll(PDO::FETCH_ASSOC);
+        if (count($info) > 0) {
+            foreach ($info as $key => $values) { ?>
+
+                <div class="separando">
+                    <fieldset class="field_cap">
+                        <small class="small_cap">Capítulo <?php echo $values['codCapitulo'] ?></small>
+                        <div class="flex_cap"> <button class="cap" type="button">
+                                <?php echo "<a class='a_cap' href='escrever_cap.php?id=" . $values['codCapitulo'] . "'> " ?> <?php echo $values['nome_cap'] . "</a>" ?>
+                            </button>
+                            <a class="sgv-cap" href="<?php echo "del_capitulo.php?id=" . $values['codCapitulo'] . "" ?>"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16">
+                                    <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z" />
+                                </svg></a>
+                        </div>
+
+                    </fieldset>
+                </div>
+    <?php
+
+            }
         }
-        //header('location:paginas/list_usuario.php');
     }
-    echo "<table border='1'>";
-    echo "<tr>";
-    echo "  <th>Nome do Capítulo</th>";
-    echo "  <th>nºcapítulo</th>";
-    echo " <th> Livro </>";
-    echo "  <th>Selecionar</th>";
-    echo "  <th>Excluir</th>";
-    echo "</tr>";
-    foreach ($info as $key => $value) {
-        echo "<tr>";
-        echo "<td>" . $value['nome_cap'] . "</td>";
-        echo "<td>" . $value['codCapitulo'] . "</td>";
-        echo "<td>" . $value['codLivro'] . "</td>";
-        echo "<td><center><a href='alt_capitulo.php?id=" . $value['codCapitulo'] . "'>(+)</a></center></td>";
-        echo "<td><center><a href='del_capitulo.php?id=" . $value['codCapitulo'] . "'>(-)</a></center></td>";
-        echo "<td><center><a href='escrever_cap.php?id=" . $value['codCapitulo'] . "'>CAD</a></center></td>";
-        echo "</tr>";
-    }
-    echo "</table>";
-}
+    ?>
+</div>

@@ -19,15 +19,13 @@
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/tipografia.css">
 
-
-</head>
-
-<body>
-
-
   <?php
   include "nav.php";
   ?>
-</body>
 
-</html>
+</head>
+
+
+
+
+<body>

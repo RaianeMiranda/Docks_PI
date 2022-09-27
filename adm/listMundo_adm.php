@@ -16,12 +16,12 @@
             echo "<tr>";
             echo "<td>".$value['nome_mundo']."</td>";
             echo "<td>".$value['descricao']."</td>";
-            echo "<td><center><a href='mundo.php?id=".$value['codMundo']."'>(+)</a></center></td>";
-            echo "<td><center><a href='delMundo.php?id=".$value['codMundo']."'>(-)</a></center></td>";
+            echo "<td><center><a href='../mundo.php?id=".$value['codMundo']."'>(+)</a></center></td>";
+            echo "<td><center><a href='../delMundo.php?id=".$value['codMundo']."'>(-)</a></center></td>";
             echo "</tr>";
         }
         echo "</table>";
     }
 ?>
 <br>
-<input type="button" value="Cadastrar" onclick="parent.location='../paginas/cadMundo.php'">
+<input type="button" value="Cadastrar" onclick="parent.location='../cadMundo.php'">

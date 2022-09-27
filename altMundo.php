@@ -29,7 +29,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) { //se isso
     $descricao = $_POST['descricao'];
 
 
-    if ($descricao) {
+    if ($descricao || $nome_mundo) {
 
         $sql = $pdo->prepare("UPDATE MUNDO SET  codMundo = ? , descricao = ? WHERE codMundo= ? ");
 

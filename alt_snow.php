@@ -1,11 +1,53 @@
 <?php
+/*
+session_start();
+include "include/MySql.php";
+
+
+$msgErro = "";
+$texto = "";
+$nome_snow = "";
+$codEtapas = "";
+$descricao = "";
+
+
+$sql = $pdo->prepare('SELECT * FROM snowflake '); //where codlivro = sessao
+if ($sql->execute()) {
+    $info = $sql->fetchAll(PDO::FETCH_ASSOC);
+
+    foreach ($info as $key => $value) {
+       
+      //  echo $value['codPersonagens'];
+     
+    
+    }
+}
+if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST["submit"])) {
+  if (isset($_POST['texto']))
+      $texto = $_POST['texto'];//TEXTO QUE VEM DO BANCO
+  else
+      $msgErro = "Sem texto";
+ 
+ $sql = $pdo->prepare("INSERT INTO ETAPAS (codEtapas, codSnowflake, codLivro, nome_etapas, descricao)
+    valueS ( NULL, NULL, NULL, NULL, ?)");
+   if ($sql->execute(array( $texto))) {
+      $msgErro = "Dados cadastrados com sucesso!";
+   } else {
+      $msgErro = "Dados não cadastrados!";
+    }
+ }*/
+?>
+
+<?php
 session_start();
 include "include/MySql.php";
 
 $codEtapas = "";
 $nome_etapas = "";
+$nome_snow = "";
 $codLivro = "";
 $descricao = "";
+$texto2 = "";
 $texto = "";
 $msgErro = "";
 
@@ -15,23 +57,23 @@ if (isset($_GET['id'])) {
     if ($sql->execute(array($codSnowflake))) { //no lugar do '6' confirmar a session do snowflake
         $info = $sql->fetchAll(PDO::FETCH_ASSOC);
         if (count($info) > 0) {
-            foreach ($info as $key => $values) {
-                $_SESSION['codSnowflake'] = $values['codSnowflake'];
-                $_SESSION['nome_snow'] = $values['nome_snow'];
-                $_SESSION['descricao'] = $values['descricao'];
-                $descricao = "";
+            foreach ($info as $key => $value) {
+                $codSnowflake = $value['codSnowflake'];
+                $nome_snow = $value['nome_snow'];
+                $descricao = $value['descricao'];
             }
         }
 
-        $sql2 = $pdo->prepare('SELECT * FROM ETAPAS '); //where codlivro = sessao
-        if ($sql2->execute()) {
+
+        $sql2 = $pdo->prepare('SELECT * FROM ETAPAS where codEtapas=?'); //where codlivro = sessao
+        if ($sql2->execute(array('1'))) {
             $info2 = $sql2->fetchAll(PDO::FETCH_ASSOC);
 
-            foreach ($info2 as $key => $values2) {
-                $codEtapas = $values2['codEtapas'];
-                $nome_etapas = $values2['nome_etapas'];
-                $texto = $values2['descricao'];
-                //  echo $values['codEtapas'];
+            foreach ($info2 as $key => $value2) {
+                $codEtapas = $value2['codEtapas'];
+                $nome_etapas = $value2['nome_etapas'];
+                $texto2 = $value2['descricao'];
+                //  echo $value['codEtapas'];
             }
         }
     }
@@ -48,15 +90,16 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
     else
         $msgErro = "Sem texto";
 
-        $sql = $pdo->prepare(" UPDATE ETAPAS SET  codEtapas=?, nome_etapas=?, codLivro=?, descricao=? WHERE codEtapas=?");
-        if ($sql->execute(array($codEtapas, $nome_etapas, $_SESSION['codLivro'], $texto, $codEtapas,))) {
-            $msgErro = "Dados cadastrados com sucesso!";
-            $_SESSION['codEtapas'] = $codEtapas;
-            $codEtapas = "";
-        } else {
-            $msgErro = "Dados não cadastrados!";
-        }
+    //_SESSION['nomeLivro'] = 1;
+    $sql = $pdo->prepare(" UPDATE ETAPAS SET  codEtapas=?,  codSnowflake=?, codLivro=?, nome_etapas =?, descricao=? WHERE codEtapas=?");
+    if ($sql->execute(array($codEtapas, $codSnowflake, $_SESSION['codLivro'], $nome_etapas, $texto, $codEtapas))) {
+        $msgErro = "Dados cadastrados com sucesso!";
+        $_SESSION['codEtapas'] = $codEtapas;
+        $codEtapas = "";
+    } else {
+        $msgErro = "Dados não cadastrados!";
     }
+}
 
 ?>
 
@@ -71,25 +114,25 @@ include "head.php";
     <section class="container">
         <div class="row">
             <div class="col-md-6">
-                <section class="parte1-snow">
+                <nav class="parte1-snow">
                     <ul>
                         <li class="voltar-snow"><a href="inicial.php"><img src="assets/images/voltar.png"></a></li>
                         <li class="snow"><b>Snowflake</b></li>
-                        <li class="menu-snow"><b>Menu</b></li>
+                        <li> <a class="menu-snow" href="inicial.php"><b>Menu</b></a></li>
                     </ul>
-                </section>
+                </nav>
                 <hr class="hr-snow">
                 <div class="titulo1-snow">
                     <h1>
                         <?php
-                        echo $values['nome_snow'];
+                        echo $nome_snow;
                         ?>
                     </h1>
                 </div>
                 <div class="texto1-snow">
                     <div class="descricao-snowflake">
                         <?php
-                        echo $values['descricao'];
+                        echo $descricao;
                         ?>
                     </div>
                 </div>
@@ -106,13 +149,13 @@ include "head.php";
                 <hr class="hr-snow">
                 <form action="" method="POST" enctype="multipart/form-data">
                     <div class="botoes-snow">
-                        <input type="submit" values="Salvar" name="submit" class="salvar1-snow">
+                        <input type="submit" value="Salvar" name="submit" class="salvar1-snow">
 
                     </div>
                     <div>
                         <textarea id="texto" name="texto"><?php
                                                             if ($texto == "") {
-                                                                echo "Comece a escrever a sua história!!";
+                                                                echo $texto2;
                                                             } else  echo $texto;
                                                             ?>
                     </textarea>

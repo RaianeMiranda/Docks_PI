@@ -1,17 +1,16 @@
 <?php
 session_start();
 include "include/MySql.php";
-
+echo "aqui" . $_SESSION['codLivro'];
 $codCapitulo = "";
-$msgErro = "";
-$descricao = "";
 $nome_cap = "";
 $codLivro = "";
+$descricao = "";
 $texto = "";
-
+$msgErro = "";
 
 $sql = $pdo->prepare('SELECT * FROM livros WHERE codLivro=?');
-if ($sql->execute(array($_SESSION['codLivro']))) { //no Lugar do '5' inserir a session do livro
+if ($sql->execute(array($_SESSION['codLivro']))) {
     $info = $sql->fetchAll(PDO::FETCH_ASSOC);
     if (count($info) > 0) {
         foreach ($info as $key => $values) {
@@ -20,48 +19,63 @@ if ($sql->execute(array($_SESSION['codLivro']))) { //no Lugar do '5' inserir a s
 
     if (isset($_GET['id'])) {
         $codCapitulo = $_GET['id'];
-        $sql = $pdo->prepare('SELECT * FROM CAPITULO WHERE codCapitulo=?'); //where codlivro = sessao
+        $sql = $pdo->prepare('SELECT * FROM CAPITULO WHERE codCapitulo=? '); //where codlivro = sessao
         if ($sql->execute(array($codCapitulo))) {
             $info = $sql->fetchAll(PDO::FETCH_ASSOC);
 
             foreach ($info as $key => $value) {
                 $codCapitulo = $value['codCapitulo'];
+                $nome_cap = $value['nome_cap'];
                 $descricao = $value['descricao'];
-                $nome = $value['nome_cap'];
                 //  echo $value['codCapitulo'];
             }
         }
     }
 }
+
 if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
 
     if (isset($_POST['texto']))
-        $texto = $_POST['texto']; //TEXTO QUE VEM DO BANCO, arrumar o inseriri etapas para enviar ao banco e deixar o texto na tela
+        $texto = $_POST['texto'];
     else
         $msgErro = "Sem texto";
 
     if (isset($_POST['nome_cap']))
-        $nome_cap = $_POST['nome_cap']; //TEXTO QUE VEM DO BANCO, arrumar o inseriri etapas para enviar ao banco e deixar o texto na tela
+        $nome_cap = $_POST['nome_cap'];
     else
         $msgErro = "Sem texto";
 
     //_SESSION['nomeLivro'] = 1;
-    $sql = $pdo->prepare(" UPDATE CAPITULO SET  codCapitulo=?, nome_cap=?, codLivro=?, descricao=? WHERE codCapitulo=?");
-    if ($sql->execute(array($codCapitulo, $nome_cap, $_SESSION['codLivro'], $texto, $codCapitulo,))) {
-        $msgErro = "Dados cadastrados com sucesso!";
-        $_SESSION['codCapitulo'] = $codCapitulo;
-        $codCapitulo = "";
+    $sql = $pdo->prepare("SELECT * FROM CAPITULO WHERE nome_cap = ?");
+    if ($sql->execute(array($nome_cap))) {
+        if ($sql->rowCount() <= 0) {
+            $sql = $pdo->prepare("INSERT INTO CAPITULO (codCapitulo, codLivro, nome_cap, descricao)
+                                            VALUES (NULL, ?, ?, ?)");
+            if ($sql->execute(array($_SESSION['codLivro'], $nome_cap, $texto))) {
+                $msgErro = "Dados cadastrados com sucesso!";
+                $_SESSION['nome_cap'] = $nome_cap;
+                $nome_cap = "";
+                header("location:inicial.php");
+            } else {
+                $msgErro = "Dados não cadastrados!";
+            }
+        }
     } else {
-        $msgErro = "Dados não cadastrados!";
+        $msgErro = "Erro no comando SELECT!";
     }
+} else {
+    $msgErro = "Dados não cadastrados!";
 }
 
 ?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <?php include "head.php";
-$titulo = "Criação de Personagem";
-?>
+ $titulo="Cadastro de capítulo";
+ ?>
+
 <link rel="stylesheet" href="assets/css/cads_usuario.css">
 
 <body>
@@ -70,9 +84,9 @@ $titulo = "Criação de Personagem";
             <div class="p">
                 <section class="parte_cap">
                     <ul>
-                        <li class="voltar"><a href="inicial.php"><img src="assets/images/voltar.png"></a></li>
+                        <li class="voltar"><a href="#"><img src="assets/images/voltar.png"></a></li>
                         <li class="nome-conteudo"><b>Escrevendo capítulo</b></li>
-                        <li><b> <a class="menu" href="inicial.php"> Menu</b></a></li>
+                        <li class="menu"><b>Menu</b></li>
                     </ul>
                 </section>
 
@@ -88,7 +102,7 @@ $titulo = "Criação de Personagem";
                                                                                                                                                     } else { ?>
                                     <input type="texto" name="nome_cap" class="input_nome" value="<?php echo @$nome_cap; ?>"><?php } ?>
                             </b></p>
-                        <input type="submit" class="save-cap" name="submit" value="salvar" class="salvar">
+                        <input type="submit" name="submit" value="salvar" class="salvar">
                     </div>
                     <hr class="hr-cap">
                     <textarea id="texto" name="texto">

@@ -10,27 +10,27 @@ $texto = "";
 $msgErro = "";
 
 $sql = $pdo->prepare('SELECT * FROM livros WHERE codLivro=?');
-if ($sql->execute(array('5'))) {
+if ($sql->execute(array($_SESSION['codLivro']))) {
     $info = $sql->fetchAll(PDO::FETCH_ASSOC);
     if (count($info) > 0) {
         foreach ($info as $key => $values) {
         }
     }
 
-        $sql = $pdo->prepare('SELECT * FROM MUNDO WHERE codMundo=? '); //where codlivro = sessao
-        if ($sql->execute(array('1'))) {
-            $info = $sql->fetchAll(PDO::FETCH_ASSOC);
+    $sql = $pdo->prepare('SELECT * FROM MUNDO WHERE codMundo=? '); //where codlivro = sessao
+    if ($sql->execute(array('1'))) {
+        $info = $sql->fetchAll(PDO::FETCH_ASSOC);
 
-            foreach ($info as $key => $values) {
-                $codMundo = $values['codMundo'];
-                $nome_mundo = $values['nome_mundo'];
-                $descricao = $values['descricao'];
-                $descricao = $descricao;
-                $nome_mundo = $nome_mundo;
-                //  echo $value['codMundo'];
-            }
+        foreach ($info as $key => $values) {
+            $codMundo = $values['codMundo'];
+            $nome_mundo = $values['nome_mundo'];
+            $descricao = $values['descricao'];
+            $descricao = $descricao;
+            $nome_mundo = $nome_mundo;
+            //  echo $value['codMundo'];
         }
     }
+}
 
 
 if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
@@ -48,7 +48,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
     //_SESSION['nomeLivro'] = 1;
     $sql = $pdo->prepare("INSERT INTO MUNDO (codMundo, codLivro, nome_mundo, descricao)
     VALUES ( NULL, ?, ?, ?)");
-    if ($sql->execute(array("1", $nome_mundo, $texto))) {
+    if ($sql->execute(array($_SESSION['codLivro'], $nome_mundo, $texto))) {
         $msgErro = "Dados cadastrados com sucesso!";
         $_SESSION['codMundo'] = $codMundo;
         $codMundo = "";
@@ -65,29 +65,31 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
 include "head.php";
 ?>
 
+<link rel="stylesheet" href="assets/css/cads_usuario.css">
+
 <body>
     <section class="container">
-        <div class="persona">
+        <div class="mundo">
             <div class="p">
-                <nav class="parte1">
+                <section class="parte1">
                     <ul>
-                        <li class="voltar"><a href="#"><img src="assets/images/voltar.png"></a></li>
-                        <li class="nome-conteudo"><b>Criação de Mundo</b></li>
-                        <li class="menu"><b>Menu</b></li>
+                        <li class="voltar"><a href="inicial.php"><img src="assets/images/voltar.png"></a></li>
+                        <li class="nome-conteudo"><h3><b>Criação de Mundo</b></h3></li>
+                        <li><a class="menu" href="inicial.php"><b>Menu</b></a></li>
                     </ul>
-                </nav>
+                </section>
                 <hr class="hr-mundo">
                 <form action="" method="POST" enctype="multipart/form-data">
                     <div class="fase">
-                        <p class="titulo"><b>
+                        <h4 class="titulo"><b>
                                 <?php
 
                                 if ($nome_mundo == "") { ?>
                                     Nome do Mundo: <input type="texto" name="nome_mundo" class="input-nome" value="<?php echo $nome_mundo ?>"> <?php
-                                                                                                                                                    } else { ?>
+                                                                                                                                            } else { ?>
                                     <input type="texto" name="nome_mundo" class="input_nome" value="<?php echo $nome_mundo; ?>"><?php } ?>
-                            </b></p>
-                        <input type="submit" name="submit" value="salvar" class="salvar">
+                        </b></h4>
+                            <input type="submit" name="submit" value="salvar" class="salvar save-mundo">
                     </div>
                     <textarea id="texto" name="texto">
                         <?php

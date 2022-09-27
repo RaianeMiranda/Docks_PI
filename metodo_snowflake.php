@@ -31,7 +31,7 @@ include "head.php"
             foreach ($info as $key => $value) {
         ?>
                 <div class="etapa_1-container">
-                    <h2 class="etapa">Etapa 1: </h2>
+                    <h2 class="etapa">Etapa </h2>
                     <?php echo "<a href='etapa-snow.php?id=" . $value['codSnowflake'] . "'>" ?> <p class="etapa-descricao"><?php echo $value['nome_snow'] ?></p><?php "</a>" ?>
                 </div>
 
