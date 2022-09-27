@@ -58,29 +58,25 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
 
 ?>
 
-<!DOCTYPE html>
-<html lang="pt-br">
+<?php 
+$titulo="Criação de Mundo";
+include "head.php";
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <title>Docks</title>
-</head>
+?>
+
+<link rel="stylesheet" href="assets/css/cads_usuario.css">
 
 <body>
     <section class="container">
         <div class="persona">
             <div class="p">
-                <nav class="parte1">
+                <section class="parte1">
                     <ul>
                         <li class="voltar"><a href="#"><img src="assets/images/voltar.png"></a></li>
                         <li class="nome-conteudo"><b>Criação de Mundo</b></li>
-                        <li class="menu"><b>Menu</b></li>
+                        <li><a class="menu" href="inicial.php"><b>Menu</b></a></li>
                     </ul>
-                </nav>
+                </section>
                 <hr class="hr-mundo">
                 <form action="" method="POST" enctype="multipart/form-data">
                     <div class="fase">
@@ -92,7 +88,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
                                                                                                                                                     } else { ?>
                                     <input type="texto" name="nome_mundo" class="input_nome" value="<?php echo $nome_mundo; ?>"><?php } ?>
                             </b></p>
-                        <input type="submit" name="submit" value="salvar" class="salvar">
+                        <input type="submit" class="save-mundo" name="submit" value="salvar" class="salvar">
                     </div>
                     <textarea id="texto" name="texto">
                         <?php

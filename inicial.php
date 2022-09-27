@@ -59,8 +59,7 @@ $titulo = "Página inicial";
 
 ?>
 
-<?php include "head.php";
-echo "aqui:" . $_SESSION['idEmail']; ?>
+<?php include "head.php";?>
 <header>
     <?php if (isset($_GET['id'])) {
         $nomeLivro = $_GET['id'];
@@ -81,9 +80,9 @@ echo "aqui:" . $_SESSION['idEmail']; ?>
 
 
     <?php if (@$_SESSION['nomeLivro'] != "") { ?>
-        <h3 class="before_course">Continue escrevendo: <span class="nome"><?php echo $_SESSION['nomeLivro'] ?></span></h3>
+        <h3 class="before_course">Continue escrevendo: <span class="nome"><?php echo @$_SESSION['nomeLivro'] ?></span></h3>
     <?php } else { ?>
-        <h3 class="before_course">Para desbloquear as fases, crie ou <a href="list_livro.php"><span class="nome">selecione</span></a> um livro</h3>
+        <h3 class="before_course">Para desbloquear as fases, crie ou <a class="nome" href="list_livro.php"><span class="nome">selecione</span></a> um livro</h3>
         <button class="criar_livro" type="submit" id="myBtn"><i class="fa-solid fa-plus"></i> Criar novo Livro</button>
 
         <!-- The Modal -->
@@ -103,8 +102,11 @@ echo "aqui:" . $_SESSION['idEmail']; ?>
     include "cards/card_mundo.php";
     include "cards/card_persona.php";
     ?>
+<br>
+<br>
+<br>
 
-    <?php if ($_SESSION['nomeLivro'] != "") {
+    <?php if (@$_SESSION['nomeLivro'] != "") {
         include "list_capitulo.php" ?>
 
         <button type="button" class="button-cap"> <a class="criar-cap" href="cad_cap.php">

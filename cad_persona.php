@@ -71,8 +71,10 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
 
 <!DOCTYPE html>
 <html lang="pt-br">
-<?php include "head.php";
+<?php 
 $titulo="Criação de Personagem";
+include "head.php";
+
 ?>
 
 
@@ -84,7 +86,7 @@ $titulo="Criação de Personagem";
                     <ul>
                         <li class="voltar"><a href="#"><img src="assets/images/voltar.png"></a></li>
                         <li class="nome-conteudo"><b>Criação de Personagem</b></li>
-                        <li class="menu"><b>Menu</b></li>
+                        <li><a class="menu" href="inicial.php"><b>Menu</b></a></li>
                     </ul>
                 </nav>
                 <hr class="hr-personagem">

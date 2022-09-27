@@ -12,7 +12,7 @@
         if ($sql->execute(array($codPersonagens))){
             if ($sql->rowCount() > 0){
                 $msgErro = "Descrição-Personagem excluída com sucesso!";
-               // header('location:listPersonagem_adm.php');
+               header('location:inicial.php');
             } else {
                 $msgErro = "Descrição-Personagem não localizado!";
             }

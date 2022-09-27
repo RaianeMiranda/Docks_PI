@@ -10,9 +10,8 @@ include "head.php"
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Método Criação de Personagem</title>
-    <?php
-    $titulo = "Método Criação de Personagem"
-    ?>
+
+
     <link rel="stylesheet" href="assets/css/metodo_criacao_de_personagem.css">
 </head>
 
@@ -30,15 +29,15 @@ include "head.php"
         <ul class="camadas-container">
 
             <li>
-                <span class="camadas">Camada periférica:</span> <span> É a parte mais fácil e rápida a ser feita para criar o seu personagem. Aqui vamos pensar em como nosso personagem é fisicamente, como ele se comunica com outras pessoas e os dados básicos.</span>
+                <span class="camadas"><a class="camadas"  href="inicial.php">Camada periférica:</a></span> <span> É a parte mais fácil e rápida a ser feita para criar o seu personagem. Aqui vamos pensar em como nosso personagem é fisicamente, como ele se comunica com outras pessoas e os dados básicos.</span>
             </li>
 
             <li>
-                <span class="camadas"> A camada de entorno: </span><span>Nesta camada, entenderemos como o personagem chegou até aqui, analisando seu histórico de vida e como foi moldada a sua personalidade. Basicamente é a biografia dele.
+                <span class="camadas"><a class="camadas" href="inicial.php"> A camada de entorno: </a></span><span>Nesta camada, entenderemos como o personagem chegou até aqui, analisando seu histórico de vida e como foi moldada a sua personalidade. Basicamente é a biografia dele.
                 </span>
             </li>
             <li>
-                <span class="camadas"> A camada central:</span><span> Talvez a etapa mais desafiadora na hora de criar a ficha de personagem. Aqui desenvolvemos a alma, a essência do personagem.
+                <span class="camadas"> <a class="camadas" href="inicial.php">A camada central:</a></span><span> Talvez a etapa mais desafiadora na hora de criar a ficha de personagem. Aqui desenvolvemos a alma, a essência do personagem.
                 </span>
             </li>
 

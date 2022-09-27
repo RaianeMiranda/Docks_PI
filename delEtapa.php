@@ -11,7 +11,7 @@ if(isset($_GET['id'])){
     if ($sql->execute(array($codEtapas))){
         if ($sql->rowCount()>0){
             $msgErro = "Etapa excluida com sucesso!";
-           header('location:listEtapas.php');
+           header('location:inicial.php');
         }else {
             $msgErro = "Código não localizado!";
         } 

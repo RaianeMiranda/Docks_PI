@@ -29,19 +29,19 @@
                 <a class="links" href="list_livro.php">
                   Biblioteca
                 </a>
-                <a class="links" href="#">
+                <a class="links" href="">
                   Jornada do Herói
                 </a>
-                <a class="links" href="#">
+                <a class="links" href="metodo_snowflake.php">
                   Snowflake
                 </a>
-                <a class="links" href="#">
+                <a class="links" href="metodo_criacao_de_mundo.php">
                   Criação de Mundos
                 </a>
-                <a class="links" href="#">
+                <a class="links" href="metodo_criacao_de_personagem.php">
                   Criação de Personagens
                 </a>
-                <a class="links" href="#">
+                <a class="links" href="sobr">
                   Sobre Nós
                 </a>
                 <a class="links" href="configuracoes.php" id="<?php $value['idEmail'] ?>">
@@ -54,7 +54,7 @@
             </div>
           </div>
           <div class="image-nome">
-            <img src="assets/images/docks.png" class="logotipo">
+           <a href="inicial.php"> <img src="assets/images/docks.png" class="logotipo"></a>
             <a class=".nome_docks" href="inicial.php"><h1 class="nome_docks">Docks</h1></a>
           </div>
         </div>

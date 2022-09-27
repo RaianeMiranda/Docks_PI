@@ -11,7 +11,7 @@ if(isset($_GET['id'])){
     if ($sql->execute(array($codMundo))){
         if ($sql->rowCount()>0){
             $msgErro = "descricao-mundo excluido com sucesso!";
-           // header('location:listMundo_adm.php');
+           header('location:inicial.php');
         }else {
             $msgErro = "Código não localizado!";
         } 

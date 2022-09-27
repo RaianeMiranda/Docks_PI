@@ -86,7 +86,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
                     <ul>
                         <li class="voltar"><a href="#"><img src="assets/images/voltar.png"></a></li>
                         <li class="nome-conteudo"><b>Escrevendo capítulo</b></li>
-                        <li class="menu"><b>Menu</b></li>
+                        <li><a class="menu" href="inicial.php"><b>Menu</b></a></li>
                     </ul>
                 </section>
 
@@ -102,7 +102,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
                                                                                                                                                     } else { ?>
                                     <input type="texto" name="nome_cap" class="input_nome" value="<?php echo @$nome_cap; ?>"><?php } ?>
                             </b></p>
-                        <input type="submit" name="submit" value="salvar" class="salvar">
+                        <input type="submit" class="save-cap" name="submit" value="salvar" class="salvar">
                     </div>
                     <hr class="hr-cap">
                     <textarea id="texto" name="texto">

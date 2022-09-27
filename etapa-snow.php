@@ -75,7 +75,7 @@ include "head.php";
                     <ul>
                         <li class="voltar-snow"><a href="inicial.php"><img src="assets/images/voltar.png"></a></li>
                         <li class="snow"><b>Snowflake</b></li>
-                        <li class="menu-snow"><b>Menu</b></li>
+                        <li><a class="menu" href="inicial.php"><b>Menu</b></a></li>
                     </ul>
                 </section>
                 <hr class="hr-snow">

@@ -59,8 +59,10 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
-<?php include "head.php";
+<?php 
 $titulo = "Criação de Personagem";
+include "head.php";
+
 ?>
 <link rel="stylesheet" href="assets/css/cads_usuario.css">
 

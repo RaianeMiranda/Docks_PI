@@ -28,7 +28,7 @@ if ($sql->execute(array($_SESSION['nomeLivro']))) {
 
                 <div class="separando">
                     <fieldset class="field_cap">
-                        <small class="small_cap">Capítulo <?php echo $values['codCapitulo'] ?></small>
+                        <small class="small_cap">Capítulo: </small>
                         <div class="flex_cap"> <button class="cap" type="button">
                                 <?php echo "<a class='a_cap' href='escrever_cap.php?id=" . $values['codCapitulo'] . "'> " ?> <?php echo $values['nome_cap'] . "</a>" ?>
                             </button>

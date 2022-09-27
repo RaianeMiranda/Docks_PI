@@ -78,7 +78,7 @@ include "head.php";
                         <li><a class="menu" href="inicial.php"><b>Menu</b></a></li>
                     </ul>
                 </section>
-                <hr class="hr-mundo">
+               
                 <form action="" method="POST" enctype="multipart/form-data">
                     <div class="fase">
                         <h4 class="titulo"><b>
@@ -87,10 +87,11 @@ include "head.php";
                                 if ($nome_mundo == "") { ?>
                                     Nome do Mundo: <input type="texto" name="nome_mundo" class="input-nome" value="<?php echo $nome_mundo ?>"> <?php
                                                                                                                                             } else { ?>
-                                    <input type="texto" name="nome_mundo" class="input_nome" value="<?php echo $nome_mundo; ?>"><?php } ?>
+                                    Nome do Mundo: <input type="texto" name="nome_mundo" class="input_nome" value="<?php echo $nome_mundo; ?>"><?php } ?>
                         </b></h4>
                             <input type="submit" name="submit" value="salvar" class="salvar save-mundo">
                     </div>
+                    <hr class="hr-mundo">
                     <textarea id="texto" name="texto">
                         <?php
                         if ($texto == "") {

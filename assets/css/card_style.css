@@ -49,15 +49,15 @@ body {
  
 /* INICÍO cards da Criação de Mundo*/
 .mundo-top{
-    background-color: #FAC7A5;
+    background-color: #D5ECB4;
 }
  
 .mundo-card{
-    border: 8px solid #FAC7A5;
+    border: 8px solid #D5ECB4;
 }
  
 .mundo-title{
-    color: #FD8A17;
+    color: #637846;
     background-color: none;
     text-decoration: none;
 }
@@ -97,7 +97,7 @@ body {
 .card-title{
     text-decoration: none;
     color: black;
-    font-size: 22px;
+    font-size: 18px;
 
 }
  
@@ -108,10 +108,25 @@ body {
     overflow: hidden;
 }
 
-.criando{
-    background-color: none !important;
-    border: solid 2px gray;
-    border-radius: 50%;
+.criando-persona{
+    color: #632571 ;
+    background-color: #ebcff1;
+    border: solid 2px #632571;
+    border-radius: 40%;
+}
+
+.criando-mundo{
+    color: #4a5a35 ;
+    background-color: #D5ECB4;
+    border: solid 2px #4a5a35;
+    border-radius: 40%;
+}
+.criar-persona{
+    color: #632571 ;
+
+}
+.criar-mundo{
+    color: #4a5a35 ;
 }
 
 .card-body{
@@ -205,4 +220,9 @@ h4.card-text{
 
   .dropdown-menu {
     border: 1px solid #FED576;
+  }
+
+  .sgv-persona{
+    color: #663a77 ;
+    background-color: #ebcff1;
   }

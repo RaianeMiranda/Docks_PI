@@ -60,23 +60,25 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
 
 <!DOCTYPE html>
 <html lang="pt-br">
-<?php include "head.php";
+<?php 
 $titulo="Criação de Personagem";
+include "head.php";
+
 ?>
 
+<link rel="stylesheet" href="assets/css/cads_usuario.css">
 
 <body>
     <section class="container">
         <div class="persona">
             <div class="p">
-                <nav class="parte1">
+                <section class="parte-persona">
                     <ul>
                         <li class="voltar"><a href="#"><img src="assets/images/voltar.png"></a></li>
                         <li class="nome-conteudo"><b>Criação de Personagem</b></li>
-                        <li class="menu"><b>Menu</b></li>
+                        <li><a class="menu" href="inicial.php"><b>Menu</b></a></li>
                     </ul>
-                </nav>
-                <hr class="hr-personagem">
+                </section>
                 <form action="" method="POST" enctype="multipart/form-data">
                     <div class="fase">
                         <p class="titulo"><b>
@@ -85,11 +87,11 @@ $titulo="Criação de Personagem";
                                     Nome do Personagem: <input type="texto" name="nome_persona" class="input-nome" value="<?php echo $nome ?>">
                                 <?php
                                 } else { ?>
-                                    <input type="texto" name="nome_persona" class="input-nome" value="<?php echo $nome_persona; ?>"><?php } ?>
+                                    Nome do Personagem: <input type="texto" name="nome_persona" class="input-nome" value="<?php echo $nome_persona; ?>"><?php } ?>
                             </b></p>
-                        <input type="submit" name="submit" value="salvar" class="salvar">
+                        <input type="submit" class="save-persona" name="submit" value="salvar" class="salvar">
                     </div>
-
+                    <hr class="hr-personagem">
                     <textarea id="texto" name="texto">
                     <?php
                     if ($texto == "") {

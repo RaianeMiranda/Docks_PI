@@ -18,6 +18,7 @@ body {
     border-color: #e572ad;
     margin: 0;
     border-width: 0;
+    opacity: 100%;
 }
 
 .parte1-snow ul {
@@ -147,10 +148,11 @@ body {
 .hr-personagem {
     width: 100%;
     height: 20px !important;
-    background-color: #a082ba;
-    border-color: #a082ba;
+    background-color: #EBDEF0;
+    border-color: #EBDEF0;
     margin: 0;
     border-width: 0;
+    opacity: 100%;
 }
 
 /*MUNDO*/
@@ -158,10 +160,11 @@ body {
 .hr-mundo {
     width: 100%;
     height: 20px !important;
-    background-color: #b5cf92;
-    border-color: #b5cf92;
+    background-color: #D5ECB4;
+    border-color: #D5ECB4;
     margin: 0;
     border-width: 0;
+    opacity: 100%;
 }
 
 /*MUNDO*/
@@ -183,7 +186,29 @@ body {
 .parte1 {
     margin-top: 25px;
     margin-bottom: 20px;
-    background-color: #b5cf92;
+    background-color: #D5ECB4;
+    justify-content: space-around;
+    justify-content: baseline;
+    width: 100%
+}
+.parte-persona ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px;
+}
+
+.parte-persona a {
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+    font-family: 'Open Sans';
+}
+
+.parte-persona {
+    margin-top: 25px;
+    margin-bottom: 20px;
+    background-color: #EBDEF0;
     justify-content: space-around;
     justify-content: baseline;
     width: 100%
@@ -252,7 +277,7 @@ body {
 
 }
 .save-cap{
-    border-color: #d68451;
+    border-color: #e08c54;
     background-color: #F1C4A5;
 }
 
@@ -282,7 +307,7 @@ body {
 }
 
 .a_cap:hover{
-    color: #d68451;
+    color: #F1C4A5;
     text-decoration: none;
     font-weight: bold;
 }
@@ -308,10 +333,11 @@ body {
 .hr-cap {
     width: 100%;
     height: 20px !important;
-    background-color: #d68451;
-    border-color: #d68451;
+    background-color: #F1C4A5;
+    border-color: #F1C4A5;
     margin: 0;
     border-width: 0;
+    opacity: 100%;
 }
 
 .parte_cap ul {

@@ -21,10 +21,7 @@ img,
 h1 {
     display: inline-block;
 }
-.nome {
-    font-size: 40px;
-    font-weight: bolder;
-}
+
 nav {
     background-color: #D5ECB4;
     padding: 0px;
@@ -59,14 +56,14 @@ hr.linha {
     display: block;
 }
 
-.menu-container {
-    width: 60px;
-    height: 45px;
+.container-menu {
+  padding: 5px;
+  margin-bottom: 15px;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
 }
-.logo-nome {
+.image-nome {
     display: flex;
     align-items: center;
 }
