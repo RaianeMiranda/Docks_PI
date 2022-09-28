@@ -47,7 +47,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
 
     //_SESSION['nomeLivro'] = 1;
     $sql = $pdo->prepare(" UPDATE MUNDO SET  codMundo=?, codLivro=?, nome_mundo=?, descricao=? WHERE codMundo=?");
-    if ($sql->execute(array($codMundo, "1", $nome_mundo, $texto, $codMundo,))) {
+    if ($sql->execute(array($codMundo, $_SESSION['codLivro'], $nome_mundo, $texto, $codMundo,))) {
         $msgErro = "Dados salvados com sucesso!";
         $_SESSION['codMundo'] = $codMundo;
         $codMundo = "";
@@ -72,7 +72,7 @@ include "head.php";
             <div class="p">
                 <section class="parte1">
                     <ul>
-                        <li class="voltar"><a href="#"><img src="assets/images/voltar.png"></a></li>
+                        <li class="voltar"><a href="inicial.php"><img src="assets/images/voltar.png"></a></li>
                         <li class="nome-conteudo"><b>Criação de Mundo</b></li>
                         <li><a class="menu" href="inicial.php"><b>Menu</b></a></li>
                     </ul>

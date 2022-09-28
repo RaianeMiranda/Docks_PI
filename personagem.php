@@ -74,7 +74,7 @@ include "head.php";
             <div class="p">
                 <section class="parte-persona">
                     <ul>
-                        <li class="voltar"><a href="#"><img src="assets/images/voltar.png"></a></li>
+                        <li class="voltar"><a href="inicial.php"><img src="assets/images/voltar.png"></a></li>
                         <li class="nome-conteudo"><b>Criação de Personagem</b></li>
                         <li><a class="menu" href="inicial.php"><b>Menu</b></a></li>
                     </ul>

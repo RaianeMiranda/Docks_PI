@@ -120,3 +120,9 @@ a :hover {
   color: black;
 
 }
+
+.criar-cap:hover {
+  text-decoration: underline;
+  color: #521f00;
+
+}

@@ -89,7 +89,7 @@ include "head.php";
                     </h1>
                 </div>
                 <div class="texto1-snow">
-                    <div class="descricao-snowflake">
+                    <div class="parte2-snow">
                         <?php
                         echo $values['descricao'];
                         ?>

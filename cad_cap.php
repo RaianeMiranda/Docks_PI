@@ -1,6 +1,7 @@
 <?php
 session_start();
 include "include/MySql.php";
+$titulo="Criando capítulo";
 $codCapitulo = "";
 $nome_cap = "";
 $codLivro = "";
@@ -113,7 +114,6 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
                         </textarea>
             </div>
             </form>
-            <?php echo $msgErro ?>
         </div>
         </div>
     </section>
@@ -139,6 +139,17 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
     </script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
     </script>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
 <?php
 include "footer.php";
 ?>

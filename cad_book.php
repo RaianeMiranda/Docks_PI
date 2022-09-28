@@ -28,7 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
                             $msgErro = "Dados salvados com sucesso!";
                             $_SESSION['nomeLivro'] = $nomeLivro;
 
-                            header('location:inicial.php');
+                            @header('location:inicial.php');
                         } else {
                             $msgErro = "Dados não salvados!";
                         }
@@ -107,5 +107,4 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
             }
         }
     </script>
-    <span class="erro"><?php echo $msgErro ?></span>
 </body>

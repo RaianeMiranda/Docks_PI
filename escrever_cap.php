@@ -1,7 +1,7 @@
 <?php
 session_start();
 include "include/MySql.php";
-$titulo="Escrevendo capítulo";
+$titulo = "Escrevendo capítulo";
 $codCapitulo = "";
 $msgErro = "";
 $descricao = "";
@@ -59,7 +59,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
-<?php 
+<?php
 $titulo = "Criação de Personagem";
 include "head.php";
 
@@ -88,7 +88,7 @@ include "head.php";
                                 if ($nome_cap == "") { ?>
                                     Nome do capítulo: <input type="texto" name="nome_cap" class="input-nome" value="<?php echo @$value['nome_cap'] ?>"> <?php
                                                                                                                                                     } else { ?>
-                                    <input type="texto" name="nome_cap" class="input_nome" value="<?php echo @$nome_cap; ?>"><?php } ?>
+                                    Nome do capítulo: <input type="texto" name="nome_cap" class="input_nome" value="<?php echo @$nome_cap; ?>"><?php } ?>
                             </b></p>
                         <input type="submit" class="save-cap" name="submit" value="salvar" class="salvar">
                     </div>
@@ -127,6 +127,6 @@ include "head.php";
     </script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
     </script>
-<?php
-include "footer.php";
-?>
+    <?php
+    include "footer.php";
+    ?>

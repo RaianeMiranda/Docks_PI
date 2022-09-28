@@ -90,7 +90,6 @@ if ($_SESSION['codLivro'] == "") {
                             <li><a class="menu" href="inicial.php"><b>Menu</b></a></li>
                         </ul>
                     </section>
-                    <hr class="hr-personagem">
                     <form action="" method="POST" enctype="multipart/form-data">
                         <div class="fase">
                             <h4 class="titulo"><b>
@@ -99,10 +98,11 @@ if ($_SESSION['codLivro'] == "") {
                                     if ($nome_persona == "") { ?>
                                         Nome do Personagem: <input type="texto" name="nome_persona" class="input-nome" value="<?php echo $nome_persona ?>"> <?php
                                                                                                                                                         } else { ?>
-                                        <input type="texto" name="nome_persona" class="input_nome" value="<?php echo $nome_persona; ?>"><?php } ?>
+                                        Nome do Personagem: <input type="texto" name="nome_persona" class="input_nome" value="<?php echo $nome_persona; ?>"><?php } ?>
                                 </b></h4>
                             <input type="submit" name="submit" value="salvar" class="salvar save-persona">
                         </div>
+                        <hr class="hr-personagem">
                         <textarea id="texto" name="texto">
                         <?php
                         if ($texto == "") {

@@ -32,7 +32,7 @@
                 <a class="links" href="jornada.php">
                   Jornada do Herói
                 </a>
-                <a class="links" href="metodo_snowflake.php">
+                <a class="links" href="listEtapa.php">
                   Snowflake
                 </a>
                 <a class="links" href="metodo_criacao_de_mundo.php">
