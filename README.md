@@ -10,7 +10,7 @@ Esse repositório é dedicado ao trabalho de Projeto Integrador
  <img  align="center" alt="Docks-JAVASCRIPT" height="35" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" />
   <img align="center" alt="Docks-MYSQL" height="35" width="40"  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" />
   <img  align="center" alt="Docks-VSCODE" height="35" width="30" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" />
-  <img  align="center" alt="Docks-LUCIDCHARD" height="35" width="40" src="https://image.winudf.com/v2/image1/Y29tLmx1Y2lkY2hhcnQuYW5kcm9pZC5jaGFydF9pY29uXzE2MzE3MTc4OThfMDQx/icon.png?w=&fakeurl=1"/>
+  <img  align="center" alt="Docks-LUCIDCHARD" height="35" width="40" src="https://www.mindmaps.com/wp-content/uploads/sites/4/2021/01/LucidChart-logo-v2.png"/>
   <img align="center" alt="Docks-NOTION" height="40" width="40" src="https://upload.wikimedia.org/wikipedia/commons/4/45/Notion_app_logo.png"/>
   <img align="center" alt="Docks-FIGMA" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" />
 </div>
