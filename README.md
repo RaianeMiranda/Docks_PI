@@ -7,11 +7,11 @@
   <hr>
  </div>
 
- <div align="center">
+ <div align="left">
   <h2>
  Sobre nós
  </h2>
- <p justify-content="left">
+ <p>
  O Docks é uma plataforma de aprendizagem, que foi criado por
 leitoras com o objetivo de suprir a carência de aplicativos na área da escrita.
 
