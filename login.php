@@ -1,4 +1,9 @@
 <?php
+include "include/MySql.php";
+include "include/functions.php";
+session_start();
+$_SESSION['idEmail']="";
+$_SESSION['nome']="";
 $idEmail = "";
 $senha = "";
 $msgErro = "";

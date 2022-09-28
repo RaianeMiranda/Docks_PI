@@ -29,7 +29,7 @@
                 <a class="links" href="list_livro.php">
                   Biblioteca
                 </a>
-                <a class="links" href="">
+                <a class="links" href="jornada.php">
                   Jornada do Herói
                 </a>
                 <a class="links" href="metodo_snowflake.php">
@@ -41,7 +41,7 @@
                 <a class="links" href="metodo_criacao_de_personagem.php">
                   Criação de Personagens
                 </a>
-                <a class="links" href="sobr">
+                <a class="links" href="sobre.php">
                   Sobre Nós
                 </a>
                 <a class="links" href="configuracoes.php" id="<?php $value['idEmail'] ?>">

@@ -8,6 +8,7 @@
   <title>Gerenciamento de Conta</title>
   <div class="gerenciamento-titulo">
     <h1>Gerenciamento da conta</h1>
+    <link rel="stylesheet" href="assets/css/gerenciamento.css">
   </div>
 </head>
 

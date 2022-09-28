@@ -1,4 +1,6 @@
 <?php
+session_start();
+include "include/MySql.php";
 $titulo = "Método Criação de Mundo";
 include "head.php"
 ?>

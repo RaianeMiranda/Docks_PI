@@ -1,4 +1,6 @@
 <?php
+session_start();
+include "include/MySql.php";
 $titulo = "Método Criação de Personagem";
 include "head.php"
 ?>
@@ -22,14 +24,14 @@ include "head.php"
             <p>Uma boa narrativa quase sempre é movida por personagens marcantes. Às vezes, marcantes em suas grandiosas personalidades e habilidades mirabolantes. Outras, ficam presas na nossa memória por sua pura simplicidade e realismo, que remete intimamente às nossas vidas.
             </p>
             <p class="juncao"> O que não muda de um modelo para o outro é que uma boa personagem é uma personagem complexa, bem desenvolvida. E esse desenvolvimento é feito em camadas.</p>
-        
+
             <p class="separado">Na metodologia a ser apresentada, trabalharemos com três níveis de criação. </p>
         </div>
         <br>
         <ul class="camadas-container">
 
             <li class="camadas-li">
-                <span class="camadas"><a class="camadas"  href="inicial.php">Camada periférica:</a></span> <span> É a parte mais fácil e rápida a ser feita para criar o seu personagem. Aqui vamos pensar em como nosso personagem é fisicamente, como ele se comunica com outras pessoas e os dados básicos.</span>
+                <span class="camadas"><a class="camadas" href="inicial.php">Camada periférica:</a></span> <span> É a parte mais fácil e rápida a ser feita para criar o seu personagem. Aqui vamos pensar em como nosso personagem é fisicamente, como ele se comunica com outras pessoas e os dados básicos.</span>
             </li>
 
             <li class="camadas-li">
@@ -43,6 +45,6 @@ include "head.php"
 
         </ul>
     </div>
-</body>
-
-</html>
+    <?php
+    include "footer.php";
+    ?>

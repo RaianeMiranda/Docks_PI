@@ -18,7 +18,7 @@ if ($sql->execute(array($_SESSION['codLivro']))) {
     }
 
     $sql = $pdo->prepare('SELECT * FROM PERSONAGENS WHERE codPersonagens=? '); //where codlivro = sessao
-    if ($sql->execute(array('1'))) {
+    if ($sql->execute(array('8'))) {
         $info = $sql->fetchAll(PDO::FETCH_ASSOC);
 
         foreach ($info as $key => $values) {

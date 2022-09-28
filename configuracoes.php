@@ -1,8 +1,6 @@
 <?php
 include "include/MySql.php";
 session_start();
-echo "aqui email:" . $_SESSION['idEmail'];
-echo "aqui nome:" . $_SESSION['nome'];
 
 $titulo = "Configurações";
 
@@ -29,59 +27,52 @@ if (isset($_GET['id'])) {
 }
 include "head.php"
 ?>
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Configurações</title>
-
-</head>
+<link rel="stylesheet" href="assets/css/configuracoes.css">
 
 <body id="posts">
-  <br>
-  <div class="config">
-    <h1 class="titulo-config">Configurações</h1>
+  
     <br>
-    <div class="config2">
-      <h2 class="tipografia">Tipografia</h2>
-      <h2 class="acessibilidade">Acessibilidade</h2>
-    </div>
-  </div>
-  <div class="container-tipografia-acessibilidade">
-    <div class="container">
-      <div class="botao-tipografia-container">
-        <button type="button" class="botao-tipografia1" id="botao-tipografia1" onclick="changeFont()">Merriweather</button>
-        <button class="botao-tipografia2" onclick="changeFont1()">Source serif pro</button>
-      </div>
-      <div class="botao-tipografia-container2">
-        <button class="botao-tipografia3" onclick="changeFont2()">Open Sans</button>
-        <button class="botao-tipografia4" onclick="changeFont()">Noto sans</button>
+    <div class="config">
+      <h1 class="titulo-config">Configurações</h1>
+      <br>
+      <div class="config2">
+        <h2 class="tipografia">Tipografia</h2>
+        <h2 class="acessibilidade">Acessibilidade</h2>
       </div>
     </div>
-    <div class="container-acessibilidade">
-      <div class="botao-acessibilidade-container">
-        <button type="" class="botao-acessibilidade1">Tradutor de Libras</button>
-        <button id="btn-1" class="botao-acessibilidade2">Desligar</button>
+    <div class="container-tipografia-acessibilidade">
+      <div class="container">
+        <div class="botao-tipografia-container">
+          <button type="button" class="botao-tipografia1" id="botao-tipografia1" onclick="changeFont()">Merriweather</button>
+          <button class="botao-tipografia2" onclick="changeFont1()">Source serif pro</button>
+        </div>
+        <div class="botao-tipografia-container2">
+          <button class="botao-tipografia3" onclick="changeFont2()">Open Sans</button>
+          <button class="botao-tipografia4" onclick="changeFont()">Noto sans</button>
+        </div>
       </div>
-      <div class="botao-acessibilidade-container2">
-        <button class="botao-acessibilidade3">Alto Contraste</button>
-        <button id="btn-2" class="botao-acessibilidade4">Ligar</button>
+      <div class="container-acessibilidade">
+        <div class="botao-acessibilidade-container">
+          <button type="" class="botao-acessibilidade1">Tradutor de Libras</button>
+          <button id="btn-1" class="botao-acessibilidade2">Desligar</button>
+        </div>
+        <div class="botao-acessibilidade-container2">
+          <button class="botao-acessibilidade3">Alto Contraste</button>
+          <button id="btn-2" class="botao-acessibilidade4">Ligar</button>
 
-      </div>
-      <div class="botao-acessibilidade-container3">
-        <button class="botao-acessibilidade5">Daltonismo<br>(Escala Cinza)</button>
-        <button id="btn-3" class="botao-acessibilidade6">Desligar</button>
+        </div>
+        <div class="botao-acessibilidade-container3">
+          <button class="botao-acessibilidade5">Daltonismo<br>(Escala Cinza)</button>
+          <button id="btn-3" class="botao-acessibilidade6">Desligar</button>
+        </div>
       </div>
     </div>
-  </div>
-  </div>
-  <?php
-  include "gerenciamento.php";
-  ?>
+    </div>
 
+    <?php
+    include "gerenciamento.php";
+    ?>
   <script>
     function changeFont() {
       var fon = document.getElementById("posts");
@@ -153,6 +144,7 @@ include "head.php"
       }
     })
   </script>
-</body>
 
-</html>
+<?php
+include "footer.php";
+?>

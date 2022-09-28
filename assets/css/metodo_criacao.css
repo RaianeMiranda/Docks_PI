@@ -1,53 +1,119 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
-body{
+body {
     font-family: 'Open Sans', sans-serif;
     background-color: #FFF2D8;
 }
-div.container{
+
+div.container {
     max-width: 1200px;
 }
-div.descricao-container{
+
+div.descricao-container {
     font-size: 20px;
 }
-h1.metodo-cp-titulo-persona{
-    color:#BAAAC8;
+
+h1.metodo-cp-titulo-persona {
+    color: #BAAAC8;
     font-size: 40px;
-    
+
 }
 
-h1.metodo-cp-titulo{
-    color:#81a056;
+h1.metodo-cp-titulo {
+    color: #81a056;
     font-size: 40px;
-    
+
 }
 
-.camadas{
-    color:#BAAAC8;
+.camadas {
+    color: #BAAAC8;
     font-size: 23px;
     font-weight: bold;
     white-space: nowrap;
 }
 
-.camadas-mundo{
-    color:#9bb970;
+.camadas-mundo {
+    color: #9bb970;
     font-size: 23px;
     font-weight: bold;
     white-space: nowrap;
 }
 
-.camadas-container{
+.camadas-container {
     display: inherit;
     font-size: 20px;
 }
 
-.camadas-li{
-    margin-bottom:10px;
+.camadas-li {
+    margin-bottom: 10px;
 }
-p{
+
+p {
     margin-bottom: 0px;
 }
-p.juncao{
+
+p.juncao {
     margin-top: 3px;
 }
 
+/* SOBRE NOS */
+.texto-sobre {
+    margin-bottom: 50px;
+
+}
+
+.texto-sobre>p {
+    font-size: 20px;
+    margin: 0;
+}
+
+.flex-sobre {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1vw;
+}
+
+.flex-sobre>div {
+    flex: 1 1 1 350px;
+    margin: 10px;
+}
+
+.sobre-img {
+    width: 150px;
+    height: auto;
+}
+
+.sobre-img2 {
+    width: 200px;
+    height: auto;
+}
+
+.sobre-ul {
+    display: block;
+    font-size: 20px;
+}
+
+/* JORNADA DO HEROI */
+.jornada-img {
+    width: 85rem;
+    height: auto;
+}
+
+.jornada-espaco {
+    padding: 3% 10%;
+}
+
+.jornada-espaco2 {
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.jornada-h3 {
+    margin: 15px 0;
+}
+
+.jornada-text>p{
+font-size: 18px;
+}

@@ -34,7 +34,7 @@
 
                                 <div class="snow-card card">
                                     <div class="snow-top card-top">
-                                        <h4 class="card-text"> <a class="etapa-descricao"  href= "<?php echo "'etapa-snow.php?id=" . $values['codSnowflake'] . "'" ?>"> <?php echo $values['nome_snow'] ?> </a> </h4>
+                                        <h4 class="card-text"> <a class="etapa-descricao"  href= "<?php echo "etapa-snow.php?id=" . $values['codSnowflake'] . "'" ?>"> <?php echo $values['nome_snow'] ?> </a> </h4>
                                     </div>
                                     <div class="card-body">
                                         <p><?php echo $values['descricao']; ?></p>
@@ -54,8 +54,3 @@
     </div>
 
     </div>
-
-
-</body>
-
-</html>

@@ -247,7 +247,9 @@ h4.card-text{
     border: 1px solid #FED576;
   }
 
-  .sgv-persona{
+  .persona-svg{
     color: #663a77 ;
-    background-color: #ebcff1;
+  }
+  .mundo-svg{
+    color: #206425 
   }

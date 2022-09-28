@@ -58,8 +58,8 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
 
 ?>
 
-<?php 
-$titulo="Criação de Mundo";
+<?php
+$titulo = "Criação de Mundo";
 include "head.php";
 
 ?>
@@ -77,7 +77,7 @@ include "head.php";
                         <li><a class="menu" href="inicial.php"><b>Menu</b></a></li>
                     </ul>
                 </section>
-               
+
                 <form action="" method="POST" enctype="multipart/form-data">
                     <div class="fase">
                         <p class="titulo"><b>
@@ -126,6 +126,6 @@ include "head.php";
     </script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
     </script>
-</body>
-
-</html>
+    <?php
+    include "footer.php";
+    ?>

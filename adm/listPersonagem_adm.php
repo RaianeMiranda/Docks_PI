@@ -17,8 +17,8 @@ include "../include/mysql.php";
             echo "<tr>";
             echo "<td>".$value['nome_persona']."</td>";
             echo "<td>".$value['descricao']."</td>";
-            echo "<td><center><a href='personagem.php?id=".$value['codPersonagens']."'>(+)</a></center></td>";
-            echo "<td><center><a href='delPersonagem.php?id=".$value['codPersonagens']."'>(-)</a></center></td>";
+            echo "<td><center><a href='../personagem.php?id=".$value['codPersonagens']."'>(+)</a></center></td>";
+            echo "<td><center><a href='../delPersonagem.php?id=".$value['codPersonagens']."'>(-)</a></center></td>";
             echo "</tr>";
         }
         echo "</table>";
