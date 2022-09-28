@@ -1,9 +1,10 @@
 <p align="center">
  <img width="100px" src="https://lh3.googleusercontent.com/pw/AL9nZEXBTFTJbsH8frsN1UtcsipmY9FFNnojY0AVzK-NbilzmKZRXPWmKsiztexFqsm0Kc2qpLEvjyZpc1TmO4KcFoMZhWTTcbVwEVaRm-8iIsl1G4Eb3KMKDTe_LMsdWyqr7_UZexpQ4UsZORiUt66eSUNbYA=s500-no?authuser=0" align="center" margin="0px" alt="Github Readme Stats" />
  <div>
-  <h2 align="center">Projeto Integrador: 
+  <h2 align="center">
   Docks</h2>
  <ul>
+  <li> Projeto Integrador: Técnico em Informática para Internet (2201)</li>
  <li>Instituição: O Serviço Nacional de Aprendizagem ComerciaL-Joinville (SENAC).</li>
  <li>Integrantes: Clara Pietra Vasconcelos Viena, Helena Meirelles, Heloísa Rebello Cabral e Raiane Miranda de Oliveira.</li>
  <li>Professores: Cláudia Werlich e Marcelo Petri.</li>
