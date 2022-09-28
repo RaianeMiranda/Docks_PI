@@ -1,10 +1,7 @@
 <p align="center">
  <img width="100px" src="https://lh3.googleusercontent.com/pw/AL9nZEXBTFTJbsH8frsN1UtcsipmY9FFNnojY0AVzK-NbilzmKZRXPWmKsiztexFqsm0Kc2qpLEvjyZpc1TmO4KcFoMZhWTTcbVwEVaRm-8iIsl1G4Eb3KMKDTe_LMsdWyqr7_UZexpQ4UsZORiUt66eSUNbYA=s500-no?authuser=0" align="center" alt="Github Readme Stats" />
- <h2 align="center">Profile</h2>
+ <h2 align="center">Docks</h2>
 </p>
-
-# Docks_PI
-Esse repositório é dedicado ao trabalho de Projeto Integrador
 <div style="display: inline_block"><br>
   <img  align="center" alt="Docks-PHP" height="60" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-plain.svg" />
    <img align="center" alt="Docks-CSS" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg">
