@@ -23,6 +23,7 @@ Os escritores iniciantes são a nossa principal motivação, já que são pessoa
 A nossa equipe visa com o Docks tornar fácil a criação de um livro e aprendizado acessível para escritores.
 O objetivo final é a criação de um livro bem estruturado, completo e sem furos.
 Os escritores iniciantes são a nossa principal motivação, já que são pessoas independentes e sem auxílio algum, que através do Docks desenvolvem melhor a escrita e estrutura de seus livros, possibilitando assim o crescimento de escritores na literatura nacional.
+  
 A nossa equipe visa com o Docks tornar fácil a criação de um livro e aprendizado acessível para escritores .
  </p>
  </div>
