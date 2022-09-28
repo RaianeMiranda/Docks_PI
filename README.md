@@ -14,8 +14,8 @@ Esse repositório é dedicado ao trabalho de Projeto Integrador
   <img align="center" alt="Docks-NOTION" height="40" width="40" src="https://upload.wikimedia.org/wikipedia/commons/4/45/Notion_app_logo.png"/>
   <img align="center" alt="Docks-FIGMA" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" />
   </div>
-  ##
-  
+ 
+ 
 <div>
   
   <a href="https://www.instagram.com/docks_escrita/" target="_blank"><img src="https://img.shields.io/badge/-Instagram-%23E4405F?style=for-the-badge&logo=instagram&logoColor=white" target="_blank"></a>
