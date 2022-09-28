@@ -13,6 +13,7 @@ Esse repositório é dedicado ao trabalho de Projeto Integrador
   <img  align="center" alt="Docks-LUCIDCHARD" height="35" width="40" src="https://i.ytimg.com/an/y55mSDtBT4jnP27fZjJNQw/featured_channel.jpg?v=614c8f78"/>
   <img align="center" alt="Docks-NOTION" height="40" width="40" src="https://upload.wikimedia.org/wikipedia/commons/4/45/Notion_app_logo.png"/>
   <img align="center" alt="Docks-FIGMA" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" />
+  </div>
   ##
   
 <div>
