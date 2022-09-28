@@ -1,6 +1,8 @@
 <p align="center">
  <img width="100px" src="https://lh3.googleusercontent.com/pw/AL9nZEXBTFTJbsH8frsN1UtcsipmY9FFNnojY0AVzK-NbilzmKZRXPWmKsiztexFqsm0Kc2qpLEvjyZpc1TmO4KcFoMZhWTTcbVwEVaRm-8iIsl1G4Eb3KMKDTe_LMsdWyqr7_UZexpQ4UsZORiUt66eSUNbYA=s500-no?authuser=0" align="center" margin="0px" alt="Github Readme Stats" />
- <h2 align="center">Docks</h2>
+ <h2 align="center">Projeto Integrador= Docks</h2>
+ <p>Instituição: O Serviço Nacional de Aprendizagem ComerciaL-Joinville (SENAC)</p>
+ <p>Integrantes: Clara Pietra Vasconcelos Viena, Helena Meirelles, Heloísa Rebello Cabral e Raiane Miranda de Oliveira</p>
 </p>
 <div align="center">
 <img width="100%"  src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/7522ff6d-01fb-4310-a7f7-5ec9d173f39d/Captura_de_tela_2022-09-28_170018.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220928%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220928T200057Z&X-Amz-Expires=86400&X-Amz-Signature=b03fb37b06cde5c231646d1c3aedf1675b912c50b148f33d3b871d55230e43eb&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Captura%2520de%2520tela%25202022-09-28%2520170018.png%22&x-id=GetObject">
