@@ -1,3 +1,8 @@
+<p align="center">
+ <img width="100px" src="docks.png" align="center" alt="Github Readme Stats" />
+ <h2 align="center">Profile</h2>
+</p>
+
 # Docks_PI
 Esse repositório é dedicado ao trabalho de Projeto Integrador
 <div style="display: inline_block"><br>
