@@ -1,10 +1,11 @@
 <p align="center">
  <img width="100px" src="https://lh3.googleusercontent.com/pw/AL9nZEXBTFTJbsH8frsN1UtcsipmY9FFNnojY0AVzK-NbilzmKZRXPWmKsiztexFqsm0Kc2qpLEvjyZpc1TmO4KcFoMZhWTTcbVwEVaRm-8iIsl1G4Eb3KMKDTe_LMsdWyqr7_UZexpQ4UsZORiUt66eSUNbYA=s500-no?authuser=0" align="center" margin="0px" alt="Github Readme Stats" />
- <h2 align="center">Projeto Integrador= Docks</h2>
+ <h2 align="center">Projeto Integrador </h2>
+ <h2>Docks</h2>
  <ul>
- <li>Instituição: O Serviço Nacional de Aprendizagem ComerciaL-Joinville (SENAC)</li>
- <li>Integrantes: Clara Pietra Vasconcelos Viena, Helena Meirelles, Heloísa Rebello Cabral e Raiane Miranda de Oliveira</li>
- <li>Professores: Cláudia Werlich e Marcelo Petri</li>
+ <li>Instituição: O Serviço Nacional de Aprendizagem ComerciaL-Joinville (SENAC).</li>
+ <li>Integrantes: Clara Pietra Vasconcelos Viena, Helena Meirelles, Heloísa Rebello Cabral e Raiane Miranda de Oliveira.</li>
+ <li>Professores: Cláudia Werlich e Marcelo Petri.</li>
  </ul>
 </p>
 <div align="center">
