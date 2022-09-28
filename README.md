@@ -8,9 +8,9 @@
  </div>
 
  <div align="left">
-  <h2>
+  <h1 align="center">
  Sobre nós
- </h2>
+ </h1>
  <p>
  O Docks é uma plataforma de aprendizagem, que foi criado por
 leitoras com o objetivo de suprir a carência de aplicativos na área da escrita.
