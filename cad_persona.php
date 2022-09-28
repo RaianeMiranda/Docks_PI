@@ -59,11 +59,11 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
     //_SESSION['nomeLivro'] = 1;
     $sql = $pdo->prepare(" INSERT INTO PERSONAGENS  (codPersonagens, nome_persona, codLivro, descricao) VALUES (NULL, ?,?,?)");
     if ($sql->execute(array($nome_persona, $_SESSION['codLivro'], $texto))) {
-        $msgErro = "Dados cadastrados com sucesso!";
+        $msgErro = "Dados salvados com sucesso!";
         $_SESSION['codPersonagens'] = $codPersonagens;
         $codPersonagens = "";
     } else {
-        $msgErro = "Dados não cadastrados!";
+        $msgErro = "Dados não salvados!";
     }
 }
 

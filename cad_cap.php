@@ -1,7 +1,6 @@
 <?php
 session_start();
 include "include/MySql.php";
-echo "aqui" . $_SESSION['codLivro'];
 $codCapitulo = "";
 $nome_cap = "";
 $codLivro = "";
@@ -52,19 +51,19 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
             $sql = $pdo->prepare("INSERT INTO CAPITULO (codCapitulo, codLivro, nome_cap, descricao)
                                             VALUES (NULL, ?, ?, ?)");
             if ($sql->execute(array($_SESSION['codLivro'], $nome_cap, $texto))) {
-                $msgErro = "Dados cadastrados com sucesso!";
+                $msgErro = "Dados salvados com sucesso!";
                 $_SESSION['nome_cap'] = $nome_cap;
                 $nome_cap = "";
                 header("location:inicial.php");
             } else {
-                $msgErro = "Dados não cadastrados!";
+                $msgErro = "Dados não salvados!";
             }
         }
     } else {
         $msgErro = "Erro no comando SELECT!";
     }
 } else {
-    $msgErro = "Dados não cadastrados!";
+    $msgErro = "Dados não salvados!";
 }
 
 ?>
@@ -100,7 +99,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
                                 if ($nome_cap == "") { ?>
                                     Nome do capítulo: <input type="texto" name="nome_cap" class="input-nome" value="<?php echo @$value['nome_cap'] ?>"> <?php
                                                                                                                                                     } else { ?>
-                                    <input type="texto" name="nome_cap" class="input_nome" value="<?php echo @$nome_cap; ?>"><?php } ?>
+                                    Nome do capítulo: <input type="texto" name="nome_cap" class="input_nome" value="<?php echo @$nome_cap; ?>"><?php } ?>
                             </b></p>
                         <input type="submit" class="save-cap" name="submit" value="salvar" class="salvar">
                     </div>

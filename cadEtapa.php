@@ -15,12 +15,12 @@ $nome_snow="";
         $sql = $pdo->prepare("INSERT INTO snowflake (codSnowflake, nome_snow, descricao)
 VALUES ( NULL, ?, ?)");
         if ($sql->execute(array($nome_snow, $texto))) {
-            $msgErro = "Dados cadastrados com sucesso!";
+            $msgErro = "Dados salvados com sucesso!";
             $_SESSION['codSnowflake'] = $codSnowflake;
             $codSnowflake="";
         }
          else {
-            $msgErro = "Dados não cadastrados!";
+            $msgErro = "Dados não salvados!";
         }
     }
 

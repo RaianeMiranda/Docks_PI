@@ -1,7 +1,4 @@
 <?php
-include "include/MySql.php";
-include "include/functions.php";
-session_start();
 $_SESSION['nome'] = "";
 $_SESSION['administrador'] = "";
 
@@ -68,13 +65,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <p class="slogan">Aqui é o lugar para suas histórias</p>
             </div>
             <fieldset class="form-fieldset">
-                <input type="text" id="nome" name="idEmail" placeholder="E-mail">
+                <input type="text" class="nome" name="idEmail" placeholder="E-mail">
             </fieldset>
             <fieldset class="form-fieldset">
-                <input type="password" id="senha"  name="senha" placeholder="Insira sua senha">
+                <input type="password" class="senha"  name="senha" placeholder="Insira sua senha">
             </fieldset>
             <div class="btn-continuar">
-                <input type="submit" name="continuar" id="continuar" value="Continuar" class="continuar">
+                <input type="submit" name="continuar" class="continuar" value="Continuar" class="continuar">
             </div>
             <br>
             <p class="membro-cadastro3">Problemas com o seu acesso? Procure ajuda capacitada!</p>
@@ -87,6 +84,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <!-- 
             <div class="login-meio">
             <label for="e-mail">E-mail</label>
-            <input class="" type="text" name="idEmail" id="e-mail" placeholder="Digite seu E-mail">
+            <input class="" type="text" name="idEmail" class="e-mail" placeholder="Digite seu E-mail">
             </div>
         -->

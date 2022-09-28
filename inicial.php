@@ -33,18 +33,18 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
                                                 VALUES (NULL, ?, ?, ?)");
                         $result = $sql->execute(array($nomeLivro, $imgContent, $_SESSION['idEmail']));
                         if ($result) {
-                            $msgErro = "Dados cadastrados com sucesso!";
+                            $msgErro = "Dados salvados com sucesso!";
                             $_SESSION['nomeLivro'] = $nomeLivro;
                             $nomeLivro = "";
                         } else {
-                            $msgErro = "Dados não cadastrados!";
+                            $msgErro = "Dados não salvados!";
                         }
                     }
                 } else {
                     $msgErro = "Erro no comando SELECT!";
                 }
             } else {
-                $msgErro = "Dados não cadastrados!";
+                $msgErro = "Dados não salvados!";
             }
         } else {
             $msgErro = "Somente arquivos JPG, JPEG, PNG e GIFF são permitidos";
@@ -83,7 +83,7 @@ $titulo = "Página inicial";
         <h3 class="before_course">Continue escrevendo: <span class="nome"><?php echo @$_SESSION['nomeLivro'] ?></span></h3>
     <?php } else { ?>
         <h3 class="before_course">Para desbloquear as fases, crie ou <a class="nome" href="list_livro.php"><span class="nome">selecione</span></a> um livro</h3>
-        <button class="criar_livro" type="submit" id="myBtn"><i class="fa-solid fa-plus"></i> Criar novo Livro</button>
+        <button class="criar_livro" type="submit" id="myBtn"> + Criar novo Livro</button>
 
         <!-- The Modal -->
         <div id="myModal" class="modal">
@@ -110,7 +110,7 @@ $titulo = "Página inicial";
         include "list_capitulo.php" ?>
 
         <button type="button" class="button-cap"> <a class="criar-cap" href="cad_cap.php">
-                <i class="fa-solid fa-plus"></i> Adicionar novo capítulo
+                + Adicionar novo capítulo
             </a>
         </button>
 

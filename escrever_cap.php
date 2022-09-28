@@ -48,11 +48,11 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
     //_SESSION['nomeLivro'] = 1;
     $sql = $pdo->prepare(" UPDATE CAPITULO SET  codCapitulo=?, nome_cap=?, codLivro=?, descricao=? WHERE codCapitulo=?");
     if ($sql->execute(array($codCapitulo, $nome_cap, $_SESSION['codLivro'], $texto, $codCapitulo,))) {
-        $msgErro = "Dados cadastrados com sucesso!";
+        $msgErro = "Dados salvados com sucesso!";
         $_SESSION['codCapitulo'] = $codCapitulo;
         $codCapitulo = "";
     } else {
-        $msgErro = "Dados não cadastrados!";
+        $msgErro = "Dados não salvados!";
     }
 }
 

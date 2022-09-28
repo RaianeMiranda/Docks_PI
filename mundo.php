@@ -48,11 +48,11 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
     //_SESSION['nomeLivro'] = 1;
     $sql = $pdo->prepare(" UPDATE MUNDO SET  codMundo=?, codLivro=?, nome_mundo=?, descricao=? WHERE codMundo=?");
     if ($sql->execute(array($codMundo, "1", $nome_mundo, $texto, $codMundo,))) {
-        $msgErro = "Dados cadastrados com sucesso!";
+        $msgErro = "Dados salvados com sucesso!";
         $_SESSION['codMundo'] = $codMundo;
         $codMundo = "";
     } else {
-        $msgErro = "Dados não cadastrados!";
+        $msgErro = "Dados não salvados!";
     }
 }
 
@@ -77,7 +77,7 @@ include "head.php";
                         <li><a class="menu" href="inicial.php"><b>Menu</b></a></li>
                     </ul>
                 </section>
-                <hr class="hr-mundo">
+               
                 <form action="" method="POST" enctype="multipart/form-data">
                     <div class="fase">
                         <p class="titulo"><b>
@@ -86,10 +86,11 @@ include "head.php";
                                 if ($nome_mundo == "") { ?>
                                     Nome do Mundo: <input type="texto" name="nome_mundo" class="input-nome" value="<?php echo $value['nome_mundo'] ?>"> <?php
                                                                                                                                                     } else { ?>
-                                    <input type="texto" name="nome_mundo" class="input_nome" value="<?php echo $nome_mundo; ?>"><?php } ?>
+                                    Nome do Mundo: <input type="texto" name="nome_mundo" class="input_nome" value="<?php echo $nome_mundo; ?>"><?php } ?>
                             </b></p>
                         <input type="submit" class="save-mundo" name="submit" value="salvar" class="salvar">
                     </div>
+                    <hr class="hr-mundo">
                     <textarea id="texto" name="texto">
                         <?php
                         if ($texto == "") {

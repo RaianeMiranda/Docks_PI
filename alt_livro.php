@@ -70,7 +70,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
             $msgErro = "Dados alterados com sucesso!";
             //header('location:listLIVROS.php');
         } else {
-            $msgErro = "Dados não cadastrados!";
+            $msgErro = "Dados não salvados!";
         }
     } else {
         $msgErro = "Dados não alteardos!";

@@ -36,7 +36,7 @@ if (!empty($_POST['descricao']))
             $msgErro = "Dados alterados com sucesso!";
             //header('location:inicial.php'); //acima de header não pode ter echo de forma alguma
         } else {
-            $msgErro = "Dados não cadastrados!";
+            $msgErro = "Dados não salvados!";
         }
     } else {
         $msgErro = "Dados não alterados!";

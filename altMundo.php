@@ -38,7 +38,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) { //se isso
             $msgErro = "Dados alterados com sucesso!";
             //header('location:inicial.php'); //acima de header não pode ter echo de forma alguma
         } else {
-            $msgErro = "Dados não cadastrados!";
+            $msgErro = "Dados não salvados!";
         }
     } else {
         $msgErro = "Dados não alterados!";

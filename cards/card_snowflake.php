@@ -15,7 +15,7 @@
                 <div class="card-wrapper">
                     <div class="snow-card card">
                         <div class="card-img-top1">
-                            <img class="card-img-top1 logo" src="assets/images/docks.png" alt="Card image cap">
+                            <img class="card-img-top1 logo" src="assets/images/snow.png" alt="Card image cap">
                         </div>
                         <h4> <a class="titulo_top-card snow-title" href="metodo_snowflake.php"> Método Snowflake</a></h4>
                         <div class="card-body">
@@ -25,7 +25,7 @@
                         </div>
                     </div>
                     <?php
-                    $sql = $pdo->prepare('SELECT * FROM snowflake');
+                    $sql = $pdo->prepare('SELECT * FROM SNOWFLAKE');
                     if ($sql->execute()) {
                         $info = $sql->fetchAll(PDO::FETCH_ASSOC);
                         if (count($info) > 0) {
@@ -34,10 +34,10 @@
 
                                 <div class="snow-card card">
                                     <div class="snow-top card-top">
-                                        <h4 class="card-text"><?php echo $values['nome_snow'] ?></h4>
+                                        <h4 class="card-text"> <a class="etapa-descricao"  href= "<?php echo "'etapa-snow.php?id=" . $values['codSnowflake'] . "'" ?>"> <?php echo $values['nome_snow'] ?> </a> </h4>
                                     </div>
                                     <div class="card-body">
-                                        <p class="card-text"><?php echo $values['descricao']; ?></p>
+                                        <p><?php echo $values['descricao']; ?></p>
                                     </div>
                                 </div>
                     <?php

@@ -25,21 +25,21 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
                               VALUES (NULL, ?, ?, ?)");
                         $msgErro = "Erro no comando SELECT!";
                         if ($sql->execute(array($nomeLivro, $imgContent, $_SESSION['idEmail']))) {
-                            $msgErro = "Dados cadastrados com sucesso!";
+                            $msgErro = "Dados salvados com sucesso!";
                             $_SESSION['nomeLivro'] = $nomeLivro;
 
                             header('location:inicial.php');
                         } else {
-                            $msgErro = "Dados não cadastrados!";
+                            $msgErro = "Dados não salvados!";
                         }
                     }
                 } else {
-                    $msgErro = "Dados não cadastrados!";
+                    $msgErro = "Dados não salvados!";
                     $msgErro = "Erro no comando SELECT!";
                 }
             } else {
                 $msgErro = "Somente arquivos JPG, JPEG, PNG e GIFF são permitidos";
-                $msgErro = "Dados não cadastrados!";
+                $msgErro = "Dados não salvados!";
             }
         } else {
             $msgErro = "Imagem não selecionada!!";

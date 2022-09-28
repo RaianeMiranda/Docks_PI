@@ -42,7 +42,7 @@ include "head.php";
 
             <div class="listagem">
               <div class="capa_livro">
-                <?php echo '<img class= "capa_livro-img" src="data:image/png;base64,' . base64_encode($values['capaLivro']) . '" />' ?>
+              <?php echo "<a class='container_nome' href='inicial.php?id=" . $values['nomeLivro'] . "'>" .'<img class= "capa_livro-img" src="data:image/png;base64,' . base64_encode($values['capaLivro']) . '" />' . "</a>" ?>
 
               </div>
               <div class="container_nome">

@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+body{
+  font-family: 'Open Sans', sans-serif;
+  background-color: #FFF2D8;
+  box-sizing: border-box;
+  margin:0;
+  
+}
+.item{
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.links{
+ margin-bottom:5px;
+ color: black;
+ font-size: 16px;
+ text-decoration: none;
+ padding: 5px 30px;
+ display:block;
+ line-height: 40px;
+ font-weight: bolder;
+}
+
+.side-bar{
+  background-color: white;
+  width:290px;
+  height: 100vh;
+  position: fixed;
+  top:10%;
+  left:-100%;
+  overflow-y:auto;
+  transition: 0.6s case;
+  transition-property: left;
+}
+.side-bar.active{
+  left:0;
+}
+.side-bar.menu{
+  width:100%;
+  margin-top: 80px;
+}
+
+.links:hover{
+ background-color: #EDEDED;
+ transition: 0.3s ease;
+}
+.close-btn{
+  position:fixed;
+  color:black;
+  font-size: 20px;
+  margin-left:14%;
+  cursor: pointer;
+}
+.menu-btn{
+  margin-left:10px;
+  color: black;
+  font-size:30px;
+  margin:25px;
+  cursor:pointer;
+
+}
+.nav-cabecalho{
+  background-color: #F4CCC8;
+}
+div.nome-usuario{
+  display: flex;
+  margin-left:5px;
+}
+.container-perfil{
+  display: flex;
+}
+button.nav-link{
+  text-align:left;
+}
+.nome-fulana{
+  font-size:15px;
+  font-weight: bolder;
+  margin-bottom:0px;
+}
+.nome-email{
+  margin-left: 3px;
+  margin-top: 3px;
+}
+.email-fulana{
+  margin-top:0px;
+  font-size:13px;
+}
+img.image2{
+  width: 50px;
+  height:50px;
+}
+.links:hover{
+  color:black;
+}

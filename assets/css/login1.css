@@ -1,17 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
-
 body {
 
     background-color: #FFF2D8;
     font-family: 'Open Sans', sans-serif;
 }
 
-.logo-img {
-    width: 90px;
-    height: 90px;
+.logo-img{
+    width:90px;
+    height:90px;
 }
 
-.container_inicial {
+.container_inicial{
     background-color: #FFFFFF;
     text-align: center;
     display: table;
@@ -23,65 +22,48 @@ body {
     width: 360px;
     height: 550px;
 }
-
-h1.slogan {
-    font-size: 35px;
-    margin-top: 0px;
-    margin-bottom: 0px;
+h1.slogan{
+    font-size:35px;
+    margin-top:0px;
+    margin-bottom:0px;
 }
-
-.slogan {
+.slogan{
     margin: 10px;
 }
-
-p.slogan {
-    font-size: 20px;
+p.slogan{
+    font-size: 15px;
     font-weight: normal;
     margin: 0px 80px 10px;
 }
-
-input#nome {
+input.nome{
     border: none;
     padding: 8px;
     font-size: 15px;
     color: #a2a2a2;
 }
 
-input#e-mail {
+input.e-mail{
     border: none;
     padding: 8px;
     font-size: 15px;
     color: #a2a2a2;
 }
-
-input:focus{
-    outline: none;
-}
-
-input{
-    border: none;
-    font-size: 18px;
-}
-
-input#senha {
+input.senha{
     border: none;
     padding: 8px;
     font-size: 15px;
     color: #a2a2a2;
 }
-
-input#continuar.continuar {
+input.continuar{
     border: 1px dashed #ded559;
     border-radius: 5px;
     background-color: #F6EB60;
     padding: 10px;
     width: 150px;
     font-size: medium;
-    margin-top: 5px;
+    margin-top:5px;
 }
-
-fieldset {
-    margin: 10px auto;
+fieldset{margin: 10px auto;
     text-align: initial;
     border-radius: 10px;
     border: 5px solid #EDEDED;
@@ -89,7 +71,6 @@ fieldset {
     color: #a2a2a2;
     padding: 5px;
 }
-
 .login-with {
     border: none;
     background-color: white;
@@ -105,7 +86,6 @@ fieldset {
 .icon-login {
     width: 42px;
 }
-
 .flex {
     display: flex;
     flex-wrap: wrap;
@@ -114,12 +94,10 @@ fieldset {
     align-items: center;
 }
 
-.membro-cadastro {
+.membro-cadastro{
     font-size: 15px;
-    text-decoration: none;
 }
-
-.form-fieldset {
+.form-fieldset{
     margin: 10px auto;
     text-align: initial;
     border-radius: 10px;
@@ -128,30 +106,15 @@ fieldset {
     color: #a2a2a2;
     padding: 5px;
 }
-
-.membro2 {
-    text-align: center;
+.membro-cadastro2{
     margin: 0px 80px 0px;
+    font-size:15px
 }
-
-.membro-cadastro2 {
-    text-align: center;
-    color: black;
-    text-decoration: none;
-}
-
-.membro-cadastro2:hover {
-    text-decoration: underline;
-    color: #8e850a;
-}
-
-.membro-cadastro3 {
+.membro-cadastro3{
     margin: 0px 60px 0px;
-    font-size: 15px;
-    text-decoration: none;
+    font-size:15px
 }
-
-.container_inicial2 {
+.container_inicial2{
     background-color: #FFFFFF;
     text-align: center;
     display: table;
@@ -163,8 +126,7 @@ fieldset {
     width: 390px;
     height: 550px;
 }
-
-.container_inicial3 {
+.container_inicial3{
     background-color: #FFFFFF;
     text-align: center;
     display: table;

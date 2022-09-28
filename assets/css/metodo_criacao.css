@@ -10,27 +10,38 @@ div.container{
 div.descricao-container{
     font-size: 20px;
 }
-h1.metodo-cp-titulo{
+h1.metodo-cp-titulo-persona{
     color:#BAAAC8;
     font-size: 40px;
     
 }
+
+h1.metodo-cp-titulo{
+    color:#81a056;
+    font-size: 40px;
+    
+}
+
 .camadas{
     color:#BAAAC8;
     font-size: 23px;
     font-weight: bold;
     white-space: nowrap;
 }
+
+.camadas-mundo{
+    color:#9bb970;
+    font-size: 23px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
 .camadas-container{
+    display: inherit;
     font-size: 20px;
 }
 
-
-ul{
-    display: inherit;
-}
-
-li{
+.camadas-li{
     margin-bottom:10px;
 }
 p{
@@ -39,3 +50,4 @@ p{
 p.juncao{
     margin-top: 3px;
 }
+

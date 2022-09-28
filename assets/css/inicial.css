@@ -102,6 +102,11 @@ a :hover {
   text-decoration: underline;
 }
 
+.footer1{
+  background-color: white;
+  
+}
+
 .button-cap {
   padding: 5px;
   border: solid 8px #F1C4A5;

@@ -28,11 +28,11 @@ if ($sql->execute(array(@$_SESSION['nomeLivro']))) {
             <div class="card-wrapper">
                 <div class="mundo-card card">
                     <div class="card-img-top1">
-                        <img class="card-img-top1 logo" src="assets/images/docks.png" alt="Card image cap">
+                        <img class="card-img-top1 logo" src="assets/images/mundo.png" alt="Card image cap">
                     </div>
                     <h4><a class="titulo_top-card mundo-title" href="metodo_criacao_de_mundo.php">Criação de mundo</a></h4>
                     <div class="card-body">
-                        <p class="card-text">Uma boa narrativa quase sempre é movida por personagens marcantes. Às vezes, marcantes em suas grandiosas personalidades e habilidades mirabolantes. Outras, ficam presas na nossa memória por sua pura simplicidade e realismo, que remete intimamente às nossas vidas.</p>
+                        <p class="card-text">Um universo totalmente diferente: Escrever um universo totalmente diferente é complicado, porque nosso imaginário é baseado no que conhecemos. Mas deve se considerar essa categoria quando uma história de ficção não tem referências óbvias à realidade, podendo ter distinções drásticas em relação à vida na terra. Por exemplo, se </p>
                     </div>
                 </div>
                 <?php

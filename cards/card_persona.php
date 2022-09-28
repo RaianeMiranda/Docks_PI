@@ -28,7 +28,7 @@ if ($sql->execute(array(@$_SESSION['nomeLivro']))) {
             <div class="card-wrapper">
                 <div class="persona-card card">
                     <div class="card-img-top1">
-                        <img class="card-img-top1 logo" src="assets/images/docks.png" alt="Card image cap">
+                        <img class="card-img-top1 logo" src="assets/images/heroi.png" alt="Card image cap">
                     </div>
                     <h4> <a class=" titulo_top-card persona-title" href="metodo_criacao_de_personagem.php">Criação de Personagem</a></h4>
                     <div class="card-body">

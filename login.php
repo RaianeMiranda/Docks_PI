@@ -1,10 +1,4 @@
 <?php
-include "include/MySql.php";
-include "include/functions.php";
-session_start();
-$_SESSION['nome'] = "";
-$_SESSION['administrador'] = "";
-
 $idEmail = "";
 $senha = "";
 $msgErro = "";
@@ -21,7 +15,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     } else {
         $senha = test_input($_POST['senha']);
     }
-
     if ($idEmail && $senha) {
         $sql = $pdo->prepare("SELECT * FROM USUARIO WHERE idEmail=? AND senha=?"); //idEmail e a senha são validados com o banco de dados
         if ($sql->execute(array($idEmail, MD5($senha)))) {
@@ -40,10 +33,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $msgErro = "Usuário não cadastrado!";
         }
     }
-}
+} ?>
 
-
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -66,13 +57,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <p class="slogan">Aqui é o lugar para suas histórias</p>
             </div>
             <fieldset class="form-fieldset">
-                <input type="text" name="idEmail" id="nome" placeholder="E-mail">
+                <input type="text" name="idEmail" class="nome" placeholder="E-mail">
             </fieldset>
             <fieldset class="form-fieldset">
-                <input type="password" name="senha" id="e-mail" placeholder="Insira sua senha">
+                <input type="password" name="senha" class="e-mail" placeholder="Insira sua senha">
             </fieldset>
             <div class="btn-continuar">
-                <input type="submit" name="submit" id="continuar" value="Continuar" class="continuar">
+                <input type="submit" name="submit" class="continuar" value="Continuar" class="continuar">
             </div>
             <p class="ou">OU</p>
             <fieldset>

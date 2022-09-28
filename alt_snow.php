@@ -31,9 +31,9 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST["submit"])) {
  $sql = $pdo->prepare("INSERT INTO ETAPAS (codEtapas, codSnowflake, codLivro, nome_etapas, descricao)
     valueS ( NULL, NULL, NULL, NULL, ?)");
    if ($sql->execute(array( $texto))) {
-      $msgErro = "Dados cadastrados com sucesso!";
+      $msgErro = "Dados salvados com sucesso!";
    } else {
-      $msgErro = "Dados não cadastrados!";
+      $msgErro = "Dados não salvados!";
     }
  }*/
 ?>
@@ -93,11 +93,11 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
     //_SESSION['nomeLivro'] = 1;
     $sql = $pdo->prepare(" UPDATE ETAPAS SET  codEtapas=?,  codSnowflake=?, codLivro=?, nome_etapas =?, descricao=? WHERE codEtapas=?");
     if ($sql->execute(array($codEtapas, $codSnowflake, $_SESSION['codLivro'], $nome_etapas, $texto, $codEtapas))) {
-        $msgErro = "Dados cadastrados com sucesso!";
+        $msgErro = "Dados salvados com sucesso!";
         $_SESSION['codEtapas'] = $codEtapas;
         $codEtapas = "";
     } else {
-        $msgErro = "Dados não cadastrados!";
+        $msgErro = "Dados não salvados!";
     }
 }
 

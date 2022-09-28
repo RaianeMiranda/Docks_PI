@@ -22,16 +22,18 @@ if (isset($_GET['id'])) {
                 $descricao = "";
             }
         }
+        if (isset($_GET['id'])) {
+            $codSnowflake = $_GET['id'];
+            $sql2 = $pdo->prepare('SELECT * FROM ETAPAS where codSnowflake=? '); //where codlivro = sessao
+            if ($sql2->execute(array($codSnowflake))) {
+                $info2 = $sql2->fetchAll(PDO::FETCH_ASSOC);
 
-        $sql2 = $pdo->prepare('SELECT * FROM ETAPAS '); //where codlivro = sessao
-        if ($sql2->execute()) {
-            $info2 = $sql2->fetchAll(PDO::FETCH_ASSOC);
-
-            foreach ($info2 as $key => $values2) {
-                $codEtapas = $values2['codEtapas'];
-                $nome_etapas = $values2['nome_etapas'];
-                $texto = $values2['descricao'];
-                //  echo $values['codEtapas'];
+                foreach ($info2 as $key => $values2) {
+                    $codEtapas = $values2['codEtapas'];
+                    $nome_etapas = $values2['nome_etapas'];
+                    $texto = $values2['descricao'];
+                    //  echo $values['codEtapas'];
+                }
             }
         }
     }
@@ -48,15 +50,15 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
     else
         $msgErro = "Sem texto";
 
-        $sql = $pdo->prepare(" UPDATE ETAPAS SET  codEtapas=?, nome_etapas=?, codLivro=?, descricao=? WHERE codEtapas=?");
-        if ($sql->execute(array($codEtapas, $nome_etapas, $_SESSION['codLivro'], $texto, $codEtapas,))) {
-            $msgErro = "Dados cadastrados com sucesso!";
-            $_SESSION['codEtapas'] = $codEtapas;
-            $codEtapas = "";
-        } else {
-            $msgErro = "Dados não cadastrados!";
-        }
+    $sql = $pdo->prepare(" UPDATE ETAPAS SET  codEtapas=?, nome_etapas=?, codLivro=?, descricao=? WHERE codEtapas=?");
+    if ($sql->execute(array($codEtapas, $nome_etapas, $_SESSION['codLivro'], $texto, $codEtapas,))) {
+        $msgErro = "Dados salvados com sucesso!";
+        $_SESSION['codEtapas'] = $codEtapas;
+        $codEtapas = "";
+    } else {
+        $msgErro = "Dados não salvados!";
     }
+}
 
 ?>
 

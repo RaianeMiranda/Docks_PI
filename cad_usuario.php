@@ -1,5 +1,4 @@
 <?php
-include "include/MySql.php";
 
 $nome = "";
 $idEmail = "";
@@ -40,13 +39,13 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['continuar'])) { //se i
                 $sql = $pdo->prepare("INSERT INTO USUARIO(nome, idEmail, senha, administrador) VALUES( ?, ?, ?, ?)");
 
                 if ($sql->execute(array($nome, $idEmail, md5($senha), $administrador))) {
-                    $msgErro = "Dados cadastrados com sucesso!";
+                    $msgErro = "Dados salvados com sucesso!";
                     $nome = "";
                     $idEmail = "";
                     $senha = ""; //isso serve para zerar as variáveis e não manter os dados no formulário
                     header('location:login.php'); //acima de header não pode ter echo de forma alguma
                 } else {
-                    $msgErro = "Dados não cadastrados!";
+                    $msgErro = "Dados não salvados!";
                 }
             } else {
                 $msgErro = "Email de usuário já cadastrado";
@@ -55,7 +54,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['continuar'])) { //se i
             $msgErro = "Erro no comando SELECT";
         }
     } else {
-        $msgErro = "Dados não cadastrados!";
+        $msgErro = "Dados não salvados!";
     }
 }
 
@@ -69,7 +68,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['continuar'])) { //se i
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="assets/css/login1_0.css">
+    <link rel="stylesheet" href="assets/css/login1.css">
 </head>
 
 <body>
@@ -85,16 +84,16 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['continuar'])) { //se i
                 <p class="slogan">Aqui é o lugar para suas histórias</p>
             </div>
             <fieldset class="form-fieldset">
-                <input type="text" name="nome" id="nome" placeholder="Nome">
+                <input type="text" name="nome" class="nome" placeholder="Nome">
             </fieldset>
             <fieldset class="form-fieldset">
-                <input type="text" id="e-mail" name="idEmail" placeholder="E-mail">
+                <input type="text" class="e-mail" name="idEmail" placeholder="E-mail">
             </fieldset>
             <fieldset class="form-fieldset">
-                <input type="text" id="senha" name="senha" placeholder="Crie uma senha">
+                <input type="password" class="senha" name="senha" placeholder="Crie uma senha">
             </fieldset>
             <div class="btn-continuar">
-                <input type="submit" name="continuar" id="continuar" value="Continuar" class="continuar">
+                <input type="submit" name="continuar" class="continuar" value="Continuar" class="continuar">
             </div>
             <p class="ou">OU</p>
             <fieldset>
@@ -120,6 +119,6 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['continuar'])) { //se i
 <!-- 
             <div class="login-meio">
             <label for="e-mail">E-mail</label>
-            <input class="" type="text" name="idEmail" id="e-mail" placeholder="Digite seu E-mail">
+            <input class="" type="text" name="idEmail" class="e-mail" placeholder="Digite seu E-mail">
             </div>
         -->
