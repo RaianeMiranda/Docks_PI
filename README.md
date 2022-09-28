@@ -4,7 +4,7 @@
   <h2 align="center">
   Docks</h2>
  <ul>
-  <li> Projeto Integrador: Técnico em Informática para Internet (2201)</li>
+  <li> Projeto Integrador: Técnico em Informática para Internet (2201).</li>
  <li>Instituição: O Serviço Nacional de Aprendizagem ComerciaL-Joinville (SENAC).</li>
  <li>Integrantes: Clara Pietra Vasconcelos Viena, Helena Meirelles, Heloísa Rebello Cabral e Raiane Miranda de Oliveira.</li>
  <li>Professores: Cláudia Werlich e Marcelo Petri.</li>
