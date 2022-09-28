@@ -12,6 +12,5 @@ Esse repositório é dedicado ao trabalho de Projeto Integrador
   <img  align="center" alt="Docks-VSCODE" height="35" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" />
   <img  align="center" alt="Docks-VSCODE" height="35" width="40" src="https://w7.pngwing.com/pngs/228/272/png-transparent-diagram-lucidchart-computer-icons-mind-map-text-orange-smiley-thumbnail.png"/>
   <img align="center" alt="Docks-NOTION" height="40" width="40" src="https://upload.wikimedia.org/wikipedia/commons/4/45/Notion_app_logo.png"/>
-  <img align="center" alt="Rafa-Csharp" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/csharp/csharp-original.svg">
 </div>
   
