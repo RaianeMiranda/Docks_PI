@@ -11,7 +11,7 @@
   <h2>
  Sobre nós
  </h2>
- <p>
+ <p justify-itens="center">
   O Docks é uma plataforma de aprendizagem, que foi criado por
 leitoras com o objetivo de suprir a carência de aplicativos na área da escrita.
 
