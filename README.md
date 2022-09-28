@@ -4,8 +4,14 @@
 </p>
 <div align="center">
 <img width="100%"  src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/7522ff6d-01fb-4310-a7f7-5ec9d173f39d/Captura_de_tela_2022-09-28_170018.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220928%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220928T200057Z&X-Amz-Expires=86400&X-Amz-Signature=b03fb37b06cde5c231646d1c3aedf1675b912c50b148f33d3b871d55230e43eb&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Captura%2520de%2520tela%25202022-09-28%2520170018.png%22&x-id=GetObject">
+  <hr>
  </div>
- <hr>
+
+ <div align="center">
+  <h2>
+ Sobre nós
+ </h2>
+ </div>
 <div style="display: inline_block"><br>
   <img  align="center" alt="Docks-PHP" height="60" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-plain.svg" />
    <img align="center" alt="Docks-CSS" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg">
