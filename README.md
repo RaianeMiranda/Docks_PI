@@ -5,7 +5,7 @@ Esse repositório é dedicado ao trabalho de Projeto Integrador
    <img align="center" alt="Docks-CSS" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg">
    <img align="center" alt="Docks-FIGMA" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" />
   <img  align="center" alt="Docks-CANVA" height="35" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/canva/canva-original.svg" />
-  <img align="center" alt="Docks-GITHUB" height="35" width="40"src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" />
+  <img align="center" alt="Docks-GITHUB" height="35" width="40"src="http://cdn.onlinewebfonts.com/svg/img_326384.png" />
   <img align="center" alt="Docks-GIT" height="35" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" />
  <img  align="center" alt="Docks-JAVASCRIPT" height="35" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" />
   <img align="center" alt="Docks-MYSQL" height="35" width="40"  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" />
