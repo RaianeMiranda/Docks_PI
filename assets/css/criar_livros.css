@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+
+body {
+    background-color: #FFF2D8;
+    font-family: "Open Sans", sans-serif;
+}
+
+div.container {
+    background-color: #FFFFFF;
+    text-align: center;
+    display: table;
+    text-align: center;
+    margin: auto;
+    padding: 17px;
+    border-radius: 20px;
+    margin-top: auto;
+    width: 400px;
+    height: 550px;
+}
+
+h1.livro {
+    display: flex;
+    font-size: 35px;
+    font-weight: bolder;
+}
+
+div.container-escrita {
+    margin-left: 7px;
+}
+
+div.container-capa {
+    display: table;
+    border: 1px solid rgb(218, 218, 218);
+    margin-bottom: 0px;
+}
+
+div.container-cores {
+    display: table;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+img.azul {
+    width: 40px;
+    height: 300px;
+}
+
+img.verde {
+    width: 40px;
+    height: 300px;
+}
+
+img.rosa {
+    width: 40px;
+    height: 300px;
+}
+
+img.laranja {
+    width: 40px;
+    height: 300px;
+}
+
+img.roxo {
+    width: 40px;
+    height: 300px;
+}
+
+div.container-criar {
+    position: absolute;
+    margin-top: 70px;
+}
+
+img.botao {
+    height: 100px;
+    width: 100px;
+}
+
+h2.titulo-criar_livros {
+    display: flex;
+    text-align: left;
+    margin-bottom: 0px;
+    font-size: 30px;
+    margin-top: 10px;
+}
+
+input[type="text"i] {
+    border: 3px solid #BBBB;
+    border-radius: 0px;
+    height: 45px;
+    width: 365px;
+    margin-bottom: 8px;
+    margin-top: 0px;
+    background-color: #F4CCC8;
+    margin-right: 10px;
+
+}
+
+div.container-adicionar {
+    position: absolute;
+    margin-top: 170px;
+}
+
+div.botao-criar_livro {
+    display: flex;
+    text-align: left;
+}
+
+.botao-flex {
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+.botao-salvar {
+    border: 3px solid #BBBBBB;
+    background-color: #D5ECB4;
+   width: 75px;
+   height: auto;
+   font-size: 15px;
+}
+
+.adicionar {
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+button.capa {
+    background-color: transparent;
+    border: none;
+    width: 100%;
+}
+
+.juncao-botao1>input {
+    display: none;
+}
+
+/*====================================================================================== */
+
+.gallery-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 2vw;
+}
+
+.gallery-itens{
+    width: 180;
+    height: 300;
+}
+.gallery-itens img{
+    width: 100%;
+    height: 100%;
+}
+
+#upload_image{
+    width: 180px;
+    height: 300px;
+}
+
+.capa_livro{
+    width: 240;
+    height: 260px;
+}
