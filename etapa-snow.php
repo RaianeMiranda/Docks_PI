@@ -98,17 +98,17 @@ include "head.php";
             </div>
 
             <div class="col-md-6">
-                <nav class="parte2-snow">
+                <div class="snow-livro">
                     <ul>
                         <div class="nome-livro-snow">
                             <li class="nomelivro1-snow"><b><?php echo $_SESSION['nomeLivro'] ?></b></li>
                         </div>
                     </ul>
-                </nav>
+                </div>
                 <hr class="hr-snow">
                 <form action="" method="POST" enctype="multipart/form-data">
                     <div class="botoes-snow">
-                        <input type="submit" values="Salvar" name="submit" class="salvar1-snow">
+                        <input class="save-snow" type="submit" values="Salvar" name="submit" class="salvar1-snow">
 
                     </div>
                     <div>
@@ -120,7 +120,7 @@ include "head.php";
                     </textarea>
                     </div>
                 </form>
-                <?php echo $msgErro ?>
+                <?php echo @$msgErro ?>
             </div>
         </div>
     </section>
@@ -146,6 +146,7 @@ include "head.php";
     </script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
     </script>
-</body>
 
-</html>
+<?php
+include "footer.php";
+?>

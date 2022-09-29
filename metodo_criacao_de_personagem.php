@@ -45,6 +45,10 @@ include "head.php"
 
         </ul>
     </div>
+    <br>
+    <br>
+    <br>
+    <br>
     <?php
     include "footer.php";
     ?>

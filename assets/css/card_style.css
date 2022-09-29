@@ -23,6 +23,12 @@ body {
 }
  
 .hero-title{
+    text-decoration: none;
+    color: #0287D2;
+}
+
+.hero-title:hover{
+    text-decoration: underline;
     color: #0287D2;
 }
  
@@ -54,7 +60,6 @@ body {
 
 .etapa-descricao:hover{
     text-decoration: underline;
-    color: gray;
 }
 /* FIM cards da Snowflake*/
  
@@ -168,7 +173,7 @@ body {
     align-items: center;
 }
  
-.logo {
+.icone {
     width: 8rem;
     height: 8rem;
     display: flex;
@@ -252,4 +257,13 @@ h4.card-text{
   }
   .mundo-svg{
     color: #206425 
+  }
+
+  .jornada-a{
+    text-decoration: none;
+    color: black;
+  }
+
+  .jornada-a:hover{
+    text-decoration: underline;
   }

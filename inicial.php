@@ -75,7 +75,7 @@ $titulo = "Página inicial";
     <?php if ($_SESSION['nome'] != "") { ?>
         <h1 class="title_welcome">Bem vindo(a) <?php echo $_SESSION['nome'] ?>!!</h1>
     <?php } else {
-        header('location:index.php');
+        echo "Você não está <a href='login.php'>logado</a>!";
     } ?>
 
 

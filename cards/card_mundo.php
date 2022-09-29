@@ -28,7 +28,7 @@ if ($sql->execute(array(@$_SESSION['nomeLivro']))) {
             <div class="card-wrapper">
                 <div class="mundo-card card">
                     <div class="card-img-top1">
-                        <img class="card-img-top1 logo" src="assets/images/mundo.png" alt="Card image cap">
+                        <img class="card-img-top1 icone" src="assets/images/mundo.png" alt="Card image cap">
                     </div>
                     <h4><a class="titulo_top-card mundo-title" href="metodo_criacao_de_mundo.php">Criação de mundo</a></h4>
                     <div class="card-body">

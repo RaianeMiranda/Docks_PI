@@ -1,19 +1,18 @@
-<head>
 
-</head>
 </main>
 <footer>
+    <link rel="stylesheet" href="assets/css/inicial.css">
 <hr class="linha">
 <ul>
     <div class="logo_footer">
         <div class="logo_flex">
-            <div><img class="logo" src="assets/images/logo.png" alt=""></div>
+            <div><img class="logo_fim" src="assets/images/logo.png" alt=""></div>
             <div>
                 <h3 class="text_footer">DOCKS</h3>
-                <h5 class="text_footer">Aqui é o lugar para as suas histórias</h5>
+                <h5 class="text_footer" style="font-size:1rem">Aqui é o lugar para as suas histórias</h5>
             </div>
         </div>
-        <p class="text_footer">Projeto Integrador TII2201: Clara Vasconcelos, Helena Meirelles, Heloísa Rebello, Raiane Miranda.</p>
+        <p class="text_footer"><b>Projeto Integrador TII2201:</b> Clara Vasconcelos, Helena Meirelles, Heloísa Rebello, Raiane Miranda.</p>
     </div>
     <div>
 

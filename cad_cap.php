@@ -84,7 +84,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
             <div class="p">
                 <section class="parte_cap">
                     <ul>
-                        <li class="voltar"><a href="#"><img src="assets/images/voltar.png"></a></li>
+                        <li class="voltar"><a href="inicial.php"><img src="assets/images/voltar.png"></a></li>
                         <li class="nome-conteudo"><b>Escrevendo capítulo</b></li>
                         <li><a class="menu" href="inicial.php"><b>Menu</b></a></li>
                     </ul>

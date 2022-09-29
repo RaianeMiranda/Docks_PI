@@ -17,8 +17,8 @@
                     <a href="inicial.php"><img class="image2" src="assets/images/usuario.png" alt=""></a>
                   </div>
                   <div class="nome-email">
-                    <h4 class="nome-fulana"><?php echo @$_SESSION['nome']; ?></h4>
-                    <p class="email-fulana"><?php echo @$_SESSION['idEmail']; ?></p>
+                    <h4 class="nome-fulana"> <?php echo@$_SESSION['nome']?></h4>
+                    <p class="email-fulana"> <?php echo@$_SESSION['idEmail']?></p>
                   </div>
                 </div>
               </div>
@@ -32,7 +32,7 @@
                 <a class="links" href="jornada.php">
                   Jornada do Herói
                 </a>
-                <a class="links" href="listEtapa.php">
+                <a class="links" href="metodo_snowflake.php">
                   Snowflake
                 </a>
                 <a class="links" href="metodo_criacao_de_mundo.php">
@@ -44,7 +44,7 @@
                 <a class="links" href="sobre.php">
                   Sobre Nós
                 </a>
-                <a class="links" href="configuracoes.php" id="<?php $value['idEmail'] ?>">
+                <a class="links" href="configuracoes.php">
                   Configurações
                 </a>
                 <a class=" links" href="logout.php">

@@ -15,13 +15,11 @@
                 <div class="card-wrapper">
                     <div class="snow-card card">
                         <div class="card-img-top1">
-                            <img class="card-img-top1 logo" src="assets/images/snow.png" alt="Card image cap">
+                            <img class="card-img-top1 icone" src="assets/images/snow.png" alt="Card image cap">
                         </div>
                         <h4> <a class="titulo_top-card snow-title" href="metodo_snowflake.php"> Método Snowflake</a></h4>
                         <div class="card-body">
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of the card's
-                                content.</p>
+                            <p class="card-text">O nome deriva do inglês e significa “floco de neve”, e a ideia é visualizar o floco de neve como uma figura complexa, que é desenvolvida por formas simples que,</p>
                         </div>
                     </div>
                     <?php

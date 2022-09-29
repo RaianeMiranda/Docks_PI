@@ -14,8 +14,8 @@ body {
 .hr-snow {
     width: 100%;
     height: 20px !important;
-    background-color: #FFF2D8;
-    border-color: #FFF2D8;
+    background-color: #F4CCC8;
+    border-color: #F4CCC8;
     margin: 0;
     border-width: 0;
     opacity: 100%;
@@ -28,6 +28,7 @@ body {
     padding: 0px;
 
 }
+
 .parte2-snow ul {
     list-style: none;
     display: flex;
@@ -35,13 +36,29 @@ body {
     padding: 0px;
 }
 
+.parte2-snow p {
+font-size: 20px;
+}
 
-
-.parte2-snow{
-    margin-top: 25px;
+.parte2-snow {
     margin-bottom: 20px;
     background-color: #F4CCC8;
-    padding: ;
+    padding: 15px ;
+    justify-content: space-around;
+    justify-content: baseline;
+    width: 100%;
+}
+
+.snow-livro ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0px;
+}
+
+.snow-livro {
+    margin-top: 25px;
+    margin-bottom: 20px;
     justify-content: space-around;
     justify-content: baseline;
     width: 100%;
@@ -57,17 +74,16 @@ body {
 .parte1-snow {
     margin-top: 25px;
     margin-bottom: 20px;
-    background-color: #F4CCC8;
     justify-content: space-around;
     justify-content: baseline;
     width: 100%
 }
 
 .titulo1-snow h1 {
-    justify-content: baseline;
-    margin: 20px;
+    margin: 5% 0;
     font-family: 'Open Sans';
-    font-size: 25px;
+    font-size: 20px;
+    font-weight: bold;
 }
 
 .menu-snow {
@@ -116,7 +132,7 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    margin-top: 10px;
+    margin: 4.5% 0;
 }
 
 .fase1-snow {
@@ -128,7 +144,6 @@ body {
 .nomelivro1-snow {
     font-size: 25px;
     font-family: 'Open Sans';
-    margin-top: 30px;
     text-align: center;
     list-style: none;
 }
@@ -194,6 +209,7 @@ body {
     justify-content: baseline;
     width: 100%
 }
+
 .parte-persona ul {
     list-style: none;
     display: flex;
@@ -232,7 +248,7 @@ body {
     margin-left: 20px;
 }
 
-.menu:hover{
+.menu:hover {
     text-decoration: underline;
     color: gray;
 }
@@ -264,22 +280,23 @@ body {
     font-family: 'Open Sans';
 }
 
-.save-snow{
-    border-color: #8da86a;
-    background-color: #b5cf92;
+.save-snow {
+    border-color: #d47b73;
+    background-color: #F4CCC8;
 }
 
-.save-persona{
+.save-persona {
     border-color: #735191;
     background-color: #d3abf6;
 }
 
-.save-mundo{
+.save-mundo {
     border-color: #8da86a;
     background-color: #b5cf92;
 
 }
-.save-cap{
+
+.save-cap {
     border-color: #e08c54;
     background-color: #F1C4A5;
 }
@@ -294,39 +311,39 @@ body {
     font-family: 'Open Sans';
 }
 
-.small_cap{
+.small_cap {
     display: block;
 }
 
-.cap{
+.cap {
     border: none;
     background-color: #FFF2D8;
 }
 
-.a_cap{
+.a_cap {
     text-decoration: none;
     color: black;
     font-size: 22px;
 }
 
-.a_cap:hover{
+.a_cap:hover {
     color: #F1C4A5;
     text-decoration: none;
     font-weight: bold;
 }
 
-.field_cap{
+.field_cap {
     border: solid 3px #F1C4A5;
     padding: 10px;
     margin: 0;
     width: 450px;
 }
 
-.separando{
-    margin: 20px 0 ;
+.separando {
+    margin: 20px 0;
 }
 
-.flex_cap{
+.flex_cap {
     display: flex;
     justify-content: space-between;
 }
@@ -368,6 +385,6 @@ body {
 
 
 /* SGVS */
-.sgv-cap{
+.sgv-cap {
     color: #d68451;
 }
