@@ -10,9 +10,7 @@
  <li>Professores: Marcelo Petri.</li>
  </ul>
 </p>
-<div align="center">
-
-   </div>
+<hr>
  
 
  <div align="left">
