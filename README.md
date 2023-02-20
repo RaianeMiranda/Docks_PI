@@ -22,7 +22,7 @@
  O Docks é uma plataforma de aprendizagem, que foi criado por
 leitoras com o objetivo de suprir a carência de aplicativos na área da escrita.
 
-O site proporciona a aprendizagem do método de escrita , o Snowflake e outros recursos como: Criação de Mundos, Personagens e o roteiro da Jornada do Herói. Além das atividades diárias para o aumento da criatividade.
+O aplicativo proporciona a aprendizagem do método de escrita , o Snowflake e outros recursos como: Criação de Mundos, Personagens e o roteiro da Jornada do Herói. Além das atividades diárias para o aumento da criatividade.
   
 O objetivo final é a criação de um livro bem estruturado, completo e sem furos.
 Os escritores iniciantes são a nossa principal motivação, já que são pessoas independentes e sem auxílio algum, que através do Docks desenvolvem melhor a escrita e estrutura de seus livros, possibilitando assim o crescimento de escritores na literatura nacional.
