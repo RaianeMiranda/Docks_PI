@@ -11,7 +11,7 @@
  </ul>
 </p>
 <div align="center">
-  <hr border="10px">
+  <hr height="10px">
    </div>
  
 
