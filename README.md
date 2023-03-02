@@ -32,7 +32,6 @@ A nossa equipe visa com o Docks tornar fácil a criação de um livro e aprendiz
   <img  align="center" alt="Docks-CANVA" height="35" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/canva/canva-original.svg" />
   <img align="center" alt="Docks-GITHUB" height="40" width="40"src="https://cdn.iconscout.com/icon/free/png-256/github-2690381-2232884.png" />
   <img align="center" alt="Docks-GIT" height="35" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" />
- <img  align="center" alt="Docks-JAVASCRIPT" height="35" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" />
   <img align="center" alt="Docks-MYSQL" height="35" width="40"  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" />
   <img  align="center" alt="Docks-VSCODE" height="35" width="30" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" />
   <img  align="center" alt="Docks-LUCIDCHARD" height="35" width="40" src="https://i.ytimg.com/an/y55mSDtBT4jnP27fZjJNQw/featured_channel.jpg?v=614c8f78"/>
